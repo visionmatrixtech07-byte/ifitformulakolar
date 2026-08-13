@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I FIT FORMULA SUPPLEMENT STORE</title>
+    <!-- FontAwesome for official icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -95,7 +97,10 @@
         }
 
         .btn-directions {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             width: 100%;
             padding: 12px;
             background-color: transparent;
@@ -105,18 +110,64 @@
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .btn-directions:hover {
-            background-color: #d4af37;
-            color: #000;
+            background-color: #2a2a2a;
         }
+
+        /* Real color for Maps marker */
+        .btn-directions i {
+            color: #EA4335; 
+            font-size: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 26px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Official Brand Colors */
+        .btn-phone {
+            background-color: #007bff; /* Standard Action Blue */
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366; /* Official WhatsApp Green */
+        }
+
+        .btn-instagram {
+            /* Official Instagram Gradient */
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Updated to match the exact filename in your repository -->
         <img src="ifitlogo.jpeg" alt="I Fit Formula Logo" class="logo">
 
         <h1>I FIT FORMULA SUPPLEMENT STORE</h1>
@@ -134,7 +185,28 @@
             <p>R K Hospital Kolar, 44QJ+J4M, MB Rd, Raja Nagar, Kolar, Karnataka 563101</p>
         </div>
 
-        <a class="btn-directions" href="https://maps.google.com/?q=44QJ+J4M,+MB+Rd,+Raja+Nagar,+Kolar,+Karnataka+563101" target="_blank">Get Directions on Maps</a>
+        <!-- Google Maps Button -->
+        <a class="btn-directions" href="https://www.google.com/maps/dir/13.133429,78.1438274/I+FIT+FORMULA+SUPPLEMENT+STORE.,+44QJ%2BJ4M,+MB+Rd,+Raja+Nagar,+Kolar,+Karnataka+563101/@13.1373351,78.126197,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3badf1000be7688b:0xf69d11a3cfd9310e!2m2!1d78.1302951!2d13.1390758?entry=ttu&g_ep=EgoyMDI2MDgxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <i class="fas fa-map-marker-alt"></i> Get Directions on Maps
+        </a>
+
+        <!-- Social & Contact Icons with Real Colors -->
+        <div class="social-links">
+            <!-- Call Phone link -->
+            <a href="tel:+919206014393" class="social-btn btn-phone" title="Call Us">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+
+            <!-- WhatsApp link -->
+            <a href="https://wa.me/919206014393" target="_blank" class="social-btn btn-whatsapp" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <!-- Instagram link (Replace with actual URL) -->
+            <a href="https://instagram.com/" target="_blank" class="social-btn btn-instagram" title="Follow on Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </div>
 
 </body>
