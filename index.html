@@ -1,14 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>I FIT FORMULA SUPPLEMENT STORE — Kolar's Premium Nutrition Store</title>
+<meta name="description" content="I FIT FORMULA SUPPLEMENT STORE is Kolar's premier sports nutrition and supplement store. 100% genuine products, top authentic brands. Shop Whey Protein, Mass Gainer, Pre-Workout, BCAA & more. Located in Kolar, Karnataka. Call +91 92060 14393."/>
+<meta name="keywords" content="supplement store Kolar, protein Kolar, whey protein Kolar, gym supplements Kolar, I Fit Formula Kolar, sports nutrition Kolar, mass gainer Kolar, pre-workout Kolar, creatine Kolar"/>
+<meta name="robots" content="index, follow"/>
+<meta name="geo.region" content="IN-KA"/>
+<meta name="geo.placename" content="Kolar, Karnataka, India"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="I FIT FORMULA SUPPLEMENT STORE — Premium Nutrition & Supplement Store"/>
+<meta property="og:description" content="100% genuine supplements, top brands, in-store shopping in Kolar, Karnataka."/>
+<meta property="og:image" content="ifitlogo.jpeg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "I FIT FORMULA SUPPLEMENT STORE",
+  "description": "Kolar's premier sports nutrition and supplement store.",
+  "telephone": "+919206014393",
+  "image": "ifitlogo.jpeg",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R K Hospital Kolar, 44QJ+J4M, MB Rd, Raja Nagar",
+    "addressLocality": "Kolar",
+    "addressRegion": "Karnataka",
+    "postalCode": "563101",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 09:30-21:30",
+  "sameAs": ["https://www.instagram.com/ifitformula/"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+:root{
+  --gold:#D4AF37;--gold-dark:#B8860B;--gold-glow:rgba(212,175,55,0.25);
+  --gold-glow2:rgba(212,175,55,0.08);
+  --black:#080808;--dark:#101010;--surface:#181818;--card:#1E1E1E;
+  --border:rgba(212,175,55,0.2);--white:#FFFFFF;--text:#F0F0F0;
+  --muted:#888888;--muted2:#555555;
+  --font-d:'Barlow Condensed',sans-serif;--font-b:'DM Sans',sans-serif;
+  --r-sm:8px;--r-md:14px;--r-lg:20px;
+  --announce-h:34px;--nav-h:66px;--top-offset:100px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:var(--font-b);background:var(--black);color:var(--text);overflow-x:hidden;line-height:1.6;}
+img{max-width:100%;height:auto;display:block;}
+a{text-decoration:none;color:inherit;}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--dark);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+
+.announce-bar{position:fixed;top:0;left:0;width:100%;height:var(--announce-h);background:var(--gold);z-index:201;overflow:hidden;display:flex;align-items:center;}
+.announce-track{display:flex;align-items:center;gap:0;animation:announceTicker 28s linear infinite;white-space:nowrap;width:max-content;}
+.announce-track:hover{animation-play-state:paused;}
+@keyframes announceTicker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.announce-item{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-d);font-size:0.78rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#000;padding:0 32px;}
+.announce-item i{font-size:0.65rem;opacity:0.8;}
+.announce-sep{color:rgba(0,0,0,0.4);font-size:0.6rem;padding:0 8px;}
+
+#scroll-progress{position:fixed;top:var(--announce-h);left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--gold-dark),var(--gold),#ffe066);z-index:9999;transition:width 0.1s linear;box-shadow:0 0 8px rgba(212,175,55,0.6);}
+#back-to-top{position:fixed;right:20px;bottom:148px;z-index:196;width:42px;height:42px;background:rgba(24,24,24,0.95);border:1px solid rgba(212,175,55,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.3s,background 0.2s;box-shadow:0 4px 16px rgba(0,0,0,0.4);backdrop-filter:blur(12px);}
+#back-to-top.show{opacity:1;pointer-events:auto;}
+#back-to-top:hover{background:var(--gold);color:#000;transform:translateY(-3px);}
+
+nav{position:fixed;top:var(--announce-h);width:100%;z-index:200;height:var(--nav-h);padding:0 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:background 0.3s;}
+nav.scrolled{background:rgba(8,8,8,0.98);}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.nav-logo{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold);filter:drop-shadow(0 0 8px var(--gold-glow));}
+.nav-name{font-family:var(--font-d);font-size:1.25rem;font-weight:800;letter-spacing:0.04em;color:var(--white);line-height:1;}
+.nav-name span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;align-items:center;}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color 0.2s;letter-spacing:0.03em;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:#000!important;padding:9px 20px;border-radius:6px;font-weight:700!important;font-size:0.85rem!important;display:flex;align-items:center;gap:7px;transition:background 0.2s,transform 0.2s,box-shadow 0.2s!important;box-shadow:0 4px 16px var(--gold-glow);}
+.nav-cta:hover{background:#b8860b!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 8px 24px var(--gold-glow)!important;}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--top-offset) 20px 60px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;filter:brightness(0.18);z-index:0;}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 50% 40%, rgba(212,175,55,0.18) 0%, transparent 65%),linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.85) 100%);}
+.hero-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(212,175,55,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,0.05) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 20s linear infinite;}
+@keyframes gridMove{from{background-position:0 0;}to{background-position:60px 60px;}}
+.hero-inner{position:relative;z-index:2;max-width:820px;width:100%;}
+.hero-logo{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);margin:0 auto 24px;filter:drop-shadow(0 0 28px rgba(212,175,55,0.55));animation:logoIn 0.9s cubic-bezier(0.16,1,0.3,1) both,logoFloat 5s ease-in-out infinite alternate 1s;}
+@keyframes logoIn{from{opacity:0;transform:scale(0.6);}to{opacity:1;transform:scale(1);}}
+@keyframes logoFloat{from{transform:translateY(0);}to{transform:translateY(-10px);}}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);color:var(--gold);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;padding:6px 18px;border-radius:30px;margin-bottom:20px;animation:fadeUp 0.7s ease 0.2s both;}
+.hero-badge::before{content:'';display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulseDot 1.5s ease-in-out infinite;margin-right:4px;}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.6);}}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.8rem,9vw,5.5rem);font-weight:900;line-height:0.95;letter-spacing:-0.01em;color:var(--white);text-transform:uppercase;margin-bottom:10px;animation:fadeUp 0.7s ease 0.3s both;}
+.hero h1 .gold{color:var(--gold);display:block;text-shadow:0 0 60px rgba(212,175,55,0.45);}
+.hero-sub{font-size:clamp(0.95rem,2.5vw,1.1rem);color:rgba(240,240,240,0.85);font-weight:400;max-width:580px;margin:16px auto 0;line-height:1.75;animation:fadeUp 0.7s ease 0.4s both;}
+
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px;animation:fadeUp 0.7s ease 0.5s both;}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:8px;font-family:var(--font-b);font-weight:700;font-size:0.95rem;cursor:pointer;border:none;transition:all 0.22s ease;-webkit-tap-highlight-color:transparent;user-select:none;}
+.btn-gold{background:var(--gold);color:#000;box-shadow:0 6px 24px var(--gold-glow);}
+.btn-gold:hover{background:#b8860b;color:#fff;transform:translateY(-2px);box-shadow:0 12px 32px var(--gold-glow);}
+.btn-gold:active{transform:translateY(0) scale(0.97);}
+.btn-ghost{background:rgba(255,255,255,0.06);border:1.5px solid rgba(212,175,55,0.4);color:var(--text);backdrop-filter:blur(6px);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+
+.hero-stats{display:flex;gap:0;margin-top:44px;border:1px solid rgba(212,175,55,0.25);border-radius:var(--r-md);background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);overflow:hidden;animation:fadeUp 0.7s ease 0.6s both;}
+.stat-item{flex:1;padding:20px 24px;text-align:center;border-right:1px solid rgba(212,175,55,0.15);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:var(--font-d);font-size:2.2rem;font-weight:900;color:var(--gold);line-height:1;transition:transform 0.3s;}
+.stat-item:hover .stat-num{transform:scale(1.08);}
+.stat-label{font-size:0.78rem;color:var(--muted);margin-top:4px;font-weight:500;}
+
+section{padding:80px 20px;}
+.container{max-width:1100px;margin:0 auto;}
+.sec-label{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px;}
+.sec-title{font-family:var(--font-d);font-size:clamp(2rem,6vw,3.2rem);font-weight:800;color:var(--white);line-height:1;text-transform:uppercase;letter-spacing:0.01em;}
+.sec-header{text-align:center;margin-bottom:52px;}
+.sec-sub{font-size:0.95rem;color:var(--muted);max-width:500px;margin:10px auto 0;line-height:1.7;}
+
+.brands-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden;}
+.marquee-track{display:flex;gap:48px;animation:marquee 22s linear infinite;width:max-content;}
+.marquee-track:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.brand-pill{display:flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-d);font-size:1rem;font-weight:700;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
+.brand-pill i{color:var(--gold);font-size:0.7rem;}
+.brand-pill:hover{color:var(--white);}
+
+#why{background:var(--dark);padding:80px 20px;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px;}
+.why-card{background:var(--surface);border-radius:var(--r-md);border:1px solid rgba(212,175,55,0.2);padding:30px 28px;display:flex;flex-direction:column;gap:12px;transition:transform 0.35s ease,box-shadow 0.35s ease,border-color 0.35s ease;}
+.why-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.6),0 0 0 1px rgba(212,175,55,0.4);border-color:var(--gold);}
+.why-card-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(212,175,55,0.12);color:var(--gold);border:1px solid rgba(212,175,55,0.3);font-family:var(--font-d);font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:30px;align-self:flex-start;}
+.why-card-title{font-family:var(--font-d);font-size:1.6rem;font-weight:900;color:var(--white);text-transform:uppercase;letter-spacing:0.02em;line-height:1.1;}
+.why-card-desc{font-size:0.9rem;color:rgba(240,240,240,0.75);line-height:1.6;}
+
+#categories{background:var(--black);}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media(max-width:900px){.cat-grid{grid-template-columns:repeat(2,1fr);}}
+.cat-card{display:block;border-radius:var(--r-md);overflow:hidden;position:relative;cursor:pointer;aspect-ratio:3/4;transition:transform 0.3s,box-shadow 0.3s;border:1px solid var(--border);}
+.cat-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,0.5);}
+.cat-card-img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;position:absolute;inset:0;}
+.cat-card:hover .cat-card-img{transform:scale(1.08);}
+.cat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.95) 0%,rgba(8,8,8,0.3) 60%,transparent 100%);}
+.cat-card-content{position:absolute;bottom:0;left:0;right:0;padding:20px 18px;z-index:2;}
+.cat-card-icon{width:40px;height:40px;background:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--gold);margin-bottom:10px;}
+.cat-card h3{font-family:var(--font-d);font-size:1.2rem;font-weight:800;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;}
+.cat-card p{font-size:0.75rem;color:rgba(255,255,255,0.6);}
+
+#store-info{background:var(--dark);padding:80px 20px;}
+.store-box{background:var(--surface);border:1px solid var(--gold);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+@media(max-width:850px){.store-box{grid-template-columns:1fr;padding:24px;}}
+.store-details h2{font-family:var(--font-d);font-size:2.2rem;color:var(--gold);margin-bottom:15px;text-transform:uppercase;}
+.store-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.store-item i{color:var(--gold);font-size:1.3rem;margin-top:3px;}
+.store-item p{font-size:0.95rem;color:var(--text);line-height:1.5;}
+.store-item strong{color:var(--white);display:block;margin-bottom:2px;}
+
+.social-action-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px;}
+.btn-social{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:0.88rem;color:#fff;text-decoration:none;transition:transform 0.2s;}
+.btn-social:hover{transform:translateY(-2px);}
+.btn-phone{background-color:#007bff;}
+.btn-whatsapp{background-color:#25D366;}
+.btn-instagram{background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);}
+
+footer{background:var(--surface);border-top:1px solid var(--border);padding:52px 24px 24px;}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;margin-bottom:40px;}
+@media(max-width:850px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:500px){.footer-grid{grid-template-columns:1fr;}}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.footer-logo{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);}
+.footer-bname{font-family:var(--font-d);font-size:1.2rem;font-weight:800;color:var(--white);letter-spacing:0.04em;}
+.footer-bname span{color:var(--gold);}
+.footer-tagline{font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:250px;margin-bottom:18px;}
+.social-row{display:flex;gap:10px;}
+.social-btn-ft{width:36px;height:36px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:0.9rem;transition:all 0.2s;}
+.social-btn-ft:hover{background:var(--gold);color:#000;}
+
+.footer-col-title{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px;}
+.footer-links{display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-size:0.88rem;color:var(--muted);transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold);}
+
+.footer-contact-list{display:flex;flex-direction:column;gap:12px;}
+.footer-contact-list a{display:flex;align-items:flex-start;gap:9px;font-size:0.85rem;color:var(--muted);transition:color 0.2s;}
+.footer-contact-list a:hover{color:var(--text);}
+.footer-contact-list i{color:var(--gold);width:14px;flex-shrink:0;margin-top:2px;}
+
+.footer-bottom{max-width:1100px;margin:0 auto;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:0.8rem;color:var(--muted2);}
+.footer-copy span{color:var(--gold);font-weight:600;}
+
+.mob-nav{display:none;position:fixed;bottom:0;width:100%;z-index:200;background:rgba(16,16,16,0.97);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:10px 0 14px;justify-content:space-around;}
+@media(max-width:768px){.mob-nav{display:flex;}}
+.mob-nav a{display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--muted);font-size:0.65rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.2s;}
+.mob-nav a i{font-size:1.1rem;}
+.mob-nav a:hover{color:var(--gold);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
 /* ==========================================
    MOBILE LAYOUT FIXES
    ========================================== */
 @media (max-width: 768px) {
-  /* 1. Fix Header Overlap */
+  #back-to-top {
+    bottom: 80px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+  }
+
   nav {
     padding: 0 12px;
     justify-content: space-between;
   }
 
-  /* Hide desktop menu links on mobile to prevent overlapping the logo */
+  /* Hide header desktop navigation links on mobile to prevent overlapping logo */
   .nav-links a:not(.nav-cta) {
     display: none;
   }
@@ -26,17 +236,15 @@
     font-size: 0.95rem;
   }
 
-  /* Compact WhatsApp CTA button for mobile header */
   .nav-cta {
     padding: 6px 10px !important;
     font-size: 0.72rem !important;
     gap: 4px;
   }
 
-  /* 2. Fix Hero Section & Prevent Bottom Bar Overlap */
   .hero {
-    padding-top: calc(var(--announce-h) + var(--nav-h) + 24px);
-    padding-bottom: 100px; /* Gives clearance for the bottom navigation bar */
+    padding-top: calc(var(--announce-h) + var(--nav-h) + 20px);
+    padding-bottom: 90px;
   }
 
   .hero-logo {
@@ -49,7 +257,6 @@
     font-size: 2.2rem;
   }
 
-  /* 3. Stack Hero Stats Vertically for Small Screens */
   .hero-stats {
     flex-direction: column;
     margin-top: 28px;
@@ -67,8 +274,314 @@
 }
 
 @media (max-width: 400px) {
-  /* Hide top header CTA on extremely narrow screens since WhatsApp is in the mobile bottom bar */
+  /* Hide top header CTA button on small screens since WhatsApp link is in mobile bottom bar */
   .nav-cta {
     display: none !important;
   }
 }
+</style>
+</head>
+<body>
+
+<!-- Ticker Bar -->
+<div class="announce-bar">
+  <div class="announce-track">
+    <span class="announce-item"><i class="fas fa-shield-alt"></i> 100% Genuine & Authentic Products</span><span class="announce-sep">•</span>
+    <span class="announce-item"><i class="fas fa-clock"></i> Store Hours: 9:30 AM – 9:30 PM Daily</span><span class="announce-sep">•</span>
+    <span class="announce-item"><i class="fas fa-map-marker-alt"></i> Visit Us In Kolar</span><span class="announce-sep">•</span>
+    <span class="announce-item"><i class="fas fa-store"></i> Online Shopping Store Coming Soon</span><span class="announce-sep">•</span>
+    <!-- Duplicate for infinite marquee effect -->
+    <span class="announce-item"><i class="fas fa-shield-alt"></i> 100% Genuine & Authentic Products</span><span class="announce-sep">•</span>
+    <span class="announce-item"><i class="fas fa-clock"></i> Store Hours: 9:30 AM – 9:30 PM Daily</span><span class="announce-sep">•</span>
+    <span class="announce-item"><i class="fas fa-map-marker-alt"></i> Visit Us In Kolar</span><span class="announce-sep">•</span>
+    <span class="announce-item"><i class="fas fa-store"></i> Online Shopping Store Coming Soon</span><span class="announce-sep">•</span>
+  </div>
+</div>
+
+<div id="scroll-progress"></div>
+<div id="back-to-top"><i class="fas fa-chevron-up"></i></div>
+
+<!-- Main Navigation -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <img src="ifitlogo.jpeg" alt="I Fit Formula Logo" class="nav-logo"/>
+    <div class="nav-name">I FIT FORMULA <span>STORE</span></div>
+  </div>
+  <div class="nav-links">
+    <a href="#why">Why Us</a>
+    <a href="#categories">Categories</a>
+    <a href="#store-info">Location</a>
+    <a href="https://wa.me/919206014393" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  
+  <div class="hero-inner">
+    <img src="ifitlogo.jpeg" alt="I Fit Formula Logo" class="hero-logo"/>
+    <div class="hero-badge">Kolar's #1 Supplement Store</div>
+    <h1>I FIT FORMULA <span class="gold">SUPPLEMENT STORE</span></h1>
+    <p class="hero-sub">Fuel your fitness journey with 100% authentic supplements, premium nutrition formulas, and expert guidance directly in Kolar.</p>
+    
+    <div class="hero-btns">
+      <a href="tel:+919206014393" class="btn btn-gold"><i class="fas fa-phone-alt"></i> Call +91 92060 14393</a>
+      <a href="https://www.google.com/maps/dir/13.133429,78.1438274/I+FIT+FORMULA+SUPPLEMENT+STORE.,+44QJ%2BJ4M,+MB+Rd,+Raja+Nagar,+Kolar,+Karnataka+563101/@13.1373351,78.126197,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3badf1000be7688b:0xf69d11a3cfd9310e!2m2!1d78.1302951!2d13.1390758?entry=ttu&g_ep=EgoyMDI2MDgxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-ghost"><i class="fas fa-map-marked-alt"></i> Store Location</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Authentic Products</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">9:30-9:30</div>
+        <div class="stat-label">Open Daily</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Top</div>
+        <div class="stat-label">Nutrition Brands</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands Banner -->
+<div class="brands-strip">
+  <div class="marquee-track">
+    <span class="brand-pill"><i class="fas fa-star"></i> OPTIMUM NUTRITION</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> MUSCLEBLAZZE</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> DYMATIZE</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> NITROTECH</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> BSN</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> CELLUCOR</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> RULE 1</span>
+    <!-- Duplicate -->
+    <span class="brand-pill"><i class="fas fa-star"></i> OPTIMUM NUTRITION</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> MUSCLEBLAZZE</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> DYMATIZE</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> NITROTECH</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> BSN</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> CELLUCOR</span>
+    <span class="brand-pill"><i class="fas fa-star"></i> RULE 1</span>
+  </div>
+</div>
+
+<!-- Why Choose Us -->
+<section id="why">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label">Why Choose Us</div>
+      <h2 class="sec-title">Premium Quality Guaranteed</h2>
+      <p class="sec-sub">Everything you need to reach your peak performance goals under one roof.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-pill">Authenticity</div>
+        <h3 class="why-card-title">100% Genuine Stock</h3>
+        <p class="why-card-desc">We directly source verified supplements from official importers to guarantee pure quality without middleman risk.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-card-pill">Guidance</div>
+        <h3 class="why-card-title">Expert Advice</h3>
+        <p class="why-card-desc">Get customized supplement recommendations based on your personal fitness goals and dietary requirements.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-card-pill">Convenience</div>
+        <h3 class="why-card-title">Open 7 Days a Week</h3>
+        <p class="why-card-desc">Visit our store daily from 9:30 AM to 9:30 PM. Online e-commerce store is also coming soon!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categories">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label">Browse Categories</div>
+      <h2 class="sec-title">Supplements & Fitness Range</h2>
+    </div>
+
+    <div class="cat-grid">
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=600&q=80" class="cat-card-img" alt="Whey Protein"/>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-card-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Whey Protein</h3>
+          <p>Isolate, Concentrate & Hydrolyzed</p>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" class="cat-card-img" alt="Mass Gainer"/>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-card-icon"><i class="fas fa-weight-hanging"></i></div>
+          <h3>Mass Gainers</h3>
+          <p>High-calorie muscle building formulas</p>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80" class="cat-card-img" alt="Pre workout"/>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-card-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Pre-Workouts</h3>
+          <p>Energy, focus, and pump boosters</p>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" class="cat-card-img" alt="Vitamins"/>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-card-icon"><i class="fas fa-capsules"></i></div>
+          <h3>Vitamins & Wellness</h3>
+          <p>Omega-3, Multivitamins, Fish Oil</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Store Info Section -->
+<section id="store-info">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-label">Store Location & Contact</div>
+      <h2 class="sec-title">Visit Us In Kolar</h2>
+    </div>
+
+    <div class="store-box">
+      <div class="store-details">
+        <h2>I FIT FORMULA</h2>
+        
+        <div class="store-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Store Address</strong>
+            <p>R K Hospital Kolar, 44QJ+J4M, MB Rd, Raja Nagar, Kolar, Karnataka 563101</p>
+          </div>
+        </div>
+
+        <div class="store-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <strong>Opening Hours</strong>
+            <p>Open Daily: 9:30 AM – 9:30 PM</p>
+          </div>
+        </div>
+
+        <div class="store-item">
+          <i class="fas fa-store"></i>
+          <div>
+            <strong>Online Store Status</strong>
+            <p style="color:var(--gold); font-weight:bold;">Online Shopping Store Coming Soon!</p>
+          </div>
+        </div>
+
+        <div class="social-action-btns">
+          <a href="tel:+919206014393" class="btn-social btn-phone"><i class="fas fa-phone-alt"></i> Call Us</a>
+          <a href="https://wa.me/919206014393" target="_blank" class="btn-social btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://www.instagram.com/ifitformula/" target="_blank" class="btn-social btn-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+      </div>
+
+      <div style="width:100%; height:100%; min-height:260px; border-radius:12px; overflow:hidden; border:1px solid var(--gold);">
+        <iframe src="https://maps.google.com/maps?q=13.1390758,78.1302951&hl=en&z=16&output=embed" width="100%" height="100%" style="border:0; min-height:280px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-wrap">
+        <img src="ifitlogo.jpeg" alt="Logo" class="footer-logo"/>
+        <div class="footer-bname">I FIT FORMULA <span>STORE</span></div>
+      </div>
+      <p class="footer-tagline">Kolar's primary destination for authentic nutrition and fitness supplements.</p>
+      <div class="social-row">
+        <a href="tel:+919206014393" class="social-btn-ft" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/919206014393" target="_blank" class="social-btn-ft" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/ifitformula/" target="_blank" class="social-btn-ft" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <div class="footer-links">
+        <a href="#why">Why Us</a>
+        <a href="#categories">Categories</a>
+        <a href="#store-info">Location</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Products</div>
+      <div class="footer-links">
+        <a href="#categories">Whey Protein</a>
+        <a href="#categories">Mass Gainers</a>
+        <a href="#categories">Pre-Workout</a>
+        <a href="#categories">Wellness</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Store Contact</div>
+      <div class="footer-contact-list">
+        <a href="tel:+919206014393"><i class="fas fa-phone-alt"></i> +91 92060 14393</a>
+        <a href="https://wa.me/919206014393" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
+        <a href="https://www.instagram.com/ifitformula/" target="_blank"><i class="fab fa-instagram"></i> @ifitformula</a>
+        <a><i class="fas fa-map-marker-alt"></i> R K Hospital, MB Rd, Kolar, KA 563101</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 <span>I FIT FORMULA SUPPLEMENT STORE</span>. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- Mobile Bottom Navigation Bar -->
+<div class="mob-nav">
+  <a href="tel:+919206014393"><i class="fas fa-phone-alt"></i> Call Us</a>
+  <a href="https://wa.me/919206014393" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a href="https://www.instagram.com/ifitformula/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  <a href="https://www.google.com/maps/dir/13.133429,78.1438274/I+FIT+FORMULA+SUPPLEMENT+STORE.,+44QJ%2BJ4M,+MB+Rd,+Raja+Nagar,+Kolar,+Karnataka+563101/@13.1373351,78.126197,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3badf1000be7688b:0xf69d11a3cfd9310e!2m2!1d78.1302951!2d13.1390758?entry=ttu&g_ep=EgoyMDI2MDgxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fas fa-map-marker-alt"></i> Map Directions</a>
+</div>
+
+<script>
+// Scroll Progress & Back to Top logic
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("scroll-progress").style.width = scrolled + "%";
+  
+  const btt = document.getElementById("back-to-top");
+  if (winScroll > 300) {
+    btt.classList.add("show");
+  } else {
+    btt.classList.remove("show");
+  }
+});
+
+document.getElementById("back-to-top").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
