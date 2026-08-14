@@ -75,7 +75,9 @@ nav.scrolled{background:rgba(8,8,8,0.98);}
 .hero-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(212,175,55,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,0.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 20s linear infinite;}
 @keyframes gridMove{from{background-position:0 0;}to{background-position:60px 60px;}}
 .hero-inner{position:relative;z-index:2;max-width:820px;width:100%;}
-.hero-logo{width:110px;height:110px;object-fit:contain;margin:0 auto 24px;filter:drop-shadow(0 0 28px rgba(212,175,55,0.55));animation:logoIn 0.9s cubic-bezier(0.16,1,0.3,1) both,logoFloat 5s ease-in-out infinite alternate 1s;}
+.hero-logo-wrap{width:clamp(180px,22vw,260px);height:clamp(180px,22vw,260px);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;position:relative;animation:logoIn 0.9s cubic-bezier(0.16,1,0.3,1) both,logoFloat 5s ease-in-out infinite alternate 1s;}
+.hero-logo-wrap::before{content:'';position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,0.18) 0%,rgba(212,175,55,0.05) 42%,transparent 72%);filter:blur(10px);pointer-events:none;}
+.hero-logo{position:relative;width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;filter:drop-shadow(0 0 28px rgba(212,175,55,0.55));}
 @keyframes logoIn{from{opacity:0;transform:scale(0.6);}to{opacity:1;transform:scale(1);}}
 @keyframes logoFloat{from{transform:translateY(0);}to{transform:translateY(-10px);}}
 .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);color:var(--red);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;padding:6px 18px;border-radius:30px;margin-bottom:20px;animation:fadeUp 0.7s ease 0.2s both;}
@@ -373,7 +375,9 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
   <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
   <div class="hero-inner">
-    <img src="ifitlogo.jpeg" alt="I FIT FORMULA" class="hero-logo"/>
+    <div class="hero-logo-wrap" aria-label="I FIT FORMULA logo">
+      <img src="ifitlogo.jpeg" alt="I FIT FORMULA" class="hero-logo" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&amp;fit=crop&amp;w=700&amp;q=85';"/>
+    </div>
     <div class="hero-badge">Kolar's Trusted Supplement Store</div>
     <h1>Fuel Your<br/><span class="red">Ambition.</span></h1>
     <p class="hero-sub">Kolar's destination for 100% genuine sports nutrition, supplements and wellness products. Get expert guidance from Ali Irfan — gym owner, trainer and nutrition advisor.</p>
@@ -444,7 +448,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
     </div>
     <div class="why-grid">
       <div class="why-card reveal">
-        <div class="why-card-img-wrap"><img src="genuine.png" alt="100% Genuine Products" loading="lazy"/></div>
+        <div class="why-card-img-wrap"><img src="genuine.png" alt="100% Genuine Products" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&amp;fit=crop&amp;w=1000&amp;q=85';"/></div>
         <div class="why-card-content">
           <div class="why-card-pill"><i class="fas fa-shield-alt"></i> Verified</div>
           <div class="why-card-title">100% Genuine</div>
@@ -452,7 +456,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
         </div>
       </div>
       <div class="why-card reveal d1">
-        <div class="why-card-img-wrap"><img src="bestprices.png" alt="Best Prices Guaranteed" loading="lazy"/></div>
+        <div class="why-card-img-wrap"><img src="bestprices.png" alt="Best Prices Guaranteed" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=1000&amp;q=85';"/></div>
         <div class="why-card-content">
           <div class="why-card-pill"><i class="fas fa-rupee-sign"></i> Best Price</div>
           <div class="why-card-title">Best Prices</div>
@@ -460,7 +464,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
         </div>
       </div>
       <div class="why-card reveal d2">
-        <div class="why-card-img-wrap"><img src="expertguidence.png" alt="Expert Guidance" loading="lazy"/></div>
+        <div class="why-card-img-wrap"><img src="expertguidence.png" alt="Expert Guidance" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=1000&amp;q=85';"/></div>
         <div class="why-card-content">
           <div class="why-card-pill"><i class="fas fa-user-graduate"></i> Expert</div>
           <div class="why-card-title">Expert Guidance</div>
@@ -468,7 +472,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
         </div>
       </div>
       <div class="why-card reveal d3">
-        <div class="why-card-img-wrap"><img src="homedelivery.png" alt="Home Delivery Kolar" loading="lazy"/></div>
+        <div class="why-card-img-wrap"><img src="homedelivery.png" alt="Home Delivery Kolar" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&amp;fit=crop&amp;w=1000&amp;q=85';"/></div>
         <div class="why-card-content">
           <div class="why-card-pill"><i class="fas fa-truck"></i> Fast Delivery</div>
           <div class="why-card-title">Home Delivery</div>
@@ -484,7 +488,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
     <div class="owner-img-col reveal">
       <div class="owner-accent-box"></div>
       <div class="owner-img-frame">
-        <img src="aliirfan.jpeg" alt="Ali Irfan — Founder, I FIT FORMULA" loading="lazy"/>
+        <img src="aliirfan.jpeg" alt="Ali Irfan — Founder, I FIT FORMULA" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=1000&amp;q=85';"/>
         <div class="owner-badge-float"><i class="fas fa-dumbbell"></i> &nbsp;Gym Owner &amp; Trainer</div>
       </div>
       <div class="owner-accent-box2"></div>
@@ -517,7 +521,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
     </div>
     <div class="experts-grid">
       <div class="expert-card reveal">
-        <div class="expert-img-wrap"><img src="Assets/massstrength.png" alt="Mass &amp; Strength Expert" loading="lazy"/></div>
+        <div class="expert-img-wrap"><img src="Assets/massstrength.png" alt="Mass &amp; Strength Expert" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&amp;fit=crop&amp;w=900&amp;q=85';"/></div>
         <div class="expert-content">
           <div class="expert-specialty"><i class="fas fa-dumbbell"></i> Muscle Building</div>
           <div class="expert-role">Bulking &amp; Mass Gain</div>
@@ -527,7 +531,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
         </div>
       </div>
       <div class="expert-card reveal d1">
-        <div class="expert-img-wrap"><img src="Assets/leanshred.png" alt="Lean &amp; Shred Expert" loading="lazy"/></div>
+        <div class="expert-img-wrap"><img src="Assets/leanshred.png" alt="Lean &amp; Shred Expert" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=900&amp;q=85';"/></div>
         <div class="expert-content">
           <div class="expert-specialty"><i class="fas fa-fire"></i> Fat Loss</div>
           <div class="expert-role">Cutting &amp; Shredding</div>
@@ -537,7 +541,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
         </div>
       </div>
       <div class="expert-card reveal d2">
-        <div class="expert-img-wrap"><img src="Assets/performrecover.png" alt="Perform &amp; Recover Expert" loading="lazy"/></div>
+        <div class="expert-img-wrap"><img src="Assets/performrecover.png" alt="Perform &amp; Recover Expert" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=900&amp;q=85';"/></div>
         <div class="expert-content">
           <div class="expert-specialty"><i class="fas fa-bolt"></i> Performance</div>
           <div class="expert-role">Energy &amp; Endurance</div>
@@ -547,7 +551,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
         </div>
       </div>
       <div class="expert-card reveal d3">
-        <div class="expert-img-wrap"><img src="Assets/vitaminhealth.png" alt="Vitamins &amp; Health Expert" loading="lazy"/></div>
+        <div class="expert-img-wrap"><img src="Assets/vitaminhealth.png" alt="Vitamins &amp; Health Expert" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&amp;fit=crop&amp;w=900&amp;q=85';"/></div>
         <div class="expert-content">
           <div class="expert-specialty"><i class="fas fa-heartbeat"></i> Wellness</div>
           <div class="expert-role">Daily Wellness</div>
@@ -634,12 +638,12 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
       <p class="sec-sub">Take a look inside our stores and check out some of our top products.</p>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal" data-action="open-lightbox" data-lb-index="0" data-lb-type="video" data-lb-src="vitaminstore.mp4"><video src="vitaminstore.mp4" autoplay loop muted playsinline></video><div class="gallery-overlay"></div><i class="fas fa-play-circle play-icon"></i></div>
-      <div class="gallery-item reveal d1" data-action="open-lightbox" data-lb-index="1" data-lb-type="image" data-lb-src="vitaminimg1.jpeg"><img src="vitaminimg1.jpeg" alt="I FIT FORMULA" loading="lazy"/><div class="gallery-overlay"></div></div>
-      <div class="gallery-item reveal d2" data-action="open-lightbox" data-lb-index="2" data-lb-type="video" data-lb-src="vitaminstore1.mp4"><video src="vitaminstore1.mp4" autoplay loop muted playsinline></video><div class="gallery-overlay"></div><i class="fas fa-play-circle play-icon"></i></div>
-      <div class="gallery-item reveal d3" data-action="open-lightbox" data-lb-index="3" data-lb-type="image" data-lb-src="vitaminimg2.jpeg"><img src="vitaminimg2.jpeg" alt="I FIT FORMULA" loading="lazy"/><div class="gallery-overlay"></div></div>
-      <div class="gallery-item reveal" data-action="open-lightbox" data-lb-index="4" data-lb-type="video" data-lb-src="vitaminstore3.mp4"><video src="vitaminstore3.mp4" autoplay loop muted playsinline></video><div class="gallery-overlay"></div><i class="fas fa-play-circle play-icon"></i></div>
-      <div class="gallery-item reveal d1" data-action="open-lightbox" data-lb-index="5" data-lb-type="image" data-lb-src="vitaminimg3.jpeg"><img src="vitaminimg3.jpeg" alt="I FIT FORMULA" loading="lazy"/><div class="gallery-overlay"></div></div>
+      <div class="gallery-item reveal" data-action="open-lightbox" data-lb-index="0" data-lb-type="video" data-lb-src="vitaminstore.mp4" data-lb-fallback="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"><video src="vitaminstore.mp4" poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" autoplay loop muted playsinline></video><div class="gallery-overlay"></div><i class="fas fa-play-circle play-icon"></i></div>
+      <div class="gallery-item reveal d1" data-action="open-lightbox" data-lb-index="1" data-lb-type="image" data-lb-src="vitaminimg1.jpeg" data-lb-fallback="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"><img src="vitaminimg1.jpeg" alt="I FIT FORMULA" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85';"/><div class="gallery-overlay"></div></div>
+      <div class="gallery-item reveal d2" data-action="open-lightbox" data-lb-index="2" data-lb-type="video" data-lb-src="vitaminstore1.mp4" data-lb-fallback="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"><video src="vitaminstore1.mp4" poster="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" autoplay loop muted playsinline></video><div class="gallery-overlay"></div><i class="fas fa-play-circle play-icon"></i></div>
+      <div class="gallery-item reveal d3" data-action="open-lightbox" data-lb-index="3" data-lb-type="image" data-lb-src="vitaminimg2.jpeg" data-lb-fallback="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"><img src="vitaminimg2.jpeg" alt="I FIT FORMULA" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=1200&amp;q=85';"/><div class="gallery-overlay"></div></div>
+      <div class="gallery-item reveal" data-action="open-lightbox" data-lb-index="4" data-lb-type="video" data-lb-src="vitaminstore3.mp4" data-lb-fallback="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"><video src="vitaminstore3.mp4" poster="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" autoplay loop muted playsinline></video><div class="gallery-overlay"></div><i class="fas fa-play-circle play-icon"></i></div>
+      <div class="gallery-item reveal d1" data-action="open-lightbox" data-lb-index="5" data-lb-type="image" data-lb-src="vitaminimg3.jpeg" data-lb-fallback="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"><img src="vitaminimg3.jpeg" alt="I FIT FORMULA" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&amp;fit=crop&amp;w=1200&amp;q=85';"/><div class="gallery-overlay"></div></div>
     </div>
   </div>
 </section>
@@ -701,10 +705,11 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo-wrap">
+              <div class="footer-logo-wrap">
         <img src="ifitlogo.jpeg" alt="I FIT FORMULA" class="footer-logo" loading="lazy"/>
-        <div class="footer-bname">Vitamin <span>Store</span></div>
+        <div class="footer-bname">I FIT <span>FORMULA</span></div>
       </div>
+
       <p class="footer-tagline">Owned by Ali Irfan — gym owner, trainer and nutrition advisor. Genuine supplements and expert guidance in Kolar.</p>
       <div class="social-row">
         <a href="https://www.instagram.com/ifitformula/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -748,20 +753,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:52px
       <a href="privacy.html">Privacy</a>
       <a href="refund.html">Refunds</a>
     </div>
-  </div>
-  <div style="max-width:1100px;margin:20px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;">
-    <a href="https://visionmatrixtech.com" target="_blank" rel="noopener noreferrer"
-       style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:6px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(0,229,255,0.15);border-radius:8px;transition:all 0.25s;"
-       onmouseover="this.style.borderColor='rgba(0,229,255,0.4)';this.style.background='rgba(0,229,255,0.07)'"
-       onmouseout="this.style.borderColor='rgba(0,229,255,0.15)';this.style.background='rgba(255,255,255,0.03)'">
-      <span style="font-size:12px;color:#555;font-weight:400;white-space:nowrap;">Designed &amp; Developed by</span>
-      <img src="visionmatrix.png" width="22" height="22" alt="VisionMatrix Tech" style="border-radius:5px;flex-shrink:0;"/>
-      <span style="font-size:13px;font-weight:700;letter-spacing:0.02em;display:inline-flex;align-items:center;white-space:nowrap;">
-        <span style="background:linear-gradient(90deg,#00E5FF,#00C853);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Vision</span>
-        <span style="color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;">Matrix</span>
-        <span style="color:#00E5FF;-webkit-text-fill-color:#00E5FF;margin-left:3px;">Tech</span>
-      </span>
-    </a>
   </div>
 </footer>
 
@@ -823,7 +814,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbNext       = document.getElementById('lb-next');
   const galleryItems = [];
   document.querySelectorAll('[data-action="open-lightbox"]').forEach(el => {
-    galleryItems.push({ type: el.getAttribute('data-lb-type'), src: el.getAttribute('data-lb-src') });
+    galleryItems.push({
+      type: el.getAttribute('data-lb-type'),
+      src: el.getAttribute('data-lb-src'),
+      fallback: el.getAttribute('data-lb-fallback')
+    });
+  });
+  document.querySelectorAll('.gallery-item video').forEach(video => {
+    video.addEventListener('error', () => {
+      const item = video.closest('.gallery-item');
+      const fallback = item && item.getAttribute('data-lb-fallback');
+      if (!fallback || video.dataset.fallbackUsed === '1') return;
+      video.dataset.fallbackUsed = '1';
+      const image = document.createElement('img');
+      image.src = fallback;
+      image.alt = 'I FIT FORMULA Gallery';
+      image.loading = 'lazy';
+      image.onerror = () => { image.onerror = null; image.src = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85'; };
+      video.replaceWith(image);
+      item.querySelector('.play-icon')?.remove();
+    });
   });
   let currentLbIndex = 0;
   function openLightbox(index) { currentLbIndex = index; renderLightbox(); lb.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
@@ -831,9 +841,39 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderLightbox() {
     const item = galleryItems[currentLbIndex];
     if (!item) return;
-    lbContainer.innerHTML = item.type === 'video'
-      ? `<video src="${item.src}" class="lightbox-content" autoplay controls playsinline></video>`
-      : `<img src="${item.src}" class="lightbox-content" alt="Gallery View"/>`;
+    lbContainer.innerHTML = '';
+    if (item.type === 'video') {
+      const video = document.createElement('video');
+      video.src = item.src;
+      video.className = 'lightbox-content';
+      video.autoplay = true;
+      video.controls = true;
+      video.playsInline = true;
+      video.poster = item.fallback || '';
+      video.onerror = () => {
+        if (!item.fallback || video.dataset.fallbackUsed === '1') return;
+        video.dataset.fallbackUsed = '1';
+        const image = document.createElement('img');
+        image.src = item.fallback;
+        image.className = 'lightbox-content';
+        image.alt = 'Gallery View';
+        image.onerror = () => { image.onerror = null; image.src = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85'; };
+        video.replaceWith(image);
+      };
+      lbContainer.appendChild(video);
+    } else {
+      const image = document.createElement('img');
+      image.src = item.src;
+      image.className = 'lightbox-content';
+      image.alt = 'Gallery View';
+      image.loading = 'eager';
+      image.onerror = () => {
+        if (!item.fallback || image.dataset.fallbackUsed === '1') return;
+        image.dataset.fallbackUsed = '1';
+        image.src = item.fallback;
+      };
+      lbContainer.appendChild(image);
+    }
   }
   function lbNavigate(dir) { currentLbIndex = (currentLbIndex + dir + galleryItems.length) % galleryItems.length; renderLightbox(); }
   lbPrev.addEventListener('click', (e) => { e.stopPropagation(); lbNavigate(-1); });
