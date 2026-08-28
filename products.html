@@ -1422,7 +1422,7 @@ function renderCard(p){
   var proteinPH=(p.protein&&p.protein!=='—')?'<div class="placeholder-protein">'+p.protein+'</div>':'';
   var imgHtml;
   if(p.img){
-    imgHtml='<img class="prod-img-real" src="'+p.img+'" alt="'+escAttr(p.brand+' '+p.name)+'"/>'+
+    imgHtml='<img class="prod-img-real" src="'+p.img+'" alt="'+escAttr(p.brand+' '+p.name)+'" onerror="var ph=document.getElementById(\'ph-'+p.id+'\');if(ph){ph.classList.add(\'show\');}this.style.display=\'none\';"/>'+
       '<div class="prod-img-placeholder" id="ph-'+p.id+'" style="background:'+p.gradient+'">'+
         '<i class="'+(p.icon||'fas fa-flask')+'"></i>'+
         '<div class="placeholder-brand-txt">'+escHtml(p.brand)+'</div>'+proteinPH+
