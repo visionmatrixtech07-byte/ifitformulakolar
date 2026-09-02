@@ -473,7 +473,7 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
 <div id="scroll-progress"></div>
 <!-- TALK BAR -->
 <div class="talk-bar">
-  <a href="https://wa.me/919949531515?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20supplement." target="_blank">
+  <a href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20supplement." target="_blank">
     <i class="fab fa-whatsapp"></i> Not sure what to buy? Get Free Advice
   </a>
 </div>
@@ -496,7 +496,7 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
       <i class="fas fa-shopping-cart"></i>
       <div class="cart-badge" id="cartBadge">0</div>
     </div>
-    <a href="https://wa.me/919949531515?text=Hi%2C%20I%20want%20a%20free%20supplement%20consultation." class="nav-cta" target="_blank">
+    <a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20a%20free%20supplement%20consultation." class="nav-cta" target="_blank">
       <i class="fab fa-whatsapp"></i> WhatsApp Us
     </a>
   </div>
@@ -546,7 +546,7 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
 
 <!-- ADVICE BAR -->
 <div class="advice-bar">
-  <a href="https://wa.me/919949531515?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20supplement%20for%20my%20goal." target="_blank">
+  <a href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20supplement%20for%20my%20goal." target="_blank">
     <i class="fab fa-whatsapp"></i>
     Not sure which product suits your goal? &nbsp;<span>Get free advice on WhatsApp &rarr;</span>
   </a>
@@ -702,7 +702,7 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
         <div class="order-success">
           <div class="order-success-icon"><i class="fas fa-check"></i></div>
           <h3>Order Sent!</h3>
-          <p>Your order has been sent to our WhatsApp. Our team will confirm the price shortly.<br/><br/>
+          <p id="orderSuccessMsg">Your order has been sent to our WhatsApp. Our team will confirm the price shortly.<br/><br/>
           Kolar: <strong style="color:var(--green);">within 2 hours</strong><br/>
           Within 50km: <strong style="color:var(--green);">8–24 hours</strong><br/><br/>
           Delivery charge: <strong style="color:var(--green);">₹20</strong></p>
@@ -1136,36 +1136,62 @@ function validateForm(){
   return valid;
 }
 
+/* ── ORDER ID GENERATOR ──
+   Format: IFF-YYMMDD-XXXX (date + random 4-digit code).
+   Shown to the customer on screen and included in both the
+   customer's WhatsApp message and the shop-owner copy, so both
+   sides can reference the exact same order. */
+function generateOrderId(){
+  var now = new Date();
+  var yy = String(now.getFullYear()).slice(-2);
+  var mm = String(now.getMonth()+1).padStart(2,'0');
+  var dd = String(now.getDate()).padStart(2,'0');
+  var rand = String(Math.floor(1000 + Math.random()*9000));
+  return 'IFF-'+yy+mm+dd+'-'+rand;
+}
+
 function submitOrder(){
   clearFormErrors();
   if(!validateForm()) return;
   var name = document.getElementById('custName').value.trim();
   var phone = document.getElementById('custPhone').value.trim();
   var address = document.getElementById('custAddress').value.trim();
+  var orderId = generateOrderId();
   var lines = [];
-  lines.push('🛒 *NEW ORDER — I FIT FORMULA*');
+  lines.push('NEW ORDER - I FIT FORMULA');
+  lines.push('Order ID: ' + orderId);
   lines.push('');
-  lines.push('👤 *Customer Details*');
+  lines.push('Customer Details');
   lines.push('Name: ' + name);
   lines.push('Phone: ' + phone);
   lines.push('Address: ' + address);
   lines.push('');
-  lines.push('📦 *Order Items*');
+  lines.push('Order Items');
   cart.forEach(function(item, idx){
     var meta = [];
     if(item.flavour && item.flavour!=='—') meta.push('Flavour: '+item.flavour);
     if(item.size && item.size!=='—') meta.push('Size: '+item.size);
-    lines.push((idx+1)+'. *'+item.brand+' — '+item.name+'*');
+    lines.push((idx+1)+'. '+item.brand+' - '+item.name);
     if(meta.length) lines.push('   '+meta.join(' | '));
     lines.push('   Qty: '+item.qty);
   });
   lines.push('');
-  lines.push('🛵 *Delivery Charge: ₹20*');
-  lines.push('⏱ Kolar: Within 2 Hours | Within 50km: 8–24 Hours');
+  lines.push('Delivery Charge: Rs 20');
+  lines.push('Kolar: Within 2 Hours | Within 50km: 8-24 Hours');
   lines.push('');
   lines.push('Please confirm product price and delivery time. Thank you!');
   var message = lines.join('\n');
-  var waUrl = 'https://wa.me/919949531515?text='+encodeURIComponent(message);
+  var waUrl = 'https://wa.me/919206014393?text='+encodeURIComponent(message);
+  var msgEl = document.getElementById('orderSuccessMsg');
+  if(msgEl){
+    msgEl.innerHTML =
+      'Your order has been sent to our WhatsApp. Our team will confirm the price shortly.<br/><br/>'+
+      'Your Order ID: <strong style="color:var(--green);">'+escHtml(orderId)+'</strong><br/>'+
+      '<span style="font-size:0.72rem;">Please quote this Order ID if you contact us.</span><br/><br/>'+
+      'Kolar: <strong style="color:var(--green);">within 2 hours</strong><br/>'+
+      'Within 50km: <strong style="color:var(--green);">8–24 hours</strong><br/><br/>'+
+      'Delivery charge: <strong style="color:var(--green);">₹20</strong>';
+  }
   document.getElementById('checkoutFormState').style.display='none';
   document.getElementById('checkoutSuccessState').style.display='block';
   window.open(waUrl, '_blank');
@@ -1231,449 +1257,4 @@ function getFlavourColor(f){
   if(f.includes('ice cream'))return '#E8D5A3';
   if(f.includes('rich chocolate'))return '#3D1C02';
   if(f.includes('unflavored')||f.includes('unflavoured'))return '#78909C';
-  if(f.includes('capsule')||f.includes('oral strips'))return '#90A4AE';
-  if(f.includes('multigrain')||f.includes('salted'))return '#8D6E63';
-  return '#616161';
-}
-
-function navigate(brand, cat){
-  if(brand && !cat){
-    var brandProds=PRODUCTS.filter(function(p){return p.brand===brand;});
-    var cats=[],seenCat={};
-    brandProds.forEach(function(p){if(!seenCat[p.cat]){seenCat[p.cat]=true;cats.push(p.cat);}});
-    if(cats.length===1){cat=cats[0];}
-  }
-  var hash;
-  if(!brand){hash='#/';}
-  else if(!cat){hash='#/'+slugify(brand);}
-  else{hash='#/'+slugify(brand)+'/'+cat;}
-  if(window.location.hash===hash){doRender(brand,cat);}
-  else{window.location.hash=hash;}
-}
-function navigateToL1(){navigate(null,null);}
-function navigateToL2(){navigate(appState.brand,null);}
-
-function parseAndRender(){
-  var raw=window.location.hash.replace(/^#\/?/,'');
-  var parts=raw?raw.split('/').filter(Boolean):[];
-  var brand=null,cat=null;
-  if(parts.length>=1){
-    brand=getBrandFromSlug(parts[0]);
-    if(brand&&parts.length>=2&&CAT_META[parts[1]]){cat=parts[1];}
-  }
-  if(appState.brand!==brand||appState.cat!==cat){
-    appState.search='';appState.sort='featured';appState.stockOnly=false;
-  }
-  doRender(brand,cat);
-}
-
-function doRender(brand,cat){
-  appState.brand=brand;appState.cat=cat;
-  appState.level=!brand?1:!cat?2:3;
-  render();
-}
-window.addEventListener('hashchange',parseAndRender);
-
-/* ── RENDER ORCHESTRATOR ── */
-function render(){
-  updateLevelHeader();
-  updateFilterBar();
-  updateAccessories();
-  updateStickyTop();
-  updateGlobalSearch();
-  if(appState.level===1){
-    if(globalSearchState.active){renderGlobalResults();}
-    else{renderBrandGrid();}
-  } else if(appState.level===2){renderCatGrid();}
-  else{renderProductGrid();}
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function updateStickyTop(){
-  var lh=document.getElementById('levelHeader');
-  var fb=document.getElementById('filterBar');
-  if(!lh||!fb)return;
-  setTimeout(function(){
-    var lhH=lh.style.display!=='none'?lh.offsetHeight:0;
-    fb.style.top=(66+lhH)+'px';
-  },10);
-}
-
-function updateLevelHeader(){
-  var lh=document.getElementById('levelHeader');
-  var inner=document.getElementById('levelHeaderInner');
-  if(appState.level===1){lh.style.display='none';return;}
-  lh.style.display='block';
-  var html='<button class="back-btn" onclick="history.back()"><i class="fas fa-arrow-left"></i> Back</button>';
-  html+='<div class="bc-divider"></div>';
-  html+='<div class="breadcrumb">';
-  html+='<span class="bc-item" onclick="navigateToL1()">All Brands</span>';
-  if(appState.level>=2&&appState.brand){
-    html+='<span class="bc-sep"><i class="fas fa-chevron-right"></i></span>';
-    if(appState.level===2){html+='<span class="bc-item active">'+escHtml(appState.brand)+'</span>';}
-    else{html+='<span class="bc-item" onclick="navigateToL2()">'+escHtml(appState.brand)+'</span>';}
-  }
-  if(appState.level===3&&appState.cat){
-    var meta=CAT_META[appState.cat]||{};
-    html+='<span class="bc-sep"><i class="fas fa-chevron-right"></i></span>';
-    html+='<span class="bc-item active">'+(meta.label||appState.cat)+'</span>';
-  }
-  html+='</div>';
-  inner.innerHTML=html;
-}
-
-function updateFilterBar(){
-  var fb=document.getElementById('filterBar');
-  fb.style.display=appState.level===3?'block':'none';
-  if(appState.level===3){
-    document.getElementById('searchInput').value=appState.search||'';
-    document.getElementById('sortSelect').value=appState.sort||'featured';
-    document.getElementById('stockToggle').classList.toggle('on',!!appState.stockOnly);
-    updateFilterChips();
-  }
-}
-
-function updateAccessories(){
-  var acc=document.getElementById('accessoriesSection');
-  acc.style.display=appState.level===1?'block':'none';
-  if(appState.level===1){renderAccessoriesGrid();}
-}
-
-function renderAccessoriesGrid(){
-  var grid=document.getElementById('accessoriesGrid');
-  if(!grid)return;
-  var accProds=PRODUCTS.filter(function(p){return p.cat==='accessories';});
-  if(accProds.length===0)return;
-  var cls=accProds.length>=4?'g4':accProds.length===3?'g3':'g2';
-  grid.innerHTML='<div class="prod-grid '+cls+'">'+accProds.map(renderCard).join('')+'</div>';
-}
-
-/* ── LEVEL 1: BRAND GRID ── */
-function renderBrandGrid(){
-  var grid=document.getElementById('mainGrid');
-  var brands=getUniqueBrands();
-  var html='<div class="brands-grid">';
-  brands.forEach(function(brand){
-    var prods=PRODUCTS.filter(function(p){return p.brand===brand;});
-    var catSeen={},cats=[];
-    prods.forEach(function(p){if(!catSeen[p.cat]){catSeen[p.cat]=true;cats.push(p.cat);}});
-    var col=BRAND_COLORS[brand]||{bg:'rgba(80,80,80,0.18)',color:'#AAAAAA'};
-    var initials=brandInitials(brand);
-    var logoUrl=(BRAND_LOGOS&&BRAND_LOGOS[brand])||'';
-    var bannerProd=prods.find(function(p){return p.img&&p.img!=='';});
-    var bannerHtml=bannerProd
-      ?('<div class="brand-card-banner"><div class="brand-card-banner-placeholder">'+initials+'</div><img src="'+bannerProd.img+'" alt="'+escAttr(brand)+' product" loading="lazy" decoding="async" onerror="this.remove()"/></div>')
-      :('<div class="brand-card-banner"><div class="brand-card-banner-placeholder">'+initials+'</div></div>');
-    var catPills=cats.slice(0,3).map(function(c){
-      var m=CAT_META[c]||{};
-      return '<span class="brand-cat-pill">'+(m.label||c)+'</span>';
-    }).join('');
-    if(cats.length>3)catPills+='<span class="brand-cat-pill">+'+(cats.length-3)+' more</span>';
-    var avatarVisual=logoUrl||(bannerProd&&bannerProd.img)||'';
-    var avatarInner='<span class="brand-avatar-fallback">'+initials+'</span>'+(avatarVisual?'<img class="brand-logo-img" src="'+avatarVisual+'" alt="'+escAttr(brand)+'" loading="lazy" decoding="async" onerror="this.remove()"/>':'');
-    var avatarBg=col.bg;
-    html+=
-      '<div class="brand-card" data-brand="'+escAttr(brand)+'" onclick="handleBrandClick(this)">'+
-        bannerHtml+
-        '<div class="brand-card-top">'+
-          '<div class="brand-card-avatar" style="background:'+avatarBg+';color:'+col.color+'">'+avatarInner+'</div>'+
-          '<div class="brand-card-name">'+escHtml(brand)+'</div>'+
-        '</div>'+
-        '<div class="brand-cats-row">'+catPills+'</div>'+
-        '<div class="brand-card-footer">'+
-          '<div class="bc-prod-count"><strong>'+prods.length+'</strong>product'+(prods.length>1?'s':'')+'</div>'+
-          '<div class="brand-arrow"><i class="fas fa-chevron-right"></i></div>'+
-        '</div>'+
-      '</div>';
-  });
-  html+='</div>';
-  grid.innerHTML=html;
-}
-function handleBrandClick(el){navigate(el.dataset.brand,null);}
-
-/* ── LEVEL 2: CATEGORY GRID ── */
-function renderCatGrid(){
-  var grid=document.getElementById('mainGrid');
-  var prods=PRODUCTS.filter(function(p){return p.brand===appState.brand;});
-  var catSeen={},cats=[];
-  prods.forEach(function(p){if(!catSeen[p.cat]){catSeen[p.cat]=true;cats.push(p.cat);}});
-  var metaOrder=Object.keys(CAT_META).filter(function(k){return k!=='all';});
-  cats.sort(function(a,b){return metaOrder.indexOf(a)-metaOrder.indexOf(b);});
-  var html='<div class="cats-grid">';
-  cats.forEach(function(cat){
-    var catProds=prods.filter(function(p){return p.cat===cat;});
-    var meta=CAT_META[cat]||{label:cat,icon:'fas fa-box'};
-    var repProd=catProds.find(function(p){return p.img&&p.img!=='';});
-    var imgHtml=repProd
-      ?('<div class="cat-card-img-full"><img src="'+repProd.img+'" alt="'+escAttr(appState.brand+' '+meta.label)+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'"/></div>')
-      :('<div class="cat-card-icon"><i class="'+meta.icon+'"></i></div>');
-    html+=
-      '<div class="cat-card" data-brand="'+escAttr(appState.brand)+'" data-cat="'+cat+'" onclick="handleCatClick(this)">'+
-        imgHtml+
-        '<div class="cat-card-name">'+meta.label+'</div>'+
-        '<div class="cat-card-count">'+catProds.length+' product'+(catProds.length>1?'s':'')+'</div>'+
-      '</div>';
-  });
-  html+='</div>';
-  grid.innerHTML=html;
-}
-function handleCatClick(el){navigate(el.dataset.brand,el.dataset.cat);}
-
-/* ── LEVEL 3: PRODUCT GRID ── */
-function getL3Products(){
-  var list=PRODUCTS.filter(function(p){return p.brand===appState.brand&&p.cat===appState.cat;});
-  if(appState.stockOnly){list=list.filter(function(p){return p.weights&&p.weights.some(function(w){return w.inStock;});});}
-  if(appState.search){
-    var q=appState.search.toLowerCase();
-    list=list.filter(function(p){
-      return p.name.toLowerCase().includes(q)||(p.flavours||[]).some(function(f){return f.toLowerCase().includes(q);})||(p.weights||[]).some(function(w){return w.size.toLowerCase().includes(q);});
-    });
-  }
-  switch(appState.sort){
-    case 'name_az':list.sort(function(a,b){return a.name.localeCompare(b.name);});break;
-    case 'protein_hl':list.sort(function(a,b){return parseProtein(b)-parseProtein(a);});break;
-    case 'instock':list.sort(function(a,b){var aS=(a.weights&&a.weights.some(function(w){return w.inStock;}))?1:0;var bS=(b.weights&&b.weights.some(function(w){return w.inStock;}))?1:0;return bS-aS;});break;
-    default:list.sort(function(a,b){return (b.featured?1:0)-(a.featured?1:0);});
-  }
-  return list;
-}
-
-function renderProductGrid(){
-  var grid=document.getElementById('mainGrid');
-  var list=getL3Products();
-  var cntEl=document.getElementById('prodCount');
-  if(cntEl)cntEl.textContent=list.length;
-  if(list.length===0){
-    grid.innerHTML='<div class="empty-state"><div class="empty-icon"><i class="fas fa-search"></i></div><div class="empty-title">No Products Found</div><div class="empty-sub">Try a different search or filter.<br/>Or ask us on WhatsApp!</div><a href="https://wa.me/919949531515" class="empty-wa" target="_blank"><i class="fab fa-whatsapp"></i> Ask on WhatsApp</a></div>';
-    return;
-  }
-  var cls=list.length>=4?'g4':list.length===3?'g3':'g2';
-  grid.innerHTML='<div class="prod-grid '+cls+'">'+list.map(renderCard).join('')+'</div>';
-}
-
-/* ── PRODUCT CARD RENDERER ── */
-function renderCard(p){
-  var hasStock=p.weights&&p.weights.some(function(w){return w.inStock;});
-  var defaultWIdx=(function(){
-    if(!p.weights)return 0;
-    var idx=p.weights.findIndex(function(w){return w.inStock;});
-    return idx>=0?idx:0;
-  })();
-  var defaultFlavour=(p.flavours&&p.flavours[0])||'—';
-  if(!cardState[p.id])cardState[p.id]={flavIdx:0,weightIdx:defaultWIdx};
-  var hasRealFlavours=p.flavours&&p.flavours.length>0&&p.flavours[0]!=='—';
-  var flavHtml='';
-  if(hasRealFlavours){
-    var swatchBtns=p.flavours.map(function(f,i){
-      return '<button class="flav-swatch'+(i===0?' active':'')+'" style="background:'+getFlavourColor(f)+'" title="'+escAttr(f)+'" onclick="selectFlavour(\''+p.id+'\','+i+')"></button>';
-    }).join('');
-    flavHtml='<div class="prod-selector-block">'+
-      '<div class="prod-selector-label">Variant &nbsp;<span class="selected-name" id="fsel-'+p.id+'">'+escHtml(defaultFlavour)+'</span></div>'+
-      '<div class="flav-swatches" id="fswatches-'+p.id+'">'+swatchBtns+'</div>'+
-      '</div>';
-  }
-  var hasRealWeights=p.weights&&p.weights.length>0&&!(p.weights.length===1&&p.weights[0].size==='—');
-  var weightHtml='';
-  if(hasRealWeights){
-    var pills=p.weights.map(function(w,i){
-      var cls='weight-pill';
-      if(i===defaultWIdx)cls+=' active';
-      if(!w.inStock)cls+=' oos';
-      var click=w.inStock?'onclick="selectWeight(\''+p.id+'\','+i+')"':'';
-      var dis=w.inStock?'':'disabled';
-      return '<button class="'+cls+'" '+click+' '+dis+'>'+escHtml(w.size)+'</button>';
-    }).join('');
-    weightHtml='<div class="prod-selector-block">'+
-      '<div class="prod-selector-label">Size / Weight</div>'+
-      '<div class="weight-pills" id="wpills-'+p.id+'">'+pills+'</div>'+
-      '</div>';
-  }
-  var proteinPH=(p.protein&&p.protein!=='—')?'<div class="placeholder-protein">'+p.protein+'</div>':'';
-  var imgHtml;
-  if(p.img){
-    imgHtml='<img class="prod-img-real" src="'+p.img+'" alt="'+escAttr(p.brand+' '+p.name)+'" loading="lazy" decoding="async" onerror="var ph=document.getElementById(\'ph-'+p.id+'\');if(ph){ph.classList.add(\'show\');}this.style.display=\'none\';"/>'+ 
-      '<div class="prod-img-placeholder" id="ph-'+p.id+'" style="background:'+p.gradient+'">'+
-        '<i class="'+(p.icon||'fas fa-flask')+'"></i>'+
-        '<div class="placeholder-brand-txt">'+escHtml(p.brand)+'</div>'+proteinPH+
-      '</div>';
-  } else {
-    imgHtml='<div class="prod-img-placeholder show" id="ph-'+p.id+'" style="background:'+p.gradient+'">'+
-      '<i class="'+(p.icon||'fas fa-flask')+'"></i>'+
-      '<div class="placeholder-brand-txt">'+escHtml(p.brand)+'</div>'+proteinPH+
-      '</div>';
-  }
-  var featBadge=p.featured?'<div class="badge-stack"><span class="badge badge-featured">\u2B50 Popular</span></div>':'';
-  var oosOverlay=!hasStock?'<div class="oos-overlay"><div class="oos-tag">Out of Stock</div></div>':'';
-  var proteinTag=(p.protein&&p.protein!=='—')?'<span class="prod-protein-tag">'+p.protein+'</span>':'';
-  var ctaIcon=hasStock?'fas fa-cart-plus':'fas fa-clock';
-  var ctaLabel=hasStock?'Add to Cart':'Out of Stock';
-  var ctaCls='prod-cta'+(!hasStock?' disabled':'');
-  var ctaClick=hasStock?'onclick="addToCart(\''+p.id+'\')"':'';
-
-  return '<div class="prod-card" id="card-'+p.id+'" itemscope itemtype="https://schema.org/Product">'+
-    '<meta itemprop="name" content="'+escAttr(p.brand+' '+p.name)+'"/>'+
-    '<meta itemprop="brand" content="'+escAttr(p.brand)+'"/>'+
-    '<div class="prod-img-wrap">'+imgHtml+oosOverlay+
-      '<div class="prod-badge-row"><span class="badge badge-brand">'+escHtml(p.brand)+'</span>'+featBadge+'</div>'+
-    '</div>'+
-    '<div class="prod-body">'+
-      '<div class="prod-brand-tag">'+escHtml(p.brand)+'</div>'+
-      '<div class="prod-name">'+escHtml(p.name)+'</div>'+
-      (p.tagline?'<div class="prod-tagline">'+escHtml(p.tagline)+'</div>':'')+
-      (proteinTag?'<div class="prod-meta">'+proteinTag+'</div>':'')+
-      flavHtml+
-      weightHtml+
-      '<div class="call-for-price"><i class="fas fa-phone-alt"></i> Call or WhatsApp for Price</div>'+
-      '<button class="'+ctaCls+'" id="cta-'+p.id+'" '+ctaClick+'>'+
-        '<i class="'+ctaIcon+'"></i> '+ctaLabel+
-      '</button>'+
-    '</div>'+
-  '</div>';
-}
-
-/* ── CARD INTERACTIONS ── */
-function selectFlavour(id,idx){
-  if(!cardState[id])cardState[id]={flavIdx:0,weightIdx:0};
-  cardState[id].flavIdx=idx;
-  document.querySelectorAll('#fswatches-'+id+' .flav-swatch').forEach(function(el,i){el.classList.toggle('active',i===idx);});
-  var p=PRODUCTS.find(function(x){return x.id===id;});
-  var nameEl=document.getElementById('fsel-'+id);
-  if(nameEl&&p)nameEl.textContent=p.flavours[idx]||'';
-}
-
-function selectWeight(id,idx){
-  if(!cardState[id])cardState[id]={flavIdx:0,weightIdx:0};
-  cardState[id].weightIdx=idx;
-  document.querySelectorAll('#wpills-'+id+' .weight-pill').forEach(function(el,i){el.classList.toggle('active',i===idx);});
-}
-
-/* ── L3 FILTER CONTROLS ── */
-function updateFilterChips(){
-  var wrap=document.getElementById('activeFilters');
-  if(!wrap)return;
-  var chips=[];
-  if(appState.search)chips.push('<span class="filter-chip" onclick="clearSearch()"><i class="fas fa-times"></i> "'+escHtml(appState.search)+'"</span>');
-  if(appState.stockOnly)chips.push('<span class="filter-chip" onclick="toggleStockFilter()"><i class="fas fa-times"></i> In Stock Only</span>');
-  if(appState.sort&&appState.sort!=='featured'){
-    var labels={name_az:'Name A\u2192Z',protein_hl:'Protein High\u2192Low',instock:'In Stock First'};
-    chips.push('<span class="filter-chip" onclick="resetSort()"><i class="fas fa-times"></i> '+(labels[appState.sort]||'')+'</span>');
-  }
-  if(chips.length>1)chips.push('<span class="clear-all-btn" onclick="clearAllFilters()">Clear All</span>');
-  wrap.innerHTML=chips.join('');
-}
-
-function clearSearch(){appState.search='';document.getElementById('searchInput').value='';renderProductGrid();updateFilterChips();}
-function resetSort(){appState.sort='featured';document.getElementById('sortSelect').value='featured';renderProductGrid();updateFilterChips();}
-function toggleStockFilter(){appState.stockOnly=!appState.stockOnly;document.getElementById('stockToggle').classList.toggle('on',appState.stockOnly);renderProductGrid();updateFilterChips();}
-function clearAllFilters(){appState.search='';appState.sort='featured';appState.stockOnly=false;document.getElementById('searchInput').value='';document.getElementById('sortSelect').value='featured';document.getElementById('stockToggle').classList.remove('on');renderProductGrid();updateFilterChips();}
-
-document.getElementById('searchInput').addEventListener('input',function(e){
-  if(appState.level!==3)return;
-  appState.search=e.target.value.trim();
-  renderProductGrid();updateFilterChips();
-});
-document.getElementById('sortSelect').addEventListener('change',function(e){
-  if(appState.level!==3)return;
-  appState.sort=e.target.value;
-  renderProductGrid();updateFilterChips();
-});
-
-/* ── ESCAPE HELPERS ── */
-function escHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
-function escAttr(s){return (s||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
-
-/* ── GLOBAL SEARCH (Level 1) ── */
-var globalSearchState = {active:false,query:'',cat:'all',sort:'featured'};
-
-function updateGlobalSearch(){
-  var bar=document.getElementById('globalSearchBar');
-  var gsInp=document.getElementById('globalSearchInput');
-  if(!bar)return;
-  if(appState.level===1){
-    bar.style.display='block';
-    if(gsInp)gsInp.value=globalSearchState.query;
-    buildCatPills();
-  } else {
-    bar.style.display='none';
-  }
-}
-
-function buildCatPills(){
-  var wrap=document.getElementById('catFilterPills');
-  if(!wrap)return;
-  wrap.innerHTML='';
-  var cats=['all','whey','preworkout','bcaa','creatine','fatburner','vitamins','bars','health','herbal','oats'];
-  var labels={all:'All',whey:'Whey',preworkout:'Pre-Workout',bcaa:'BCAA',creatine:'Creatine',fatburner:'Fat Burners',vitamins:'Vitamins',bars:'Protein Bars',health:'Health',herbal:'Herbal',oats:'Oats & Muesli'};
-  cats.forEach(function(c){
-    var btn=document.createElement('button');
-    btn.className='cat-filter-pill'+(globalSearchState.cat===c?' active':'');
-    btn.textContent=labels[c];
-    btn.setAttribute('data-cat',c);
-    btn.addEventListener('click',function(){setCatFilter(this.getAttribute('data-cat'));});
-    wrap.appendChild(btn);
-  });
-}
-
-function setCatFilter(cat){
-  globalSearchState.cat=cat;
-  globalSearchState.active=!!(globalSearchState.query||cat!=='all');
-  render();
-}
-
-function renderGlobalResults(){
-  var grid=document.getElementById('mainGrid');
-  var q=globalSearchState.query.toLowerCase();
-  var list=PRODUCTS.filter(function(p){
-    var matchQ=!q||(p.name.toLowerCase().includes(q)||p.brand.toLowerCase().includes(q)||(p.flavours||[]).some(function(f){return f.toLowerCase().includes(q);}));
-    var matchC=globalSearchState.cat==='all'||p.cat===globalSearchState.cat;
-    return matchQ&&matchC;
-  });
-  if(globalSearchState.sort==='name_az')list.sort(function(a,b){return a.name.localeCompare(b.name);});
-  else if(globalSearchState.sort==='instock')list.sort(function(a,b){
-    var aS=a.weights&&a.weights.some(function(w){return w.inStock;})?1:0;
-    var bS=b.weights&&b.weights.some(function(w){return w.inStock;})?1:0;
-    return bS-aS;
-  });
-  else list.sort(function(a,b){return (b.featured?1:0)-(a.featured?1:0);});
-  var cnt=document.getElementById('globalCount');
-  var cntWrap=document.getElementById('globalResultsCount');
-  if(cnt)cnt.textContent=list.length;
-  if(cntWrap)cntWrap.style.display='block';
-  if(list.length===0){
-    grid.innerHTML='<div class="empty-state"><div class="empty-icon"><i class="fas fa-search"></i></div><div class="empty-title">No Products Found</div><div class="empty-sub">Try different keywords.</div></div>';
-    return;
-  }
-  var cls=list.length>=4?'g4':list.length===3?'g3':'g2';
-  grid.innerHTML='<div class="prod-grid '+cls+'">'+list.map(renderCard).join('')+'</div>';
-}
-
-document.addEventListener('DOMContentLoaded',function(){
-  var inp=document.getElementById('globalSearchInput');
-  if(inp){
-    inp.addEventListener('input',function(e){
-      globalSearchState.query=e.target.value.trim();
-      globalSearchState.active=!!(globalSearchState.query||globalSearchState.cat!=='all');
-      var cnt=document.getElementById('globalResultsCount');
-      if(!globalSearchState.active&&cnt)cnt.style.display='none';
-      render();
-    });
-  }
-  var srt=document.getElementById('globalSort');
-  if(srt){
-    srt.addEventListener('change',function(e){
-      globalSearchState.sort=e.target.value;
-      if(globalSearchState.active)render();
-    });
-  }
-  updateCartUI();
-  renderCartBody();
-});
-
-document.getElementById('checkoutModal').addEventListener('click',function(e){
-  if(e.target===this) closeCheckout();
-});
-
-parseAndRender();
-</script>
-</body>
-</html>
+  if(f.includes('capsule')||f.includes('oral strips'))return 
