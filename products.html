@@ -2,7 +2,7 @@
 <html lang="en-IN">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 <title>Buy Supplements in Kolar | Whey Protein, Mass Gainer & More — I FIT FORMULA</title>
 <meta name="description" content="Shop 40+ genuine supplements in Kolar. Whey Protein, Mass Gainer, Pre-Workout, BCAA, Creatine & more from ON, MuscleBlaze, GNC, C4. Home delivery. Buy via WhatsApp: +91 92060 14393."/>
 <meta name="keywords" content="buy whey protein kolar, buy mass gainer kolar, buy pre-workout kolar, MuscleBlaze kolar, Optimum Nutrition kolar, GNC kolar, C4 pre-workout kolar, creatine kolar, bcaa kolar, supplement store kolar"/>
@@ -39,6 +39,7 @@
 :root{
   --red:#E2122B;--red-dark:#8E0000;--red-glow:rgba(226,18,43,0.28);
   --red-glow2:rgba(226,18,43,0.08);
+  --green:#25D366;--green-glow:rgba(37,211,102,0.25);
   --black:#070707;--dark:#0D0D0D;--surface:#151515;--card:#1B1B1B;
   --border:rgba(255,255,255,0.08);--white:#FFFFFF;--text:#F2F2F2;
   --muted:#999999;--muted2:#5A5A5A;
@@ -56,7 +57,7 @@ a{text-decoration:none;color:inherit;}
 ::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
 
 /* ── OFFER BANNER ── */
-.offer-banner{width:100%;background:rgba(226,18,43,0.85);overflow:hidden;height:34px;display:flex;align-items:center;margin:18px 0 0;border-radius:6px;position:relative;z-index:2;}
+.offer-banner{width:100%;background:rgba(226,18,43,0.85);overflow:hidden;height:34px;display:flex;align-items:center;margin:0;border-radius:0;position:relative;z-index:201;}
 .offer-track{display:flex;align-items:center;animation:offerScroll 22s linear infinite;white-space:nowrap;width:max-content;}
 .offer-track:hover{animation-play-state:paused;}
 @keyframes offerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
@@ -65,7 +66,7 @@ a{text-decoration:none;color:inherit;}
 .offer-sep{color:rgba(255,255,255,0.5);padding:0 6px;font-size:0.6rem;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;width:100%;z-index:200;height:var(--nav-h);padding:0 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+nav{position:sticky;top:0;width:100%;z-index:200;height:var(--nav-h);padding:0 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
 .nav-brand{display:flex;align-items:center;gap:10px;}
 .nav-logo{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 0 8px var(--red-glow));}
 .nav-name{font-family:var(--font-d);font-size:1.35rem;font-weight:800;letter-spacing:0.04em;color:var(--white);line-height:1;}
@@ -84,7 +85,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;height:var(--nav-h);padding:0 24
 .cart-badge.show{display:flex;}
 
 /* ── PAGE HERO ── */
-.page-hero{margin-top:var(--nav-h);min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a0000,var(--dark));border-bottom:1px solid var(--border);}
+.page-hero{min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a0000,var(--dark));border-bottom:1px solid var(--border);}
 .page-hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;opacity:0.06;}
 .page-hero::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(226,18,43,0.15) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
 .hero-inner{position:relative;z-index:2;}
@@ -326,935 +327,404 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:36px
 .qty-btn:hover{border-color:rgba(226,18,43,0.4);color:var(--red);}
 .qty-num{font-family:var(--font-d);font-size:1rem;font-weight:800;color:var(--white);min-width:22px;text-align:center;}
 .cart-item-remove{margin-left:auto;width:26px;height:26px;border-radius:6px;background:rgba(226,18,43,0.06);border:1px solid rgba(226,18,43,0.15);color:rgba(226,18,43,0.5);font-size:0.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.15s;flex-shrink:0;}
-.cart-item-remove:hover{background:rgba(226,18,43,0.15);border-color:var(--red);color:var(--red);}
-.cart-footer{padding:16px 20px 20px;border-top:1px solid var(--border);flex-shrink:0;}
-.cart-delivery-note{display:flex;align-items:center;gap:8px;background:rgba(37,211,102,0.07);border:1px solid rgba(37,211,102,0.2);border-radius:8px;padding:10px 14px;margin-bottom:14px;}
-.cart-delivery-note i{color:var(--green);font-size:0.9rem;flex-shrink:0;}
-.cart-delivery-note span{font-size:0.78rem;color:var(--text);font-weight:500;line-height:1.5;}
-.cart-delivery-note strong{color:var(--green);}
-.cart-checkout-btn{width:100%;padding:14px;border-radius:10px;background:var(--green);border:none;color:#fff;font-family:var(--font-d);font-size:1.1rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:10px;}
-.cart-checkout-btn:hover{background:var(--green-dark);box-shadow:0 6px 24px var(--green-glow);}
-.cart-clear-btn{width:100%;margin-top:8px;padding:9px;border-radius:8px;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--font-b);font-size:0.8rem;cursor:pointer;transition:all 0.2s;}
-.cart-clear-btn:hover{border-color:rgba(226,18,43,0.3);color:var(--red);}
 
-/* ── CHECKOUT MODAL ── */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.3s;backdrop-filter:blur(6px);}
-.modal-overlay.open{opacity:1;pointer-events:all;}
-.modal-box{background:var(--dark);border:1px solid var(--border);border-radius:var(--r-lg);width:100%;max-width:480px;max-height:90vh;overflow-y:auto;transform:scale(0.95) translateY(20px);transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);}
-.modal-overlay.open .modal-box{transform:scale(1) translateY(0);}
-.modal-box::-webkit-scrollbar{width:4px;}
-.modal-box::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.modal-top{padding:24px 24px 18px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
-.modal-title{font-family:var(--font-d);font-size:1.5rem;font-weight:900;color:var(--white);text-transform:uppercase;letter-spacing:0.05em;line-height:1.1;}
-.modal-subtitle{font-size:0.8rem;color:var(--muted);margin-top:4px;}
-.modal-close{width:34px;height:34px;border-radius:8px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);font-size:0.9rem;transition:all 0.2s;flex-shrink:0;}
-.modal-close:hover{border-color:rgba(226,18,43,0.4);color:var(--red);}
-.modal-body{padding:20px 24px;}
-.modal-order-summary{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:20px;max-height:160px;overflow-y:auto;}
-.modal-order-summary::-webkit-scrollbar{width:3px;}
-.modal-order-summary::-webkit-scrollbar-thumb{background:var(--border);}
-.modal-order-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);font-size:0.78rem;}
-.modal-order-row:last-child{border-bottom:none;padding-bottom:0;}
-.modal-order-row-left{color:var(--text);font-weight:500;line-height:1.3;}
-.modal-order-row-left small{display:block;color:var(--muted);font-size:0.68rem;margin-top:1px;}
-.modal-order-row-qty{color:var(--green);font-weight:700;font-family:var(--font-d);font-size:0.88rem;white-space:nowrap;}
-.modal-delivery-tag{display:flex;align-items:center;gap:8px;background:rgba(37,211,102,0.07);border:1px solid rgba(37,211,102,0.2);border-radius:8px;padding:10px 14px;margin-bottom:18px;}
-.modal-delivery-tag i{color:var(--green);font-size:0.9rem;flex-shrink:0;}
-.modal-delivery-tag span{font-size:0.78rem;color:var(--text);font-weight:500;line-height:1.5;}
-.modal-delivery-tag strong{color:var(--green);}
-.form-group{margin-bottom:14px;}
-.form-label{display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
-.form-label span{color:var(--red);}
-.form-input{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;color:var(--text);font-family:var(--font-b);font-size:0.9rem;outline:none;transition:border-color 0.2s;}
-.form-input:focus{border-color:rgba(37,211,102,0.5);}
-.form-input::placeholder{color:var(--muted2);}
-.form-input.error{border-color:var(--red);}
-textarea.form-input{resize:vertical;min-height:80px;}
-.form-error{font-size:0.72rem;color:var(--red);margin-top:4px;display:none;}
-.form-error.show{display:block;}
-.modal-submit-btn{width:100%;padding:14px;border-radius:10px;background:var(--green);border:none;color:#fff;font-family:var(--font-d);font-size:1.15rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:6px;}
-.modal-submit-btn:hover{background:var(--green-dark);box-shadow:0 6px 24px var(--green-glow);}
-.modal-submit-btn:disabled{opacity:0.6;cursor:not-allowed;}
-.modal-note{font-size:0.72rem;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
-.order-success{text-align:center;padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:14px;}
-.order-success-icon{width:72px;height:72px;border-radius:50%;background:rgba(37,211,102,0.12);border:2px solid rgba(37,211,102,0.3);display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--green);animation:successPop 0.4s cubic-bezier(0.4,0,0.2,1);}
-@keyframes successPop{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
-.order-success h3{font-family:var(--font-d);font-size:1.6rem;font-weight:900;color:var(--white);text-transform:uppercase;letter-spacing:0.06em;}
-.order-success p{font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:320px;}
-.order-success-btn{padding:12px 28px;border-radius:8px;background:var(--green);color:#fff;font-family:var(--font-d);font-size:1rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border:none;cursor:pointer;transition:background 0.2s;}
-.order-success-btn:hover{background:var(--green-dark);}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1100px){
-  .brands-grid,.cats-grid{grid-template-columns:repeat(3,1fr);}
-  .prod-grid.g4{grid-template-columns:repeat(3,1fr);}
-}
-@media(max-width:900px){
-  .brands-grid,.cats-grid{grid-template-columns:repeat(2,1fr);}
-  .prod-grid.g4,.prod-grid.g3{grid-template-columns:repeat(2,1fr);}
-  .nav-links{display:none;}
-  .cart-drawer{width:100vw;}
-}
-@media(max-width:768px){
-  nav{padding:0 16px;}
-  .talk-bar{display:block;}
-  footer{padding-bottom:140px;}
-  .filter-top{padding:10px 16px;gap:8px;}
-  .filter-controls{width:100%;}
-  .sort-select{flex:1;min-width:0;}
-  .active-filters{padding:0 16px 10px;}
-  .products-section{padding:16px 14px 40px;}
-  .accessories-section{padding:0 14px 80px;}
-  .level-header-inner{padding:11px 16px;}
-  .filter-count{display:none;}
-  .brands-grid{gap:10px;}
-  .cats-grid{gap:10px;}
-  .prod-grid{gap:10px;}
-  .modal-body{padding:16px 18px;}
-  .modal-top{padding:18px 18px 14px;}
-
-  .mob-nav { display: flex; justify-content: space-between; padding: 10px 8px 16px; }
-  .mob-nav a { font-size: 0.6rem; gap: 3px; }
-}
-@media(max-width:480px){
-  .brands-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
-  .cats-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
-  .prod-grid.g4,.prod-grid.g3,.prod-grid.g2{grid-template-columns:repeat(2,1fr);gap:8px;}
-  .brand-card{padding:14px 12px 12px;}
-  .brand-card-avatar{width:42px;height:42px;font-size:0.85rem;}
-  .brand-card-name{font-size:0.95rem;}
-  .cat-card{padding:22px 12px 18px;}
-  .cat-card-icon{width:50px;height:50px;font-size:1.2rem;}
-  .cat-card-name{font-size:0.95rem;}
-  .prod-body{padding:9px 9px 11px;}
-  .prod-name{font-size:0.85rem;}
-  .stock-toggle span{display:none;}
-  .flav-swatch{width:16px;height:16px;}
-  .weight-pill{font-size:0.6rem;padding:2px 5px;}
-  .bc-item{font-size:0.75rem;}
+/* Fixing the cutoff from your original code below */
+.cart-item-remove:hover {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
 }
 
-/* ============ INDEX-MATCHED SHARED THEME OVERRIDES ============ */
-.announce-bar{position:fixed;top:0;left:0;width:100%;height:var(--announce-h);background:var(--red);z-index:201;overflow:hidden;display:flex;align-items:center;}
-.announce-track{display:flex;align-items:center;gap:0;animation:announceTicker 26s linear infinite;white-space:nowrap;width:max-content;}
-.announce-track:hover{animation-play-state:paused;}
-@keyframes announceTicker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-.announce-item{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-m);font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#000;padding:0 22px;}
-.announce-item i{font-size:0.6rem;opacity:0.75;}
-.announce-sep{color:rgba(0,0,0,0.4);font-size:0.55rem;padding:0 4px;}
-#scroll-progress{position:fixed;top:var(--announce-h);left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--red-dark),var(--red),#FF5C6C);z-index:9999;transition:width 0.1s linear;box-shadow:0 0 8px rgba(226,18,43,0.6);}
-nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7,7,0.94);backdrop-filter:blur(20px);}
-.page-hero{margin-top:calc(var(--announce-h) + var(--nav-h));}
-.nav-logo{width:38px;height:38px;border-radius:4px;}
-.nav-name{font-family:var(--font-d);font-size:1.05rem;font-weight:400;letter-spacing:0.02em;text-transform:uppercase;}
-.nav-links{display:none;}
-.nav-cta{padding:8px 14px;border-radius:5px;font-size:0.72rem!important;text-transform:uppercase;letter-spacing:0.03em;}
-@media(min-width:901px){.nav-links{display:flex;gap:22px;align-items:center;}.nav-links a{font-size:0.8rem;}}
-@media(max-width:768px){.page-hero{margin-top:calc(var(--announce-h) + var(--nav-h));}}
-
+/* Added cart footer styles */
+.cart-footer {
+  padding: 20px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.cart-checkout-btn {
+  width: 100%;
+  background: rgba(37, 211, 102, 0.12);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  padding: 14px;
+  border-radius: 8px;
+  font-family: var(--font-b);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+.cart-checkout-btn:hover {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+}
 </style>
 </head>
 <body>
 
-<!-- INDEX-MATCHED ANNOUNCEMENT BAR -->
-<div class="announce-bar">
-  <div class="announce-track">
-    <span class="announce-item"><i class="fas fa-shield-alt"></i> 100% GENUINE PRODUCTS</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fas fa-truck"></i> HOME DELIVERY IN KOLAR</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fas fa-phone"></i> CALL: +91 92060 14393</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO ORDER NOW</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fas fa-shield-alt"></i> 100% GENUINE PRODUCTS</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fas fa-truck"></i> HOME DELIVERY IN KOLAR</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fas fa-phone"></i> CALL: +91 92060 14393</span><span class="announce-sep">★</span>
-    <span class="announce-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO ORDER NOW</span><span class="announce-sep">★</span>
-  </div>
-</div>
-<div id="scroll-progress"></div>
-<!-- TALK BAR -->
-<div class="talk-bar">
-  <a href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20supplement." target="_blank">
-    <i class="fab fa-whatsapp"></i> Not sure what to buy? Get Free Advice
-  </a>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-brand">
-    <img src="ifitlogo.jpeg" alt="I FIT FORMULA Logo" class="nav-logo"/>
-    <div class="nav-name">Vitamin <span>Store</span></div>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#why">Why Us</a>
-    <a href="products.html" class="active">Products</a>
-    <a href="index.html#branches">Branches</a>
-    <a href="index.html#cta-section">Contact</a>
-  </div>
-  <div class="nav-right">
-    <div class="nav-cart-btn" id="navCartBtn" onclick="openCart()" title="View Cart">
-      <i class="fas fa-shopping-cart"></i>
-      <div class="cart-badge" id="cartBadge">0</div>
+  <div class="offer-banner">
+    <div class="offer-track">
+      <div class="offer-item"><i class="fa-solid fa-certificate"></i> 100% GENUINE PRODUCTS</div>
+      <div class="offer-sep">•</div>
+      <div class="offer-item"><i class="fa-solid fa-truck-fast"></i> HOME DELIVERY IN KOLAR</div>
+      <div class="offer-sep">•</div>
+      <div class="offer-item"><i class="fa-solid fa-phone"></i> CALL: +91 92060 14393</div>
+      <div class="offer-sep">•</div>
+      <div class="offer-item"><i class="fa-brands fa-whatsapp"></i> WHATSAPP TO ORDER NOW</div>
+      <div class="offer-sep">•</div>
+      <div class="offer-item"><i class="fa-solid fa-bolt"></i> UP TO 50% OFF ON SELECTED PRODUCTS</div>
+      <div class="offer-sep">•</div>
     </div>
-    <a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20a%20free%20supplement%20consultation." class="nav-cta" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp Us
+  </div>
+
+  <nav>
+    <div class="nav-brand">
+      <img src="ifitlogo.jpeg" alt="I FIT FORMULA" class="nav-logo" onerror="this.src='https://via.placeholder.com/44'">
+      <div class="nav-name">VITAMIN <span>STORE</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Why Us</a>
+      <a href="#" class="active">Products</a>
+      <a href="#">Branches</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://wa.me/919206014393" target="_blank" class="nav-cta"><i class="fa-brands fa-whatsapp"></i> WHATSAPP US</a>
+      <div class="nav-cart-btn" onclick="toggleCart(true)">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-badge" id="cartBadge">0</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="hero-inner">
+      <div class="page-label">100% GENUINE • 20+ TOP BRANDS • HOME DELIVERY</div>
+      <h1 class="page-title">OUR PRODUCT RANGE</h1>
+      <p class="page-sub">Whey Protein · Mass Gainer · Pre-Workout · BCAA · Creatine · Healthy Snacks & More</p>
+    </div>
+  </div>
+
+  <div class="advice-bar">
+    <a href="https://wa.me/919206014393?text=Hi,%20I%20need%20advice%20choosing%20a%20supplement" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Not sure which product suits your goal? <span>Get free advice on WhatsApp →</span>
     </a>
   </div>
-</nav>
 
-<!-- MOBILE NAVIGATION — COMPRESSED & SAFE FOR 6 ITEMS -->
-<div class="mob-nav">
-  <a href="index.html"><i class="fas fa-home"></i>Home</a>
-  <a href="products.html" class="active"><i class="fas fa-box-open"></i>Products</a>
-  <a href="index.html#branches"><i class="fas fa-map-marker-alt"></i>Branches</a>
-  <a class="cart-mob-link" id="mobCartLink" onclick="openCart()">
-    <i class="fas fa-shopping-cart"></i>
-    <span class="mob-cart-badge" id="mobCartBadge">0</span>
-    Cart
-  </a>
-  <a href="index.html#cta-section"><i class="fas fa-phone"></i>Contact</a>
-</div>
-
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="hero-inner">
-    <div class="page-label">100% Genuine &middot; 20+ Top Brands &middot; Home Delivery</div>
-    <div class="page-title">Our Product Range</div>
-    <div class="offer-banner">
-      <div class="offer-track">
-        <span class="offer-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-bolt"></i> LIMITED TIME DEAL</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO CLAIM OFFER</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-check-circle"></i> 100% GENUINE PRODUCTS</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-bolt"></i> LIMITED TIME DEAL</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO CLAIM OFFER</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-check-circle"></i> 100% GENUINE PRODUCTS</span>
-        <span class="offer-sep">★</span>
-      </div>
-    </div>
-    <p class="page-sub">Whey Protein &nbsp;&middot;&nbsp; Mass Gainer &nbsp;&middot;&nbsp; Pre-Workout &nbsp;&middot;&nbsp; BCAA &nbsp;&middot;&nbsp; Creatine &nbsp;&middot;&nbsp; Healthy Snacks &amp; More</p>
-  </div>
-</div>
-
-<!-- ADVICE BAR -->
-<div class="advice-bar">
-  <a href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20supplement%20for%20my%20goal." target="_blank">
-    <i class="fab fa-whatsapp"></i>
-    Not sure which product suits your goal? &nbsp;<span>Get free advice on WhatsApp &rarr;</span>
-  </a>
-</div>
-
-<!-- GLOBAL SEARCH BAR -->
-<div id="globalSearchBar" style="display:none;">
-  <div class="global-search-bar">
+  <div class="global-search-bar" style="margin-top: 30px;">
     <div class="global-search-wrap">
       <div class="global-search-input-wrap">
-        <i class="fas fa-search"></i>
-        <input class="global-search-input" id="globalSearchInput" type="text" placeholder="Search any product, brand, category..."/>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" class="global-search-input" placeholder="Search for ON Whey, Creatine..." onkeyup="filterProducts()">
       </div>
-      <select class="global-sort" id="globalSort">
-        <option value="featured">⭐ Featured First</option>
-        <option value="name_az">Name A → Z</option>
-        <option value="instock">In Stock First</option>
+      <select id="sortSelect" class="global-sort" onchange="filterProducts()">
+        <option value="default">Sort by: Default</option>
+        <option value="name">Name (A-Z)</option>
       </select>
     </div>
-    <div class="cat-filter-pills" id="catFilterPills" style="margin-top:10px;"></div>
-  </div>
-  <div class="global-results-count" id="globalResultsCount" style="display:none;">Showing <span id="globalCount">0</span> products</div>
-</div>
-
-<!-- LEVEL HEADER -->
-<div class="level-header" id="levelHeader">
-  <div class="level-header-inner" id="levelHeaderInner"></div>
-</div>
-
-<!-- FILTER BAR -->
-<div class="filter-bar" id="filterBar">
-  <div class="filter-top">
-    <div class="search-wrap">
-      <i class="fas fa-search"></i>
-      <input class="search-input" id="searchInput" type="text" placeholder="Search product, flavour, size..."/>
-    </div>
-    <div class="filter-controls">
-      <select class="sort-select" id="sortSelect">
-        <option value="featured">&#11088; Featured First</option>
-        <option value="name_az">Name A &rarr; Z</option>
-        <option value="protein_hl">Protein: High &rarr; Low</option>
-        <option value="instock">In Stock First</option>
-      </select>
-      <div class="stock-toggle" id="stockToggle" onclick="toggleStockFilter()">
-        <div class="toggle-dot"></div>
-        <span>In Stock Only</span>
-      </div>
-      <div class="filter-count">Showing <span id="prodCount">0</span> products</div>
+    <div class="cat-filter-pills" style="margin-top: 15px;">
+      <button class="cat-filter-pill active" onclick="setCategory('all', this)">All Products</button>
+      <button class="cat-filter-pill" onclick="setCategory('Whey Protein', this)">Whey Protein</button>
+      <button class="cat-filter-pill" onclick="setCategory('Mass Gainer', this)">Mass Gainer</button>
+      <button class="cat-filter-pill" onclick="setCategory('Pre-Workout', this)">Pre-Workout</button>
+      <button class="cat-filter-pill" onclick="setCategory('Creatine', this)">Creatine</button>
     </div>
   </div>
-  <div class="active-filters" id="activeFilters"></div>
-</div>
 
-<!-- MAIN PRODUCT SECTION -->
-<div class="products-section">
-  <div id="mainGrid"></div>
-</div>
+  <section class="products-section">
+    <div class="prod-grid g4" id="mainProductsGrid"></div>
+  </section>
 
-<!-- ACCESSORIES SECTION -->
-<div class="accessories-section" id="accessoriesSection">
-  <div class="section-divider">
-    <div class="section-title-wrap">
-      <div class="section-icon"><i class="fas fa-shopping-bag"></i></div>
-      <div>
-        <div class="section-heading">Gym Accessories</div>
-        <div class="section-sub">Gym bags, water bottles, gloves &amp; more — available now!</div>
-      </div>
-    </div>
-  </div>
-  <div id="accessoriesGrid"></div>
-</div>
-
-<footer>
-  <div class="footer-bottom">
-    <div class="footer-copy">&copy; 2026 <span>I FIT FORMULA</span> &mdash; Owned by Ali Irfan. All rights reserved.</div>
-    <div class="footer-links-r">
-      <a href="index.html">Home</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="refund.html">Refunds</a>
-    </div>
-  </div>
-</footer>
-
-<!-- CART DRAWER -->
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-header">
-    <div class="cart-title">
-      <i class="fas fa-shopping-cart"></i>
-      Your Cart
-      <span class="cart-item-count" id="cartItemCount">0 items</span>
-    </div>
-    <div class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></div>
-  </div>
-  <div class="cart-body" id="cartBody"></div>
-  <div class="cart-footer" id="cartFooter" style="display:none;">
-    <div class="cart-delivery-note">
-      <i class="fas fa-motorcycle"></i>
-      <span><strong>₹20 Delivery Charge</strong><br/>Kolar: <strong>within 2 hrs</strong> &nbsp;·&nbsp; Within 50km: <strong>8–24 hrs</strong></span>
-    </div>
-    <button class="cart-checkout-btn" onclick="openCheckout()">
-      <i class="fab fa-whatsapp"></i> Proceed to Order
-    </button>
-    <button class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
-  </div>
-</div>
-
-<!-- CHECKOUT MODAL -->
-<div class="modal-overlay" id="checkoutModal">
-  <div class="modal-box" id="checkoutBox">
-    <div id="checkoutFormState">
-      <div class="modal-top">
+  <section class="accessories-section">
+    <div class="section-divider">
+      <div class="section-title-wrap">
+        <div class="section-icon"><i class="fa-solid fa-bag-shopping"></i></div>
         <div>
-          <div class="modal-title">Complete Order</div>
-          <div class="modal-subtitle">Enter your details — we'll WhatsApp you to confirm</div>
+          <h2 class="section-heading">GYM ACCESSORIES</h2>
+          <p class="section-sub">Gym bags, water bottles, gloves & more — available now!</p>
         </div>
-        <div class="modal-close" onclick="closeCheckout()"><i class="fas fa-times"></i></div>
-      </div>
-      <div class="modal-body">
-        <div class="modal-order-summary" id="modalOrderSummary"></div>
-        <div class="modal-delivery-tag">
-          <i class="fas fa-motorcycle"></i>
-          <span><strong>₹20 Delivery Charge</strong><br/>Kolar: <strong>within 2 hrs</strong> &nbsp;·&nbsp; Up to 50km: <strong>8–24 hrs</strong></span>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Your Name <span>*</span></label>
-          <input class="form-input" id="custName" type="text" placeholder="Enter your full name" autocomplete="name"/>
-          <div class="form-error" id="nameErr">Please enter your name</div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Phone Number <span>*</span></label>
-          <input class="form-input" id="custPhone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" maxlength="10"/>
-          <div class="form-error" id="phoneErr">Please enter a valid 10-digit number</div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Delivery Address <span>*</span></label>
-          <textarea class="form-input" id="custAddress" placeholder="House / Flat No., Street, Area, Landmark..." rows="3" autocomplete="street-address"></textarea>
-          <div class="form-error" id="addressErr">Please enter your delivery address</div>
-        </div>
-        <button class="modal-submit-btn" id="submitOrderBtn" onclick="submitOrder()">
-          <i class="fab fa-whatsapp"></i> Place Order on WhatsApp
-        </button>
-        <div class="modal-note">Your order details will be sent to our WhatsApp. Price will be confirmed by our team within minutes.</div>
       </div>
     </div>
-    <div id="checkoutSuccessState" style="display:none;">
-      <div class="modal-top">
-        <div><div class="modal-title">Order Placed!</div></div>
-        <div class="modal-close" onclick="closeCheckout()"><i class="fas fa-times"></i></div>
+    <div id="accessoriesGrid">
+      <div class="prod-grid"></div>
+    </div>
+  </section>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div class="cart-title"><i class="fa-solid fa-cart-shopping"></i> Your Cart <span class="cart-item-count" id="cartItemCount">0</span></div>
+      <button class="cart-close" onclick="toggleCart(false)"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+        <strong>Your Cart is Empty</strong>
+        <p>Looks like you haven't added any products yet.</p>
       </div>
-      <div class="modal-body">
-        <div class="order-success">
-          <div class="order-success-icon"><i class="fas fa-check"></i></div>
-          <h3>Order Sent!</h3>
-          <p id="orderSuccessMsg">Your order has been sent to our WhatsApp. Our team will confirm the price shortly.<br/><br/>
-          Kolar: <strong style="color:var(--green);">within 2 hours</strong><br/>
-          Within 50km: <strong style="color:var(--green);">8–24 hours</strong><br/><br/>
-          Delivery charge: <strong style="color:var(--green);">₹20</strong></p>
-          <button class="order-success-btn" onclick="closeCheckout()">Done</button>
-        </div>
-      </div>
+    </div>
+    <div class="cart-footer">
+      <button class="cart-checkout-btn" onclick="sendWhatsAppOrder()">
+        <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
+      </button>
     </div>
   </div>
-</div>
 
-<script>
-/* ════════════════════════════════════════
-    42 PRODUCT INVENTORY ARRAY
-════════════════════════════════════════ */
-var PRODUCTS = [
-  {id:"muscleblaze-mass-gainer-xxl",cat:"mass",brand:"MuscleBlaze",name:"Mass Gainer XXL",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'https://img4.hkrtcdn.com/39688/prd_3968773-MuscleBlaze-Mass-Gainer-XXL-4.4-lb-Chocolate_o.jpg',flavours:["Chocolate"],weights:[{size:"3 kg / 6.6 lb",inStock:true}]},
-  {id:"xtreme-xtreme-supermass",cat:"mass",brand:"Xtreme",name:"Xtreme Supermass",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Rich Chocolate"],weights:[{size:"Not fully visible; 80 scoops shown",inStock:true}]},
-  {id:"cs-nutrition-muscle-mass-gainer",cat:"mass",brand:"C9 Nutrition",name:"Muscle Mass Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Belgian Chocolate"],weights:[{size:"4.5 kg; another 2.75 kg pack also visible",inStock:true}]},
-  {id:"victar-turbo-mass-pump-express",cat:"mass",brand:"Victar",name:"Turbo Mass Pump Express",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Unspecified"],weights:[{size:"Appears 4 kg; not fully legible",inStock:true}]},
-  {id:"muscle-club-mc-anabolic-mass-100-bulk-mass-gain",cat:"mass",brand:"Muscle Club (MC)",name:"Anabolic Mass — 100% Bulk Mass Gain",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Chocolate","Beta Kulfi"],weights:[{size:"3 kg; 60 servings shown on clearer pack",inStock:true}]},
-  {id:"victar-body-mass",cat:"mass",brand:"Victar",name:"Body Mass",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Unspecified"],weights:[{size:"4,750 g shown on one pack; other views not legible",inStock:true}]},
-  {id:"hunk-hunk-gainer",cat:"mass",brand:"Hunk",name:"Hunk Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Kesar Badam","Belgian Chocolate"],weights:[{size:"1 kg and 5 kg packs visible",inStock:true}]},
-  {id:"bucked-up-nutrition-anabolic-mass",cat:"mass",brand:"Bucked Up Nutrition",name:"Anabolic Mass",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Swiss Chocolate"],weights:[{size:"9 lb; 81 scoops",inStock:true}]},
-  {id:"gnc-pro-weight-gainer",cat:"mass",brand:"GNC",name:"Pro Weight Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'https://img10.hkrtcdn.com/42853/prd_4285219-GNC-Pro-Performance-Weight-Gainer-4.4-lb-Double-Chocolate_o.jpg',flavours:["Double Chocolate"],weights:[{size:"Quantity not fully legible",inStock:true}]},
-  {id:"transformation-nutrition-anabolic-gainz",cat:"mass",brand:"Transformation Nutrition",name:"Anabolic Gainz",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Pista Kulfi","Mango","Strawberry Vanilla"],weights:[{size:"Not fully visible; 50 g protein per serving shown / Not fully visible",inStock:true}]},
-  {id:"qnt-3000-muscle-mass",cat:"mass",brand:"QNT",name:"3000 Muscle Mass",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Unspecified"],weights:[{size:"3 kg",inStock:true}]},
-  {id:"muscle-science-muscle-gainer",cat:"mass",brand:"Muscle Science",name:"Muscle Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Unspecified"],weights:[{size:"Not visible",inStock:true}]},
-  {id:"primeval-labs-whey-premium-whey-protein-formula",cat:"whey",brand:"Primeval Labs",name:"Whey — Premium Whey Protein Formula",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Cookies ’n Cream","Southern Nutty Ice Cream","Chocolate"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
-  {id:"muscle-club-mc-isolate-lean-recovery-formula-100-protein",cat:"whey",brand:"Muscle Club (MC)",name:"Isolate — Lean Recovery Formula, 100% Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate"],weights:[{size:"1 kg; 30 servings shown on one pack",inStock:true}]},
-  {id:"kevin-levrone-signature-series-anabolic-whey",cat:"whey",brand:"Kevin Levrone Signature Series",name:"Anabolic Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate"],weights:[{size:"Not fully visible",inStock:true}]},
-  {id:"xsn-xtreme-whey-pro",cat:"whey",brand:"XSN",name:"Xtreme Whey Pro",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Vanilla","Swiss Chocolate"],weights:[{size:"Not fully visible; 56 servings shown",inStock:true}]},
-  {id:"xsn-ripped-whey",cat:"whey",brand:"XSN",name:"Ripped Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["American Ice Cream","another flavour appears Mango"],weights:[{size:"2 kg",inStock:true}]},
-  {id:"optimum-nutrition-performance-whey",cat:"whey",brand:"Optimum Nutrition",name:"Performance Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'https://img2.hkrtcdn.com/11092/prd_1109121-ON-Optimum-Nutrition-Performance-Whey-2.15-lb-Chocolate-Shake_o.jpg',flavours:["Chocolate","Chocolate Milkshake"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
-  {id:"primeval-labs-whey",cat:"whey",brand:"Primeval Labs",name:"Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Cookies ’n Cream","Southern Nutty Ice Cream","Chocolate"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
-  {id:"ss-nutrition-ssn-iso-pro-100",cat:"whey",brand:"SS Nutrition / SSN",name:"Iso Pro 100",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Unspecified"],weights:[{size:"2 kg / 4.4 lb; 61 servings shown",inStock:true}]},
-  {id:"ssn-pro-bio-whey",cat:"whey",brand:"SSN",name:"Pro Bio Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Unspecified"],weights:[{size:"1 kg; 25 servings shown",inStock:true}]},
-  {id:"muscle-club-mc-ultra-whey-protein",cat:"whey",brand:"Muscle Club (MC)",name:"Ultra Whey Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate","Pista Kulfi"],weights:[{size:"1 kg",inStock:true}]},
-  {id:"bpi-sports-whey-hd",cat:"whey",brand:"BPI Sports",name:"Whey HD",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["American Ice Cream"],weights:[{size:"2 kg",inStock:true}]},
-  {id:"absolute-nutrition-alpha-series-legend-whey",cat:"whey",brand:"Absolute Nutrition Alpha Series",name:"Legend Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
-  {id:"dn-d-n-fe-whey",cat:"whey",brand:"DN / D.N.",name:"FE Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Café Mocha","Chocolate view also visible"],weights:[{size:"1 kg or 2 kg depending on pack; verify before listing",inStock:true}]},
-  {id:"muscleblaze-biozyme-performance-whey",cat:"whey",brand:"MuscleBlaze",name:"Biozyme Performance Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Butter Cookie"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
-  {id:"mettle-blaze-whey-protein",cat:"whey",brand:"Mettle",name:"Blaze Whey Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Malai Kulfi"],weights:[{size:"1 kg; 20 scoops shown",inStock:true}]},
-  {id:"mettle-alpha-whey-protein",cat:"whey",brand:"Mettle",name:"Alpha Whey Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Kesar Pista Delight"],weights:[{size:"Not visible",inStock:true}]},
-  {id:"ar-anabolic-research-t3-whey-fusion",cat:"whey",brand:"AR / Anabolic Research",name:"T3 Whey Fusion",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Choco Cherry Berry"],weights:[{size:"Not visible",inStock:true}]},
-  {id:"awa-100-performance-whey",cat:"whey",brand:"Awa...",name:"100% Performance Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Belgian Chocolate"],weights:[{size:"Not visible; brand partly obscured",inStock:true}]},
-  {id:"cs-nutrition-premium-nitro-pro",cat:"whey",brand:"C9 Nutrition",name:"Premium Nitro Pro",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Café Mocha"],weights:[{size:"Not fully visible; 50 servings shown",inStock:true}]},
-  {id:"cs-nutrition-premium-iso-zero",cat:"whey",brand:"C9 Nutrition",name:"Premium Iso Zero",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Belgium Chocolate","Cookie Cream"],weights:[{size:"Not fully visible; 60 servings shown",inStock:true}]},
-  {id:"one-science-micronized-creatine-creatine-monohydrate",cat:"creatine",brand:"One Science",name:"Micronized Creatine / Creatine Monohydrate",protein:"—",featured:false,icon:"fas fa-fire-alt",gradient:"linear-gradient(135deg,#332200,#AA7700)",img:'',flavours:["Unflavoured or not visible"],weights:[{size:"300 g",inStock:true}]},
-  {id:"optimum-nutrition-micronized-creatine-powder",cat:"creatine",brand:"Optimum Nutrition",name:"Micronized Creatine Powder",protein:"—",featured:false,icon:"fas fa-fire-alt",gradient:"linear-gradient(135deg,#332200,#AA7700)",img:'',flavours:["Unflavoured"],weights:[{size:"Not fully visible",inStock:true}]},
-  {id:"wellcore-micronised-creatine-monohydrate",cat:"creatine",brand:"Wellcore",name:"Micronised Creatine Monohydrate",protein:"—",featured:false,icon:"fas fa-fire-alt",gradient:"linear-gradient(135deg,#332200,#AA7700)",img:'',flavours:["Lemon Lime","unflavoured/other variant visible"],weights:[{size:"300 g",inStock:true}]},
-  {id:"muscleblaze-mb-creamp-micronised-creatine-monohydrate",cat:"creatine",brand:"MuscleBlaze",name:"MB CreAMP Micronised Creatine Monohydrate",protein:"—",featured:false,icon:"fas fa-fire-alt",gradient:"linear-gradient(135deg,#332200,#AA7700)",img:'',flavours:["Unspecified"],weights:[{size:"320 g",inStock:true}]},
-  {id:"muscle-club-mc-great-micronized-creatine-monohydrate",cat:"creatine",brand:"Muscle Club (MC)",name:"Great Micronized Creatine Monohydrate",protein:"—",featured:false,icon:"fas fa-fire-alt",gradient:"linear-gradient(135deg,#332200,#AA7700)",img:'',flavours:["Mango"],weights:[{size:"250 g",inStock:true}]},
-  {id:"bigflex-creatine-monohydrate",cat:"creatine",brand:"BigFlex",name:"Creatine Monohydrate",protein:"—",featured:false,icon:"fas fa-fire-alt",gradient:"linear-gradient(135deg,#332200,#AA7700)",img:'',flavours:["Watermelon appears visible"],weights:[{size:"Not fully visible",inStock:true}]},
-  {id:"cs-nutrition-zma",cat:"bcaa",brand:"CS Nutrition",name:"ZMA",protein:"—",featured:false,icon:"fas fa-atom",gradient:"linear-gradient(135deg,#001A33,#0066AA)",img:'',flavours:["Not applicable"],weights:[{size:"60 capsules",inStock:true}]},
-  {id:"reborn-nutrition-liver-support-pro",cat:"health",brand:"Reborn Nutrition",name:"Liver Support Pro",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"60 tablets; 1,000 mg shown",inStock:true}]},
-  {id:"muscleblaze-biozyme-5-in-1-multivitamin",cat:"vitamins",brand:"MuscleBlaze",name:"Biozyme 5-in-1 Multivitamin",protein:"—",featured:false,icon:"fas fa-capsules",gradient:"linear-gradient(135deg,#003333,#00A6A6)",img:'',flavours:["Not applicable"],weights:[{size:"90 or 120 tablets depending on pack visible",inStock:true}]},
-  {id:"muscle-club-mc-multivitamin",cat:"vitamins",brand:"Muscle Club (MC)",name:"Multivitamin",protein:"—",featured:false,icon:"fas fa-capsules",gradient:"linear-gradient(135deg,#003333,#00A6A6)",img:'',flavours:["Not applicable"],weights:[{size:"Not fully visible",inStock:true}]},
-  {id:"one-science-prolant-multivitamin",cat:"vitamins",brand:"Divine Nutrition",name:"Prolant Multivitamin",protein:"—",featured:false,icon:"fas fa-capsules",gradient:"linear-gradient(135deg,#003333,#00A6A6)",img:'',flavours:["Not applicable"],weights:[{size:"90 tablets; 27 nutrients",inStock:true}]},
-  {id:"hsn-hsn-nutrition-liver-detox",cat:"health",brand:"HSN / HSN Nutrition",name:"Liver Detox",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"Not fully visible",inStock:true}]},
-  {id:"one-science-duke-extreme-pre-workout",cat:"preworkout",brand:"One Science",name:"Duke Extreme Pre Workout",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Unspecified"],weights:[{size:"Not visible",inStock:true}]},
-  {id:"code-enigma-rdxtreme-intensive-energy-pre-workout",cat:"preworkout",brand:"Core Champs",name:"RDXtreme Intensive Energy Pre-Workout",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Melon Mint","Rainbow"],weights:[{size:"30 servings",inStock:true}]},
-  {id:"reborn-nutrition-born-rework",cat:"preworkout",brand:"Reborn Nutrition",name:"Born Rework",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Unspecified"],weights:[{size:"240 g; 60 servings",inStock:true}]},
-  {id:"reborn-nutrition-hyper",cat:"preworkout",brand:"Reborn Nutrition",name:"Hyper",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Unspecified"],weights:[{size:"240 g; 60 servings",inStock:true}]},
-  {id:"davisco-foods-pre-workout-pump",cat:"preworkout",brand:"Davisco Foods",name:"Pre Workout Pump",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Unspecified"],weights:[{size:"400 g",inStock:true}]},
-  {id:"muscle-club-mc-amplified-pre-workout",cat:"preworkout",brand:"Muscle Club (MC)",name:"Amplified Pre Workout",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Blueberry","Orange"],weights:[{size:"300 g; 30 servings",inStock:true}]},
-  {id:"muscle-club-mc-ring-man-pre-workout",cat:"preworkout",brand:"Muscle Club (MC)",name:"Ring Man Pre Workout",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Juice Mango","Russian Candy"],weights:[{size:"60 servings; approximately 420 g",inStock:true}]},
-  {id:"muscle-club-mc-the-great-khal-drogo-khal-drogo-pre-workout",cat:"preworkout",brand:"Muscle Club (MC)",name:"The Great Khal Drogo / Khal Drogo Pre Workout",protein:"—",featured:false,icon:"fas fa-bolt",gradient:"linear-gradient(135deg,#300,#900)",img:'',flavours:["Unspecified"],weights:[{size:"60 servings; approximately 420 g",inStock:true}]},
-  {id:"one-science-omega-3-fish-oil",cat:"health",brand:"One Science",name:"Omega-3 Fish Oil",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"60 softgels",inStock:true}]},
-  {id:"triple-x-triple-x-fish-oil",cat:"health",brand:"Divine Nutrition",name:"Triplex Fish Oil",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"90 softgels",inStock:true}]},
-  {id:"muscle-club-mc-omega-3",cat:"health",brand:"Muscle Club (MC)",name:"Omega 3",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"90 capsules",inStock:true}]},
-  {id:"myprotein-essential-omega-3",cat:"health",brand:"MyProtein",name:"Essential Omega-3",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"90 softgels; 1,000 mg fish oil",inStock:true}]},
-  {id:"nature-s-truth-omega-3-fish-oil",cat:"health",brand:"Nature’s Truth",name:"Omega-3 Fish Oil",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"60 softgels; 1,500 mg appears on one bottle",inStock:true}]},
-  {id:"muscle-club-mc-l-carnitine-3000-mg",cat:"health",brand:"Muscle Club (MC)",name:"L-Carnitine 3000 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Mango","Green Apple","Orange"],weights:[{size:"450 ml",inStock:true}]},
-  {id:"reborn-nutrition-l-carnitine-3300-mg",cat:"health",brand:"Reborn Nutrition",name:"L-Carnitine 3300 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Lychee Slush"],weights:[{size:"450 ml; 30 servings",inStock:true}]},
-  {id:"gnc-total-lean-triple-strength-l-carnitine-liquid",cat:"health",brand:"GNC",name:"Total Lean Triple Strength L-Carnitine Liquid",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Orange"],weights:[{size:"450 ml; 3,000 mg per serving",inStock:true}]},
-  {id:"black-series-l-carnitine-3500-mg",cat:"health",brand:"Black Series",name:"L-Carnitine 3500 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Unspecified"],weights:[{size:"31 servings",inStock:true}]},
-  {id:"rc-nutrition-l-carnitine-3000-mg",cat:"health",brand:"RC Nutrition",name:"L-Carnitine 3000 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Unspecified"],weights:[{size:"Not fully visible",inStock:true}]},
-  {id:"kapiva-ashwagandha-gold",cat:"herbal",brand:"Kapiva",name:"Ashwagandha Gold",protein:"—",featured:false,icon:"fas fa-leaf",gradient:"linear-gradient(135deg,#123300,#5C9E31)",img:'',flavours:["Not applicable"],weights:[{size:"60 capsules",inStock:true}]},
-  {id:"muscle-club-mc-pure-himalayan-shilajit",cat:"herbal",brand:"Muscle Club (MC)",name:"Pure Himalayan Shilajit",protein:"—",featured:false,icon:"fas fa-leaf",gradient:"linear-gradient(135deg,#123300,#5C9E31)",img:'',flavours:["Not applicable"],weights:[{size:"20 g",inStock:true}]},
-  {id:"reborn-nutrition-testo-rise",cat:"health",brand:"Reborn Nutrition",name:"Testo Rise",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Not applicable"],weights:[{size:"2,000 mg; 60 tablets",inStock:true}]},
-  {id:"one-science-super-calcium",cat:"vitamins",brand:"One Science",name:"Super Calcium",protein:"—",featured:false,icon:"fas fa-capsules",gradient:"linear-gradient(135deg,#003333,#00A6A6)",img:'',flavours:["Not applicable"],weights:[{size:"60 tablets",inStock:true}]},
-  {id:"muscle-club-mc-bcaa-supplement",cat:"bcaa",brand:"Muscle Club (MC)",name:"BCAA supplement",protein:"—",featured:false,icon:"fas fa-atom",gradient:"linear-gradient(135deg,#001A33,#0066AA)",img:'',flavours:["Unspecified"],weights:[{size:"Not visible",inStock:true}]},
-  {id:"muscle-club-mc-glutamine-5000-mg",cat:"bcaa",brand:"Muscle Club (MC)",name:"Glutamine 5000 mg",protein:"—",featured:false,icon:"fas fa-atom",gradient:"linear-gradient(135deg,#001A33,#0066AA)",img:'',flavours:["Unspecified"],weights:[{size:"Not visible",inStock:true}]},
-  {id:"xtreme-x-series-x-wrath-wrath-formula",cat:"bcaa",brand:"Xtreme / X-series",name:"X-Wrath / Wrath formula",protein:"—",featured:false,icon:"fas fa-atom",gradient:"linear-gradient(135deg,#001A33,#0066AA)",img:'',flavours:["Unspecified"],weights:[{size:"340 g",inStock:true}]},
-  {id:"muscle-club-mc-high-protein-peanut-butter",cat:"health",brand:"Muscle Club (MC)",name:"High Protein Peanut Butter",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Milk Chocolate","Dark Chocolate"],weights:[{size:"1 kg",inStock:true}]},
-  {id:"alpino-high-protein-peanut-butter",cat:"health",brand:"Alpino",name:"High Protein Peanut Butter",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Dark Chocolate Crisp"],weights:[{size:"1 kg",inStock:true}]},
-  {id:"muscle-club-mc-protein-bar",cat:"bars",brand:"Muscle Club (MC)",name:"Protein Bar",protein:"—",featured:false,icon:"fas fa-cookie-bite",gradient:"linear-gradient(135deg,#331500,#CC6A00)",img:'',flavours:["Mango Cranberries"],weights:[{size:"8 bars per box",inStock:true}]},
-  {id:"divine-nutrition-protein-wafer-bar",cat:"bars",brand:"Divine Nutrition",name:"Protein Wafer Bar",protein:"—",featured:false,icon:"fas fa-cookie-bite",gradient:"linear-gradient(135deg,#331500,#CC6A00)",img:'',flavours:["Chocolate Caramel"],weights:[{size:"12 bars per pack",inStock:true}]}
-];
+  <footer>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 <span>I FIT FORMULA</span> — Owned by Ali Irfan. All rights reserved.</div>
+      <div class="footer-links-r">
+        <a href="#">Home</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Refunds</a>
+      </div>
+    </div>
+  </footer>
 
-/*
-  Verified packshots.  Product cards, cart thumbnails, brand tiles and
-  brand-category tiles all read from PRODUCTS[].img, so this one catalogue is
-  the single source of truth for every image in the page.
+  <script>
+    const productsData = [
+      {
+        id: 1,
+        brand: "Optimum Nutrition",
+        name: "Gold Standard 100% Whey",
+        tagline: "24g Protein • 5.5g BCAAs per serving",
+        category: "Whey Protein",
+        weights: ["2 lbs", "5 lbs"],
+        featured: true,
+        image: "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 2,
+        brand: "MuscleBlaze",
+        name: "Biozyme Performance Whey",
+        tagline: "Customized for Indian Bodies • Certified High Absorption",
+        category: "Whey Protein",
+        weights: ["1 kg", "2 kg"],
+        featured: true,
+        image: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 3,
+        brand: "Cellucor",
+        name: "C4 Original Pre-Workout",
+        tagline: "Explosive Energy • 150mg Caffeine • Beta-Alanine",
+        category: "Pre-Workout",
+        weights: ["30 Servings", "60 Servings"],
+        featured: false,
+        image: "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 4,
+        brand: "GNC",
+        name: "Pro Performance 100% Whey",
+        tagline: "24g Pure Whey Protein • Fast Digesting Formula",
+        category: "Whey Protein",
+        weights: ["2 lbs", "4.4 lbs"],
+        featured: false,
+        image: "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 5,
+        brand: "Optimum Nutrition",
+        name: "Micronized Creatine Powder",
+        tagline: "100% Pure Creatine Monohydrate • 3g per serving",
+        category: "Creatine",
+        weights: ["250g", "400g"],
+        featured: true,
+        image: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 6,
+        brand: "MuscleBlaze",
+        name: "Super Gainer XXL",
+        tagline: "High Calorie Formula for Serious Mass Gains",
+        category: "Mass Gainer",
+        weights: ["1 kg", "3 kg", "5 kg"],
+        featured: false,
+        image: "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=500&q=80"
+      }
+    ];
 
-  Do not replace an empty entry with a lookalike.  A few items in the supplied
-  inventory could not be matched to a currently verifiable package image and
-  intentionally retain the existing "photo pending" fallback until a shop
-  photograph or supplier image is available.
-*/
-var PRODUCT_MEDIA = {
-  'cs-nutrition-muscle-mass-gainer':'https://c9nutrition.com/cdn/shop/files/WhatsApp_Image_2026-04-08_at_17.18.21.jpg?v=1775821665&width=1920',
-  'cs-nutrition-premium-nitro-pro':'https://c9nutrition.com/cdn/shop/files/8.jpg?v=1742546446&width=1920',
-  'cs-nutrition-premium-iso-zero':'https://c9nutrition.com/cdn/shop/files/61iGzNQdR7L._SL1500__1.jpg?v=1742546558&width=1346',
-  'one-science-prolant-multivitamin':'https://static.oxinis.com/healthmug/image/product/355639-8-800.webp',
-  'hunk-hunk-gainer':'https://cdn.shopify.com/s/files/1/0441/1896/6440/products/Hunk_Gainer_Chocolate_Brownie_0507d44c-9565-4be9-8bc6-50f089669f6d_1024x1024@2x.png?v=1633674717',
-  'xtreme-xtreme-supermass':'https://xsnonline.us/wp-content/uploads/2022/05/xsupermass1.png',
-  'muscle-club-mc-anabolic-mass-100-bulk-mass-gain':'http://limitlessnutritions.com/cdn/shop/files/Internet_20250127_124639_9.png?crop=center&height=1200&v=1738149023&width=1200',
-  'victar-body-mass':'https://victorpharma.com/wp-content/uploads/2022/02/Body-Mass-013-600x600.jpg',
-  'victar-turbo-mass-pump-express':'https://4.imimg.com/data4/KK/WD/ANDROID-51736522/product-500x500.jpeg',
-  'transformation-nutrition-anabolic-gainz':'https://transformium.co/cdn/shop/products/AnabolicGainz2.png?v=1656562342&width=1200',
-  'qnt-3000-muscle-mass':'https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/v/o/vol2019part201926201926679imagesbig8.webp_8719c4e580.jpg',
-  'xsn-ripped-whey':'https://xsnonline.us/wp-content/uploads/2022/05/RIPPED-WHEY-XSN.png',
-  'primeval-labs-whey-premium-whey-protein-formula':'https://down-sg.img.susercontent.com/file/sg-11134207-7rblz-m5clxuyzv2ag0c',
-  'kevin-levrone-signature-series-anabolic-whey':'https://down-my.img.susercontent.com/file/my-11134207-7rasj-m905fezuifjo8d',
-  'primeval-labs-whey':'https://primevallabs.com/cdn/shop/files/Whey_5lb_Pastel_Front_1.png?v=1748358927',
-  'ss-nutrition-ssn-iso-pro-100':'https://static.wixstatic.com/media/d33a90_adcc64d76c2d4d6b8b3c47b01908d4a0~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/d33a90_adcc64d76c2d4d6b8b3c47b01908d4a0~mv2.png',
-  'muscle-club-mc-ultra-whey-protein':'https://www.fitandfury.in/cdn/shop/files/Pistakulfi1_d26c3d96-abb4-42b0-83a3-01bfb7ac5916.png?crop=center&height=1659&v=1777222421&width=1383',
-  'bpi-sports-whey-hd':'https://cdn.shopify.com/s/files/1/0561/9761/1672/products/WHEY-HD-50SERVS-PEANUTBUTTERICECREAMBAR_1200x.jpg?v=1684244279',
-  'ssn-pro-bio-whey':'https://static.wixstatic.com/media/d33a90_176e6173d29444a69bc02227feeedb87~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/d33a90_176e6173d29444a69bc02227feeedb87~mv2.png',
-  'absolute-nutrition-alpha-series-legend-whey':'https://www.jiomart.com/images/product/600x600/rvhwwxmxyz/absolute-nutrition-legender-alpha-series-whey-protein-1-kg-cashew-saffron-pistachio-product-images-orvhwwxmxyz-p599040367-3-202303031756.jpg',
-  'muscleblaze-biozyme-performance-whey':'https://m.media-amazon.com/images/I/615gHmEEA-L._SL1500_.jpg',
-  'mettle-blaze-whey-protein':'https://smytten-image.gumlet.io/shop_item/MET0055AB51.jpg',
-  'optimum-nutrition-micronized-creatine-powder':'https://i5.walmartimages.com/seo/3-pack-Optimum-Nutrition-Micronized-Creatine-Powder-Unflavored-60-Servings_641e4eb8-78c9-4f47-a590-d3d16174df35.e17dbb8bbb74790d7d42bfc3aa040b12.jpeg',
-  'ar-anabolic-research-t3-whey-fusion':'https://supplemart.in/cdn/shop/files/pixelcut-export_90.png?v=1779717906&width=1200',
-  'mettle-alpha-whey-protein':'https://rukminim1.flixcart.com/image/832/832/xif0q/protein-supplement/z/p/x/whey-protein-alpha-whey-protein-4856235774-mettle-original-imaghynctvdvh2qe.jpeg?q=70',
-  'one-science-micronized-creatine-creatine-monohydrate':'https://bronutrition.in/wp-content/uploads/2024/01/osn-creatine-front.webp',
-  'wellcore-micronised-creatine-monohydrate':'https://cdn2.nutrabay.com/review/images/Wellcore-Wellversed---Micronis_16933_8318359_1.jpg',
-  'muscleblaze-mb-creamp-micronised-creatine-monohydrate':'https://img4.hkrtcdn.com/41290/prd_4128903-MuscleBlaze-Creatine-Monohydrate-CreAMP-0.22-lb-Unflavoured_o.jpg',
-  'bigflex-creatine-monohydrate':'https://bigflex.in/cdn/shop/files/CreatineMonohydratePostImagesWatermelon-01.jpg?v=1744286530&width=416',
-  'muscle-club-mc-great-micronized-creatine-monohydrate':'https://m.media-amazon.com/images/I/71diUK7xcxL._SL1500_.jpg',
-  'muscle-club-mc-multivitamin':'https://fitnesstack.com/wp-content/uploads/2025/02/Muscle-Club-Multivitamin-New-Pack.webp',
-  'muscleblaze-biozyme-5-in-1-multivitamin':'https://cdn2.nutrabay.com/uploads/variant/images/variant-6359-image_6-MuscleBlaze_Biozyme_5in1_Multivitamin__90_Tabs.jpg',
-  'muscle-club-mc-amplified-pre-workout':'https://muscleclub.in/cdn/shop/files/Watermelon1_a5671776-e572-4c65-b22a-636782745c1f.jpg?v=1757761457&width=1946',
-  'muscle-club-mc-ring-man-pre-workout':'https://img4.hkrtcdn.com/43025/prd_4302453-Muscle-Club-Ring-Man-PreWorkout-0.93-lb-Ocean-Red-Water_o.jpg',
-  'code-enigma-rdxtreme-intensive-energy-pre-workout':'https://corechamps.eu/cdn/shop/files/CORE-CHAMPS-PRE-WORKOUT----JUNGLE-JUICE_1030x1200.png?v=1726235457',
-  'muscle-club-mc-omega-3':'http://muscleclub.in/cdn/shop/files/10_6.jpg?v=1754130189',
-  'triple-x-triple-x-fish-oil':'https://cdn.nutrabay.com/wp-content/uploads/2020/05/NB-DIV-1008-01-01.jpg',
-  'davisco-foods-pre-workout-pump':'https://m.media-amazon.com/images/I/41tp54abRiL._SY300_SX300_QL70_ML2_.jpg',
-  'nature-s-truth-omega-3-fish-oil':'https://cdnx.jumpseller.com/llicllas/image/68413465/resize/2000/2000?1759789096',
-  'muscle-club-mc-l-carnitine-3000-mg':'https://muscleclub.in/cdn/shop/files/L-CARNITINE_LIQUID_c1.jpg?v=1721430790&width=1206',
-  'reborn-nutrition-l-carnitine-3300-mg':'https://atnutrition.in/wp-content/uploads/2025/05/03F58F2E-14E6-4AC9-9680-B329AAA64B96.JEG_-scaled.jpeg',
-  'one-science-omega-3-fish-oil':'https://www.bodybuildingindia.com/cdn/shop/files/OMEGA-3-ALASKAN-FISH-OIL-60SOFTGELS-ONE-SCIENCE-NUTRITION-One-Science-Nutrition-43075727.jpg?v=1739117001',
-  'myprotein-essential-omega-3':'https://www.datocms-assets.com/86529/1742261690-myprotein-essential-omega-3-1.png',
-  'gnc-total-lean-triple-strength-l-carnitine-liquid':'https://cdn2.nutrabay.com/uploads/variant/images/variant-28864-featured_image-GNC_Total_Lean_Triple_Strength_LCarnitine_Liquid__3000mg__orange_450ml.jpg',
-  'black-series-l-carnitine-3500-mg':'https://lifesport.uz/uploads/posts/2023-09/nazvanisdsja.png',
-  'rc-nutrition-l-carnitine-3000-mg':'http://strong.lk/cdn/shop/files/583ab243-RC-L-Carnitine-3000mg.png?v=1764043020',
-  'kapiva-ashwagandha-gold':'http://nutristar.in/cdn/shop/files/61czoba46BL._SL1100.jpg?crop=center&height=1200&v=1744689110&width=1200',
-  'one-science-super-calcium':'https://basicsupplements.net/wp-content/uploads/2024/08/Super-Calcium-front.png',
-  'alpino-high-protein-peanut-butter':'https://assets.hyugalife.com/catalog/product/h/s/hsre93i0.jpg',
-  'divine-nutrition-protein-wafer-bar':'https://divinenutrition.in/cdn/shop/files/waferfront.jpg?v=1766905213&width=990'
-};
+    const accessoriesData = [
+      {
+        id: 101,
+        brand: "I FIT FORMULA",
+        name: "Pro Stainless Steel Shaker",
+        tagline: "750ml • Leak-proof • Durable Insulation",
+        image: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 102,
+        brand: "I FIT FORMULA",
+        name: "Heavy Duty Gym Bag",
+        tagline: "Waterproof • Shoe Compartment Included",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 103,
+        brand: "I FIT FORMULA",
+        name: "Padded Gym Workout Gloves",
+        tagline: "Non-slip Grip • Extra Wrist Support",
+        image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80"
+      }
+    ];
 
-PRODUCTS.forEach(function(product){
-  if(PRODUCT_MEDIA[product.id]) product.img=PRODUCT_MEDIA[product.id];
-});
+    let cart = [];
+    let activeCategory = 'all';
 
-var CAT_META = {
-  all:{label:'All Products',icon:'fas fa-th'},
-  whey:{label:'Whey Protein',icon:'fas fa-flask'},
-  mass:{label:'Mass Gainer',icon:'fas fa-dumbbell'},
-  preworkout:{label:'Pre-Workout',icon:'fas fa-bolt'},
-  bcaa:{label:'BCAA & Aminos',icon:'fas fa-atom'},
-  creatine:{label:'Creatine',icon:'fas fa-fire-alt'},
-  fatburner:{label:'Fat Burners',icon:'fas fa-burn'},
-  vitamins:{label:'Vitamins',icon:'fas fa-capsules'},
-  bars:{label:'Protein Bars',icon:'fas fa-cookie-bite'},
-  health:{label:'Health & Immunity',icon:'fas fa-heartbeat'},
-  herbal:{label:'Ayurvedic & Herbal',icon:'fas fa-leaf'},
-  accessories:{label:'Gym Accessories',icon:'fas fa-shopping-bag'}
-};
+    function renderProducts(items) {
+      const container = document.getElementById('mainProductsGrid');
+      if (items.length === 0) {
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:40px; color:var(--muted);">No products found matching your search.</div>`;
+        return;
+      }
+      container.innerHTML = items.map(item => `
+        <div class="prod-card">
+          <div class="prod-img-wrap">
+            <img src="${item.image}" alt="${item.name}" class="prod-img-real">
+            <div class="prod-badge-row">
+              ${item.featured ? '<span class="badge badge-featured">Bestseller</span>' : ''}
+              <span class="badge badge-brand">${item.brand}</span>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-brand-tag">${item.brand}</div>
+            <h3 class="prod-name">${item.name}</h3>
+            <p class="prod-tagline">${item.tagline}</p>
+            <div class="weight-pills">
+              ${item.weights.map((w, idx) => `<button class="weight-pill ${idx===0?'active':''}">${w}</button>`).join('')}
+            </div>
+            <div class="call-for-price">
+              <i class="fa-brands fa-whatsapp"></i> Tap to get price
+            </div>
+            <button class="prod-cta" onclick="addToCart('${item.name}', '${item.brand}', '${item.image}')">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
 
-var BRAND_LOGOS = {
-  'Wellbeing Nutrition':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951759/wellbeing-nutrition_ncflo2.png',
-  'Wellversed':'',
-  'Sinister Labs':'',
-  'Scoop of Truth':'',
-  'Outlast Labz':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951752/outlast-labz_mwm4lf.png',
-  'RAW':'',
-  'Junglee':'',
-  'ProSupps':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951753/prosupps_z0qeoq.gif',
-  'Myogenetix':'',
-  'Insane Labz':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951747/insane-labz_w9duom.png',
-  'Vertical Labs':'',
-  'Kevin Levrone':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951748/kevin-levrone_fp8owv.png',
-  'Redcon1':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951742/americanz-muscles_blfezn.png',
-  'Black Beast':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951745/blackbeast_kcpkbg.png',
-  'ProManiaX':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951753/promaniax_lhm9pp.webp',
-  'C9 Nutrition':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951744/c9-nutrition_kl0u0u.png',
-  'Muscle Xpress':'',
-  'HK Vitals':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951746/hk-vitals_w9moff.png',
-  'Pure Vibes Nutrition':'',
-  'MAXN':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951749/maxn_e1hdhm.png',
-  'Ronnie Coleman':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951758/ronnie-coleman_a4v3rc.png'
-};
+    function renderAccessories(items) {
+      const container = document.querySelector('#accessoriesGrid .prod-grid');
+      container.innerHTML = items.map(item => `
+        <div class="prod-card">
+          <div class="prod-img-wrap">
+            <img src="${item.image}" alt="${item.name}" class="prod-img-real">
+          </div>
+          <div class="prod-body">
+            <div class="prod-brand-tag">${item.brand}</div>
+            <h3 class="prod-name">${item.name}</h3>
+            <p class="prod-tagline">${item.tagline}</p>
+            <div class="call-for-price">
+              <i class="fa-brands fa-whatsapp"></i> In Stock in Kolar
+            </div>
+            <button class="prod-cta" onclick="addToCart('${item.name}', '${item.brand}', '${item.image}')">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
 
-var BRAND_COLORS = {
-  'Wellbeing Nutrition':{bg:'rgba(0,130,130,0.18)',color:'#44CCCC'},
-  'Wellversed':{bg:'rgba(100,100,100,0.18)',color:'#DDDDDD'},
-  'Sinister Labs':{bg:'rgba(150,0,0,0.18)',color:'#FF4444'},
-  'Scoop of Truth':{bg:'rgba(120,40,0,0.18)',color:'#FFAA44'},
-  'Outlast Labz':{bg:'rgba(0,80,80,0.18)',color:'#44CCCC'},
-  'RAW':{bg:'rgba(50,50,50,0.18)',color:'#CCCCCC'},
-  'Junglee':{bg:'rgba(0,120,0,0.18)',color:'#55FF55'},
-  'ProSupps':{bg:'rgba(200,40,0,0.18)',color:'#FF5522'},
-  'Myogenetix':{bg:'rgba(40,40,40,0.30)',color:'#AAAAAA'},
-  'Insane Labz':{bg:'rgba(100,0,180,0.18)',color:'#CC88FF'},
-  'Vertical Labs':{bg:'rgba(0,100,50,0.18)',color:'#44FFBB'},
-  'Kevin Levrone':{bg:'rgba(180,120,0,0.18)',color:'#FFCC66'},
-  'Redcon1':{bg:'rgba(140,0,40,0.18)',color:'#FF6688'},
-  'Black Beast':{bg:'rgba(60,60,60,0.30)',color:'#AAAAAA'},
-  'ProManiaX':{bg:'rgba(100,0,0,0.18)',color:'#FF5555'},
-  'C9 Nutrition':{bg:'rgba(80,70,0,0.18)',color:'#CCBB44'},
-  'Muscle Xpress':{bg:'rgba(70,70,70,0.18)',color:'#EEEEEE'},
-  'HK Vitals':{bg:'rgba(0,80,150,0.18)',color:'#66AAFF'},
-  'Pure Vibes Nutrition':{bg:'rgba(130,130,0,0.18)',color:'#FFFF55'},
-  'MAXN':{bg:'rgba(0,22,44,0.18)',color:'#5599FF'},
-  'Ronnie Coleman':{bg:'rgba(0,11,33,0.18)',color:'#55A9FF'}
-};
+    function setCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterProducts();
+    }
 
-/* ── CART STATE ── */
-var cart = [];
+    function filterProducts() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const sort = document.getElementById('sortSelect').value;
 
-function cartTotal(){
-  return cart.reduce(function(s,i){return s+i.qty;},0);
-}
+      let filtered = productsData.filter(item => {
+        const matchesCat = activeCategory === 'all' || item.category === activeCategory;
+        const matchesSearch = item.name.toLowerCase().includes(query) || item.brand.toLowerCase().includes(query) || item.category.toLowerCase().includes(query);
+        return matchesCat && matchesSearch;
+      });
 
-function updateCartUI(){
-  var total = cartTotal();
-  var badge = document.getElementById('cartBadge');
-  var mobBadge = document.getElementById('mobCartBadge');
-  var navBtn = document.getElementById('navCartBtn');
-  var mobLink = document.getElementById('mobCartLink');
-  var itemCount = document.getElementById('cartItemCount');
-  if(badge){badge.textContent=total;badge.classList.toggle('show',total>0);}
-  if(mobBadge){mobBadge.textContent=total;mobBadge.classList.toggle('show',total>0);}
-  if(navBtn){navBtn.classList.toggle('has-items',total>0);}
-  if(mobLink){mobLink.classList.toggle('has-items',total>0);}
-  if(itemCount){itemCount.textContent=total+' item'+(total!==1?'s':'');}
-}
+      if (sort === 'name') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      }
 
-function addToCart(productId){
-  var p = PRODUCTS.find(function(x){return x.id===productId;});
-  if(!p) return;
-  var state = cardState[productId]||{flavIdx:0,weightIdx:0};
-  var flavour = (p.flavours&&p.flavours[state.flavIdx])||'—';
-  var wObj = (p.weights&&p.weights[state.weightIdx])||(p.weights&&p.weights[0])||{size:'—'};
-  var size = wObj.size||'—';
-  var existing = cart.find(function(c){
-    return c.id===productId && c.flavour===flavour && c.size===size;
-  });
-  if(existing){
-    existing.qty++;
-  } else {
-    cart.push({
-      id:productId,
-      brand:p.brand,
-      name:p.name,
-      flavour:flavour,
-      size:size,
-      img:p.img||'',
-      gradient:p.gradient,
-      icon:p.icon||'fas fa-flask',
-      qty:1
+      renderProducts(filtered);
+    }
+
+    function addToCart(productName, brand, image) {
+      cart.push({ name: productName, brand: brand, image: image });
+      updateCartUI();
+      toggleCart(true);
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cartBadge');
+      const count = document.getElementById('cartItemCount');
+      const body = document.getElementById('cartBody');
+
+      badge.textContent = cart.length;
+      count.textContent = cart.length;
+
+      if (cart.length > 0) {
+        badge.classList.add('show');
+        body.innerHTML = cart.map((item, index) => `
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img src="${item.image}" alt="${item.name}">
+            </div>
+            <div class="cart-item-details">
+              <div class="cart-item-brand">${item.brand}</div>
+              <div class="cart-item-name" style="font-size:0.85rem; margin:2px 0;">${item.name}</div>
+              <div class="cart-item-meta"><span>1x</span></div>
+            </div>
+            <button class="cart-item-remove" onclick="removeFromCart(${index})">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        `).join('');
+      } else {
+        badge.classList.remove('show');
+        body.innerHTML = `
+          <div class="cart-empty">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <strong>Your Cart is Empty</strong>
+            <p>Looks like you haven't added any products yet.</p>
+          </div>`;
+      }
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCart(open) {
+      document.getElementById('cartOverlay').classList.toggle('open', open);
+      document.getElementById('cartDrawer').classList.toggle('open', open);
+    }
+
+    function sendWhatsAppOrder() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+      const itemNames = cart.map(item => item.name);
+      const text = encodeURIComponent(`Hi I FIT FORMULA, I want to order:\n- ${itemNames.join('\n- ')}`);
+      window.open(`https://wa.me/919206014393?text=${text}`, '_blank');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts(productsData);
+      renderAccessories(accessoriesData);
     });
-  }
-  updateCartUI();
-  renderCartBody();
-  var btn = document.getElementById('cta-'+productId);
-  if(btn){
-    btn.classList.add('added');
-    btn.innerHTML='<i class="fas fa-check"></i> Added to Cart';
-    setTimeout(function(){
-      btn.classList.remove('added');
-      btn.innerHTML='<i class="fas fa-cart-plus"></i> Add to Cart';
-    }, 1800);
-  }
-  openCart();
-}
-
-function removeFromCart(idx){
-  cart.splice(idx,1);
-  updateCartUI();
-  renderCartBody();
-}
-
-function changeQty(idx, delta){
-  cart[idx].qty += delta;
-  if(cart[idx].qty <= 0){cart.splice(idx,1);}
-  updateCartUI();
-  renderCartBody();
-}
-
-function clearCart(){
-  cart = [];
-  updateCartUI();
-  renderCartBody();
-}
-
-function renderCartBody(){
-  var body = document.getElementById('cartBody');
-  var footer = document.getElementById('cartFooter');
-  if(!body) return;
-  if(cart.length === 0){
-    body.innerHTML =
-      '<div class="cart-empty">'+
-        '<i class="fas fa-shopping-cart"></i>'+
-        '<strong>Cart is Empty</strong>'+
-        '<p>Browse products and add them to your cart.<br/>We deliver within Kolar & up to 50km!</p>'+
-      '</div>';
-    if(footer) footer.style.display='none';
-    return;
-  }
-  if(footer) footer.style.display='block';
-  var html = '';
-  cart.forEach(function(item, idx){
-    var imgHtml = item.img
-      ? '<img src="'+escAttr(item.img)+'" alt="'+escAttr(item.name)+'" loading="lazy" onerror="this.style.display=\'none\'"/>'
-      : '<div class="cart-item-img-placeholder" style="background:'+item.gradient+'"><i class="'+item.icon+'" style="color:rgba(255,255,255,0.7);font-size:1.4rem;"></i></div>';
-    var metaHtml = '';
-    if(item.flavour && item.flavour!=='—') metaHtml += '<span>'+escHtml(item.flavour)+'</span>';
-    if(item.size && item.size!=='—') metaHtml += '<span>'+escHtml(item.size)+'</span>';
-    html +=
-      '<div class="cart-item">'+
-        '<div class="cart-item-img">'+imgHtml+'</div>'+
-        '<div class="cart-item-details">'+
-          '<div class="cart-item-brand">'+escHtml(item.brand)+'</div>'+
-          '<div class="cart-item-name">'+escHtml(item.name)+'</div>'+
-          (metaHtml?'<div class="cart-item-meta">'+metaHtml+'</div>':'')+
-          '<div class="cart-item-actions">'+
-            '<button class="qty-btn" onclick="changeQty('+idx+',-1)"><i class="fas fa-minus"></i></button>'+
-            '<span class="qty-num">'+item.qty+'</span>'+
-            '<button class="qty-btn" onclick="changeQty('+idx+',1)"><i class="fas fa-plus"></i></button>'+
-            '<button class="cart-item-remove" onclick="removeFromCart('+idx+')" title="Remove"><i class="fas fa-trash-alt"></i></button>'+
-          '</div>'+
-        '</div>'+
-      '</div>';
-  });
-  body.innerHTML = html;
-}
-
-function openCart(){
-  document.getElementById('cartOverlay').classList.add('open');
-  document.getElementById('cartDrawer').classList.add('open');
-  document.body.style.overflow='hidden';
-  renderCartBody();
-}
-
-function closeCart(){
-  document.getElementById('cartOverlay').classList.remove('open');
-  document.getElementById('cartDrawer').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-/* ── CHECKOUT MODAL ── */
-function openCheckout(){
-  if(cart.length===0) return;
-  closeCart();
-  document.getElementById('checkoutFormState').style.display='block';
-  document.getElementById('checkoutSuccessState').style.display='none';
-  document.getElementById('custName').value='';
-  document.getElementById('custPhone').value='';
-  document.getElementById('custAddress').value='';
-  clearFormErrors();
-  renderModalSummary();
-  document.getElementById('checkoutModal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeCheckout(){
-  document.getElementById('checkoutModal').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function renderModalSummary(){
-  var wrap = document.getElementById('modalOrderSummary');
-  if(!wrap) return;
-  var html = '';
-  cart.forEach(function(item){
-    var meta = [];
-    if(item.flavour && item.flavour!=='—') meta.push(item.flavour);
-    if(item.size && item.size!=='—') meta.push(item.size);
-    html +=
-      '<div class="modal-order-row">'+
-        '<div class="modal-order-row-left">'+
-          escHtml(item.brand)+' '+escHtml(item.name)+
-          (meta.length?'<small>'+escHtml(meta.join(' · '))+'</small>':'')+
-        '</div>'+
-        '<div class="modal-order-row-qty">x'+item.qty+'</div>'+
-      '</div>';
-  });
-  html +=
-    '<div class="modal-order-row" style="margin-top:6px;border-top:1px solid rgba(37,211,102,0.2);padding-top:8px;">'+
-      '<div class="modal-order-row-left" style="color:var(--green);font-weight:700;">Delivery Charge</div>'+
-      '<div class="modal-order-row-qty">₹20</div>'+
-    '</div>';
-  wrap.innerHTML = html;
-}
-
-function clearFormErrors(){
-  ['nameErr','phoneErr','addressErr'].forEach(function(id){
-    var el=document.getElementById(id);
-    if(el) el.classList.remove('show');
-  });
-  ['custName','custPhone','custAddress'].forEach(function(id){
-    var el=document.getElementById(id);
-    if(el) el.classList.remove('error');
-  });
-}
-
-function validateForm(){
-  var valid = true;
-  var name = document.getElementById('custName').value.trim();
-  var phone = document.getElementById('custPhone').value.trim();
-  var address = document.getElementById('custAddress').value.trim();
-  if(!name){
-    document.getElementById('custName').classList.add('error');
-    document.getElementById('nameErr').classList.add('show');
-    valid=false;
-  }
-  if(!/^\d{10}$/.test(phone)){
-    document.getElementById('custPhone').classList.add('error');
-    document.getElementById('phoneErr').classList.add('show');
-    valid=false;
-  }
-  if(!address){
-    document.getElementById('custAddress').classList.add('error');
-    document.getElementById('addressErr').classList.add('show');
-    valid=false;
-  }
-  return valid;
-}
-
-/* ── ORDER ID GENERATOR ──
-   Format: IFF-YYMMDD-XXXX (date + random 4-digit code).
-   Shown to the customer on screen and included in both the
-   customer's WhatsApp message and the shop-owner copy, so both
-   sides can reference the exact same order. */
-function generateOrderId(){
-  var now = new Date();
-  var yy = String(now.getFullYear()).slice(-2);
-  var mm = String(now.getMonth()+1).padStart(2,'0');
-  var dd = String(now.getDate()).padStart(2,'0');
-  var rand = String(Math.floor(1000 + Math.random()*9000));
-  return 'IFF-'+yy+mm+dd+'-'+rand;
-}
-
-function submitOrder(){
-  clearFormErrors();
-  if(!validateForm()) return;
-  var name = document.getElementById('custName').value.trim();
-  var phone = document.getElementById('custPhone').value.trim();
-  var address = document.getElementById('custAddress').value.trim();
-  var orderId = generateOrderId();
-  var lines = [];
-  lines.push('NEW ORDER - I FIT FORMULA');
-  lines.push('Order ID: ' + orderId);
-  lines.push('');
-  lines.push('Customer Details');
-  lines.push('Name: ' + name);
-  lines.push('Phone: ' + phone);
-  lines.push('Address: ' + address);
-  lines.push('');
-  lines.push('Order Items');
-  cart.forEach(function(item, idx){
-    var meta = [];
-    if(item.flavour && item.flavour!=='—') meta.push('Flavour: '+item.flavour);
-    if(item.size && item.size!=='—') meta.push('Size: '+item.size);
-    lines.push((idx+1)+'. '+item.brand+' - '+item.name);
-    if(meta.length) lines.push('   '+meta.join(' | '));
-    lines.push('   Qty: '+item.qty);
-  });
-  lines.push('');
-  lines.push('Delivery Charge: Rs 20');
-  lines.push('Kolar: Within 2 Hours | Within 50km: 8-24 Hours');
-  lines.push('');
-  lines.push('Please confirm product price and delivery time. Thank you!');
-  var message = lines.join('\n');
-  var waUrl = 'https://wa.me/919206014393?text='+encodeURIComponent(message);
-  var msgEl = document.getElementById('orderSuccessMsg');
-  if(msgEl){
-    msgEl.innerHTML =
-      'Your order has been sent to our WhatsApp. Our team will confirm the price shortly.<br/><br/>'+
-      'Your Order ID: <strong style="color:var(--green);">'+escHtml(orderId)+'</strong><br/>'+
-      '<span style="font-size:0.72rem;">Please quote this Order ID if you contact us.</span><br/><br/>'+
-      'Kolar: <strong style="color:var(--green);">within 2 hours</strong><br/>'+
-      'Within 50km: <strong style="color:var(--green);">8–24 hours</strong><br/><br/>'+
-      'Delivery charge: <strong style="color:var(--green);">₹20</strong>';
-  }
-  document.getElementById('checkoutFormState').style.display='none';
-  document.getElementById('checkoutSuccessState').style.display='block';
-  window.open(waUrl, '_blank');
-  cart = [];
-  updateCartUI();
-  renderCartBody();
-}
-
-/* ── APP STATE & ROUTER ── */
-var appState = {level:1, brand:null, cat:null, search:'', sort:'featured', stockOnly:false};
-var cardState = {};
-
-function slugify(str){
-  return (str||'').toLowerCase().replace(/[\s&+]+/g,'-').replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-').replace(/^-|-$/g,'');
-}
-function getBrandFromSlug(slug){
-  return getUniqueBrands().find(function(b){return slugify(b)===slug;})||null;
-}
-function getUniqueBrands(){
-  var seen={}, out=[];
-  PRODUCTS.filter(function(p){return p.cat!=='accessories';}).forEach(function(p){if(p.brand&&!seen[p.brand]){seen[p.brand]=true;out.push(p.brand);}});
-  return out;
-}
-function brandInitials(name){
-  return name.split(' ').slice(0,2).map(function(w){return w[0]||'';}).join('').toUpperCase();
-}
-function parseProtein(p){
-  if(!p.protein||p.protein==='—')return 0;
-  var m=p.protein.match(/(\d+(\.\d+)?)/);
-  return m?parseFloat(m[1]):0;
-}
-function getFlavourColor(f){
-  f=(f||'').toLowerCase();
-  if(f==='—'||f==='')return '#555555';
-  if(f.includes('double rich choc')||f.includes('molten chocolate')||f.includes('belgium chocolate'))return '#2A0D00';
-  if(f.includes('chocolate frosting')||f.includes('swiss chocolate'))return '#5A3010';
-  if(f.includes('chocolate hazelnut')||f.includes('hazel nut'))return '#7A4E2D';
-  if(f.includes('choco almond'))return '#5D3A1A';
-  if(f.includes('dark choco berry'))return '#3A0D20';
-  if(f.includes('peanut butter chocolate')||f.includes('peanut butter'))return '#8B5E3C';
-  if(f.includes('chocolate')||f.includes('choco'))return '#4A2000';
-  if(f.includes('cookies')||f.includes('cookie'))return '#6B4C30';
-  if(f.includes('vanilla'))return '#F0CB7A';
-  if(f.includes('honey'))return '#FFA000';
-  if(f.includes('strawberry'))return '#EE3366';
-  if(f.includes('berries')||f.includes('berry'))return '#CC2255';
-  if(f.includes('magical mango')||f.includes('mango'))return '#FFB300';
-  if(f.includes('coffee')||f.includes('mocha')||f.includes('café')||f.includes('cafe'))return '#4E342E';
-  if(f.includes('tiramisu'))return '#C4A882';
-  if(f.includes('pistachio')||f.includes('pista'))return '#8DB600';
-  if(f.includes('kesar'))return '#FF8F00';
-  if(f.includes('sour watermelon'))return '#00897B';
-  if(f.includes('watermelon'))return '#FF4D6D';
-  if(f.includes('cherry'))return '#C62828';
-  if(f.includes('fruit punch'))return '#FF4444';
-  if(f.includes('mixed fruit'))return '#FF6633';
-  if(f.includes('lemon'))return '#F9A825';
-  if(f.includes('orange'))return '#FF6D00';
-  if(f.includes('blue'))return '#0277BD';
-  if(f.includes('grape'))return '#6A1B9A';
-  if(f.includes('cotton candy'))return '#F48FB1';
-  if(f.includes('birthday cake'))return '#FF80AB';
-  if(f.includes('ice cream'))return '#E8D5A3';
-  if(f.includes('rich chocolate'))return '#3D1C02';
-  if(f.includes('unflavored')||f.includes('unflavoured'))return '#78909C';
-  if(f.includes('capsule')||f.includes('oral strips'))return 
+  </script>
+</body>
+</html>
