@@ -1688,3 +1688,372 @@ parseAndRender();
 </script>
 </body>
 </html>
+parseAndRender();
+/* =========================================================
+   TOP 10 WHEY BRANDS — 1 KG / 2 KG + BRAND-WISE SORTING
+   ========================================================= */
+
+var TOP_10_WHEY_BRANDS = [
+  'Optimum Nutrition (ON)',
+  'Dymatize',
+  'MuscleTech',
+  'MyProtein',
+  'MuscleBlaze',
+  'GNC',
+  'Avvatar',
+  'Labrada',
+  'Isopure',
+  'Ultimate Nutrition'
+];
+
+function brandRank(brand) {
+  var index = TOP_10_WHEY_BRANDS.indexOf(brand);
+  return index === -1 ? TOP_10_WHEY_BRANDS.length : index;
+}
+
+function compareBrandsTop10(a, b) {
+  var difference = brandRank(a) - brandRank(b);
+  return difference || a.localeCompare(b);
+}
+
+function compareProductsTop10(a, b) {
+  var difference = brandRank(a.brand) - brandRank(b.brand);
+  if (difference) return difference;
+
+  var brandDifference = a.brand.localeCompare(b.brand);
+  if (brandDifference) return brandDifference;
+
+  return a.name.localeCompare(b.name);
+}
+
+function addOrUpdateWheyProduct(product) {
+  var existing = PRODUCTS.find(function (item) {
+    return item.id === product.id;
+  });
+
+  if (!existing) PRODUCTS.push(product);
+}
+
+function setWheySizes(productId) {
+  var product = PRODUCTS.find(function (item) {
+    return item.id === productId;
+  });
+
+  if (product) {
+    product.weights = [
+      { size: '1 kg', inStock: true },
+      { size: '2 kg', inStock: true }
+    ];
+  }
+}
+
+/* Rename ON everywhere so it appears exactly as requested. */
+PRODUCTS.forEach(function (product) {
+  if (product.brand === 'Optimum Nutrition') {
+    product.brand = 'Optimum Nutrition (ON)';
+  }
+});
+
+/* Existing whey products: force 1 kg and 2 kg options. */
+setWheySizes('optimum-nutrition-performance-whey');
+setWheySizes('muscleblaze-biozyme-performance-whey');
+setWheySizes('awa-100-performance-whey');
+
+/* Add missing top-10 whey brands.
+   Keep img empty until you add approved exact product packshots. */
+addOrUpdateWheyProduct({
+  id: 'dymatize-elite-100-whey',
+  cat: 'whey',
+  brand: 'Dymatize',
+  name: 'Elite 100% Whey',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Chocolate'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+addOrUpdateWheyProduct({
+  id: 'muscletech-nitro-tech-whey-gold',
+  cat: 'whey',
+  brand: 'MuscleTech',
+  name: 'Nitro-Tech Whey Gold',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Double Rich Chocolate'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+addOrUpdateWheyProduct({
+  id: 'myprotein-impact-whey',
+  cat: 'whey',
+  brand: 'MyProtein',
+  name: 'Impact Whey Protein',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Chocolate Smooth'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+addOrUpdateWheyProduct({
+  id: 'gnc-pro-performance-whey',
+  cat: 'whey',
+  brand: 'GNC',
+  name: 'Pro Performance 100% Whey',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Chocolate'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+addOrUpdateWheyProduct({
+  id: 'labrada-lean-body-whey',
+  cat: 'whey',
+  brand: 'Labrada',
+  name: 'Lean Body Whey Protein',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Chocolate'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+addOrUpdateWheyProduct({
+  id: 'isopure-zero-carb-whey-isolate',
+  cat: 'whey',
+  brand: 'Isopure',
+  name: 'Zero Carb Whey Protein Isolate',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Creamy Vanilla'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+addOrUpdateWheyProduct({
+  id: 'ultimate-nutrition-prostar-whey',
+  cat: 'whey',
+  brand: 'Ultimate Nutrition',
+  name: 'Prostar 100% Whey Protein',
+  protein: '—',
+  featured: false,
+  icon: 'fas fa-flask',
+  gradient: 'linear-gradient(135deg,#111,#555)',
+  img: '',
+  flavours: ['Chocolate'],
+  weights: [
+    { size: '1 kg', inStock: true },
+    { size: '2 kg', inStock: true }
+  ]
+});
+
+/* Sort all brand cards in the requested Top-10 order. */
+function getUniqueBrands() {
+  var seen = {};
+  var brands = [];
+
+  PRODUCTS
+    .filter(function (product) {
+      return product.cat !== 'accessories';
+    })
+    .forEach(function (product) {
+      if (product.brand && !seen[product.brand]) {
+        seen[product.brand] = true;
+        brands.push(product.brand);
+      }
+    });
+
+  return brands.sort(compareBrandsTop10);
+}
+
+/* Sort products inside individual brand/category pages. */
+function getL3Products() {
+  var list = PRODUCTS.filter(function (product) {
+    return product.brand === appState.brand && product.cat === appState.cat;
+  });
+
+  if (appState.stockOnly) {
+    list = list.filter(function (product) {
+      return product.weights && product.weights.some(function (weight) {
+        return weight.inStock;
+      });
+    });
+  }
+
+  if (appState.search) {
+    var query = appState.search.toLowerCase();
+
+    list = list.filter(function (product) {
+      return product.name.toLowerCase().includes(query) ||
+        (product.flavours || []).some(function (flavour) {
+          return flavour.toLowerCase().includes(query);
+        }) ||
+        (product.weights || []).some(function (weight) {
+          return weight.size.toLowerCase().includes(query);
+        });
+    });
+  }
+
+  if (appState.sort === 'name_az') {
+    list.sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
+  } else if (appState.sort === 'protein_hl') {
+    list.sort(function (a, b) {
+      return parseProtein(b) - parseProtein(a);
+    });
+  } else if (appState.sort === 'instock') {
+    list.sort(function (a, b) {
+      var aStock = a.weights && a.weights.some(function (weight) {
+        return weight.inStock;
+      }) ? 1 : 0;
+
+      var bStock = b.weights && b.weights.some(function (weight) {
+        return weight.inStock;
+      }) ? 1 : 0;
+
+      return bStock - aStock;
+    });
+  } else {
+    list.sort(compareProductsTop10);
+  }
+
+  return list;
+}
+
+/* Sort products when a customer clicks Whey or any category. */
+function renderGlobalResults() {
+  var grid = document.getElementById('mainGrid');
+  var query = globalSearchState.query.toLowerCase();
+
+  var list = PRODUCTS.filter(function (product) {
+    var matchesSearch = !query ||
+      product.name.toLowerCase().includes(query) ||
+      product.brand.toLowerCase().includes(query) ||
+      (product.flavours || []).some(function (flavour) {
+        return flavour.toLowerCase().includes(query);
+      });
+
+    var matchesCategory = globalSearchState.cat === 'all' ||
+      product.cat === globalSearchState.cat;
+
+    return matchesSearch && matchesCategory;
+  });
+
+  if (globalSearchState.sort === 'name_az') {
+    list.sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
+  } else if (globalSearchState.sort === 'instock') {
+    list.sort(function (a, b) {
+      var aStock = a.weights && a.weights.some(function (weight) {
+        return weight.inStock;
+      }) ? 1 : 0;
+
+      var bStock = b.weights && b.weights.some(function (weight) {
+        return weight.inStock;
+      }) ? 1 : 0;
+
+      return bStock - aStock;
+    });
+  } else {
+    list.sort(compareProductsTop10);
+  }
+
+  var count = document.getElementById('globalCount');
+  var countWrap = document.getElementById('globalResultsCount');
+
+  if (count) count.textContent = list.length;
+  if (countWrap) countWrap.style.display = 'block';
+
+  if (list.length === 0) {
+    grid.innerHTML =
+      '<div class="empty-state">' +
+      '<div class="empty-icon"><i class="fas fa-search"></i></div>' +
+      '<div class="empty-title">No Products Found</div>' +
+      '<div class="empty-sub">Try different keywords.</div>' +
+      '</div>';
+    return;
+  }
+
+  var gridClass = list.length >= 4 ? 'g4' : list.length === 3 ? 'g3' : 'g2';
+
+  grid.innerHTML =
+    '<div class="prod-grid ' + gridClass + '">' +
+    list.map(renderCard).join('') +
+    '</div>';
+}
+
+/* Add the Top-10 sorting option in both dropdowns. */
+function addTop10SortOption(selectId) {
+  var select = document.getElementById(selectId);
+  if (!select) return;
+
+  if (!select.querySelector('option[value="brand_order"]')) {
+    var option = document.createElement('option');
+    option.value = 'brand_order';
+    option.textContent = '🏆 Top 10 Whey Brand Order';
+    select.insertBefore(option, select.firstChild);
+  }
+
+  select.value = 'brand_order';
+}
+
+addTop10SortOption('globalSort');
+addTop10SortOption('sortSelect');
+
+appState.sort = 'brand_order';
+globalSearchState.sort = 'brand_order';
+
+function resetSort() {
+  appState.sort = 'brand_order';
+  document.getElementById('sortSelect').value = 'brand_order';
+  renderProductGrid();
+  updateFilterChips();
+}
+
+function clearAllFilters() {
+  appState.search = '';
+  appState.sort = 'brand_order';
+  appState.stockOnly = false;
+
+  document.getElementById('searchInput').value = '';
+  document.getElementById('sortSelect').value = 'brand_order';
+  document.getElementById('stockToggle').classList.remove('on');
+
+  renderProductGrid();
+  updateFilterChips();
+}
