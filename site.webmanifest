@@ -1,0 +1,15 @@
+{
+  "name": "I FIT FORMULA — Supplements in Kolar",
+  "short_name": "I FIT FORMULA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070707",
+  "theme_color": "#E2122B",
+  "icons": [
+    {
+      "src": "ifitherologo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
