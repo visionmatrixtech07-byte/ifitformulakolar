@@ -1,820 +1,849 @@
 <!doctype html>
 <html lang="en-IN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="FIT FORMULA Nutrition Store in Kolar. Browse genuine whey protein, creatine, mass gainers, pre-workout, vitamins and wellness essentials.">
-  <meta name="theme-color" content="#034422">
-  <link rel="canonical" href="https://ifitformula.co.in/">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>FIT FORMULA Nutrition Store | Genuine Supplements in Kolar</title>
+  <meta name="description" content="FIT FORMULA Nutrition Store in Kolar offers genuine whey protein, creatine, mass gainers, pre-workout and wellness supplements. Call or WhatsApp 9206014393."/>
+  <meta name="keywords" content="supplement store Kolar, whey protein Kolar, creatine Kolar, mass gainer Kolar, supplements Srinivaspur, Mulbagal supplements, Bangarpet supplements, Malur supplements"/>
+  <meta name="theme-color" content="#075b35"/>
+  <meta property="og:title" content="FIT FORMULA Nutrition Store | Kolar"/>
+  <meta property="og:description" content="Genuine supplements, product guidance and Kolar-area delivery enquiries."/>
+  <meta property="og:image" content="https://ifitformula.co.in/ifitlogo.jpeg"/>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["Store","LocalBusiness"],
+    "name":"FIT FORMULA Nutrition Store",
+    "telephone":"+919206014393",
+    "url":"https://ifitformula.co.in/",
+    "image":"https://ifitformula.co.in/ifitlogo.jpeg",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Raja Nagar, MB Road",
+      "addressLocality":"Kolar",
+      "addressRegion":"Karnataka",
+      "postalCode":"563101",
+      "addressCountry":"IN"
+    },
+    "areaServed":["Kolar","Srinivaspur","Mulbagal","Bangarpet","Malur"]
+  }
+  </script>
 
   <style>
     :root{
-      --green:#076437;
-      --deep:#034422;
-      --leaf:#b8ec91;
-      --ink:#102519;
-      --muted:#58705d;
-      --soft:#eef8e9;
-      --line:#d9e8d4;
-      --white:#fff;
-      --max:1240px;
+      --green:#075b35;
+      --green-dark:#043c24;
+      --lime:#b8ee78;
+      --cream:#f7f8f3;
+      --ink:#102719;
+      --muted:#627568;
+      --line:#dbe7da;
+      --white:#ffffff;
+      --shadow:0 18px 50px rgba(6,63,35,.12);
+      --radius:20px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      background:#fbfcf9;
       color:var(--ink);
+      background:var(--cream);
       font-family:Arial,Helvetica,sans-serif;
+      line-height:1.5;
     }
 
-    a{text-decoration:none;color:inherit}
+    a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
-    .shell{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .shell{width:min(1440px,calc(100% - 48px));margin:auto}
 
     .topbar{
-      min-height:38px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:15px;
-      padding:8px 16px;
-      background:var(--deep);
+      background:var(--green-dark);
       color:#fff;
-      font-size:12px;
+      font-size:13px;
       font-weight:700;
     }
 
-    .topbar i{
-      width:5px;height:5px;border-radius:50%;
-      background:var(--leaf);
+    .topbar-inner{
+      min-height:42px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:18px;
+      text-align:center;
     }
 
-    .topbar a{
-      text-decoration:underline;
-      text-underline-offset:4px;
+    .topbar-dot{
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:var(--lime);
     }
 
-    header{background:#fff;border-bottom:1px solid var(--line)}
+    .topbar a{text-decoration:underline;text-underline-offset:4px}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
     .header-main{
-      min-height:88px;
+      min-height:96px;
       display:grid;
-      grid-template-columns:190px 1fr auto;
+      grid-template-columns:190px minmax(250px,1fr) auto;
       align-items:center;
       gap:28px;
     }
 
-    .header-logo img{
-      width:172px;
-      height:68px;
+    .brand-logo{
+      width:150px;
+      height:74px;
       object-fit:contain;
       object-position:left center;
     }
 
-    .searchbox{
-      height:46px;
+    .search-box{
+      height:52px;
+      border:1px solid #b8d7bc;
+      border-radius:14px;
+      padding:0 18px;
       display:flex;
       align-items:center;
-      gap:10px;
-      padding:0 15px;
-      border:1px solid #c7dcc0;
-      border-radius:10px;
+      gap:12px;
       background:#fff;
     }
 
-    .searchbox span{color:var(--green);font-size:25px;font-weight:bold}
-    .searchbox input{
-      flex:1;border:0;outline:0;
-      color:var(--ink);
-      font:14px Arial,Helvetica,sans-serif;
-    }
-
-    .header-actions{display:flex;align-items:center;gap:16px}
-    .call-us{font-size:12px;font-weight:700;color:var(--green)}
-    .call-us small{display:block;color:#78917d;font-size:10px;font-weight:400}
-    .catalogue-btn{
-      padding:13px 16px;
-      border-radius:9px;
-      background:var(--green);
-      color:#fff;
-      font-size:13px;
-      font-weight:700;
-      white-space:nowrap;
-    }
-
-    .nav-row{border-top:1px solid #edf3ea}
-    .nav-row nav{
-      min-height:47px;
-      display:flex;
-      align-items:center;
-      gap:25px;
-      overflow-x:auto;
-      scrollbar-width:none;
-    }
-
-    .nav-row nav::-webkit-scrollbar{display:none}
-    .nav-row a{
-      white-space:nowrap;
-      color:#405745;
-      font-size:12px;
-      font-weight:700;
-    }
-
-    .nav-row a:last-child{
-      margin-left:auto;
+    .search-box span{
+      font-size:24px;
+      font-weight:bold;
       color:var(--green);
     }
 
-    .hero{
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(118deg,#01391d 0%,#075d33 55%,#0a7a43 100%);
+    .search-box input{
+      width:100%;
+      border:0;
+      outline:0;
+      font-size:16px;
+      color:var(--ink);
+      background:transparent;
+    }
+
+    .header-actions{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .call-link{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .call-link small{
+      display:block;
+      font-size:11px;
+      color:var(--muted);
+    }
+
+    .catalogue-button,
+    .primary-button,
+    .secondary-button{
+      min-height:48px;
+      border-radius:12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:0 19px;
+      font-size:15px;
+      font-weight:800;
+      transition:.25s ease;
+    }
+
+    .catalogue-button,
+    .primary-button{
+      background:var(--green);
       color:#fff;
     }
 
-    .hero:before{
+    .catalogue-button:hover,
+    .primary-button:hover{
+      background:var(--green-dark);
+      transform:translateY(-2px);
+    }
+
+    .secondary-button{
+      border:1px solid #b7d2b8;
+      color:var(--green);
+      background:rgba(255,255,255,.82);
+    }
+
+    .secondary-button:hover{
+      border-color:var(--green);
+      transform:translateY(-2px);
+    }
+
+    .category-nav{
+      border-top:1px solid #edf2ed;
+      background:#fff;
+    }
+
+    .category-nav-inner{
+      min-height:58px;
+      display:flex;
+      align-items:center;
+      gap:30px;
+      overflow-x:auto;
+      scrollbar-width:none;
+      white-space:nowrap;
+    }
+
+    .category-nav-inner::-webkit-scrollbar{display:none}
+
+    .category-nav a{
+      font-size:14px;
+      font-weight:800;
+      color:#385445;
+      transition:.2s ease;
+    }
+
+    .category-nav a:hover{color:var(--green)}
+    .category-nav .browse-link{margin-left:auto;color:#c94942}
+
+    .hero{
+      min-height:610px;
+      position:relative;
+      overflow:hidden;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(3,61,35,.98) 0%,rgba(4,88,49,.91) 52%,rgba(4,80,42,.83) 100%),
+        url("massstrength.jpeg") center/cover;
+    }
+
+    .hero::before{
       content:"";
       position:absolute;
       inset:0;
-      opacity:.17;
-      background-image:
-        linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
-      background-size:42px 42px;
-      mask-image:linear-gradient(to bottom,#000,transparent);
+      background:
+        linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+      background-size:54px 54px;
+      pointer-events:none;
     }
 
-    .hero:after{
+    .hero::after{
       content:"";
       position:absolute;
-      width:620px;
-      height:620px;
-      right:-180px;
-      bottom:-330px;
-      border:1px solid rgba(184,236,145,.35);
+      width:520px;
+      height:520px;
+      right:-140px;
+      bottom:-260px;
+      border:1px solid rgba(184,238,120,.42);
       border-radius:50%;
+      box-shadow:0 0 0 70px rgba(184,238,120,.05),0 0 0 140px rgba(184,238,120,.035);
+      pointer-events:none;
     }
 
     .hero-inner{
       position:relative;
       z-index:1;
-      min-height:510px;
+      min-height:610px;
       display:grid;
-      grid-template-columns:minmax(0,1.08fr) minmax(320px,.72fr);
+      grid-template-columns:minmax(0,1.05fr) minmax(310px,.72fr);
       align-items:center;
-      gap:48px;
-      padding:72px 0 48px;
+      gap:70px;
+      padding:54px 0 44px;
     }
 
     .eyebrow{
-      margin:0 0 14px;
-      color:var(--leaf);
-      font-size:12px;
-      font-weight:700;
+      margin:0 0 12px;
+      color:var(--lime);
+      font-size:13px;
+      font-weight:800;
       letter-spacing:.14em;
+      text-transform:uppercase;
     }
 
     .hero h1{
-      max-width:650px;
       margin:0;
+      max-width:700px;
       color:#fff;
-      font-size:clamp(44px,5vw,72px);
+      font-size:clamp(42px,5.3vw,78px);
       line-height:.98;
-      letter-spacing:-.07em;
+      letter-spacing:-.065em;
     }
 
-    .hero h1 span{color:var(--leaf)}
+    .hero h1 strong{color:var(--lime)}
 
-    .hero p{
-      max-width:580px;
-      margin:21px 0 0;
-      color:#d9edd9;
-      font-size:17px;
-      line-height:1.7;
+    .hero-text{
+      max-width:650px;
+      margin:24px 0;
+      font-size:18px;
+      color:#e1f0e2;
     }
 
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
-      margin-top:27px;
+      margin-top:28px;
     }
 
-    .btn{
-      min-height:47px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:0 19px;
-      border-radius:9px;
+    .hero .primary-button{
+      background:var(--lime);
+      color:#17361f;
+    }
+
+    .hero .primary-button:hover{background:#d0ff96}
+
+    .hero-points{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .hero-points span{
+      padding:10px 13px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:10px;
+      color:#e5f4e7;
+      background:rgba(0,0,0,.12);
       font-size:13px;
       font-weight:700;
     }
 
-    .btn-primary{
-      background:var(--leaf);
-      color:#12351b;
-    }
+    .hero-points b{color:var(--lime)}
 
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,.45);
-      background:rgba(255,255,255,.08);
-      color:#fff;
-    }
-
-    .hero-stats{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:28px;
-    }
-
-    .hero-stats div{
-      min-width:132px;
-      padding:10px 12px;
-      border:1px solid rgba(255,255,255,.2);
-      border-radius:9px;
-      background:rgba(0,35,18,.24);
-      color:#dff1df;
-      font-size:11px;
-      font-weight:600;
-    }
-
-    .hero-stats b{
-      display:block;
-      margin-bottom:3px;
-      color:var(--leaf);
-      font-size:17px;
-    }
-
-    .hero-logo-area{
+    .hero-logo-stage{
       position:relative;
-      width:100%;
-      height:340px;
+      min-height:390px;
       display:grid;
       place-items:center;
-      overflow:hidden;
     }
 
     .hero-logo-card{
-      width:306px;
-      max-width:306px;
-      height:268px;
-      padding:19px;
-      overflow:hidden;
-      border:1px solid #cbe8bd;
-      border-radius:20px;
-      background:#fff;
-      box-shadow:0 26px 55px rgba(0,0,0,.28);
+      width:min(370px,100%);
+      min-height:320px;
+      padding:22px;
+      border:1px solid rgba(255,255,255,.52);
+      border-radius:24px;
       display:flex;
       flex-direction:column;
-      align-items:center;
       justify-content:space-between;
-      animation:floatLogo 4s ease-in-out infinite;
+      align-items:center;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 24px 60px rgba(0,0,0,.25);
+      animation:floatLogo 5s ease-in-out infinite;
     }
 
-    .hero-logo-card small,
-    .hero-logo-card strong{
-      color:#176139;
-      font-size:9px;
-      font-weight:700;
-      letter-spacing:.13em;
-      text-align:center;
-      white-space:nowrap;
-    }
-
-    .hero-logo-card img{
-      width:235px;
-      max-width:235px;
-      height:155px;
-      max-height:155px;
-      object-fit:contain;
-    }
-
-    .hero-badge{
-      position:absolute;
-      right:0;
-      bottom:22px;
-      padding:12px 14px;
-      border-radius:10px;
-      background:var(--leaf);
-      color:#12351b;
-      font-size:10px;
-      font-weight:700;
-    }
-
-    @keyframes floatLogo{
-      50%{transform:translateY(-8px)}
-    }
-
-    .hero-bottom{
-      position:relative;
-      z-index:1;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      border-top:1px solid rgba(255,255,255,.2);
-    }
-
-    .hero-bottom div{
-      padding:18px;
-      border-right:1px solid rgba(255,255,255,.16);
-      color:#d8edd9;
-      font-size:11px;
-    }
-
-    .hero-bottom div:last-child{border:0}
-    .hero-bottom b{
-      display:block;
-      margin-bottom:5px;
-      color:var(--leaf);
-      font-size:10px;
-      letter-spacing:.1em;
-    }
-
-    section{padding:78px 0}
-    .kicker{
+    .hero-logo-card p,
+    .hero-logo-card span{
       margin:0;
       color:var(--green);
       font-size:11px;
-      font-weight:700;
-      letter-spacing:.12em;
-      text-transform:uppercase;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-align:center;
     }
 
-    h2{
-      margin:11px 0 0;
-      color:var(--ink);
-      font-size:clamp(32px,3.4vw,49px);
-      line-height:1.05;
-      letter-spacing:-.06em;
+    .hero-logo-card img{
+      width:280px;
+      height:205px;
+      object-fit:contain;
     }
 
-    .section-head{
-      display:flex;
-      align-items:end;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .section-link{
-      color:var(--green);
-      border-bottom:1px solid #a6ca9a;
-      padding-bottom:4px;
+    .hero-tag{
+      position:absolute;
+      right:-18px;
+      bottom:16px;
+      padding:13px 16px;
+      border-radius:12px;
+      color:#17361f;
+      background:var(--lime);
       font-size:12px;
-      font-weight:700;
-      white-space:nowrap;
+      font-weight:900;
+      box-shadow:0 14px 30px rgba(0,0,0,.18);
     }
+
+    .hero-stat{
+      position:absolute;
+      left:-14px;
+      top:42px;
+      padding:13px 16px;
+      border-radius:12px;
+      color:#fff;
+      background:var(--green-dark);
+      font-size:12px;
+      font-weight:800;
+      box-shadow:0 14px 30px rgba(0,0,0,.18);
+    }
+
+    .quick-trust{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid rgba(255,255,255,.24);
+    }
+
+    .quick-trust article{
+      padding:20px 24px 24px;
+      border-right:1px solid rgba(255,255,255,.18);
+    }
+
+    .quick-trust article:last-child{border-right:0}
+    .quick-trust strong{display:block;color:var(--lime);font-size:12px;letter-spacing:.1em}
+    .quick-trust span{display:block;margin-top:4px;font-size:14px;color:#e6f2e8}
+
+    section{padding:84px 0}
+
+    .section-heading{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      margin-bottom:30px;
+    }
+
+    .section-heading h2{
+      margin:0;
+      font-size:clamp(30px,3vw,45px);
+      letter-spacing:-.05em;
+      line-height:1.05;
+    }
+
+    .section-heading p{margin:0 0 8px}
+    .section-link{color:var(--green);font-weight:800;border-bottom:1px solid #a8caa9;padding-bottom:4px}
 
     .category-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
-      gap:13px;
-      margin-top:30px;
+      gap:16px;
     }
 
     .category-card{
-      min-height:158px;
-      padding:18px;
+      min-height:164px;
+      padding:20px;
       border:1px solid var(--line);
-      border-radius:14px;
-      background:#fff;
+      border-radius:18px;
       display:flex;
       flex-direction:column;
-      justify-content:flex-end;
-      transition:.2s;
+      justify-content:space-between;
+      background:#fff;
+      transition:.25s ease;
     }
 
     .category-card:hover{
-      transform:translateY(-4px);
-      border-color:#8ac57a;
-      box-shadow:0 14px 26px rgba(17,76,34,.1);
+      border-color:#8bc58f;
+      transform:translateY(-5px);
+      box-shadow:var(--shadow);
     }
 
-    .category-card i{
-      margin-bottom:auto;
+    .category-icon{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
       color:var(--green);
-      font-size:25px;
-      font-style:normal;
-      font-weight:700;
+      background:#e6f4df;
+      font-size:24px;
+      font-weight:bold;
     }
 
-    .category-card strong{
-      font-size:16px;
-      letter-spacing:-.04em;
-    }
+    .category-card strong{font-size:18px}
+    .category-card small{color:var(--muted);font-weight:600}
 
-    .category-card small{
-      margin-top:4px;
-      color:var(--muted);
-      font-size:11px;
-    }
-
-    .products-bg{
-      background:var(--soft);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
+    .featured-section{background:#eef6eb}
 
     .product-grid{
       display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:14px;
-      margin-top:30px;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
     }
 
     .product-card{
       overflow:hidden;
       border:1px solid var(--line);
-      border-radius:14px;
+      border-radius:18px;
       background:#fff;
-      transition:.2s;
+      transition:.28s ease;
+      animation:reveal .55s both;
     }
 
     .product-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 28px rgba(17,76,34,.12);
+      transform:translateY(-6px);
+      border-color:#82bd86;
+      box-shadow:var(--shadow);
     }
 
-    .product-card img{
-      width:100%;
-      height:178px;
-      padding:14px;
-      background:#fbfcfa;
-      object-fit:contain;
-    }
+    .product-card:nth-child(2){animation-delay:.03s}
+    .product-card:nth-child(3){animation-delay:.06s}
+    .product-card:nth-child(4){animation-delay:.09s}
+    .product-card:nth-child(5){animation-delay:.12s}
+    .product-card:nth-child(6){animation-delay:.15s}
+    .product-card:nth-child(7){animation-delay:.18s}
+    .product-card:nth-child(8){animation-delay:.21s}
 
-    .product-info{padding:14px}
-    .product-brand{
-      margin:0;
-      color:var(--green);
-      font-size:10px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    .product-info h3{
-      min-height:34px;
-      margin:7px 0;
-      font-size:15px;
-      line-height:1.1;
-      letter-spacing:-.04em;
-    }
-
-    .product-info small{
-      display:block;
-      min-height:29px;
-      color:var(--muted);
-      font-size:10px;
-      line-height:1.4;
-    }
-
-    .product-info a{
-      display:block;
-      margin-top:11px;
-      padding-top:10px;
-      border-top:1px solid var(--line);
-      color:var(--green);
-      font-size:11px;
-      font-weight:700;
-    }
-
-    .trust{
-      background:#fff;
-    }
-
-    .trust-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:65px;
-      align-items:center;
-    }
-
-    .trust-text{
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.75;
-    }
-
-    .checklist{
-      overflow:hidden;
-      margin:0;
-      padding:0;
-      list-style:none;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background:#fff;
-    }
-
-    .checklist li{
-      display:grid;
-      grid-template-columns:118px 1fr;
-      gap:15px;
-      padding:18px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .checklist li:last-child{border:0}
-    .checklist b{
-      color:var(--green);
-      font-size:11px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    .checklist span{
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .founder{
-      background:#f4faef;
-      border-top:1px solid var(--line);
-    }
-
-    .founder-grid{
-      display:grid;
-      grid-template-columns:minmax(280px,.78fr) minmax(0,1fr);
-      gap:70px;
-      align-items:center;
-    }
-
-    .founder-photo{
+    .product-image{
+      height:205px;
       position:relative;
-      max-width:420px;
-    }
-
-    .founder-photo img{
-      width:100%;
-      aspect-ratio:4/4.5;
-      object-fit:cover;
-      border-radius:18px;
-    }
-
-    .founder-photo span{
-      position:absolute;
-      right:-18px;
-      bottom:20px;
-      padding:12px 15px;
-      border-radius:10px;
-      background:var(--green);
-      color:#fff;
-      font-size:10px;
-      font-weight:700;
-      letter-spacing:.1em;
-    }
-
-    .founder-copy p:not(.kicker){
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.75;
-    }
-
-    .delivery{
-      background:var(--deep);
-      color:#fff;
-    }
-
-    .delivery h2{color:#fff}
-    .delivery .kicker{color:var(--leaf)}
-    .delivery p{color:#d6ead8;line-height:1.75}
-
-    .towns{
       display:flex;
-      flex-wrap:wrap;
-      gap:9px;
-      margin-top:22px;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+      background:linear-gradient(145deg,#fff,#edf5ed);
+      overflow:hidden;
     }
 
-    .towns span{
-      padding:10px 13px;
-      border:1px solid rgba(255,255,255,.28);
-      border-radius:8px;
-      font-size:12px;
-      font-weight:700;
+    .product-image img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      transition:.3s ease;
     }
+
+    .product-card:hover .product-image img{transform:scale(1.06)}
+
+    .product-brand{
+      position:absolute;
+      top:12px;
+      left:12px;
+      max-width:calc(100% - 24px);
+      padding:5px 9px;
+      border-radius:999px;
+      color:#fff;
+      background:var(--green-dark);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    .product-info{padding:16px}
+    .product-info h3{min-height:46px;margin:0;font-size:17px;line-height:1.18}
+    .product-info p{margin:8px 0 13px;color:var(--muted);font-size:12px;font-weight:700}
+    .product-info a{
+      width:100%;
+      min-height:40px;
+      border-radius:9px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--green);
+      background:#e6f4df;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .product-info a:hover{background:var(--green);color:#fff}
+
+    .guide-section{background:#fff}
+
+    .guide-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .guide-card{
+      min-height:220px;
+      padding:24px;
+      border-radius:18px;
+      color:#fff;
+      background:var(--green);
+    }
+
+    .guide-card:nth-child(2){background:#0c7344}
+    .guide-card:nth-child(3){background:#126b40}
+    .guide-card:nth-child(4){background:#0b4a2d}
+
+    .guide-card span{color:var(--lime);font-weight:900}
+    .guide-card h3{margin:30px 0 10px;font-size:22px}
+    .guide-card p{margin:0;color:#dcefe0;font-size:14px}
+
+    .owner-section{
+      padding:84px 0;
+      background:#e9f4e6;
+    }
+
+    .owner-grid{
+      display:grid;
+      grid-template-columns:minmax(280px,.8fr) minmax(0,1fr);
+      align-items:center;
+      gap:70px;
+    }
+
+    .owner-photo{
+      min-height:470px;
+      padding:16px;
+      border-radius:24px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .owner-photo img{
+      width:100%;
+      height:438px;
+      object-fit:contain;
+      object-position:center top;
+      border-radius:15px;
+      background:#dbeada;
+    }
+
+    .owner-copy h2{
+      margin:0;
+      font-size:clamp(34px,4vw,54px);
+      line-height:1;
+      letter-spacing:-.06em;
+    }
+
+    .owner-copy p{max-width:680px;color:#496254;font-size:17px}
+    .owner-copy .primary-button{margin-top:10px}
+
+    .delivery-section{
+      color:#fff;
+      background:var(--green-dark);
+    }
+
+    .delivery-grid{
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .delivery-grid h2{
+      margin:0;
+      font-size:clamp(32px,4vw,52px);
+      letter-spacing:-.055em;
+      line-height:1.04;
+    }
+
+    .delivery-grid p{color:#d9eadc;font-size:17px}
+    .town-list{display:flex;flex-wrap:wrap;gap:10px}
+    .town-list span{
+      padding:11px 14px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .faq-section{background:#fff}
 
     .faq-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:12px;
-      margin-top:30px;
+      gap:14px;
     }
 
     details{
+      padding:18px 20px;
       border:1px solid var(--line);
-      border-radius:12px;
+      border-radius:14px;
       background:#fff;
-      padding:0 18px;
     }
 
-    summary{
-      position:relative;
-      padding:18px 24px 18px 0;
-      cursor:pointer;
-      color:var(--ink);
-      font-size:14px;
-      font-weight:700;
-      list-style:none;
-    }
+    summary{cursor:pointer;font-weight:800}
+    details p{margin:12px 0 0;color:var(--muted);font-size:14px}
 
-    summary:after{
-      content:"+";
-      position:absolute;
-      right:0;
-      color:var(--green);
-      font-size:20px;
-    }
-
-    details[open] summary:after{content:"–"}
-
-    details p{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.7;
-    }
-
-    footer{
-      padding:54px 0 20px;
-      background:#0b1b10;
-      color:#e8f3e8;
+    .footer{
+      color:#dcefe0;
+      background:#062c1b;
     }
 
     .footer-grid{
       display:grid;
       grid-template-columns:1.5fr 1fr 1fr 1fr;
-      gap:35px;
+      gap:30px;
+      padding:55px 0;
     }
 
-    .footer-grid img{
-      width:174px;
-      height:70px;
+    .footer img{
+      width:170px;
+      height:90px;
       object-fit:contain;
       object-position:left;
+      background:#fff;
+      border-radius:10px;
     }
 
-    .footer-grid h3{
-      margin:0 0 14px;
-      color:var(--leaf);
-      font-size:10px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .footer-grid p,
-    .footer-grid a{
-      display:block;
-      margin:8px 0;
-      color:#c7dac8;
-      font-size:12px;
-      line-height:1.6;
-    }
+    .footer h3{margin:0 0 13px;color:var(--lime);font-size:14px}
+    .footer p{color:#bdd1c1;font-size:14px}
+    .footer a{display:block;margin:8px 0;font-size:14px}
+    .footer a:hover{color:var(--lime)}
 
     .footer-bottom{
-      margin-top:35px;
-      padding-top:16px;
-      border-top:1px solid rgba(255,255,255,.12);
-      color:#8fa893;
-      font-size:10px;
+      padding:17px 0;
+      border-top:1px solid rgba(255,255,255,.15);
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      color:#9eb6a4;
+      font-size:13px;
     }
 
-    @media(max-width:980px){
-      .header-main{grid-template-columns:170px 1fr auto;gap:16px}
-      .call-us{display:none}
-      .category-grid{grid-template-columns:repeat(2,1fr)}
+    @keyframes floatLogo{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-9px)}
+    }
+
+    @keyframes reveal{
+      from{opacity:0;transform:translateY(18px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @media(max-width:1050px){
+      .header-main{grid-template-columns:150px 1fr auto;gap:15px}
+      .call-link{display:none}
+      .hero-inner{gap:35px}
       .product-grid{grid-template-columns:repeat(3,1fr)}
-      .footer-grid{grid-template-columns:repeat(2,1fr)}
+      .category-grid{grid-template-columns:repeat(4,1fr)}
+      .guide-grid{grid-template-columns:repeat(2,1fr)}
     }
 
     @media(max-width:760px){
-      .shell{width:min(calc(100% - 28px),var(--max))}
-      .topbar{justify-content:flex-start;overflow:hidden;white-space:nowrap;font-size:10px}
-      .topbar i:nth-of-type(2),.topbar span:nth-of-type(2){display:none}
+      .shell{width:min(100% - 30px,600px)}
+      .topbar-inner{min-height:36px;gap:10px;font-size:10px}
+      .topbar-dot{display:none}
 
       .header-main{
-        min-height:72px;
-        grid-template-columns:1fr auto;
+        min-height:76px;
+        grid-template-columns:95px 1fr auto;
+        gap:10px;
       }
 
-      .header-logo img{width:132px;height:58px}
-      .searchbox{grid-column:1/-1;grid-row:2;margin-bottom:12px}
-      .catalogue-btn{padding:11px}
-      .catalogue-btn{font-size:0}
-      .catalogue-btn:after{content:"Shop";font-size:12px}
+      .brand-logo{width:90px;height:58px}
+      .search-box{height:42px;padding:0 10px;border-radius:10px}
+      .search-box span{font-size:18px}
+      .search-box input{font-size:13px}
+      .catalogue-button{min-height:42px;padding:0 12px;font-size:12px}
+      .category-nav-inner{min-height:49px;gap:20px}
+      .category-nav a{font-size:12px}
+      .category-nav .browse-link{margin-left:0}
 
-      .nav-row nav{gap:19px;min-height:42px}
-      .nav-row a{font-size:11px}
-      .nav-row a:last-child{margin-left:0}
-
+      .hero{min-height:auto}
       .hero-inner{
         min-height:auto;
         grid-template-columns:1fr;
-        gap:22px;
-        padding:48px 0 35px;
+        gap:24px;
+        padding:46px 0 22px;
       }
 
       .hero h1{font-size:48px}
-      .hero p{font-size:14px}
-      .hero-logo-area{height:280px}
-      .hero-logo-card{
-        width:248px;
-        max-width:248px;
-        height:220px;
-        padding:15px;
-      }
+      .hero-text{font-size:16px;margin:18px 0}
+      .hero-logo-stage{min-height:270px}
+      .hero-logo-card{width:270px;min-height:240px;padding:16px}
+      .hero-logo-card img{width:220px;height:145px}
+      .hero-tag{right:0;bottom:0;font-size:10px;padding:10px}
+      .hero-stat{left:0;top:12px;font-size:10px;padding:10px}
+      .hero-points span{font-size:11px}
+      .quick-trust{grid-template-columns:1fr}
+      .quick-trust article{padding:14px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}
+      .quick-trust article:last-child{border-bottom:0}
 
-      .hero-logo-card img{
-        width:190px;
-        max-width:190px;
-        height:124px;
-        max-height:124px;
-      }
+      section,.owner-section{padding:58px 0}
+      .section-heading{align-items:flex-start;flex-direction:column;margin-bottom:22px}
+      .section-heading h2{font-size:34px}
 
-      .hero-badge{
-        right:3px;
-        bottom:6px;
-        font-size:9px;
-      }
+      .category-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+      .category-card{min-height:140px;padding:15px}
+      .category-card strong{font-size:15px}
 
-      .hero-bottom{display:none}
-      .hero-stats{gap:7px}
-      .hero-stats div{min-width:0;font-size:9px}
-      .hero-stats b{font-size:14px}
+      .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+      .product-image{height:160px;padding:10px}
+      .product-info{padding:13px}
+      .product-info h3{min-height:39px;font-size:14px}
+      .product-info p{font-size:11px;margin:7px 0 10px}
+      .product-info a{font-size:11px;min-height:36px}
+      .product-brand{font-size:8px;padding:4px 7px}
 
-      section{padding:56px 0}
-      .section-head{align-items:start}
-      .section-link{font-size:11px}
-      .product-grid{
-        display:flex;
-        overflow:auto;
-        margin-right:-14px;
-        padding-right:14px;
-        scroll-snap-type:x mandatory;
-      }
+      .guide-grid{grid-template-columns:1fr}
+      .guide-card{min-height:170px}
 
-      .product-card{
-        min-width:220px;
-        scroll-snap-align:start;
-      }
+      .owner-grid,.delivery-grid{grid-template-columns:1fr;gap:30px}
+      .owner-photo{min-height:360px;padding:12px}
+      .owner-photo img{height:335px;object-fit:contain}
+      .owner-copy p,.delivery-grid p{font-size:16px}
 
-      .trust-grid,.founder-grid{grid-template-columns:1fr;gap:35px}
-      .founder-photo{max-width:100%}
-      .founder-photo img{aspect-ratio:4/3}
-      .founder-photo span{right:12px;bottom:14px}
       .faq-grid{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr 1fr;gap:25px}
-      .footer-grid>div:first-child{grid-column:1/-1}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:26px}
+      .footer-grid > :first-child{grid-column:1/-1}
+      .footer-bottom{display:block;line-height:1.8}
+    }
+
+    @media(max-width:390px){
+      .header-main{grid-template-columns:78px 1fr auto}
+      .brand-logo{width:75px}
+      .catalogue-button{padding:0 8px;font-size:10px}
+      .hero h1{font-size:42px}
     }
 
     @media(prefers-reduced-motion:reduce){
-      .hero-logo-card{animation:none}
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="topbar">
-    <span>100% genuine products</span><i></i>
-    <span>Expert guidance from Kolar</span><i></i>
-    <a href="https://wa.me/919206014393" target="_blank">WhatsApp: 92060 14393</a>
+    <div class="shell topbar-inner">
+      <span>100% genuine products</span>
+      <i class="topbar-dot"></i>
+      <span>Expert guidance from Kolar</span>
+      <i class="topbar-dot"></i>
+      <a href="https://wa.me/919206014393" target="_blank">WhatsApp: 92060 14393</a>
+    </div>
   </div>
 
-  <header>
+  <header class="site-header">
     <div class="shell header-main">
-      <a class="header-logo" href="index.html">
-        <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store">
+      <a href="index.html" aria-label="FIT FORMULA home">
+        <img class="brand-logo" src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store"/>
       </a>
 
-      <label class="searchbox">
+      <label class="search-box">
         <span>⌕</span>
-        <input type="search" placeholder="Search whey, creatine, vitamins and more"
-          onkeydown="if(event.key==='Enter'){location.href='products.html'}">
+        <input type="search" placeholder="Search whey, creatine, vitamins and more" onkeydown="if(event.key==='Enter')window.location.href='products.html'"/>
       </label>
 
       <div class="header-actions">
-        <a class="call-us" href="tel:+919206014393">
-          <small>Need help?</small>
-          Call us
+        <a class="call-link" href="tel:+919206014393">
+          <span>☎</span>
+          <span><small>Need help?</small>Call us</span>
         </a>
-        <a class="catalogue-btn" href="products.html">Catalogue</a>
+        <a class="catalogue-button" href="products.html">Catalogue</a>
       </div>
     </div>
 
-    <div class="nav-row">
-      <nav class="shell">
+    <nav class="category-nav">
+      <div class="shell category-nav-inner">
         <a href="products.html">All supplements</a>
         <a href="products.html#/category/whey">Whey protein</a>
         <a href="products.html#/category/mass">Mass gainers</a>
         <a href="products.html#/category/creatine">Creatine</a>
         <a href="products.html#/category/preworkout">Pre-workout</a>
-        <a href="products.html#/category/vitamins">Vitamins & wellness</a>
+        <a href="products.html#/category/vitamins">Vitamins &amp; wellness</a>
         <a href="products.html#/category/health">Health essentials</a>
-        <a href="products.html">Browse brands →</a>
-      </nav>
-    </div>
+        <a class="browse-link" href="products.html">Browse brands →</a>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -822,145 +851,204 @@
       <div class="shell hero-inner">
         <div>
           <p class="eyebrow">FIT FORMULA · KOLAR, KARNATAKA</p>
-
-          <h1>Real fuel.<br><span>Clear direction.</span></h1>
-
-          <p>
-            Genuine whey protein, creatine, mass gainers, pre-workout and
-            wellness essentials—with straightforward product guidance before
-            you order.
+          <h1>Train smart.<br/><strong>Stay consistent.</strong></h1>
+          <p class="hero-text">
+            Genuine whey protein, creatine, mass gainers, pre-workout and wellness essentials—supported with practical guidance before you order.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="products.html">Explore supplements →</a>
-            <a class="btn btn-secondary"
-              href="https://wa.me/919206014393"
-              target="_blank">Ask for guidance</a>
+            <a class="primary-button" href="products.html">Explore supplements →</a>
+            <a class="secondary-button" href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20a%20supplement." target="_blank">Ask for guidance</a>
           </div>
 
-          <div class="hero-stats">
-            <div><b>10+</b>categories to explore</div>
-            <div><b>1:1</b>WhatsApp support</div>
-            <div><b>100%</b>genuine-product focus</div>
+          <div class="hero-points">
+            <span><b>✓</b> Genuine-product focus</span>
+            <span><b>✓</b> Stock confirmation</span>
+            <span><b>✓</b> Kolar-area enquiries</span>
           </div>
         </div>
 
-        <div class="hero-logo-area">
+        <div class="hero-logo-stage">
+          <div class="hero-stat">1:1 WhatsApp support</div>
           <div class="hero-logo-card">
-            <small>YOUR LOCAL NUTRITION STORE</small>
-            <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store">
-            <strong>TRAIN · RECOVER · GROW</strong>
+            <p>Your local nutrition store</p>
+            <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store logo"/>
+            <span>Train · Recover · Grow</span>
           </div>
-
-          <div class="hero-badge">
-            Stock and flavour confirmation available
-          </div>
+          <div class="hero-tag">Stock and flavour confirmation available</div>
         </div>
       </div>
 
-      <div class="shell hero-bottom">
-        <div><b>GENUINE RANGE</b>Actual product catalogue</div>
-        <div><b>PERSONAL HELP</b>Goal, flavour and pack guidance</div>
-        <div><b>LOCAL SUPPORT</b>Kolar-area delivery enquiries</div>
+      <div class="shell quick-trust">
+        <article><strong>GENUINE RANGE</strong><span>Actual catalogue, clearly listed</span></article>
+        <article><strong>PERSONAL HELP</strong><span>Goal, flavour and pack guidance</span></article>
+        <article><strong>LOCAL SUPPORT</strong><span>Kolar-area delivery enquiries</span></article>
       </div>
     </section>
 
     <section class="shell">
-      <div class="section-head">
+      <div class="section-heading">
         <div>
-          <p class="kicker">Find what you need</p>
-          <h2>Shop by category</h2>
+          <p class="eyebrow">Find what you need</p>
+          <h2>Shop by your goal</h2>
         </div>
         <a class="section-link" href="products.html">View all categories →</a>
       </div>
 
       <div class="category-grid">
-        <a class="category-card" href="products.html#/category/whey"><i>↗</i><strong>Whey protein</strong><small>Daily protein support</small></a>
-        <a class="category-card" href="products.html#/category/mass"><i>＋</i><strong>Mass gainers</strong><small>Build strength and size</small></a>
-        <a class="category-card" href="products.html#/category/creatine"><i>◒</i><strong>Creatine</strong><small>Training support</small></a>
-        <a class="category-card" href="products.html#/category/preworkout"><i>ϟ</i><strong>Pre-workout</strong><small>Before-training energy</small></a>
-        <a class="category-card" href="products.html#/category/bcaa"><i>⌁</i><strong>BCAA & aminos</strong><small>Recovery support</small></a>
-        <a class="category-card" href="products.html#/category/vitamins"><i>✦</i><strong>Vitamins</strong><small>Everyday wellness</small></a>
-        <a class="category-card" href="products.html#/category/health"><i>♡</i><strong>Health essentials</strong><small>Support your basics</small></a>
-        <a class="category-card" href="products.html#/category/bars"><i>□</i><strong>Protein bars</strong><small>On-the-go options</small></a>
+        <a class="category-card" href="products.html#/category/whey"><span class="category-icon">↗</span><strong>Whey protein</strong><small>Daily protein support</small></a>
+        <a class="category-card" href="products.html#/category/mass"><span class="category-icon">+</span><strong>Mass gainers</strong><small>Build strength and size</small></a>
+        <a class="category-card" href="products.html#/category/creatine"><span class="category-icon">◒</span><strong>Creatine</strong><small>Training performance</small></a>
+        <a class="category-card" href="products.html#/category/preworkout"><span class="category-icon">ϟ</span><strong>Pre-workout</strong><small>Energy before training</small></a>
+        <a class="category-card" href="products.html#/category/bcaa"><span class="category-icon">⌁</span><strong>BCAA &amp; aminos</strong><small>Recovery support</small></a>
+        <a class="category-card" href="products.html#/category/vitamins"><span class="category-icon">✦</span><strong>Vitamins</strong><small>Everyday wellness</small></a>
+        <a class="category-card" href="products.html#/category/health"><span class="category-icon">♡</span><strong>Health essentials</strong><small>Support your basics</small></a>
+        <a class="category-card" href="products.html#/category/bars"><span class="category-icon">□</span><strong>Protein bars</strong><small>Convenient nutrition</small></a>
       </div>
     </section>
 
-    <section class="products-bg">
+    <section class="featured-section">
       <div class="shell">
-        <div class="section-head">
+        <div class="section-heading">
           <div>
-            <p class="kicker">Featured in store</p>
-            <h2>Popular products</h2>
+            <p class="eyebrow">Popular in store</p>
+            <h2>Featured supplements</h2>
           </div>
-          <a class="section-link" href="products.html">Open catalogue →</a>
+          <a class="section-link" href="products.html">Open full catalogue →</a>
         </div>
 
-        <div class="product-grid" id="productGrid"></div>
+        <div class="product-grid">
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/whey"><span class="product-brand">XSN</span><img src="assets/products/xsn-xtreme-whey-pro.jpg" alt="XSN Xtreme Whey Pro"/></a>
+            <div class="product-info"><h3>Xtreme Whey Pro</h3><p>Whey protein · Check flavour and size</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20XSN%20Xtreme%20Whey%20Pro." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/whey"><span class="product-brand">Muscle Club</span><img src="assets/products/muscle-club-isolate.jpg" alt="Muscle Club Isolate"/></a>
+            <div class="product-info"><h3>Lean Recovery Isolate</h3><p>Protein support · Confirm pack size</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20Isolate." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/whey"><span class="product-brand">Avvatar</span><img src="assets/products/avvatar-performance-whey.png" alt="Avvatar Performance Whey"/></a>
+            <div class="product-info"><h3>Performance Whey</h3><p>Whey protein · Confirm flavour</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Avvatar%20Performance%20Whey." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/whey"><span class="product-brand">Absolute Nutrition</span><img src="assets/products/absolute-legend-whey.jpg" alt="Absolute Legend Whey"/></a>
+            <div class="product-info"><h3>Legend Whey</h3><p>Whey protein · Check stock</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Absolute%20Legend%20Whey." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/mass"><span class="product-brand">C9 Nutrition</span><img src="assets/products/c9-muscle-mass-gainer.jpg" alt="C9 Muscle Mass Gainer"/></a>
+            <div class="product-info"><h3>Muscle Mass Gainer</h3><p>Mass gain · Confirm pack</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20C9%20Muscle%20Mass%20Gainer." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/mass"><span class="product-brand">Muscle Science</span><img src="assets/products/muscle-science-gainer.png" alt="Muscle Science Gainer"/></a>
+            <div class="product-info"><h3>Muscle Gainer</h3><p>Calorie support · Check pack</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Science%20Gainer." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/mass"><span class="product-brand">Buckle Up</span><img src="assets/products/buckleup-anabolic-mass.png" alt="Buckle Up Anabolic Mass"/></a>
+            <div class="product-info"><h3>Anabolic Mass</h3><p>Mass gainer · Confirm size</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Buckle%20Up%20Anabolic%20Mass." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/preworkout"><span class="product-brand">Reborn Nutrition</span><img src="assets/products/reborn-preworkout.jpg" alt="Reborn Nutrition Pre-workout"/></a>
+            <div class="product-info"><h3>Pre-workout</h3><p>Training energy · Confirm flavour</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Reborn%20Pre-workout." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/preworkout"><span class="product-brand">Reborn Nutrition</span><img src="assets/products/reborn-hyper.jpg" alt="Reborn Nutrition Hyper"/></a>
+            <div class="product-info"><h3>Hyper Pre-workout</h3><p>Pre-training support · Check stock</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Reborn%20Hyper." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/preworkout"><span class="product-brand">C9 Nutrition</span><img src="assets/products/c9-nitro-pro.jpg" alt="C9 Nitro Pro"/></a>
+            <div class="product-info"><h3>Nitro Pro</h3><p>Pre-workout · Confirm flavour</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20C9%20Nitro%20Pro." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/bcaa"><span class="product-brand">Muscle Club</span><img src="assets/products/muscle-club-bcaa.jpg" alt="Muscle Club BCAA Supplement"/></a>
+            <div class="product-info"><h3>BCAA Supplement</h3><p>Recovery support · Confirm pack</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20BCAA." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/bcaa"><span class="product-brand">Muscle Club</span><img src="assets/products/muscle-club-glutamine.jpg" alt="Muscle Club Glutamine"/></a>
+            <div class="product-info"><h3>Glutamine 5000 mg</h3><p>Recovery support · Check pack</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20Glutamine." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/vitamins"><span class="product-brand">Muscle Club</span><img src="assets/products/muscle-club-multivitamin.jpg" alt="Muscle Club Multivitamin"/></a>
+            <div class="product-info"><h3>Multivitamin</h3><p>Daily wellness · Confirm pack</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20Multivitamin." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/health"><span class="product-brand">HSN Nutrition</span><img src="assets/products/hsn-liver-care.jpg" alt="HSN Liver Care"/></a>
+            <div class="product-info"><h3>Liver Care</h3><p>Health support · Confirm stock</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20HSN%20Liver%20Care." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/health"><span class="product-brand">Reborn Nutrition</span><img src="assets/products/reborn-liver-support.jpg" alt="Reborn Liver Support"/></a>
+            <div class="product-info"><h3>Liver Support Pro</h3><p>Wellness support · Check pack</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Reborn%20Liver%20Support%20Pro." target="_blank">Check availability</a></div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-image" href="products.html#/category/whey"><span class="product-brand">Divine Nutrition</span><img src="assets/products/divine-life-whey.jpg" alt="Divine Nutrition Life Whey"/></a>
+            <div class="product-info"><h3>Life Whey</h3><p>Protein support · Confirm flavour</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Divine%20Nutrition%20Life%20Whey." target="_blank">Check availability</a></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="trust">
-      <div class="shell trust-grid">
-        <div>
-          <p class="kicker">Before you order</p>
-          <h2>What we help you check.</h2>
-          <p class="trust-text">
-            Supplements vary by brand, flavour, size and availability.
-            Send us the product name and your preference before ordering so
-            we can help you confirm the current product details.
-          </p>
-          <a class="btn btn-primary"
-            href="https://wa.me/919206014393"
-            target="_blank">Confirm a product →</a>
+    <section class="guide-section">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Simple supplement guidance</p>
+            <h2>Choose with a clear purpose</h2>
+          </div>
         </div>
 
-        <ul class="checklist">
-          <li><b>Product</b><span>Exact brand and product name</span></li>
-          <li><b>Variant</b><span>Available flavour or version</span></li>
-          <li><b>Pack</b><span>Size or weight currently in stock</span></li>
-          <li><b>Location</b><span>Town and pin code for delivery enquiry</span></li>
-        </ul>
+        <div class="guide-grid">
+          <article class="guide-card"><span>01</span><h3>Daily protein</h3><p>Explore whey protein when you want a convenient protein option alongside meals and training.</p></article>
+          <article class="guide-card"><span>02</span><h3>Muscle and weight goals</h3><p>Explore mass gainers, whey and creatine categories based on your routine and calorie goal.</p></article>
+          <article class="guide-card"><span>03</span><h3>Training support</h3><p>Browse pre-workout, creatine, BCAA and glutamine options for training-day support.</p></article>
+          <article class="guide-card"><span>04</span><h3>Everyday wellness</h3><p>Find multivitamins and health essentials to support your daily nutrition basics.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="founder">
-      <div class="shell founder-grid">
-        <div class="founder-photo">
-          <img src="aliirfan.jpeg" alt="Ali Irfan, FIT FORMULA founder">
-          <span>FIT FORMULA<br>KOLAR</span>
+    <section class="owner-section">
+      <div class="shell owner-grid">
+        <div class="owner-photo">
+          <img src="aliirfan.jpeg" alt="Ali Irfan from FIT FORMULA Nutrition Store, Kolar"/>
         </div>
 
-        <div class="founder-copy">
-          <p class="kicker">Guidance you can speak to</p>
+        <div class="owner-copy">
+          <p class="eyebrow">Guidance you can speak to</p>
           <h2>Meet Ali Irfan.</h2>
           <p>
-            FIT FORMULA is built around practical supplement guidance—not just
-            a product shelf. Ali Irfan brings a trainer’s perspective to help
-            customers understand categories, pack sizes and product options.
+            FIT FORMULA is more than a product catalogue. Ali Irfan helps customers understand product categories, flavour choices, pack sizes and current stock before ordering.
           </p>
           <p>
-            Share your routine and goal on WhatsApp before ordering. We will
-            help you check the right category, available product, flavour and
-            pack size.
+            Send your fitness goal, product preference and location on WhatsApp. You can get practical guidance before making a purchase decision.
           </p>
-          <a class="btn btn-primary"
-            href="https://wa.me/919206014393"
-            target="_blank">Ask for guidance →</a>
+          <a class="primary-button" href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20supplement%20guidance." target="_blank">Ask Ali for guidance →</a>
         </div>
       </div>
     </section>
 
-    <section class="delivery">
-      <div class="shell">
-        <p class="kicker">Kolar district support</p>
-        <h2>Order support starts with a conversation.</h2>
-        <p>
-          Send the product name, preferred flavour, pack size and your pin code
-          on WhatsApp. Delivery possibilities are confirmed before you proceed.
-        </p>
+    <section class="delivery-section">
+      <div class="shell delivery-grid">
+        <div>
+          <p class="eyebrow">Kolar district support</p>
+          <h2>Order support starts with a conversation.</h2>
+          <p>Send the product name, flavour, size and your pin code. We will help you check stock and delivery possibilities before you proceed.</p>
+          <a class="secondary-button" href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20delivery%20for%20my%20location." target="_blank">Check delivery availability →</a>
+        </div>
 
-        <div class="towns">
+        <div class="town-list">
           <span>Kolar</span>
           <span>Srinivaspur</span>
           <span>Mulbagal</span>
@@ -971,98 +1059,72 @@
       </div>
     </section>
 
-    <section class="shell">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Helpful answers</p>
-          <h2>Before you place an order</h2>
+    <section class="faq-section">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Helpful answers</p>
+            <h2>Before you order</h2>
+          </div>
         </div>
-      </div>
 
-      <div class="faq-grid">
-        <details open>
-          <summary>How do I choose the right category?</summary>
-          <p>Start with your goal: protein intake, muscle and weight goals, training performance or everyday wellness. Then ask for a practical shortlist.</p>
-        </details>
+        <div class="faq-grid">
+          <details open>
+            <summary>Can I confirm the flavour and pack size first?</summary>
+            <p>Yes. Send the product name, flavour and size on WhatsApp. We will confirm current availability before you decide.</p>
+          </details>
 
-        <details>
-          <summary>Can I confirm flavour and pack size?</summary>
-          <p>Yes. Send the product name, preferred flavour and pack size on WhatsApp. Current availability is confirmed before you order.</p>
-        </details>
+          <details>
+            <summary>Which areas can enquire for delivery?</summary>
+            <p>We accept enquiries from Kolar, Srinivaspur, Mulbagal, Bangarpet, Malur and nearby areas. Delivery depends on address and pin code confirmation.</p>
+          </details>
 
-        <details>
-          <summary>Do you confirm stock before ordering?</summary>
-          <p>Yes. Product availability can change, so the store confirms the required product details directly.</p>
-        </details>
+          <details>
+            <summary>How do I choose the right category?</summary>
+            <p>Start with your goal: protein intake, weight gain, training performance or wellness. Then ask us for a practical shortlist.</p>
+          </details>
 
-        <details>
-          <summary>Which locations can enquire for delivery?</summary>
-          <p>Enquiries are accepted from Kolar, Srinivaspur, Mulbagal, Bangarpet, Malur and nearby locations. Address and pin code are required for confirmation.</p>
-        </details>
+          <details>
+            <summary>How can I contact FIT FORMULA?</summary>
+            <p>Call or WhatsApp +91 92060 14393. WhatsApp is useful for sharing product names, flavours, pack sizes and location details.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="shell footer-grid">
       <div>
-        <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store">
-        <p>Genuine sports nutrition and practical guidance from Kolar, Karnataka.</p>
+        <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store"/>
+        <p>Genuine sports nutrition, wellness essentials and practical supplement guidance from Kolar, Karnataka.</p>
       </div>
 
       <div>
-        <h3>Explore</h3>
+        <h3>EXPLORE</h3>
         <a href="products.html">All products</a>
         <a href="products.html#/category/whey">Whey protein</a>
-        <a href="products.html#/category/vitamins">Wellness essentials</a>
+        <a href="products.html#/category/vitamins">Vitamins and wellness</a>
       </div>
 
       <div>
-        <h3>Contact</h3>
+        <h3>CONTACT</h3>
         <a href="tel:+919206014393">+91 92060 14393</a>
         <a href="https://wa.me/919206014393" target="_blank">WhatsApp the store</a>
+        <a href="https://www.instagram.com/ifitformula/" target="_blank">Instagram</a>
       </div>
 
       <div>
-        <h3>Visit</h3>
-        <p>Raja Nagar, MB Road<br>Kolar, Karnataka 563101</p>
+        <h3>VISIT</h3>
+        <p>Raja Nagar, MB Road<br/>Kolar, Karnataka 563101</p>
+        <a href="https://maps.google.com/?q=R+K+Hospital+Kolar+MB+Road+Raja+Nagar" target="_blank">Get directions →</a>
       </div>
     </div>
 
     <div class="shell footer-bottom">
-      © 2026 FIT FORMULA Nutrition Store · Genuine supplements · Kolar, Karnataka
+      <span>© 2026 FIT FORMULA Nutrition Store</span>
+      <span>Genuine supplements · Kolar, Karnataka</span>
     </div>
   </footer>
-
-  <script>
-    const products = [
-      ["XSN","Xtreme Whey Pro","Whey protein · Confirm size and flavour","assets/products/xsn-xtreme-whey-pro.jpg","whey"],
-      ["Muscle Club","Lean Recovery Isolate","Protein support · Stock confirmation","assets/products/muscle-club-isolate.jpg","whey"],
-      ["Muscle Club","Multivitamin","Wellness essential · Confirm pack","assets/products/muscle-club-multivitamin.jpg","vitamins"],
-      ["Reborn Nutrition","Pre-workout","Training energy · Confirm flavour","assets/products/reborn-preworkout.jpg","preworkout"],
-      ["C9 Nutrition","Muscle Mass Gainer","Mass-gain support · Confirm pack","assets/products/c9-muscle-mass-gainer.jpg","mass"],
-      ["Muscle Science","Muscle Gainer","Calorie support · Confirm pack","assets/products/muscle-science-gainer.png","mass"],
-      ["Reborn Nutrition","Hyper Pre-workout","Pre-training support · Confirm flavour","assets/products/reborn-hyper.jpg","preworkout"],
-      ["Muscle Club","BCAA Supplement","Recovery support · Confirm pack","assets/products/muscle-club-bcaa.jpg","bcaa"],
-      ["Muscle Club","Glutamine 5000 mg","Recovery support · Confirm pack","assets/products/muscle-club-glutamine.jpg","bcaa"],
-      ["Reborn Nutrition","Liver Support Pro","Wellness support · Confirm pack","assets/products/reborn-liver-support.jpg","health"]
-    ];
-
-    document.getElementById("productGrid").innerHTML = products.map(product => `
-      <article class="product-card">
-        <a href="products.html#/category/${product[4]}">
-          <img src="${product[3]}" alt="${product[1]}">
-        </a>
-        <div class="product-info">
-          <p class="product-brand">${product[0]}</p>
-          <h3>${product[1]}</h3>
-          <small>${product[2]}</small>
-          <a href="https://wa.me/919206014393?text=${encodeURIComponent("Hi, I want to check " + product[1])}" target="_blank">
-            Check availability →
-          </a>
-        </div>
-      </article>
-    `).join("");
-  </script>
 </body>
 </html>
