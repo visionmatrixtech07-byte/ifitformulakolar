@@ -1,89 +1,1068 @@
 <!doctype html>
 <html lang="en-IN">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="FIT FORMULA Nutrition Store in Kolar. Browse genuine whey protein, creatine, mass gainers, pre-workout, vitamins and wellness essentials.">
+  <meta name="theme-color" content="#034422">
+  <link rel="canonical" href="https://ifitformula.co.in/">
   <title>FIT FORMULA Nutrition Store | Genuine Supplements in Kolar</title>
-  <meta name="description" content="Browse genuine whey protein, creatine, mass gainers, pre-workout, vitamins and wellness essentials at FIT FORMULA Nutrition Store, Kolar. Call or WhatsApp 9206014393 for stock and delivery enquiries."/>
-  <meta name="keywords" content="supplement store Kolar, whey protein Kolar, creatine Kolar, mass gainer Kolar, sports nutrition Kolar, supplements Srinivaspur, supplements Mulbagal, supplements Bangarpet, supplements Malur"/>
-  <meta name="robots" content="index,follow,max-image-preview:large"/>
-  <link rel="canonical" href="https://ifitformula.co.in/"/>
-  <link rel="manifest" href="site.webmanifest"/>
-  <meta name="theme-color" content="#034422"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="FIT FORMULA Nutrition Store | Kolar"/>
-  <meta property="og:description" content="Genuine sports nutrition and wellness essentials in Kolar. Check product availability on WhatsApp."/>
-  <meta property="og:url" content="https://ifitformula.co.in/"/>
-  <meta property="og:image" content="https://ifitformula.co.in/ifitlogo.jpeg"/>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":["Store","LocalBusiness"],"name":"FIT FORMULA Nutrition Store","url":"https://ifitformula.co.in/","telephone":"+919206014393","image":"https://ifitformula.co.in/ifitlogo.jpeg","priceRange":"₹₹","address":{"@type":"PostalAddress","streetAddress":"R K Hospital Kolar, 44QJ+J4M, MB Rd, Raja Nagar","addressLocality":"Kolar","addressRegion":"Karnataka","postalCode":"563101","addressCountry":"IN"},"areaServed":["Kolar","Srinivaspur","Mulbagal","Bangarpet","Malur"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Sports nutrition and wellness essentials","itemListElement":[{"@type":"OfferCatalog","name":"Whey Protein"},{"@type":"OfferCatalog","name":"Creatine"},{"@type":"OfferCatalog","name":"Mass Gainers"},{"@type":"OfferCatalog","name":"Vitamins and Wellness"}]}}
-  </script>
-  <link rel="stylesheet" href="retail-preview.css"/>
-  <link rel="stylesheet" href="retail-logo.css"/>
-  <link rel="stylesheet" href="retail-final.css"/>
-  <link rel="stylesheet" href="retail-rich.css"/>
-  <link rel="stylesheet" href="hero-upgrade.css"/>
-</head>
-<body>
-  <div class="utility-bar"><div class="shell utility-inner"><span>100% genuine products</span><span class="utility-dot"></span><span>Expert guidance from Kolar</span><span class="utility-dot"></span><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a></div></div>
 
-  <header class="site-header">
-    <div class="shell top-header">
-      <a class="brand-lockup" href="#top" aria-label="FIT FORMULA home"><img class="full-logo" src="ifitlogo.jpeg?v=20260907" alt="FIT FORMULA Nutrition Store"/></a>
-      <label class="site-search" for="homeSearch"><span aria-hidden="true">⌕</span><input id="homeSearch" type="search" placeholder="Search whey, creatine, vitamins and more" onkeydown="if(event.key==='Enter') location.href='products.html'"/></label>
-      <div class="header-actions"><a class="help-link" href="tel:+919206014393"><span aria-hidden="true">☎</span><span><small>Need help?</small>Call us</span></a><a class="cart-link" href="products.html"><span aria-hidden="true">▢</span><b>Catalogue</b></a></div>
+  <style>
+    :root{
+      --green:#076437;
+      --deep:#034422;
+      --leaf:#b8ec91;
+      --ink:#102519;
+      --muted:#58705d;
+      --soft:#eef8e9;
+      --line:#d9e8d4;
+      --white:#fff;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fbfcf9;
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .shell{width:min(calc(100% - 40px),var(--max));margin:auto}
+
+    .topbar{
+      min-height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:15px;
+      padding:8px 16px;
+      background:var(--deep);
+      color:#fff;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .topbar i{
+      width:5px;height:5px;border-radius:50%;
+      background:var(--leaf);
+    }
+
+    .topbar a{
+      text-decoration:underline;
+      text-underline-offset:4px;
+    }
+
+    header{background:#fff;border-bottom:1px solid var(--line)}
+    .header-main{
+      min-height:88px;
+      display:grid;
+      grid-template-columns:190px 1fr auto;
+      align-items:center;
+      gap:28px;
+    }
+
+    .header-logo img{
+      width:172px;
+      height:68px;
+      object-fit:contain;
+      object-position:left center;
+    }
+
+    .searchbox{
+      height:46px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:0 15px;
+      border:1px solid #c7dcc0;
+      border-radius:10px;
+      background:#fff;
+    }
+
+    .searchbox span{color:var(--green);font-size:25px;font-weight:bold}
+    .searchbox input{
+      flex:1;border:0;outline:0;
+      color:var(--ink);
+      font:14px Arial,Helvetica,sans-serif;
+    }
+
+    .header-actions{display:flex;align-items:center;gap:16px}
+    .call-us{font-size:12px;font-weight:700;color:var(--green)}
+    .call-us small{display:block;color:#78917d;font-size:10px;font-weight:400}
+    .catalogue-btn{
+      padding:13px 16px;
+      border-radius:9px;
+      background:var(--green);
+      color:#fff;
+      font-size:13px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    .nav-row{border-top:1px solid #edf3ea}
+    .nav-row nav{
+      min-height:47px;
+      display:flex;
+      align-items:center;
+      gap:25px;
+      overflow-x:auto;
+      scrollbar-width:none;
+    }
+
+    .nav-row nav::-webkit-scrollbar{display:none}
+    .nav-row a{
+      white-space:nowrap;
+      color:#405745;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .nav-row a:last-child{
+      margin-left:auto;
+      color:var(--green);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(118deg,#01391d 0%,#075d33 55%,#0a7a43 100%);
+      color:#fff;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      opacity:.17;
+      background-image:
+        linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom,#000,transparent);
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:620px;
+      height:620px;
+      right:-180px;
+      bottom:-330px;
+      border:1px solid rgba(184,236,145,.35);
+      border-radius:50%;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      min-height:510px;
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.72fr);
+      align-items:center;
+      gap:48px;
+      padding:72px 0 48px;
+    }
+
+    .eyebrow{
+      margin:0 0 14px;
+      color:var(--leaf);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
+    }
+
+    .hero h1{
+      max-width:650px;
+      margin:0;
+      color:#fff;
+      font-size:clamp(44px,5vw,72px);
+      line-height:.98;
+      letter-spacing:-.07em;
+    }
+
+    .hero h1 span{color:var(--leaf)}
+
+    .hero p{
+      max-width:580px;
+      margin:21px 0 0;
+      color:#d9edd9;
+      font-size:17px;
+      line-height:1.7;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:27px;
+    }
+
+    .btn{
+      min-height:47px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 19px;
+      border-radius:9px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .btn-primary{
+      background:var(--leaf);
+      color:#12351b;
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.45);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+    }
+
+    .hero-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .hero-stats div{
+      min-width:132px;
+      padding:10px 12px;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:9px;
+      background:rgba(0,35,18,.24);
+      color:#dff1df;
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .hero-stats b{
+      display:block;
+      margin-bottom:3px;
+      color:var(--leaf);
+      font-size:17px;
+    }
+
+    .hero-logo-area{
+      position:relative;
+      width:100%;
+      height:340px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+    }
+
+    .hero-logo-card{
+      width:306px;
+      max-width:306px;
+      height:268px;
+      padding:19px;
+      overflow:hidden;
+      border:1px solid #cbe8bd;
+      border-radius:20px;
+      background:#fff;
+      box-shadow:0 26px 55px rgba(0,0,0,.28);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between;
+      animation:floatLogo 4s ease-in-out infinite;
+    }
+
+    .hero-logo-card small,
+    .hero-logo-card strong{
+      color:#176139;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.13em;
+      text-align:center;
+      white-space:nowrap;
+    }
+
+    .hero-logo-card img{
+      width:235px;
+      max-width:235px;
+      height:155px;
+      max-height:155px;
+      object-fit:contain;
+    }
+
+    .hero-badge{
+      position:absolute;
+      right:0;
+      bottom:22px;
+      padding:12px 14px;
+      border-radius:10px;
+      background:var(--leaf);
+      color:#12351b;
+      font-size:10px;
+      font-weight:700;
+    }
+
+    @keyframes floatLogo{
+      50%{transform:translateY(-8px)}
+    }
+
+    .hero-bottom{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid rgba(255,255,255,.2);
+    }
+
+    .hero-bottom div{
+      padding:18px;
+      border-right:1px solid rgba(255,255,255,.16);
+      color:#d8edd9;
+      font-size:11px;
+    }
+
+    .hero-bottom div:last-child{border:0}
+    .hero-bottom b{
+      display:block;
+      margin-bottom:5px;
+      color:var(--leaf);
+      font-size:10px;
+      letter-spacing:.1em;
+    }
+
+    section{padding:78px 0}
+    .kicker{
+      margin:0;
+      color:var(--green);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    h2{
+      margin:11px 0 0;
+      color:var(--ink);
+      font-size:clamp(32px,3.4vw,49px);
+      line-height:1.05;
+      letter-spacing:-.06em;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .section-link{
+      color:var(--green);
+      border-bottom:1px solid #a6ca9a;
+      padding-bottom:4px;
+      font-size:12px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    .category-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+      margin-top:30px;
+    }
+
+    .category-card{
+      min-height:158px;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      transition:.2s;
+    }
+
+    .category-card:hover{
+      transform:translateY(-4px);
+      border-color:#8ac57a;
+      box-shadow:0 14px 26px rgba(17,76,34,.1);
+    }
+
+    .category-card i{
+      margin-bottom:auto;
+      color:var(--green);
+      font-size:25px;
+      font-style:normal;
+      font-weight:700;
+    }
+
+    .category-card strong{
+      font-size:16px;
+      letter-spacing:-.04em;
+    }
+
+    .category-card small{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .products-bg{
+      background:var(--soft);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+      margin-top:30px;
+    }
+
+    .product-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      transition:.2s;
+    }
+
+    .product-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 28px rgba(17,76,34,.12);
+    }
+
+    .product-card img{
+      width:100%;
+      height:178px;
+      padding:14px;
+      background:#fbfcfa;
+      object-fit:contain;
+    }
+
+    .product-info{padding:14px}
+    .product-brand{
+      margin:0;
+      color:var(--green);
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .product-info h3{
+      min-height:34px;
+      margin:7px 0;
+      font-size:15px;
+      line-height:1.1;
+      letter-spacing:-.04em;
+    }
+
+    .product-info small{
+      display:block;
+      min-height:29px;
+      color:var(--muted);
+      font-size:10px;
+      line-height:1.4;
+    }
+
+    .product-info a{
+      display:block;
+      margin-top:11px;
+      padding-top:10px;
+      border-top:1px solid var(--line);
+      color:var(--green);
+      font-size:11px;
+      font-weight:700;
+    }
+
+    .trust{
+      background:#fff;
+    }
+
+    .trust-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .trust-text{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .checklist{
+      overflow:hidden;
+      margin:0;
+      padding:0;
+      list-style:none;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+    }
+
+    .checklist li{
+      display:grid;
+      grid-template-columns:118px 1fr;
+      gap:15px;
+      padding:18px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .checklist li:last-child{border:0}
+    .checklist b{
+      color:var(--green);
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .checklist span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .founder{
+      background:#f4faef;
+      border-top:1px solid var(--line);
+    }
+
+    .founder-grid{
+      display:grid;
+      grid-template-columns:minmax(280px,.78fr) minmax(0,1fr);
+      gap:70px;
+      align-items:center;
+    }
+
+    .founder-photo{
+      position:relative;
+      max-width:420px;
+    }
+
+    .founder-photo img{
+      width:100%;
+      aspect-ratio:4/4.5;
+      object-fit:cover;
+      border-radius:18px;
+    }
+
+    .founder-photo span{
+      position:absolute;
+      right:-18px;
+      bottom:20px;
+      padding:12px 15px;
+      border-radius:10px;
+      background:var(--green);
+      color:#fff;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.1em;
+    }
+
+    .founder-copy p:not(.kicker){
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .delivery{
+      background:var(--deep);
+      color:#fff;
+    }
+
+    .delivery h2{color:#fff}
+    .delivery .kicker{color:var(--leaf)}
+    .delivery p{color:#d6ead8;line-height:1.75}
+
+    .towns{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:22px;
+    }
+
+    .towns span{
+      padding:10px 13px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:8px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:30px;
+    }
+
+    details{
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      padding:0 18px;
+    }
+
+    summary{
+      position:relative;
+      padding:18px 24px 18px 0;
+      cursor:pointer;
+      color:var(--ink);
+      font-size:14px;
+      font-weight:700;
+      list-style:none;
+    }
+
+    summary:after{
+      content:"+";
+      position:absolute;
+      right:0;
+      color:var(--green);
+      font-size:20px;
+    }
+
+    details[open] summary:after{content:"–"}
+
+    details p{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    footer{
+      padding:54px 0 20px;
+      background:#0b1b10;
+      color:#e8f3e8;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr 1fr;
+      gap:35px;
+    }
+
+    .footer-grid img{
+      width:174px;
+      height:70px;
+      object-fit:contain;
+      object-position:left;
+    }
+
+    .footer-grid h3{
+      margin:0 0 14px;
+      color:var(--leaf);
+      font-size:10px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .footer-grid p,
+    .footer-grid a{
+      display:block;
+      margin:8px 0;
+      color:#c7dac8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .footer-bottom{
+      margin-top:35px;
+      padding-top:16px;
+      border-top:1px solid rgba(255,255,255,.12);
+      color:#8fa893;
+      font-size:10px;
+    }
+
+    @media(max-width:980px){
+      .header-main{grid-template-columns:170px 1fr auto;gap:16px}
+      .call-us{display:none}
+      .category-grid{grid-template-columns:repeat(2,1fr)}
+      .product-grid{grid-template-columns:repeat(3,1fr)}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(max-width:760px){
+      .shell{width:min(calc(100% - 28px),var(--max))}
+      .topbar{justify-content:flex-start;overflow:hidden;white-space:nowrap;font-size:10px}
+      .topbar i:nth-of-type(2),.topbar span:nth-of-type(2){display:none}
+
+      .header-main{
+        min-height:72px;
+        grid-template-columns:1fr auto;
+      }
+
+      .header-logo img{width:132px;height:58px}
+      .searchbox{grid-column:1/-1;grid-row:2;margin-bottom:12px}
+      .catalogue-btn{padding:11px}
+      .catalogue-btn{font-size:0}
+      .catalogue-btn:after{content:"Shop";font-size:12px}
+
+      .nav-row nav{gap:19px;min-height:42px}
+      .nav-row a{font-size:11px}
+      .nav-row a:last-child{margin-left:0}
+
+      .hero-inner{
+        min-height:auto;
+        grid-template-columns:1fr;
+        gap:22px;
+        padding:48px 0 35px;
+      }
+
+      .hero h1{font-size:48px}
+      .hero p{font-size:14px}
+      .hero-logo-area{height:280px}
+      .hero-logo-card{
+        width:248px;
+        max-width:248px;
+        height:220px;
+        padding:15px;
+      }
+
+      .hero-logo-card img{
+        width:190px;
+        max-width:190px;
+        height:124px;
+        max-height:124px;
+      }
+
+      .hero-badge{
+        right:3px;
+        bottom:6px;
+        font-size:9px;
+      }
+
+      .hero-bottom{display:none}
+      .hero-stats{gap:7px}
+      .hero-stats div{min-width:0;font-size:9px}
+      .hero-stats b{font-size:14px}
+
+      section{padding:56px 0}
+      .section-head{align-items:start}
+      .section-link{font-size:11px}
+      .product-grid{
+        display:flex;
+        overflow:auto;
+        margin-right:-14px;
+        padding-right:14px;
+        scroll-snap-type:x mandatory;
+      }
+
+      .product-card{
+        min-width:220px;
+        scroll-snap-align:start;
+      }
+
+      .trust-grid,.founder-grid{grid-template-columns:1fr;gap:35px}
+      .founder-photo{max-width:100%}
+      .founder-photo img{aspect-ratio:4/3}
+      .founder-photo span{right:12px;bottom:14px}
+      .faq-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:25px}
+      .footer-grid>div:first-child{grid-column:1/-1}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      .hero-logo-card{animation:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span>100% genuine products</span><i></i>
+    <span>Expert guidance from Kolar</span><i></i>
+    <a href="https://wa.me/919206014393" target="_blank">WhatsApp: 92060 14393</a>
+  </div>
+
+  <header>
+    <div class="shell header-main">
+      <a class="header-logo" href="index.html">
+        <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store">
+      </a>
+
+      <label class="searchbox">
+        <span>⌕</span>
+        <input type="search" placeholder="Search whey, creatine, vitamins and more"
+          onkeydown="if(event.key==='Enter'){location.href='products.html'}">
+      </label>
+
+      <div class="header-actions">
+        <a class="call-us" href="tel:+919206014393">
+          <small>Need help?</small>
+          Call us
+        </a>
+        <a class="catalogue-btn" href="products.html">Catalogue</a>
+      </div>
     </div>
-    <nav class="category-nav" aria-label="Shop categories"><div class="shell category-nav-inner">
-      <a href="products.html">All supplements</a><a href="products.html#/category/whey">Whey protein</a><a href="products.html#/category/mass">Mass gainers</a><a href="products.html#/category/creatine">Creatine</a><a href="products.html#/category/preworkout">Pre-workout</a><a href="products.html#/category/vitamins">Vitamins &amp; wellness</a><a href="products.html#/category/health">Health essentials</a><a class="nav-offer" href="products.html">Browse brands →</a>
-    </div></nav>
+
+    <div class="nav-row">
+      <nav class="shell">
+        <a href="products.html">All supplements</a>
+        <a href="products.html#/category/whey">Whey protein</a>
+        <a href="products.html#/category/mass">Mass gainers</a>
+        <a href="products.html#/category/creatine">Creatine</a>
+        <a href="products.html#/category/preworkout">Pre-workout</a>
+        <a href="products.html#/category/vitamins">Vitamins & wellness</a>
+        <a href="products.html#/category/health">Health essentials</a>
+        <a href="products.html">Browse brands →</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero-section hero-strong"><div class="hero-graphic hero-graphic-one" aria-hidden="true"></div><div class="hero-graphic hero-graphic-two" aria-hidden="true"></div><div class="hero-grid-lines" aria-hidden="true"></div><div class="shell hero-grid">
-      <div class="hero-copy"><p class="overline">FIT FORMULA · KOLAR, KARNATAKA</p><h1>Real fuel.<br/><em>Clear direction.</em></h1><p class="hero-text">Choose genuine sports nutrition with straightforward support for your training, recovery and everyday wellness routine.</p><div class="hero-cta-row"><a class="button button-primary" href="products.html">Explore the catalogue <span>→</span></a><a class="button button-secondary" href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20a%20supplement." target="_blank" rel="noopener noreferrer">Get product guidance</a></div><div class="hero-data"><span><b>10+</b> categories to explore</span><span><b>1:1</b> WhatsApp support</span><span><b>100%</b> genuine-product focus</span></div></div>
-      <div class="hero-brand-stage" aria-label="FIT FORMULA nutrition store"><div class="hero-logo-card"><p>YOUR LOCAL NUTRITION STORE</p><img src="ifitlogo.jpeg?v=20260907" alt="FIT FORMULA Nutrition Store logo"/><span>TRAIN · RECOVER · GROW</span></div><div class="hero-float-card hero-float-card-a"><b>✓</b><span>Stock<br/>confirmation</span></div><div class="hero-float-card hero-float-card-b"><b>01</b><span>Goal-led<br/>guidance</span></div><div class="hero-orbit hero-orbit-one" aria-hidden="true"></div><div class="hero-orbit hero-orbit-two" aria-hidden="true"></div></div>
-    </div><div class="shell hero-bottom-data"><span><b>GENUINE RANGE</b> Actual product catalogue</span><span><b>PERSONAL HELP</b> Goal, flavour and pack guidance</span><span><b>LOCAL SUPPORT</b> Kolar-area delivery enquiries</span></div></section>
+  <main>
+    <section class="hero">
+      <div class="shell hero-inner">
+        <div>
+          <p class="eyebrow">FIT FORMULA · KOLAR, KARNATAKA</p>
 
-    <section class="proof-strip" aria-label="FIT FORMULA service promise"><div class="shell proof-grid"><article><span>01</span><div><strong>Genuine-product focus</strong><p>We help you confirm the actual product before an order is placed.</p></div></article><article><span>02</span><div><strong>Guidance before checkout</strong><p>Start with your goal, routine, flavour and pack-size preference.</p></div></article><article><span>03</span><div><strong>Stock confirmation</strong><p>Ask for current availability before making a payment decision.</p></div></article><article><span>04</span><div><strong>Kolar-area enquiries</strong><p>Share your town and pin code to confirm delivery possibilities.</p></div></article></div></section>
+          <h1>Real fuel.<br><span>Clear direction.</span></h1>
 
-    <section class="shop-section shell" aria-labelledby="category-heading"><div class="section-heading-row"><div><p class="overline">Find what you need</p><h2 id="category-heading">Shop by category</h2></div><a href="products.html" class="text-link">View all categories <span>→</span></a></div>
-      <div class="category-grid">
-        <a class="category-card tint-green" href="products.html#/category/whey"><span class="category-icon">↗</span><strong>Whey protein</strong><small>Daily protein support</small></a><a class="category-card tint-mint" href="products.html#/category/mass"><span class="category-icon">＋</span><strong>Mass gainers</strong><small>Build strength &amp; size</small></a><a class="category-card tint-yellow" href="products.html#/category/creatine"><span class="category-icon">◒</span><strong>Creatine</strong><small>Train with intent</small></a><a class="category-card tint-peach" href="products.html#/category/preworkout"><span class="category-icon">ϟ</span><strong>Pre-workout</strong><small>Energy before training</small></a><a class="category-card tint-blue" href="products.html#/category/bcaa"><span class="category-icon">⌁</span><strong>BCAA &amp; aminos</strong><small>Recovery support</small></a><a class="category-card tint-sage" href="products.html#/category/vitamins"><span class="category-icon">✦</span><strong>Vitamins</strong><small>Everyday wellness</small></a><a class="category-card tint-yellow" href="products.html#/category/health"><span class="category-icon">♡</span><strong>Health essentials</strong><small>Support your basics</small></a><a class="category-card tint-mint" href="products.html#/category/bars"><span class="category-icon">□</span><strong>Protein bars</strong><small>Smart on-the-go options</small></a>
+          <p>
+            Genuine whey protein, creatine, mass gainers, pre-workout and
+            wellness essentials—with straightforward product guidance before
+            you order.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="products.html">Explore supplements →</a>
+            <a class="btn btn-secondary"
+              href="https://wa.me/919206014393"
+              target="_blank">Ask for guidance</a>
+          </div>
+
+          <div class="hero-stats">
+            <div><b>10+</b>categories to explore</div>
+            <div><b>1:1</b>WhatsApp support</div>
+            <div><b>100%</b>genuine-product focus</div>
+          </div>
+        </div>
+
+        <div class="hero-logo-area">
+          <div class="hero-logo-card">
+            <small>YOUR LOCAL NUTRITION STORE</small>
+            <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store">
+            <strong>TRAIN · RECOVER · GROW</strong>
+          </div>
+
+          <div class="hero-badge">
+            Stock and flavour confirmation available
+          </div>
+        </div>
+      </div>
+
+      <div class="shell hero-bottom">
+        <div><b>GENUINE RANGE</b>Actual product catalogue</div>
+        <div><b>PERSONAL HELP</b>Goal, flavour and pack guidance</div>
+        <div><b>LOCAL SUPPORT</b>Kolar-area delivery enquiries</div>
       </div>
     </section>
 
-    <section class="choice-section"><div class="shell"><div class="section-heading-row"><div><p class="overline">A better way to choose</p><h2>Start with a purpose, not a random product.</h2></div></div><p class="section-intro">Different supplements support different routines. Use these quick paths to narrow the catalogue, then ask us to confirm the right product, available flavour and pack size.</p><div class="choice-grid"><article><span class="choice-number">01</span><h3>Daily protein</h3><p>For people who want a convenient protein option alongside regular meals and training.</p><a href="products.html#/category/whey">Explore whey protein →</a></article><article><span class="choice-number">02</span><h3>Muscle &amp; weight goals</h3><p>Explore higher-calorie mass-gainer options and ask us which pack suits your routine.</p><a href="products.html#/category/mass">Explore mass gainers →</a></article><article><span class="choice-number">03</span><h3>Training-day support</h3><p>Browse creatine, pre-workout and amino categories based on your training preference.</p><a href="products.html#/category/preworkout">Explore performance →</a></article><article><span class="choice-number">04</span><h3>Everyday wellness</h3><p>Browse vitamins, fish-oil and wellness categories for your daily essentials.</p><a href="products.html#/category/vitamins">Explore wellness →</a></article></div></div></section>
-
-    <section class="product-band"><div class="shell"><div class="section-heading-row"><div><p class="overline">Featured in store</p><h2>Popular ways to start</h2></div><a href="products.html" class="text-link">Open full catalogue <span>→</span></a></div>
-      <div class="product-grid">
-        <article class="product-card"><a class="product-image" href="products.html#/category/whey"><img src="assets/products/xsn-xtreme-whey-pro.jpg" alt="XSN Xtreme Whey Pro"/></a><div class="product-details"><p>XSN</p><h3>Xtreme Whey Pro</h3><span>Whey protein · Confirm size &amp; flavour</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20XSN%20Xtreme%20Whey%20Pro." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/whey"><img src="assets/products/muscle-club-isolate.jpg" alt="Muscle Club Isolate"/></a><div class="product-details"><p>Muscle Club</p><h3>Lean Recovery Isolate</h3><span>Protein support · Stock confirmation</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20Isolate." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/vitamins"><img src="assets/products/muscle-club-multivitamin.jpg" alt="Muscle Club Multivitamin"/></a><div class="product-details"><p>Muscle Club</p><h3>Multivitamin</h3><span>Wellness essential · Confirm pack</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20Multivitamin." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/preworkout"><img src="assets/products/reborn-preworkout.jpg" alt="Reborn Nutrition pre-workout"/></a><div class="product-details"><p>Reborn Nutrition</p><h3>Pre-workout</h3><span>Training energy · Confirm flavour</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Reborn%20Pre-workout." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/mass"><img src="assets/products/c9-muscle-mass-gainer.jpg" alt="C9 Nutrition Muscle Mass Gainer"/></a><div class="product-details"><p>C9 Nutrition</p><h3>Muscle Mass Gainer</h3><span>Mass-gain support · Confirm pack</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20C9%20Muscle%20Mass%20Gainer." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/mass"><img src="assets/products/muscle-science-gainer.png" alt="Muscle Science Gainer"/></a><div class="product-details"><p>Muscle Science</p><h3>Muscle Gainer</h3><span>Calorie support · Confirm pack</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Science%20Gainer." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/preworkout"><img src="assets/products/reborn-hyper.jpg" alt="Reborn Nutrition Hyper"/></a><div class="product-details"><p>Reborn Nutrition</p><h3>Hyper Pre-workout</h3><span>Pre-training support · Confirm flavour</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Reborn%20Hyper." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/bcaa"><img src="assets/products/muscle-club-bcaa.jpg" alt="Muscle Club BCAA"/></a><div class="product-details"><p>Muscle Club</p><h3>BCAA Supplement</h3><span>Recovery support · Confirm pack</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20BCAA." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/bcaa"><img src="assets/products/muscle-club-glutamine.jpg" alt="Muscle Club Glutamine"/></a><div class="product-details"><p>Muscle Club</p><h3>Glutamine 5000 mg</h3><span>Recovery support · Confirm pack</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Muscle%20Club%20Glutamine." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
-        <article class="product-card"><a class="product-image" href="products.html#/category/health"><img src="assets/products/reborn-liver-support.jpg" alt="Reborn Nutrition Liver Support"/></a><div class="product-details"><p>Reborn Nutrition</p><h3>Liver Support Pro</h3><span>Wellness support · Confirm pack</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Reborn%20Liver%20Support%20Pro." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
+    <section class="shell">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Find what you need</p>
+          <h2>Shop by category</h2>
+        </div>
+        <a class="section-link" href="products.html">View all categories →</a>
       </div>
-    </div></section>
 
-    <section class="shell goal-section"><div class="section-heading-row"><div><p class="overline">A simpler way to shop</p><h2>Start with your goal</h2></div></div><div class="goal-grid"><a class="goal-panel goal-strength" href="products.html#/category/whey"><span>01</span><h3>Muscle<br/>and strength</h3><p>Explore whey protein, mass gainers and creatine.</p><b>Explore products →</b></a><a class="goal-panel goal-performance" href="products.html#/category/preworkout"><span>02</span><h3>Training<br/>performance</h3><p>Find pre-workouts and BCAA support.</p><b>Explore products →</b></a><a class="goal-panel goal-wellness" href="products.html#/category/vitamins"><span>03</span><h3>Everyday<br/>wellness</h3><p>Discover vitamins, fish oil and health essentials.</p><b>Explore products →</b></a></div></section>
+      <div class="category-grid">
+        <a class="category-card" href="products.html#/category/whey"><i>↗</i><strong>Whey protein</strong><small>Daily protein support</small></a>
+        <a class="category-card" href="products.html#/category/mass"><i>＋</i><strong>Mass gainers</strong><small>Build strength and size</small></a>
+        <a class="category-card" href="products.html#/category/creatine"><i>◒</i><strong>Creatine</strong><small>Training support</small></a>
+        <a class="category-card" href="products.html#/category/preworkout"><i>ϟ</i><strong>Pre-workout</strong><small>Before-training energy</small></a>
+        <a class="category-card" href="products.html#/category/bcaa"><i>⌁</i><strong>BCAA & aminos</strong><small>Recovery support</small></a>
+        <a class="category-card" href="products.html#/category/vitamins"><i>✦</i><strong>Vitamins</strong><small>Everyday wellness</small></a>
+        <a class="category-card" href="products.html#/category/health"><i>♡</i><strong>Health essentials</strong><small>Support your basics</small></a>
+        <a class="category-card" href="products.html#/category/bars"><i>□</i><strong>Protein bars</strong><small>On-the-go options</small></a>
+      </div>
+    </section>
 
-    <section class="verification-section"><div class="shell verification-grid"><div><p class="overline">Before you order</p><h2>What we help you check.</h2><p>Supplements vary by brand, flavour, weight and batch. That is why FIT FORMULA keeps the conversation clear before an order is confirmed.</p><a class="button button-primary" href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20to%20confirm%20a%20product%20before%20ordering." target="_blank" rel="noopener noreferrer">Confirm a product <span>→</span></a></div><ol class="checklist"><li><b>Product</b><span>Exact brand and product name</span></li><li><b>Variant</b><span>Available flavour or version</span></li><li><b>Pack</b><span>Size or weight currently in stock</span></li><li><b>Location</b><span>Your town and pin code for delivery enquiry</span></li></ol></div></section>
+    <section class="products-bg">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Featured in store</p>
+            <h2>Popular products</h2>
+          </div>
+          <a class="section-link" href="products.html">Open catalogue →</a>
+        </div>
 
-    <section class="brands-section"><div class="shell"><div class="section-heading-row"><div><p class="overline">Whey protein guide</p><h2>Top brands to explore first</h2></div><a class="text-link" href="products.html#/category/whey">Browse whey category →</a></div><p class="section-intro">The catalogue follows this requested whey-brand order. Individual products and stock are confirmed separately on WhatsApp.</p><div class="brand-order-grid"><a href="products.html#/category/whey"><b>01</b><span>Optimum Nutrition</span></a><a href="products.html#/category/whey"><b>02</b><span>Dymatize</span></a><a href="products.html#/category/whey"><b>03</b><span>MuscleTech</span></a><a href="products.html#/category/whey"><b>04</b><span>MyProtein</span></a><a href="products.html#/category/whey"><b>05</b><span>MuscleBlaze</span></a><a href="products.html#/category/whey"><b>06</b><span>GNC</span></a><a href="products.html#/category/whey"><b>07</b><span>Avvatar</span></a><a href="products.html#/category/whey"><b>08</b><span>Labrada</span></a><a href="products.html#/category/whey"><b>09</b><span>Isopure</span></a><a href="products.html#/category/whey"><b>10</b><span>Ultimate Nutrition</span></a></div></div></section>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
 
-    <section class="founder-section"><div class="shell founder-grid"><div class="founder-photo"><img src="aliirfan.jpeg" alt="Ali Irfan, founder and nutrition advisor at FIT FORMULA"/><span>FIT FORMULA<br/>KOLAR</span></div><div class="founder-copy"><p class="overline">Guidance you can speak to</p><h2>Meet Ali Irfan.</h2><p>FIT FORMULA is built around practical supplement guidance—not just a product shelf. Ali Irfan brings a trainer’s perspective to each conversation, helping customers understand which category, pack size and routine can suit their goal.</p><p>Share your training plan and preference on WhatsApp before ordering. We will help you check the genuine product, flavour and current availability.</p><a class="button button-primary" href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20supplement%20guidance." target="_blank" rel="noopener noreferrer">Ask Ali for guidance <span>→</span></a></div></div></section>
+    <section class="trust">
+      <div class="shell trust-grid">
+        <div>
+          <p class="kicker">Before you order</p>
+          <h2>What we help you check.</h2>
+          <p class="trust-text">
+            Supplements vary by brand, flavour, size and availability.
+            Send us the product name and your preference before ordering so
+            we can help you confirm the current product details.
+          </p>
+          <a class="btn btn-primary"
+            href="https://wa.me/919206014393"
+            target="_blank">Confirm a product →</a>
+        </div>
 
-    <section class="delivery-section"><div class="shell delivery-grid"><div><p class="overline">Kolar district support</p><h2>Order support that starts with a conversation.</h2><p>Send the product name, preferred flavour, pack size and your pin code on WhatsApp. We will help you check current availability and delivery possibilities before you proceed.</p><a class="button button-light" href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20to%20check%20delivery%20for%20my%20location." target="_blank" rel="noopener noreferrer">Check delivery availability <span>→</span></a></div><div class="delivery-towns"><span>Kolar</span><span>Srinivaspur</span><span>Mulbagal</span><span>Bangarpet</span><span>Malur</span><span>Nearby areas</span><p>Delivery availability depends on stock, address and pin code confirmation.</p></div></div></section>
+        <ul class="checklist">
+          <li><b>Product</b><span>Exact brand and product name</span></li>
+          <li><b>Variant</b><span>Available flavour or version</span></li>
+          <li><b>Pack</b><span>Size or weight currently in stock</span></li>
+          <li><b>Location</b><span>Town and pin code for delivery enquiry</span></li>
+        </ul>
+      </div>
+    </section>
 
-    <section class="faq-section shell"><div class="section-heading-row"><div><p class="overline">Helpful answers</p><h2>Before you place an order</h2></div></div><div class="faq-grid"><details open><summary>How do I know which supplement category to choose?</summary><p>Start with your goal—protein intake, muscle and weight goals, training performance or everyday wellness. Then send us your routine and preference on WhatsApp for a practical shortlist.</p></details><details><summary>Can I confirm the flavour and pack size first?</summary><p>Yes. Please share the product name, preferred flavour and size. We will confirm what is currently available before you decide.</p></details><details><summary>Do you show prices on the website?</summary><p>Stock and variants can change, so the store confirms the current product details directly before an order is placed.</p></details><details><summary>Which areas can enquire for delivery?</summary><p>We take enquiries from Kolar, Srinivaspur, Mulbagal, Bangarpet, Malur and nearby locations. Delivery options are confirmed using your address or pin code.</p></details><details><summary>How do I contact FIT FORMULA?</summary><p>Call or WhatsApp +91 92060 14393. WhatsApp is best when you want to share a product name, flavour, pack size or delivery location.</p></details><details><summary>Are supplements suitable for everyone?</summary><p>Products should be chosen carefully based on your own needs. For medical conditions, pregnancy, medication use or other health concerns, consult a qualified healthcare professional first.</p></details></div></section>
+    <section class="founder">
+      <div class="shell founder-grid">
+        <div class="founder-photo">
+          <img src="aliirfan.jpeg" alt="Ali Irfan, FIT FORMULA founder">
+          <span>FIT FORMULA<br>KOLAR</span>
+        </div>
 
-    <section class="trust-section"><div class="shell trust-grid"><div><p class="overline">Shop with confidence</p><h2>Clarity before you buy.</h2><p>We help you confirm the product, flavour, pack size and current stock before you place an order. No confusing claims, no random recommendations.</p><a class="button button-dark" href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">Talk to the store <span>→</span></a></div><div class="trust-list"><article><span>01</span><div><strong>Genuine-product focus</strong><p>Browse the actual catalogue and check availability directly with us.</p></div></article><article><span>02</span><div><strong>Goal-led guidance</strong><p>Tell us your training plan and we will help you shortlist the right category.</p></div></article><article><span>03</span><div><strong>Kolar-area support</strong><p>Enquire from Kolar, Srinivaspur, Mulbagal, Bangarpet, Malur and nearby areas.</p></div></article></div></div></section>
+        <div class="founder-copy">
+          <p class="kicker">Guidance you can speak to</p>
+          <h2>Meet Ali Irfan.</h2>
+          <p>
+            FIT FORMULA is built around practical supplement guidance—not just
+            a product shelf. Ali Irfan brings a trainer’s perspective to help
+            customers understand categories, pack sizes and product options.
+          </p>
+          <p>
+            Share your routine and goal on WhatsApp before ordering. We will
+            help you check the right category, available product, flavour and
+            pack size.
+          </p>
+          <a class="btn btn-primary"
+            href="https://wa.me/919206014393"
+            target="_blank">Ask for guidance →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery">
+      <div class="shell">
+        <p class="kicker">Kolar district support</p>
+        <h2>Order support starts with a conversation.</h2>
+        <p>
+          Send the product name, preferred flavour, pack size and your pin code
+          on WhatsApp. Delivery possibilities are confirmed before you proceed.
+        </p>
+
+        <div class="towns">
+          <span>Kolar</span>
+          <span>Srinivaspur</span>
+          <span>Mulbagal</span>
+          <span>Bangarpet</span>
+          <span>Malur</span>
+          <span>Nearby areas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Helpful answers</p>
+          <h2>Before you place an order</h2>
+        </div>
+      </div>
+
+      <div class="faq-grid">
+        <details open>
+          <summary>How do I choose the right category?</summary>
+          <p>Start with your goal: protein intake, muscle and weight goals, training performance or everyday wellness. Then ask for a practical shortlist.</p>
+        </details>
+
+        <details>
+          <summary>Can I confirm flavour and pack size?</summary>
+          <p>Yes. Send the product name, preferred flavour and pack size on WhatsApp. Current availability is confirmed before you order.</p>
+        </details>
+
+        <details>
+          <summary>Do you confirm stock before ordering?</summary>
+          <p>Yes. Product availability can change, so the store confirms the required product details directly.</p>
+        </details>
+
+        <details>
+          <summary>Which locations can enquire for delivery?</summary>
+          <p>Enquiries are accepted from Kolar, Srinivaspur, Mulbagal, Bangarpet, Malur and nearby locations. Address and pin code are required for confirmation.</p>
+        </details>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand-lockup brand-lockup-footer" href="#top"><img class="full-logo" src="ifitlogo.jpeg?v=20260907" alt="FIT FORMULA Nutrition Store"/></a><p>Genuine sports nutrition and practical guidance from Kolar, Karnataka.</p></div><div><h2>Explore</h2><a href="products.html">All products</a><a href="products.html#/category/whey">Whey protein</a><a href="products.html#/category/vitamins">Wellness essentials</a></div><div><h2>Contact</h2><a href="tel:+919206014393">+91 92060 14393</a><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp the store</a><a href="https://www.instagram.com/ifitformula/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div><h2>Visit</h2><p>Raja Nagar, MB Road<br/>Kolar, Karnataka 563101</p><a class="footer-map" href="https://maps.google.com/?q=R+K+Hospital+Kolar+MB+Road+Raja+Nagar" target="_blank" rel="noopener noreferrer">Get directions →</a></div></div><div class="shell footer-bottom"><span>© 2026 FIT FORMULA Nutrition Store</span><span>Genuine supplements · Kolar, Karnataka</span></div></footer>
+  <footer>
+    <div class="shell footer-grid">
+      <div>
+        <img src="ifitlogo.jpeg" alt="FIT FORMULA Nutrition Store">
+        <p>Genuine sports nutrition and practical guidance from Kolar, Karnataka.</p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="products.html">All products</a>
+        <a href="products.html#/category/whey">Whey protein</a>
+        <a href="products.html#/category/vitamins">Wellness essentials</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+919206014393">+91 92060 14393</a>
+        <a href="https://wa.me/919206014393" target="_blank">WhatsApp the store</a>
+      </div>
+
+      <div>
+        <h3>Visit</h3>
+        <p>Raja Nagar, MB Road<br>Kolar, Karnataka 563101</p>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      © 2026 FIT FORMULA Nutrition Store · Genuine supplements · Kolar, Karnataka
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+      ["XSN","Xtreme Whey Pro","Whey protein · Confirm size and flavour","assets/products/xsn-xtreme-whey-pro.jpg","whey"],
+      ["Muscle Club","Lean Recovery Isolate","Protein support · Stock confirmation","assets/products/muscle-club-isolate.jpg","whey"],
+      ["Muscle Club","Multivitamin","Wellness essential · Confirm pack","assets/products/muscle-club-multivitamin.jpg","vitamins"],
+      ["Reborn Nutrition","Pre-workout","Training energy · Confirm flavour","assets/products/reborn-preworkout.jpg","preworkout"],
+      ["C9 Nutrition","Muscle Mass Gainer","Mass-gain support · Confirm pack","assets/products/c9-muscle-mass-gainer.jpg","mass"],
+      ["Muscle Science","Muscle Gainer","Calorie support · Confirm pack","assets/products/muscle-science-gainer.png","mass"],
+      ["Reborn Nutrition","Hyper Pre-workout","Pre-training support · Confirm flavour","assets/products/reborn-hyper.jpg","preworkout"],
+      ["Muscle Club","BCAA Supplement","Recovery support · Confirm pack","assets/products/muscle-club-bcaa.jpg","bcaa"],
+      ["Muscle Club","Glutamine 5000 mg","Recovery support · Confirm pack","assets/products/muscle-club-glutamine.jpg","bcaa"],
+      ["Reborn Nutrition","Liver Support Pro","Wellness support · Confirm pack","assets/products/reborn-liver-support.jpg","health"]
+    ];
+
+    document.getElementById("productGrid").innerHTML = products.map(product => `
+      <article class="product-card">
+        <a href="products.html#/category/${product[4]}">
+          <img src="${product[3]}" alt="${product[1]}">
+        </a>
+        <div class="product-info">
+          <p class="product-brand">${product[0]}</p>
+          <h3>${product[1]}</h3>
+          <small>${product[2]}</small>
+          <a href="https://wa.me/919206014393?text=${encodeURIComponent("Hi, I want to check " + product[1])}" target="_blank">
+            Check availability →
+          </a>
+        </div>
+      </article>
+    `).join("");
+  </script>
 </body>
 </html>
