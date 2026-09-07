@@ -828,71 +828,82 @@ var PRODUCTS = [
   photograph or supplier image is available.
 */
 var PRODUCT_MEDIA = {
-  'cs-nutrition-muscle-mass-gainer':'assets/products/c9-muscle-mass-gainer.jpg',
-  'cs-nutrition-premium-nitro-pro':'assets/products/c9-nitro-pro.jpg',
-  'cs-nutrition-premium-iso-zero':'assets/products/c9-iso-zero.jpg',
-  'one-science-prolant-multivitamin':'https://static.oxinis.com/healthmug/image/product/355639-8-800.webp',
-  'hsn-hsn-nutrition-liver-detox':'assets/products/hsn-liver-care.jpg',
-  'hunk-hunk-gainer':'https://cdn.shopify.com/s/files/1/0441/1896/6440/products/Hunk_Gainer_Chocolate_Brownie_0507d44c-9565-4be9-8bc6-50f089669f6d_1024x1024@2x.png?v=1633674717',
+  /* Every path below is bundled with this website. Do not add external image URLs. */
+  'muscleblaze-mass-gainer-xxl':'assets/products/catalogue/muscleblaze-mass-gainer-xxl.jpg',
   'xtreme-xtreme-supermass':'assets/products/xtreme-supermass.jpg',
+  'cs-nutrition-muscle-mass-gainer':'assets/products/c9-muscle-mass-gainer.jpg',
+  'victar-turbo-mass-pump-express':'assets/products/catalogue/victar-turbo-mass-pump-express.jpeg',
+  'muscle-club-mc-anabolic-mass-100-bulk-mass-gain':'assets/products/catalogue/muscle-club-mc-anabolic-mass-100-bulk-mass-gain.png',
+  'hunk-hunk-gainer':'assets/products/catalogue/hunk-hunk-gainer.png',
   'bucked-up-nutrition-anabolic-mass':'assets/products/buckleup-anabolic-mass.png',
-  'muscle-club-mc-anabolic-mass-100-bulk-mass-gain':'http://limitlessnutritions.com/cdn/shop/files/Internet_20250127_124639_9.png?crop=center&height=1200&v=1738149023&width=1200',
-  'victar-body-mass':'https://victorpharma.com/wp-content/uploads/2022/02/Body-Mass-013-600x600.jpg',
-  'victar-turbo-mass-pump-express':'https://4.imimg.com/data4/KK/WD/ANDROID-51736522/product-500x500.jpeg',
-  'transformation-nutrition-anabolic-gainz':'https://transformium.co/cdn/shop/products/AnabolicGainz2.png?v=1656562342&width=1200',
-  'qnt-3000-muscle-mass':'https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/v/o/vol2019part201926201926679imagesbig8.webp_8719c4e580.jpg',
-  'xsn-xtreme-whey-pro':'assets/products/xsn-xtreme-whey-pro.jpg',
-  'xsn-ripped-whey':'assets/products/xsn-xtreme-whey-pro.jpg',
-  'primeval-labs-whey-premium-whey-protein-formula':'https://down-sg.img.susercontent.com/file/sg-11134207-7rblz-m5clxuyzv2ag0c',
-  'kevin-levrone-signature-series-anabolic-whey':'https://down-my.img.susercontent.com/file/my-11134207-7rasj-m905fezuifjo8d',
-  'primeval-labs-whey':'https://primevallabs.com/cdn/shop/files/Whey_5lb_Pastel_Front_1.png?v=1748358927',
-  'ss-nutrition-ssn-iso-pro-100':'https://static.wixstatic.com/media/d33a90_adcc64d76c2d4d6b8b3c47b01908d4a0~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/d33a90_adcc64d76c2d4d6b8b3c47b01908d4a0~mv2.png',
-  'muscle-club-mc-ultra-whey-protein':'assets/products/muscle-club-isolate.jpg',
-  'bpi-sports-whey-hd':'https://cdn.shopify.com/s/files/1/0561/9761/1672/products/WHEY-HD-50SERVS-PEANUTBUTTERICECREAMBAR_1200x.jpg?v=1684244279',
-  'ssn-pro-bio-whey':'https://static.wixstatic.com/media/d33a90_176e6173d29444a69bc02227feeedb87~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/d33a90_176e6173d29444a69bc02227feeedb87~mv2.png',
+  'gnc-pro-weight-gainer':'assets/products/catalogue/gnc-pro-weight-gainer.jpg',
+  'transformation-nutrition-anabolic-gainz':'assets/products/catalogue/transformation-nutrition-anabolic-gainz.png',
+  'qnt-3000-muscle-mass':'assets/products/catalogue/qnt-3000-muscle-mass.jpg',
   'muscle-science-muscle-gainer':'assets/products/muscle-science-gainer.png',
+  'primeval-labs-whey-premium-whey-protein-formula':'assets/products/catalogue/primeval-labs-whey-premium-whey-protein-formula.jpg',
+  'muscle-club-mc-isolate-lean-recovery-formula-100-protein':'assets/products/muscle-club-isolate.jpg',
+  'kevin-levrone-signature-series-anabolic-whey':'assets/products/catalogue/kevin-levrone-signature-series-anabolic-whey.jpg',
+  'xsn-xtreme-whey-pro':'assets/products/xsn-xtreme-whey-pro.jpg',
+  'optimum-nutrition-performance-whey':'assets/products/catalogue/optimum-nutrition-performance-whey.jpg',
+  'primeval-labs-whey':'assets/products/catalogue/primeval-labs-whey.png',
+  'ss-nutrition-ssn-iso-pro-100':'assets/products/catalogue/ss-nutrition-ssn-iso-pro-100.png',
+  'bpi-sports-whey-hd':'assets/products/catalogue/bpi-sports-whey-hd.jpg',
+  'ssn-pro-bio-whey':'assets/products/catalogue/ssn-pro-bio-whey.png',
   'absolute-nutrition-alpha-series-legend-whey':'assets/products/absolute-legend-whey.jpg',
   'dn-d-n-fe-whey':'assets/products/divine-life-whey.jpg',
   'awa-100-performance-whey':'assets/products/avvatar-performance-whey.png',
-  'muscleblaze-biozyme-performance-whey':'https://m.media-amazon.com/images/I/615gHmEEA-L._SL1500_.jpg',
-  'mettle-blaze-whey-protein':'https://smytten-image.gumlet.io/shop_item/MET0055AB51.jpg',
-  'optimum-nutrition-micronized-creatine-powder':'https://i5.walmartimages.com/seo/3-pack-Optimum-Nutrition-Micronized-Creatine-Powder-Unflavored-60-Servings_641e4eb8-78c9-4f47-a590-d3d16174df35.e17dbb8bbb74790d7d42bfc3aa040b12.jpeg',
-  'ar-anabolic-research-t3-whey-fusion':'https://supplemart.in/cdn/shop/files/pixelcut-export_90.png?v=1779717906&width=1200',
-  'mettle-alpha-whey-protein':'https://rukminim1.flixcart.com/image/832/832/xif0q/protein-supplement/z/p/x/whey-protein-alpha-whey-protein-4856235774-mettle-original-imaghynctvdvh2qe.jpeg?q=70',
-  'one-science-micronized-creatine-creatine-monohydrate':'https://bronutrition.in/wp-content/uploads/2024/01/osn-creatine-front.webp',
-  'wellcore-micronised-creatine-monohydrate':'https://cdn2.nutrabay.com/review/images/Wellcore-Wellversed---Micronis_16933_8318359_1.jpg',
-  'muscleblaze-mb-creamp-micronised-creatine-monohydrate':'https://img4.hkrtcdn.com/41290/prd_4128903-MuscleBlaze-Creatine-Monohydrate-CreAMP-0.22-lb-Unflavoured_o.jpg',
-  'bigflex-creatine-monohydrate':'https://bigflex.in/cdn/shop/files/CreatineMonohydratePostImagesWatermelon-01.jpg?v=1744286530&width=416',
-  'muscle-club-mc-great-micronized-creatine-monohydrate':'https://m.media-amazon.com/images/I/71diUK7xcxL._SL1500_.jpg',
+  'muscleblaze-biozyme-performance-whey':'assets/products/catalogue/muscleblaze-biozyme-performance-whey.jpg',
+  'mettle-blaze-whey-protein':'assets/products/catalogue/mettle-blaze-whey-protein.jpg',
+  'mettle-alpha-whey-protein':'assets/products/catalogue/mettle-alpha-whey-protein.jpeg',
+  'ar-anabolic-research-t3-whey-fusion':'assets/products/catalogue/ar-anabolic-research-t3-whey-fusion.png',
+  'dymatize-elite-100-whey':'assets/products/catalogue/dymatize-elite-100-whey.png',
+  'muscletech-nitro-tech-whey-gold':'assets/products/catalogue/muscletech-nitro-tech-whey-gold.png',
+  'myprotein-impact-whey':'assets/products/catalogue/myprotein-impact-whey.webp',
+  'gnc-pro-performance-whey':'assets/products/catalogue/gnc-pro-performance-100-whey.png',
+  'labrada-lean-body-whey':'assets/products/catalogue/labrada-lean-body-whey.png',
+  'isopure-zero-carb-whey-isolate':'assets/products/catalogue/isopure-zero-carb-whey-isolate.webp',
+  'ultimate-nutrition-prostar-whey':'assets/products/catalogue/ultimate-nutrition-prostar-whey.png',
+  'cs-nutrition-premium-nitro-pro':'assets/products/c9-nitro-pro.jpg',
+  'cs-nutrition-premium-iso-zero':'assets/products/c9-iso-zero.jpg',
+  'one-science-micronized-creatine-creatine-monohydrate':'assets/products/catalogue/one-science-micronized-creatine-creatine-monohydrate.webp',
+  'optimum-nutrition-micronized-creatine-powder':'assets/products/catalogue/optimum-nutrition-micronized-creatine-powder.jpeg',
+  'wellcore-micronised-creatine-monohydrate':'assets/products/catalogue/wellcore-micronised-creatine-monohydrate.jpg',
+  'muscleblaze-mb-creamp-micronised-creatine-monohydrate':'assets/products/catalogue/muscleblaze-mb-creamp-micronised-creatine-monohydrate.jpg',
+  'muscle-club-mc-great-micronized-creatine-monohydrate':'assets/products/catalogue/muscle-club-mc-great-micronized-creatine-monohydrate.jpg',
+  'bigflex-creatine-monohydrate':'assets/products/catalogue/bigflex-creatine-monohydrate.jpg',
+  'hsn-hsn-nutrition-liver-detox':'assets/products/hsn-liver-care.jpg',
+  'reborn-nutrition-liver-support-pro':'assets/products/reborn-liver-support.jpg',
+  'muscleblaze-biozyme-5-in-1-multivitamin':'assets/products/catalogue/muscleblaze-biozyme-5-in-1-multivitamin.jpg',
   'muscle-club-mc-multivitamin':'assets/products/muscle-club-multivitamin.jpg',
+  'one-science-prolant-multivitamin':'assets/products/catalogue/one-science-prolant-multivitamin.webp',
+  'code-enigma-rdxtreme-intensive-energy-pre-workout':'assets/products/catalogue/code-enigma-rdxtreme-intensive-energy-pre-workout.png',
+  'reborn-nutrition-born-rework':'assets/products/reborn-preworkout.jpg',
+  'reborn-nutrition-hyper':'assets/products/reborn-hyper.jpg',
+  'davisco-foods-pre-workout-pump':'assets/products/catalogue/davisco-foods-pre-workout-pump.jpg',
+  'muscle-club-mc-amplified-pre-workout':'assets/products/catalogue/muscle-club-mc-amplified-pre-workout.jpg',
+  'muscle-club-mc-ring-man-pre-workout':'assets/products/catalogue/muscle-club-mc-ring-man-pre-workout.jpg',
+  'one-science-omega-3-fish-oil':'assets/products/catalogue/one-science-omega-3-fish-oil.jpg',
+  'triple-x-triple-x-fish-oil':'assets/products/catalogue/triple-x-triple-x-fish-oil.jpg',
+  'muscle-club-mc-omega-3':'assets/products/catalogue/muscle-club-mc-omega-3.jpg',
+  'myprotein-essential-omega-3':'assets/products/catalogue/myprotein-essential-omega-3.png',
+  'nature-s-truth-omega-3-fish-oil':'assets/products/catalogue/nature-s-truth-omega-3-fish-oil.jpg',
+  'muscle-club-mc-l-carnitine-3000-mg':'assets/products/catalogue/muscle-club-mc-l-carnitine-3000-mg.jpg',
+  'reborn-nutrition-l-carnitine-3300-mg':'assets/products/catalogue/reborn-nutrition-l-carnitine-3300-mg.jpeg',
+  'gnc-total-lean-triple-strength-l-carnitine-liquid':'assets/products/catalogue/gnc-total-lean-triple-strength-l-carnitine-liquid.jpg',
+  'rc-nutrition-l-carnitine-3000-mg':'assets/products/catalogue/rc-nutrition-l-carnitine-3000-mg.png',
+  'kapiva-ashwagandha-gold':'assets/products/catalogue/kapiva-ashwagandha-gold.jpg',
   'muscle-club-mc-bcaa-supplement':'assets/products/muscle-club-bcaa.jpg',
   'muscle-club-mc-glutamine-5000-mg':'assets/products/muscle-club-glutamine.jpg',
-  'muscleblaze-biozyme-5-in-1-multivitamin':'https://cdn2.nutrabay.com/uploads/variant/images/variant-6359-image_6-MuscleBlaze_Biozyme_5in1_Multivitamin__90_Tabs.jpg',
-  'muscle-club-mc-amplified-pre-workout':'https://muscleclub.in/cdn/shop/files/Watermelon1_a5671776-e572-4c65-b22a-636782745c1f.jpg?v=1757761457&width=1946',
-  'muscle-club-mc-ring-man-pre-workout':'https://img4.hkrtcdn.com/43025/prd_4302453-Muscle-Club-Ring-Man-PreWorkout-0.93-lb-Ocean-Red-Water_o.jpg',
-  'code-enigma-rdxtreme-intensive-energy-pre-workout':'https://corechamps.eu/cdn/shop/files/CORE-CHAMPS-PRE-WORKOUT----JUNGLE-JUICE_1030x1200.png?v=1726235457',
-  'muscle-club-mc-omega-3':'http://muscleclub.in/cdn/shop/files/10_6.jpg?v=1754130189',
-  'triple-x-triple-x-fish-oil':'https://cdn.nutrabay.com/wp-content/uploads/2020/05/NB-DIV-1008-01-01.jpg',
-  'davisco-foods-pre-workout-pump':'https://m.media-amazon.com/images/I/41tp54abRiL._SY300_SX300_QL70_ML2_.jpg',
-  'nature-s-truth-omega-3-fish-oil':'https://cdnx.jumpseller.com/llicllas/image/68413465/resize/2000/2000?1759789096',
-  'muscle-club-mc-l-carnitine-3000-mg':'https://muscleclub.in/cdn/shop/files/L-CARNITINE_LIQUID_c1.jpg?v=1721430790&width=1206',
-  'reborn-nutrition-l-carnitine-3300-mg':'https://atnutrition.in/wp-content/uploads/2025/05/03F58F2E-14E6-4AC9-9680-B329AAA64B96.JEG_-scaled.jpeg',
-  'reborn-nutrition-liver-support-pro':'assets/products/reborn-liver-support.jpg',
-  'reborn-nutrition-hyper':'assets/products/reborn-hyper.jpg',
-  'one-science-omega-3-fish-oil':'https://www.bodybuildingindia.com/cdn/shop/files/OMEGA-3-ALASKAN-FISH-OIL-60SOFTGELS-ONE-SCIENCE-NUTRITION-One-Science-Nutrition-43075727.jpg?v=1739117001',
-  'myprotein-essential-omega-3':'https://www.datocms-assets.com/86529/1742261690-myprotein-essential-omega-3-1.png',
-  'gnc-total-lean-triple-strength-l-carnitine-liquid':'https://cdn2.nutrabay.com/uploads/variant/images/variant-28864-featured_image-GNC_Total_Lean_Triple_Strength_LCarnitine_Liquid__3000mg__orange_450ml.jpg',
-  'black-series-l-carnitine-3500-mg':'https://lifesport.uz/uploads/posts/2023-09/nazvanisdsja.png',
-  'rc-nutrition-l-carnitine-3000-mg':'http://strong.lk/cdn/shop/files/583ab243-RC-L-Carnitine-3000mg.png?v=1764043020',
-  'kapiva-ashwagandha-gold':'http://nutristar.in/cdn/shop/files/61czoba46BL._SL1100.jpg?crop=center&height=1200&v=1744689110&width=1200',
-  'one-science-super-calcium':'https://basicsupplements.net/wp-content/uploads/2024/08/Super-Calcium-front.png',
-  'alpino-high-protein-peanut-butter':'https://assets.hyugalife.com/catalog/product/h/s/hsre93i0.jpg',
-  'divine-nutrition-protein-wafer-bar':'https://divinenutrition.in/cdn/shop/files/waferfront.jpg?v=1766905213&width=990'
+  'one-science-super-calcium':'assets/products/catalogue/one-science-super-calcium.png',
+  'alpino-high-protein-peanut-butter':'assets/products/catalogue/alpino-high-protein-peanut-butter.jpg',
+  'divine-nutrition-protein-wafer-bar':'assets/products/catalogue/divine-nutrition-protein-wafer-bar.jpg'
 };
 
 PRODUCTS.forEach(function(product){
-  if(PRODUCT_MEDIA[product.id]) product.img=PRODUCT_MEDIA[product.id];
+  product.img=PRODUCT_MEDIA[product.id]||'';
 });
+/* A product is never shown without an exact, bundled packshot. */
+PRODUCTS=PRODUCTS.filter(function(product){return !!product.img;});
 
 var CAT_META = {
   all:{label:'All Products',icon:'fas fa-th'},
@@ -909,28 +920,25 @@ var CAT_META = {
   accessories:{label:'Gym Accessories',icon:'fas fa-shopping-bag'}
 };
 
+/* Downloaded brand marks. Other brand cards use their verified product packshot. */
 var BRAND_LOGOS = {
-  'Wellbeing Nutrition':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951759/wellbeing-nutrition_ncflo2.png',
-  'Wellversed':'',
-  'Sinister Labs':'',
-  'Scoop of Truth':'',
-  'Outlast Labz':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951752/outlast-labz_mwm4lf.png',
-  'RAW':'',
-  'Junglee':'',
-  'ProSupps':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951753/prosupps_z0qeoq.gif',
-  'Myogenetix':'',
-  'Insane Labz':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951747/insane-labz_w9duom.png',
-  'Vertical Labs':'',
-  'Kevin Levrone':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951748/kevin-levrone_fp8owv.png',
-  'Redcon1':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951742/americanz-muscles_blfezn.png',
-  'Black Beast':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951745/blackbeast_kcpkbg.png',
-  'ProManiaX':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951753/promaniax_lhm9pp.webp',
-  'C9 Nutrition':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951744/c9-nutrition_kl0u0u.png',
-  'Muscle Xpress':'',
-  'HK Vitals':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951746/hk-vitals_w9moff.png',
-  'Pure Vibes Nutrition':'',
-  'MAXN':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951749/maxn_e1hdhm.png',
-  'Ronnie Coleman':'https://res.cloudinary.com/dtn0xkzkz/image/upload/v1779951758/ronnie-coleman_a4v3rc.png'
+  'Optimum Nutrition (ON)':'assets/brands/optimum-nutrition.png',
+  'Dymatize':'assets/brands/dymatize.png',
+  'MuscleTech':'assets/brands/muscletech.png',
+  'MyProtein':'assets/brands/myprotein.png',
+  'MuscleBlaze':'assets/brands/muscleblaze.png',
+  'GNC':'assets/brands/gnc.png',
+  'Avvatar':'assets/brands/avvatar.png',
+  'Labrada':'assets/brands/labrada.png',
+  'Isopure':'assets/brands/isopure.png',
+  'Ultimate Nutrition':'assets/brands/ultimate-nutrition.png',
+  'BPI Sports':'assets/brands/bpi-sports.png',
+  'BigFlex':'assets/brands/bigflex.png',
+  'Kapiva':'assets/brands/kapiva.png',
+  'Primeval Labs':'assets/brands/primeval-labs.png',
+  'QNT':'assets/brands/qnt.png',
+  'Divine Nutrition':'assets/brands/divine-nutrition.png',
+  'Muscle Club (MC)':'assets/brands/muscle-club.png'
 };
 
 var BRAND_COLORS = {
@@ -1428,16 +1436,15 @@ function renderBrandGrid(){
     var initials=brandInitials(brand);
     var logoUrl=(BRAND_LOGOS&&BRAND_LOGOS[brand])||'';
     var bannerProd=prods.find(function(p){return p.img&&p.img!=='';});
-    var bannerHtml=bannerProd
-      ?('<div class="brand-card-banner"><div class="brand-card-banner-placeholder">'+initials+'</div><img src="'+bannerProd.img+'" alt="'+escAttr(brand)+' product" loading="lazy" decoding="async" onerror="this.remove()"/></div>')
-      :('<div class="brand-card-banner"><div class="brand-card-banner-placeholder">'+initials+'</div></div>');
+    /* Every brand listed here has at least one locally verified product image. */
+    var bannerHtml='<div class="brand-card-banner"><img src="'+bannerProd.img+'" alt="'+escAttr(brand)+' product packshot" loading="lazy" decoding="async" onerror="this.closest(\'.brand-card\').remove()"/></div>';
     var catPills=cats.slice(0,3).map(function(c){
       var m=CAT_META[c]||{};
       return '<span class="brand-cat-pill">'+(m.label||c)+'</span>';
     }).join('');
     if(cats.length>3)catPills+='<span class="brand-cat-pill">+'+(cats.length-3)+' more</span>';
-    var avatarVisual=logoUrl||(bannerProd&&bannerProd.img)||'';
-    var avatarInner='<span class="brand-avatar-fallback">'+initials+'</span>'+(avatarVisual?'<img class="brand-logo-img" src="'+avatarVisual+'" alt="'+escAttr(brand)+'" loading="lazy" decoding="async" onerror="this.remove()"/>':'');
+    var avatarVisual=logoUrl||bannerProd.img;
+    var avatarInner='<img class="brand-logo-img" src="'+avatarVisual+'" alt="'+escAttr(brand)+' brand" loading="lazy" decoding="async" onerror="this.closest(\'.brand-card\').remove()"/>';
     var avatarBg=col.bg;
     html+=
       '<div class="brand-card" data-brand="'+escAttr(brand)+'" onclick="handleBrandClick(this)">'+
@@ -1556,20 +1563,8 @@ function renderCard(p){
       '<div class="weight-pills" id="wpills-'+p.id+'">'+pills+'</div>'+
       '</div>';
   }
-  var proteinPH=(p.protein&&p.protein!=='—')?'<div class="placeholder-protein">'+p.protein+'</div>':'';
-  var imgHtml;
-  if(p.img){
-    imgHtml='<img class="prod-img-real" src="'+p.img+'" alt="'+escAttr(p.brand+' '+p.name)+'" loading="lazy" decoding="async" onerror="var ph=document.getElementById(\'ph-'+p.id+'\');if(ph){ph.classList.add(\'show\');}this.style.display=\'none\';"/>'+ 
-      '<div class="prod-img-placeholder" id="ph-'+p.id+'" style="background:'+p.gradient+'">'+
-        '<i class="'+(p.icon||'fas fa-flask')+'"></i>'+
-        '<div class="placeholder-brand-txt">'+escHtml(p.brand)+'</div>'+proteinPH+
-      '</div>';
-  } else {
-    imgHtml='<div class="prod-img-placeholder show" id="ph-'+p.id+'" style="background:'+p.gradient+'">'+
-      '<i class="'+(p.icon||'fas fa-flask')+'"></i>'+
-      '<div class="placeholder-brand-txt">'+escHtml(p.brand)+'</div>'+proteinPH+
-      '</div>';
-  }
+  /* The inventory is filtered above; this can only be a bundled, verified packshot. */
+  var imgHtml='<img class="prod-img-real" src="'+p.img+'" alt="'+escAttr(p.brand+' '+p.name)+'" loading="lazy" decoding="async" onerror="this.closest(\'.prod-card\').remove()"/>';
   var featBadge=p.featured?'<div class="badge-stack"><span class="badge badge-featured">\u2B50 Popular</span></div>':'';
   var oosOverlay=!hasStock?'<div class="oos-overlay"><div class="oos-tag">Out of Stock</div></div>':'';
   var proteinTag=(p.protein&&p.protein!=='—')?'<span class="prod-protein-tag">'+p.protein+'</span>':'';
