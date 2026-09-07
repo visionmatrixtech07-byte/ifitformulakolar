@@ -4,9 +4,13 @@
 .goal-panel:before{background:linear-gradient(135deg,rgba(2,54,27,.22),rgba(2,54,27,.68))!important}
 .goal-panel{border:1px solid rgba(255,255,255,.12)}
 
+/* Commercial product shelf and founder story on the homepage. */
+@media(min-width:1100px){.product-grid{grid-template-columns:repeat(5,1fr)!important}.product-image{height:184px!important}.product-details{padding:14px!important}.product-details h3{font-size:15px!important}}
+.founder-section{background:#fff;padding:80px 0;border-top:1px solid #dce8d7}.founder-grid{display:grid;grid-template-columns:minmax(280px,.78fr) minmax(0,1fr);gap:72px;align-items:center}.founder-photo{position:relative;max-width:430px}.founder-photo img{display:block;width:100%;aspect-ratio:4/4.45;object-fit:cover;border-radius:18px;filter:saturate(.88) contrast(1.04)}.founder-photo span{position:absolute;right:-20px;bottom:22px;background:#076437;color:#fff;border-radius:11px;padding:13px 16px;font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.4;text-transform:uppercase}.founder-copy h2{margin:10px 0 16px;color:#13251a;font-size:clamp(34px,4.2vw,53px);letter-spacing:-.065em;line-height:1}.founder-copy>p:not(.overline){max-width:610px;color:#526c59;font-size:15px;line-height:1.75}.founder-copy .button{margin-top:13px}@media(max-width:760px){.founder-section{padding:55px 0}.founder-grid{grid-template-columns:1fr;gap:32px}.founder-photo{max-width:100%}.founder-photo img{aspect-ratio:4/3}.founder-photo span{right:12px;bottom:14px}.founder-copy h2{font-size:37px}}
+
 /* Catalogue uses the same clean retail system while retaining its existing cart,
    stock controls, product data, exact product media and brand-order logic. */
-body.catalogue-revamp{font-family:Arial,Helvetica,sans-serif!important;background:#fbfcf8!important;color:#13251a!important}
+body.catalogue-revamp{--red:#076437!important;--red-dark:#034422!important;--red-glow:rgba(7,100,55,.18)!important;--gold:#68a85b!important;--gold-soft:#eff8e9!important;font-family:Arial,Helvetica,sans-serif!important;background:#fbfcf8!important;color:#13251a!important}
 body.catalogue-revamp .announce-bar{background:#034422!important}
 body.catalogue-revamp .announce-item,body.catalogue-revamp .announce-sep{font-family:Arial,Helvetica,sans-serif!important;color:#fff!important}
 body.catalogue-revamp nav{height:82px!important;background:#fff!important;border-bottom:1px solid #dce8d7!important;padding:0 24px!important}
@@ -32,6 +36,7 @@ body.catalogue-revamp .brand-card-name,body.catalogue-revamp .cat-card-name,body
 body.catalogue-revamp .prod-img-wrap{background:#fbfcfa!important}.catalogue-revamp .prod-body{background:#fff!important}
 body.catalogue-revamp .prod-brand-tag{color:#076437!important}.catalogue-revamp .call-for-price{background:#eff8e9!important;border-color:#cfe1c9!important;color:#31563d!important}
 body.catalogue-revamp .prod-cta{background:#076437!important;border-color:#076437!important;border-radius:8px!important}.catalogue-revamp footer{background:#0b1a10!important}
+body.catalogue-revamp .weight-pill,body.catalogue-revamp .flav-swatch{border-color:#a9cfa1!important;color:#315b46!important}body.catalogue-revamp .weight-pill.active{background:#eaf6e7!important;border-color:#076437!important;color:#075b34!important;box-shadow:0 0 0 1px #076437!important}body.catalogue-revamp .flav-swatch.active{outline-color:#076437!important;box-shadow:0 0 0 2px #076437!important}body.catalogue-revamp .brand-card-banner,body.catalogue-revamp .cat-card-banner{background:#eef7ea!important}body.catalogue-revamp .brand-card-banner-placeholder,body.catalogue-revamp .cat-card-banner-placeholder{background:#d8ecd1!important;color:#076437!important}body.catalogue-revamp .prod-selector-label,body.catalogue-revamp .prod-meta-label{color:#466a50!important}body.catalogue-revamp .empty-wa{background:#076437!important;border-color:#076437!important}body.catalogue-revamp .cart-badge,body.catalogue-revamp .mob-cart-badge{background:#076437!important}
 @media(max-width:768px){body.catalogue-revamp nav{height:70px!important;padding:0 14px!important}body.catalogue-revamp .nav-logo{width:116px!important;height:58px!important}body.catalogue-revamp .nav-cta{font-size:10px!important;padding:10px!important}body.catalogue-revamp .mob-nav{background:#fff!important;border-top:1px solid #dce8d7!important}body.catalogue-revamp .mob-nav a{color:#315b46!important}}
 
 /* The legal pages retain their wording while adopting the same logo, typography,
