@@ -456,6 +456,7 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
 
 </style>
 <link rel="stylesheet" href="revamp.css"/>
+<link rel="stylesheet" href="retail-final.css"/>
 </head>
 <body class="catalogue-revamp">
 
@@ -489,10 +490,10 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="index.html#why">Why Us</a>
+    <a href="index.html#category-heading">Categories</a>
     <a href="products.html" class="active">Products</a>
-    <a href="index.html#branches">Branches</a>
-    <a href="index.html#cta-section">Contact</a>
+    <a href="index.html#top">About</a>
+    <a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">Contact</a>
   </div>
   <div class="nav-right">
     <div class="nav-cart-btn" id="navCartBtn" onclick="openCart()" title="View Cart">
@@ -509,13 +510,13 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
 <div class="mob-nav">
   <a href="index.html"><i class="fas fa-home"></i>Home</a>
   <a href="products.html" class="active"><i class="fas fa-box-open"></i>Products</a>
-  <a href="index.html#branches"><i class="fas fa-map-marker-alt"></i>Branches</a>
+  <a href="index.html#category-heading"><i class="fas fa-th-large"></i>Categories</a>
   <a class="cart-mob-link" id="mobCartLink" onclick="openCart()">
     <i class="fas fa-shopping-cart"></i>
     <span class="mob-cart-badge" id="mobCartBadge">0</span>
     Cart
   </a>
-  <a href="index.html#cta-section"><i class="fas fa-phone"></i>Contact</a>
+  <a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i>Contact</a>
 </div>
 
 <!-- PAGE HERO -->
@@ -1294,6 +1295,12 @@ function getFlavourColor(f){
 }
 
 function navigate(brand, cat){
+  if(!brand&&cat){
+    var categoryHash='#/category/'+cat;
+    if(window.location.hash===categoryHash){doRender(null,cat);}
+    else{window.location.hash=categoryHash;}
+    return;
+  }
   if(brand && !cat){
     var brandProds=PRODUCTS.filter(function(p){return p.brand===brand;});
     var cats=[],seenCat={};
@@ -1315,8 +1322,11 @@ function parseAndRender(){
   var parts=raw?raw.split('/').filter(Boolean):[];
   var brand=null,cat=null;
   if(parts.length>=1){
-    brand=getBrandFromSlug(parts[0]);
-    if(brand&&parts.length>=2&&CAT_META[parts[1]]){cat=parts[1];}
+    if(parts[0]==='category'&&parts.length>=2&&CAT_META[parts[1]]){cat=parts[1];}
+    else{
+      brand=getBrandFromSlug(parts[0]);
+      if(brand&&parts.length>=2&&CAT_META[parts[1]]){cat=parts[1];}
+    }
   }
   if(appState.brand!==brand||appState.cat!==cat){
     appState.search='';appState.sort='brand_order';appState.stockOnly=false;
@@ -1326,7 +1336,7 @@ function parseAndRender(){
 
 function doRender(brand,cat){
   appState.brand=brand;appState.cat=cat;
-  appState.level=!brand?1:!cat?2:3;
+  appState.level=cat?3:brand?2:1;
   render();
 }
 window.addEventListener('hashchange',parseAndRender);
@@ -1478,7 +1488,7 @@ function handleCatClick(el){navigate(el.dataset.brand,el.dataset.cat);}
 
 /* ── LEVEL 3: PRODUCT GRID ── */
 function getL3Products(){
-  var list=PRODUCTS.filter(function(p){return p.brand===appState.brand&&p.cat===appState.cat;});
+  var list=PRODUCTS.filter(function(p){return (!appState.brand||p.brand===appState.brand)&&p.cat===appState.cat;});
   if(appState.stockOnly){list=list.filter(function(p){return p.weights&&p.weights.some(function(w){return w.inStock;});});}
   if(appState.search){
     var q=appState.search.toLowerCase();

@@ -1,0 +1,46 @@
+/* Final store skin: the homepage uses the supplied logo and real packshots only.
+   No stock gym, lifestyle, or decorative background photography is used. */
+.goal-strength{background:#0a5f35!important}.goal-performance{background:#126e45!important}.goal-wellness{background:#477b29!important}
+.goal-panel:before{background:linear-gradient(135deg,rgba(2,54,27,.22),rgba(2,54,27,.68))!important}
+.goal-panel{border:1px solid rgba(255,255,255,.12)}
+
+/* Catalogue uses the same clean retail system while retaining its existing cart,
+   stock controls, product data, exact product media and brand-order logic. */
+body.catalogue-revamp{font-family:Arial,Helvetica,sans-serif!important;background:#fbfcf8!important;color:#13251a!important}
+body.catalogue-revamp .announce-bar{background:#034422!important}
+body.catalogue-revamp .announce-item,body.catalogue-revamp .announce-sep{font-family:Arial,Helvetica,sans-serif!important;color:#fff!important}
+body.catalogue-revamp nav{height:82px!important;background:#fff!important;border-bottom:1px solid #dce8d7!important;padding:0 24px!important}
+body.catalogue-revamp .nav-logo{width:136px!important;height:66px!important;object-fit:contain!important;object-position:left center!important;border-radius:0!important;filter:none!important}
+body.catalogue-revamp .nav-name{display:none!important}
+body.catalogue-revamp .nav-links a{font-family:Arial,Helvetica,sans-serif!important;color:#375442!important;font-weight:700!important}
+body.catalogue-revamp .nav-cta{background:#076437!important;border-radius:9px!important;text-transform:none!important;letter-spacing:0!important}
+body.catalogue-revamp .page-hero{min-height:245px!important;background:linear-gradient(125deg,#e6f4dc,#f7fbf1,#fff)!important;border:0!important}
+body.catalogue-revamp .page-title{font-family:Arial,Helvetica,sans-serif!important;text-transform:none!important;letter-spacing:-.06em!important;color:#13251a!important;font-weight:700!important}
+body.catalogue-revamp .page-label{font-family:Arial,Helvetica,sans-serif!important;color:#076437!important;font-weight:700!important}
+body.catalogue-revamp .page-sub{color:#5f7064!important}
+body.catalogue-revamp .offer-banner{background:#fff!important;border:1px solid #cfe1c9!important}
+body.catalogue-revamp .offer-item,body.catalogue-revamp .offer-sep{color:#076437!important;font-family:Arial,Helvetica,sans-serif!important}
+body.catalogue-revamp .advice-bar{background:#eff8e9!important;border-color:#cfe1c9!important}
+body.catalogue-revamp .advice-bar a,body.catalogue-revamp .advice-bar a span{color:#075b34!important}
+body.catalogue-revamp .global-search-bar,body.catalogue-revamp .filter-bar{background:#fbfcf8!important;border-color:#dce8d7!important}
+body.catalogue-revamp .global-search-input-wrap,body.catalogue-revamp .search-input,body.catalogue-revamp .global-sort,body.catalogue-revamp .sort-select{background:#fff!important;border-color:#cddfc7!important;color:#13251a!important;border-radius:9px!important;font-family:Arial,Helvetica,sans-serif!important}
+body.catalogue-revamp .cat-filter-pill{background:#fff!important;border-color:#cddfc7!important;color:#3c5e46!important;font-family:Arial,Helvetica,sans-serif!important}
+body.catalogue-revamp .cat-filter-pill.active{background:#076437!important;border-color:#076437!important;color:#fff!important}
+body.catalogue-revamp .brand-card,body.catalogue-revamp .cat-card,body.catalogue-revamp .prod-card{background:#fff!important;border-color:#dce8d7!important;border-radius:14px!important;box-shadow:0 8px 22px rgba(21,67,30,.06)!important}
+body.catalogue-revamp .brand-card:hover,body.catalogue-revamp .cat-card:hover,body.catalogue-revamp .prod-card:hover{border-color:#83b976!important;box-shadow:0 14px 28px rgba(21,67,30,.12)!important}
+body.catalogue-revamp .brand-card-name,body.catalogue-revamp .cat-card-name,body.catalogue-revamp .prod-name{color:#13251a!important;font-family:Arial,Helvetica,sans-serif!important}
+body.catalogue-revamp .prod-img-wrap{background:#fbfcfa!important}.catalogue-revamp .prod-body{background:#fff!important}
+body.catalogue-revamp .prod-brand-tag{color:#076437!important}.catalogue-revamp .call-for-price{background:#eff8e9!important;border-color:#cfe1c9!important;color:#31563d!important}
+body.catalogue-revamp .prod-cta{background:#076437!important;border-color:#076437!important;border-radius:8px!important}.catalogue-revamp footer{background:#0b1a10!important}
+@media(max-width:768px){body.catalogue-revamp nav{height:70px!important;padding:0 14px!important}body.catalogue-revamp .nav-logo{width:116px!important;height:58px!important}body.catalogue-revamp .nav-cta{font-size:10px!important;padding:10px!important}body.catalogue-revamp .mob-nav{background:#fff!important;border-top:1px solid #dce8d7!important}body.catalogue-revamp .mob-nav a{color:#315b46!important}}
+
+/* The legal pages retain their wording while adopting the same logo, typography,
+   white surfaces and green accents as the storefront. */
+body.policy-revamp{font-family:Arial,Helvetica,sans-serif!important;background:#fbfcf8!important;color:#13251a!important}
+body.policy-revamp nav{background:#fff!important;border-bottom:1px solid #dce8d7!important;height:78px!important}
+body.policy-revamp .nav-logo{width:136px!important;height:66px!important;object-fit:contain!important;object-position:left center!important;filter:none!important}
+body.policy-revamp .nav-name{display:none!important}body.policy-revamp .nav-back{color:#076437!important;font-family:Arial,Helvetica,sans-serif!important;font-weight:700!important}
+body.policy-revamp .page-hero{margin-top:78px!important;background:linear-gradient(125deg,#e6f4dc,#f7fbf1)!important;border-bottom:1px solid #dce8d7!important}
+body.policy-revamp .page-title{font-family:Arial,Helvetica,sans-serif!important;color:#13251a!important;text-transform:none!important;letter-spacing:-.05em!important}body.policy-revamp .page-label,body.policy-revamp .toc-title,body.policy-revamp .ls-num{color:#076437!important}body.policy-revamp .page-meta,body.policy-revamp .ls-body p,body.policy-revamp .ls-body li,body.policy-revamp .toc ol li a{color:#526c59!important}
+body.policy-revamp .toc,body.policy-revamp .info-box{background:#fff!important;border-color:#cfe1c9!important}body.policy-revamp .ls-title{font-family:Arial,Helvetica,sans-serif!important;color:#13251a!important;text-transform:none!important;letter-spacing:-.03em!important}body.policy-revamp .legal-footer{background:#0b1a10!important}
+@media(max-width:768px){body.policy-revamp nav{height:70px!important}body.policy-revamp .nav-logo{width:116px!important;height:58px!important}body.policy-revamp .page-hero{margin-top:70px!important}}
