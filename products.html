@@ -212,6 +212,12 @@ nav{position:fixed;top:0;width:100%;z-index:200;height:var(--nav-h);padding:0 24
 .weight-pill:not(:disabled):hover{border-color:rgba(226,18,43,0.4);color:var(--text);}
 .weight-pill.active{background:rgba(226,18,43,0.1);border-color:var(--red);color:var(--red);}
 .weight-pill.oos{opacity:0.35;cursor:not-allowed;text-decoration:line-through;}
+.product-guidance{margin-top:9px;border:1px solid rgba(37,211,102,0.25);background:rgba(37,211,102,0.05);border-radius:7px;overflow:hidden;}
+.product-guidance summary{cursor:pointer;list-style:none;padding:7px 9px;color:var(--green);font-size:0.67rem;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:6px;}
+.product-guidance summary::-webkit-details-marker{display:none;}
+.product-guidance summary:before{content:'\f0f3';font-family:'Font Awesome 6 Free';font-weight:900;}
+.product-guidance p{margin:0;padding:0 9px 8px;color:var(--text);font-size:0.7rem;line-height:1.45;}
+.product-guidance a{display:inline-block;margin:0 9px 9px;color:var(--green);font-size:0.66rem;font-weight:700;text-decoration:underline;}
 .call-for-price{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);font-size:0.74rem;color:var(--muted);font-weight:600;letter-spacing:0.02em;}
 .call-for-price i{color:var(--red);font-size:0.78rem;}
 .prod-cta{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:8px;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);color:var(--green);font-size:0.82rem;font-weight:700;cursor:pointer;transition:all 0.2s;width:100%;text-align:center;font-family:var(--font-b);}
@@ -755,7 +761,7 @@ var PRODUCTS = [
   {id:"primeval-labs-whey",cat:"whey",brand:"Primeval Labs",name:"Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Cookies ’n Cream","Southern Nutty Ice Cream","Chocolate"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
   {id:"ss-nutrition-ssn-iso-pro-100",cat:"whey",brand:"SS Nutrition / SSN",name:"Iso Pro 100",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Unspecified"],weights:[{size:"2 kg / 4.4 lb; 61 servings shown",inStock:true}]},
   {id:"ssn-pro-bio-whey",cat:"whey",brand:"SSN",name:"Pro Bio Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Unspecified"],weights:[{size:"1 kg; 25 servings shown",inStock:true}]},
-  {id:"muscle-club-mc-ultra-whey-protein",cat:"whey",brand:"Muscle Club (MC)",name:"Ultra Whey Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate","Pista Kulfi"],weights:[{size:"1 kg",inStock:true}]},
+  {id:"muscle-club-mc-ultra-whey-protein",cat:"whey",brand:"Muscle Club (MC)",name:"Ultra Whey Protein",protein:"23 g protein / 33 g serving",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate","Irish Chocolate","Pista Kulfi","Rose Delight"],weights:[{size:"1 kg",inStock:true},{size:"2 kg",inStock:true},{size:"4 kg",inStock:true}]},
   {id:"bpi-sports-whey-hd",cat:"whey",brand:"BPI Sports",name:"Whey HD",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["American Ice Cream"],weights:[{size:"2 kg",inStock:true}]},
   {id:"absolute-nutrition-alpha-series-legend-whey",cat:"whey",brand:"Absolute Nutrition Alpha Series",name:"Legend Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate"],weights:[{size:"2 kg / 4.4 lb",inStock:true}]},
   {id:"dn-d-n-fe-whey",cat:"whey",brand:"Divine Nutrition",name:"Life Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Café Mocha","Chocolate view also visible"],weights:[{size:"1 kg or 2 kg depending on pack; verify before listing",inStock:true}]},
@@ -802,7 +808,7 @@ var PRODUCTS = [
   {id:"muscle-club-mc-l-carnitine-3000-mg",cat:"health",brand:"Muscle Club (MC)",name:"L-Carnitine 3000 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Mango","Green Apple","Orange"],weights:[{size:"450 ml",inStock:true}]},
   {id:"reborn-nutrition-l-carnitine-3300-mg",cat:"health",brand:"Reborn Nutrition",name:"L-Carnitine 3300 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Lychee Slush"],weights:[{size:"450 ml; 30 servings",inStock:true}]},
   {id:"gnc-total-lean-triple-strength-l-carnitine-liquid",cat:"health",brand:"GNC",name:"Total Lean Triple Strength L-Carnitine Liquid",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Orange"],weights:[{size:"450 ml; 3,000 mg per serving",inStock:true}]},
-  {id:"black-series-l-carnitine-3500-mg",cat:"health",brand:"Black Series",name:"L-Carnitine 3500 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Unspecified"],weights:[{size:"31 servings",inStock:true}]},
+  {id:"black-series-l-carnitine-3500-mg",cat:"health",brand:"Black Series",name:"L-Carnitine 3500 mg",protein:"3,500 mg / serving",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Blood Orange","Blue Raspberry","Green Apple"],weights:[{size:"473 ml; 31 servings",inStock:true}]},
   {id:"rc-nutrition-l-carnitine-3000-mg",cat:"health",brand:"RC Nutrition",name:"L-Carnitine 3000 mg",protein:"—",featured:false,icon:"fas fa-heartbeat",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Unspecified"],weights:[{size:"Not fully visible",inStock:true}]},
   {id:"kapiva-ashwagandha-gold",cat:"herbal",brand:"Kapiva",name:"Ashwagandha Gold",protein:"—",featured:false,icon:"fas fa-leaf",gradient:"linear-gradient(135deg,#123300,#5C9E31)",img:'',flavours:["Not applicable"],weights:[{size:"60 capsules",inStock:true}]},
   {id:"muscle-club-mc-pure-himalayan-shilajit",cat:"herbal",brand:"Muscle Club (MC)",name:"Pure Himalayan Shilajit",protein:"—",featured:false,icon:"fas fa-leaf",gradient:"linear-gradient(135deg,#123300,#5C9E31)",img:'',flavours:["Not applicable"],weights:[{size:"20 g",inStock:true}]},
@@ -814,7 +820,39 @@ var PRODUCTS = [
   {id:"muscle-club-mc-high-protein-peanut-butter",cat:"health",brand:"Muscle Club (MC)",name:"High Protein Peanut Butter",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Milk Chocolate","Dark Chocolate"],weights:[{size:"1 kg",inStock:true}]},
   {id:"alpino-high-protein-peanut-butter",cat:"health",brand:"Alpino",name:"High Protein Peanut Butter",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Dark Chocolate Crisp"],weights:[{size:"1 kg",inStock:true}]},
   {id:"muscle-club-mc-protein-bar",cat:"bars",brand:"Muscle Club (MC)",name:"Protein Bar",protein:"—",featured:false,icon:"fas fa-cookie-bite",gradient:"linear-gradient(135deg,#331500,#CC6A00)",img:'',flavours:["Mango Cranberries"],weights:[{size:"8 bars per box",inStock:true}]},
-  {id:"divine-nutrition-protein-wafer-bar",cat:"bars",brand:"Divine Nutrition",name:"Protein Wafer Bar",protein:"—",featured:false,icon:"fas fa-cookie-bite",gradient:"linear-gradient(135deg,#331500,#CC6A00)",img:'',flavours:["Chocolate Caramel"],weights:[{size:"12 bars per pack",inStock:true}]}
+  {id:"divine-nutrition-protein-wafer-bar",cat:"bars",brand:"Divine Nutrition",name:"Protein Wafer Bar",protein:"—",featured:false,icon:"fas fa-cookie-bite",gradient:"linear-gradient(135deg,#331500,#CC6A00)",img:'',flavours:["Chocolate Caramel"],weights:[{size:"12 bars per pack",inStock:true}]},
+  {id:"optimum-nutrition-serious-mass",cat:"mass",brand:"Optimum Nutrition (ON)",name:"Serious Mass",protein:"50 g protein / serving",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Chocolate"],weights:[{size:"5 kg / 11 lb; 15 servings",inStock:true},{size:"3 kg / 6.6 lb; 9 servings",inStock:true}]},
+  {id:"muscletech-mass-tech-extreme-2000",cat:"mass",brand:"MuscleTech",name:"Mass Tech Extreme 2000",protein:"30 g protein / serving",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Vanilla Milkshake"],weights:[{size:"3 kg / 6.6 lb; 10 servings",inStock:true}]},
+  {id:"muscle-doctor-dna-anabolic-mass-gainer",cat:"mass",brand:"Muscle Doctor (MG / Muscle Garage)",name:"DNA Anabolic Mass Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Choco Caramel"],weights:[{size:"900 g / 2 lb; 9 servings",inStock:true}]},
+  {id:"muscle-science-lean-mass-gainer",cat:"mass",brand:"Muscle Science",name:"Lean Mass Gainer",protein:"58.5g protein / serving",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Unspecified"],weights:[{size:"3 kg",inStock:true}]},
+  {id:"bpi-sports-bulk-muscle-xl",cat:"mass",brand:"BPI Sports",name:"Bulk Muscle XL",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Chocolate","Vanilla","Banana"],weights:[{size:"3 kg; 14 servings",inStock:true},{size:"5 kg; 23 servings",inStock:true}]},
+  {id:"kevin-levrone-anabolic-mass",cat:"mass",brand:"Kevin Levrone",name:"Anabolic Mass",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Vanilla"],weights:[{size:"1 kg",inStock:true},{size:"3 kg",inStock:true}]},
+  {id:"absolute-nutrition-mass-gainer",cat:"mass",brand:"Absolute Nutrition",name:"Mass Gainer",protein:"30g protein / 150g serving",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Chocolate"],weights:[{size:"3 kg",inStock:true},{size:"5 kg",inStock:true}]},
+  {id:"muscle-harvest-monster-mass",cat:"mass",brand:"Muscle Harvest",name:"Monster Mass",protein:"20g protein / serving",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["American Ice Cream"],weights:[{size:"3 kg",inStock:true}]},
+  {id:"doctors-choice-bulk-king",cat:"mass",brand:"Doctor's Choice",name:"Bulk King",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Choco Brownie Fudge"],weights:[{size:"3 kg / 6.6 lb; 6 servings",inStock:true}]},
+  {id:"labrada-super-mass-gainer",cat:"mass",brand:"Labrada",name:"Super Mass Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Triple Rich Chocolate"],weights:[{size:"3 kg / 6.61 lb",inStock:true}]},
+  {id:"muscleblaze-super-gainer-xxl",cat:"mass",brand:"MuscleBlaze",name:"Super Gainer XXL",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Chocolate"],weights:[{size:"3 kg",inStock:true}]},
+  {id:"labrada-muscle-mass-gainer",cat:"mass",brand:"Labrada",name:"Muscle Mass Gainer",protein:"—",featured:false,icon:"fas fa-dumbbell",gradient:"linear-gradient(135deg,#240000,#8E0000)",img:'',flavours:["Chocolate"],weights:[{size:"3 kg / 6.61 lb",inStock:true}]},
+  {id:"health-ninja-peanut-butter",cat:"health",brand:"Health Ninja",name:"Peanut Butter",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Milk Chocolate","Dark Chocolate","Smooth","Crunchy"],weights:[{size:"1 kg",inStock:true}]},
+  {id:"health-ninja-high-protein-muesli",cat:"health",brand:"Health Ninja",name:"High Protein Muesli",protein:"26g protein / 100g",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Dark Chocolate"],weights:[{size:"900 g",inStock:true}]},
+  {id:"wellx-brothers-dark-chocolate-crunchy-oats",cat:"health",brand:"Wellx Brothers",name:"Dark Chocolate Crunchy Oats",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Dark Chocolate Crunchy"],weights:[{size:"1 kg",inStock:true}]},
+  {id:"muscle-science-muesli-15-in-1",cat:"health",brand:"Muscle Science",name:"Muesli 15-in-1 Nuts and Fruits Flakes",protein:"—",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Unspecified"],weights:[{size:"Not specified",inStock:true}]},
+  {id:"muscle-science-super-oats",cat:"health",brand:"Muscle Science",name:"Super Oats",protein:"22 g protein (pack claim)",featured:false,icon:"fas fa-seedling",gradient:"linear-gradient(135deg,#003300,#2E8B57)",img:'',flavours:["Dark Chocolate"],weights:[{size:"1 kg",inStock:true}]},
+  {id:"dexter-jackson-black-series-whey-isolate-hydrolyzed",cat:"whey",brand:"Dexter Jackson (Black Series)",name:"Whey Isolate and Hydrolyzed Whey Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["American Banana Split"],weights:[{size:"2.2 kg / 5 lb; 76 servings",inStock:true}]},
+  {id:"bsn-syntha-6",cat:"whey",brand:"BSN",name:"Syntha-6 Ultra Premium Protein Matrix",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate Milkshake"],weights:[{size:"2.27 kg / 5 lb; 48 servings",inStock:true}]},
+  {id:"applied-nutrition-critical-whey",cat:"whey",brand:"Applied Nutrition",name:"Critical Whey Advanced Protein",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Vanilla Ice Cream"],weights:[{size:"2 kg; 61 servings",inStock:true}]},
+  {id:"c9-nutrition-premium-iso-ripped",cat:"whey",brand:"C9 Nutrition",name:"Premium Iso Ripped",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Café Mocha","Cookie Cream"],weights:[{size:"2 kg; 60 servings",inStock:true}]},
+  {id:"divine-nutrition-nitra-max",cat:"whey",brand:"Divine Nutrition",name:"Nitra Max",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate Brownie"],weights:[{size:"1 kg; 25 servings",inStock:true},{size:"2 kg; 50 servings",inStock:true}]},
+  {id:"gnc-amp-pure-isolate",cat:"whey",brand:"GNC",name:"AMP Pure Isolate",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate Frosting","Cookies and Cream"],weights:[{size:"1.81 kg / 4 lb; 60 servings",inStock:true},{size:"907 g / 2 lb; 30 servings",inStock:true}]},
+  {id:"muscletech-nitro-tech-ripped",cat:"whey",brand:"MuscleTech",name:"Nitro-Tech Ripped",protein:"30 g protein / serving",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["French Vanilla Bean","Chocolate Fudge Brownie"],weights:[{size:"907 g / 2 lb; about 21 servings",inStock:true}]},
+  {id:"muscleblaze-biozyme-whey-pr",cat:"whey",brand:"MuscleBlaze",name:"Biozyme Whey PR",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Molten Chocolate Cake"],weights:[{size:"2 kg",inStock:true},{size:"4 kg",inStock:true}]},
+  {id:"muscleblaze-biozyme-iso-zero-low-carb",cat:"whey",brand:"MuscleBlaze",name:"Biozyme ISO Zero Low Carb",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Cookies and Cream"],weights:[{size:"2 kg",inStock:true},{size:"4 kg",inStock:true}]},
+  {id:"dymatize-iso100-hydrolyzed",cat:"whey",brand:"Dymatize",name:"ISO100 Hydrolyzed",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Gourmet Chocolate"],weights:[{size:"2.3 kg / 5 lb; 71 servings",inStock:true}]},
+  {id:"optimum-nutrition-gold-standard-100-whey",cat:"whey",brand:"Optimum Nutrition (ON)",name:"Gold Standard 100% Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Double Rich Chocolate"],weights:[{size:"907 g / 2 lb",inStock:true},{size:"1.7 kg",inStock:true}]},
+  {id:"ronnie-coleman-king-whey",cat:"whey",brand:"Ronnie Coleman",name:"King Whey",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate Brownie"],weights:[{size:"69 servings; pack size not specified",inStock:true}]},
+  {id:"ronnie-coleman-pro-antium",cat:"whey",brand:"Ronnie Coleman",name:"Pro-Antium",protein:"—",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Double Chocolate Cookie"],weights:[{size:"52 servings; pack size not specified",inStock:true}]},
+  {id:"muscle-harvest-elite-whey",cat:"whey",brand:"Muscle Harvest",name:"Elite Whey",protein:"24g protein / serving",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Chocolate Fantasy"],weights:[{size:"2 kg",inStock:true}]},
+  {id:"muscle-harvest-rip-pro",cat:"whey",brand:"Muscle Harvest",name:"RIP Pro",protein:"22g protein / serving",featured:false,icon:"fas fa-flask",gradient:"linear-gradient(135deg,#111,#555)",img:'',flavours:["Saffron Pistachio","Caramel Chocolate","Chocolate"],weights:[{size:"2 kg bundle pack",inStock:true},{size:"1 kg",inStock:true}]}
 ];
 
 /*
@@ -896,11 +934,162 @@ var PRODUCT_MEDIA = {
   'muscle-club-mc-glutamine-5000-mg':'assets/products/muscle-club-glutamine.jpg',
   'one-science-super-calcium':'assets/products/catalogue/one-science-super-calcium.png',
   'alpino-high-protein-peanut-butter':'assets/products/catalogue/alpino-high-protein-peanut-butter.jpg',
-  'divine-nutrition-protein-wafer-bar':'assets/products/catalogue/divine-nutrition-protein-wafer-bar.jpg'
+  'divine-nutrition-protein-wafer-bar':'assets/products/catalogue/divine-nutrition-protein-wafer-bar.jpg',
+  'muscle-doctor-dna-anabolic-mass-gainer':'assets/products/catalogue/muscle-doctor-dna-anabolic-mass-gainer.png',
+  'c9-nutrition-premium-iso-ripped':'assets/products/catalogue/c9-nutrition-premium-iso-ripped.png',
+  'muscleblaze-biozyme-whey-pr':'assets/products/catalogue/muscleblaze-biozyme-whey-pr.jpg',
+  'health-ninja-peanut-butter':'assets/products/catalogue/health-ninja-peanut-butter.png',
+  'applied-nutrition-critical-whey':'assets/products/catalogue/applied-nutrition-critical-whey-vanilla-ice-cream.png',
+  'muscleblaze-biozyme-iso-zero-low-carb':'assets/products/catalogue/muscleblaze-biozyme-iso-zero-low-carb.jpg',
+  'dymatize-iso100-hydrolyzed':'assets/products/catalogue/dymatize-iso100-gourmet-chocolate-5lb.jpg',
+  'optimum-nutrition-gold-standard-100-whey':'assets/products/catalogue/optimum-nutrition-gold-standard-double-rich-chocolate-2lb.png',
+  'bsn-syntha-6':'assets/products/catalogue/bsn-syntha-6-chocolate-milkshake-5lb.webp',
+  'muscleblaze-super-gainer-xxl':'assets/products/catalogue/muscleblaze-super-gainer-xxl-chocolate-3kg.jpg',
+  'divine-nutrition-nitra-max':'assets/products/catalogue/divine-nutrition-nitra-max-chocolate-brownie-2kg.jpg',
+  'muscletech-nitro-tech-ripped':'assets/products/catalogue/muscletech-nitro-tech-ripped-french-vanilla-2lb.png',
+  'gnc-amp-pure-isolate':'assets/products/catalogue/gnc-amp-pure-isolate-chocolate-frosting-4lb.jpg',
+  'ronnie-coleman-king-whey':'assets/products/catalogue/ronnie-coleman-king-whey-chocolate-brownie-5lb.jpg',
+  'ronnie-coleman-pro-antium':'assets/products/catalogue/ronnie-coleman-pro-antium-double-chocolate-cookie-5lb.jpg',
+  'bpi-sports-bulk-muscle-xl':'assets/products/catalogue/bpi-sports-bulk-muscle-xl-chocolate-3kg.png',
+  'kevin-levrone-anabolic-mass':'assets/products/catalogue/kevin-levrone-anabolic-mass-vanilla-3kg.jpg',
+  'doctors-choice-bulk-king':'assets/products/catalogue/doctors-choice-bulk-king-choco-brownie-fudge-3kg.jpg',
+  'labrada-super-mass-gainer':'assets/products/catalogue/labrada-super-mass-gainer-triple-rich-chocolate-3kg.png',
+  'labrada-muscle-mass-gainer':'assets/products/catalogue/labrada-muscle-mass-gainer-chocolate-3kg.jpg',
+  'health-ninja-high-protein-muesli':'assets/products/catalogue/health-ninja-high-protein-dark-chocolate-muesli-900g.jpg',
+  'wellx-brothers-dark-chocolate-crunchy-oats':'assets/products/catalogue/wellx-dark-chocolate-crunchy-oats-1kg.jpg',
+  'muscle-science-muesli-15-in-1':'assets/products/catalogue/muscle-science-muesli-15-in-1.jpg',
+  'muscle-harvest-monster-mass':'assets/products/catalogue/muscle-harvest-elite-monster-mass-3kg.webp',
+  'absolute-nutrition-mass-gainer':'assets/products/catalogue/absolute-nutrition-mass-gainer-chocolate-3kg.jpg',
+  'dexter-jackson-black-series-whey-isolate-hydrolyzed':'assets/products/catalogue/dexter-jackson-black-series-whey-american-banana-split-5lb.jpg',
+  'muscle-harvest-elite-whey':'assets/products/catalogue/muscle-harvest-elite-whey-2kg.webp',
+  'muscle-harvest-rip-pro':'assets/products/catalogue/muscle-harvest-rip-pro-whey-2kg.webp',
+  'muscle-science-lean-mass-gainer':'assets/products/catalogue/muscle-science-lean-mass-gainer-3kg.jpg',
+  'optimum-nutrition-serious-mass':'assets/products/catalogue/optimum-nutrition-serious-mass-chocolate-5kg.webp',
+  'muscletech-mass-tech-extreme-2000':'assets/products/catalogue/muscletech-mass-tech-extreme-2000-vanilla-3kg.png',
+  'muscle-club-mc-ultra-whey-protein':'assets/products/catalogue/muscle-club-ultra-whey-chocolate-1kg.jpg',
+  'black-series-l-carnitine-3500-mg':'assets/products/catalogue/black-series-l-carnitine-3500mg-blood-orange.jpg',
+  'muscle-science-super-oats':'assets/products/catalogue/muscle-science-super-oats-dark-chocolate-1kg.jpg'
+};
+
+/* Directions are added only when matched to a specific product/variant source. */
+var PRODUCT_GUIDANCE = {
+  'muscle-club-mc-anabolic-mass-100-bulk-mass-gain':{
+    dose:'Mix 2 scoops (50 g) with 250–300 ml of water or milk. Use 1–2 times daily according to the pack instructions.',
+    source:'https://muscleclub.in/collections/best-seller/products/muscle-club-anabolic-mass-gainer'
+  },
+  'gnc-pro-weight-gainer':{
+    dose:'Mix 4 scoops (184.5 g) with 475 ml (16 fl oz) of water or milk. Use 1–2 times daily according to the product label.',
+    source:'https://www.gnc.com/mass-gainers/GNCProPerformanceWeightGainer.html'
+  },
+  'qnt-3000-muscle-mass':{
+    dose:'Mix 1–3 scoops (50 g each) with 450 ml of water or milk. Use between meals; follow the current pack for your serving plan.',
+    source:'https://www.qntsport.com/en/products/3000-muscle-mass-gainer-13-kg'
+  },
+  'xsn-xtreme-whey-pro':{
+    dose:'Mix 1 scoop (36 g) with 250–350 ml of water or milk. The product direction lists morning and post-workout use.',
+    source:'https://xsnonline.us/product/xtreme-whey-pro/'
+  },
+  'optimum-nutrition-performance-whey':{
+    dose:'Mix 1 scoop with 180–240 ml of cold water or milk. The Indian product direction lists one serving daily.',
+    source:'https://www.optimumnutrition.co.in/collections/performance-whey-whey-protein/products/optimum-nutrition-on-performance-whey-protein-powder-1kg-chocolate-milkshake'
+  },
+  'gnc-pro-performance-whey':{
+    dose:'Mix 1 scoop (33 g) with about 180 ml (6 fl oz) of water or milk. Use 1–2 times daily as directed on the pack.',
+    source:'https://www.gnc.com/whey-protein/379965.html'
+  },
+  'muscle-club-mc-amplified-pre-workout':{
+    dose:'Mix 1 serving (10 g) with 200 ml water and consume about 30 minutes before training. Do not exceed the labelled serving.',
+    source:'https://muscleclub.in/products/muscle-club-amplifier-pre-workout'
+  },
+  'muscle-club-mc-ring-man-pre-workout':{
+    dose:'Mix 1 scoop (about 35 g) with 250 ml water and consume 20–30 minutes before training. Do not exceed the labelled serving.',
+    source:'https://muscleclub.in/collections/pre-post-workout/products/ring-man-pre-workout'
+  },
+  'myprotein-essential-omega-3':{
+    dose:'Take 1 softgel daily, preferably with a meal.',
+    source:'https://www.myprotein.co.in/p/sports-nutrition/myprotein-essential-omega-3/15591730/'
+  },
+  'muscle-club-mc-l-carnitine-3000-mg':{
+    dose:'Take 1 tablespoon (15 ml) before exercise. Do not exceed the labelled daily serving.',
+    source:'https://muscleclub.in/products/muscle-club-l-carnitine-liquid-3000mg'
+  },
+  'gnc-total-lean-triple-strength-l-carnitine-liquid':{
+    dose:'Take 1 tablespoon (15 ml) daily. Follow the current bottle label and do not exceed the stated serving.',
+    source:'https://www.gnc.com/amino-acids/732281.html'
+  },
+  'kapiva-ashwagandha-gold':{
+    dose:'Take 1 capsule twice daily after a meal, with water or milk.',
+    source:'https://kapiva.in/solution/daily-wellness/ashwagandha-gold-capsules-60-caps/'
+  },
+  'optimum-nutrition-gold-standard-100-whey':{
+    dose:'Mix 1 rounded scoop with 180–240 ml of cold water or milk. Use after training or between meals.',
+    source:'https://www.optimumnutrition.co.in/products/gold-standard-100-whey-protein-powder-double-rich-chocolate-1118950'
+  },
+  'myprotein-impact-whey':{
+    dose:'Mix 1 scoop (25 g) with 150–250 ml water or milk. Consume around 30 minutes before or after training, or any time to raise daily protein intake.',
+    source:'https://www.myprotein.co.in/p/sports-nutrition/impact-whey-protein/11654605/'
+  },
+  'optimum-nutrition-micronized-creatine-powder':{
+    dose:'Add 3 g (about 1 scoop) to a protein shake or flavoured beverage and mix. Use 1 serving daily; do not exceed the labelled serving.',
+    source:'https://www.optimumnutrition.co.in/products/micronized-creatine-powder-unflavoured-100-g-1145331'
+  },
+  'dymatize-iso100-hydrolyzed':{
+    dose:'Mix 1 scoop with about 180 ml of water or another beverage. Use before or after training, or as needed to meet protein intake.',
+    source:'https://dymatize.com/products/iso100'
+  },
+  'applied-nutrition-critical-whey':{
+    dose:'Mix 2 level scoops (33 g) with 250 ml of cold water or milk. Use after training or between meals; follow the pack for daily servings.',
+    source:'https://appliednutrition.uk/products/critical-whey-protein'
+  },
+  'muscleblaze-biozyme-iso-zero-low-carb':{
+    dose:'Mix 1 scoop (32.5 g) with 200–250 ml of chilled water. Shake for 15–30 seconds; use post-workout or at a convenient time.',
+    source:'https://www.muscleblaze.com/sv/muscleblaze-biozyme-iso-zero/SP-103271'
+  },
+  'divine-nutrition-nitra-max':{
+    dose:'Mix 1 scoop (40 g) with 200–250 ml of chilled water and consume as directed on the pack.',
+    source:'https://divinenutrition.in/'
+  },
+  'muscletech-nitro-tech-ripped':{
+    dose:'Mix 1 scoop with 240 ml (8 fl oz) of cold water or skim milk. Take twice daily, 30–60 minutes before your two largest meals.',
+    source:'https://www.muscletech.com/products/nitro-tech-ripped'
+  },
+  'muscle-club-mc-ultra-whey-protein':{
+    dose:'Mix 1 scoop (33 g) with 200 ml chilled water or skimmed milk. Consume post-workout or when an extra protein serving is needed.',
+    source:'https://muscleclub.in/products/muscle-club-ultra-whey-protein'
+  },
+  'black-series-l-carnitine-3500-mg':{
+    dose:'Mix 1 tablespoon (about 15 ml) with 300–420 ml of water and consume during exercise. Do not exceed the labelled daily serving.',
+    source:'https://triumphnutrition.in/products/dexter-jackson-black-series-l-carnitine-3500mg-fat-weightloss'
+  },
+  'muscle-harvest-elite-whey':{
+    dose:'Mix 1 scoop with 200 ml of water or milk. The product instructions state twice daily, including after training.',
+    source:'https://muscleharvest.in/'
+  },
+  'muscle-harvest-rip-pro':{
+    dose:'Mix 1 scoop with cold water or milk. The product instructions state twice daily, including after training.',
+    source:'https://muscleharvest.in/'
+  },
+  'dexter-jackson-black-series-whey-isolate-hydrolyzed':{
+    dose:'Mix 1 scoop with about 180 ml of water or milk; use less liquid for a thicker shake. Follow the pack for daily servings.',
+    source:'https://dextersupplements.com/'
+  },
+  'absolute-nutrition-mass-gainer':{
+    dose:'Mix 3 scoops (150 g) with 300–400 ml of water or milk. The listed direction is once daily; do not exceed the current pack directions.',
+    source:'https://absolutenutrition.in/'
+  },
+  'optimum-nutrition-serious-mass':{
+    dose:'Mix 2 heaped scoops (334 g) with about 710 ml of water or milk. Start with a half serving if needed and follow the current pack label.',
+    source:'https://www.optimumnutrition.co.in/'
+  },
+  'muscletech-mass-tech-extreme-2000':{
+    dose:'Mix 1 serving (3.5 scoops / 281 g) with 300 ml of water or milk. Follow the current pack label for timing and daily use.',
+    source:'https://www.muscletech.com/'
+  }
 };
 
 PRODUCTS.forEach(function(product){
   product.img=PRODUCT_MEDIA[product.id]||'';
+  product.guidance=PRODUCT_GUIDANCE[product.id]||null;
 });
 /* A product is never shown without an exact, bundled packshot. */
 PRODUCTS=PRODUCTS.filter(function(product){return !!product.img;});
@@ -1572,6 +1761,11 @@ function renderCard(p){
   var ctaLabel=hasStock?'Add to Cart':'Out of Stock';
   var ctaCls='prod-cta'+(!hasStock?' disabled':'');
   var ctaClick=hasStock?'onclick="addToCart(\''+p.id+'\')"':'';
+  var guidanceHtml=p.guidance?
+    '<details class="product-guidance"><summary>Verified use directions</summary>'+ 
+      '<p>'+escHtml(p.guidance.dose)+'</p>'+ 
+      '<a href="'+escAttr(p.guidance.source)+'" target="_blank" rel="noopener noreferrer">Check product source</a>'+ 
+    '</details>':'';
 
   return '<div class="prod-card" id="card-'+p.id+'" itemscope itemtype="https://schema.org/Product">'+
     '<meta itemprop="name" content="'+escAttr(p.brand+' '+p.name)+'"/>'+
@@ -1586,6 +1780,7 @@ function renderCard(p){
       (proteinTag?'<div class="prod-meta">'+proteinTag+'</div>':'')+
       flavHtml+
       weightHtml+
+      guidanceHtml+
       '<div class="call-for-price"><i class="fas fa-phone-alt"></i> Call / WhatsApp: +91 92060 14393</div>'+
       '<button class="'+ctaCls+'" id="cta-'+p.id+'" '+ctaClick+'>'+
         '<i class="'+ctaIcon+'"></i> '+ctaLabel+
