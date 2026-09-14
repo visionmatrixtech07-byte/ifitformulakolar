@@ -1,0 +1,6 @@
+/* Keep the catalogue navigation visible and stack catalogue controls below it. */
+body.catalogue-revamp{--catalogue-nav-h:76px}
+body.catalogue-revamp nav{position:sticky!important;top:0!important;z-index:220!important;height:var(--catalogue-nav-h)!important}
+body.catalogue-revamp .level-header{top:var(--catalogue-nav-h)!important;z-index:210!important}
+body.catalogue-revamp .filter-bar{z-index:200!important}
+@media(max-width:768px){body.catalogue-revamp{--catalogue-nav-h:64px}}

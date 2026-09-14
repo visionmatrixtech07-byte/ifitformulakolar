@@ -463,6 +463,7 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
 </style>
 <link rel="stylesheet" href="revamp.css"/>
 <link rel="stylesheet" href="retail-final.css"/>
+<link rel="stylesheet" href="catalogue-nav-fix.css"/>
 </head>
 <body class="catalogue-revamp">
 
@@ -1559,7 +1560,8 @@ function updateStickyTop(){
   if(!lh||!fb)return;
   setTimeout(function(){
     var lhH=lh.style.display!=='none'?lh.offsetHeight:0;
-    fb.style.top=(66+lhH)+'px';
+    var navHeight=parseInt(getComputedStyle(document.body).getPropertyValue('--catalogue-nav-h'),10)||76;
+    fb.style.top=(navHeight+lhH)+'px';
   },10);
 }
 
