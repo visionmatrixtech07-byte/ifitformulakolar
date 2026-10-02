@@ -24,6 +24,15 @@
   <link rel="stylesheet" href="retail-rich.css"/>
   <link rel="stylesheet" href="hero-upgrade.css"/>
   <link rel="stylesheet" href="hero-repair.css"/>
+  <style>
+    /* Mobile uses separate four-card pages: two columns by two rows. */
+    .mobile-product-carousel{display:none;}
+    @media(max-width:640px){
+      .desktop-product-carousel{display:none;}
+      .mobile-product-carousel{display:block;}
+      .mobile-product-carousel .carousel-page.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;}
+    }
+  </style>
 </head>
 <body>
   <div class="utility-bar"><div class="shell utility-inner"><span>100% genuine products</span><span class="utility-dot"></span><span>Expert guidance from Kolar</span><span class="utility-dot"></span><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a></div></div>
@@ -66,7 +75,7 @@
     <section class="choice-section"><div class="shell"><div class="section-heading-row"><div><p class="overline">A better way to choose</p><h2>Start with a purpose, not a random product.</h2></div></div><p class="section-intro">Different supplements support different routines. Use these quick paths to narrow the catalogue, then ask us to confirm the right product, available flavour and pack size.</p><div class="choice-grid"><article><span class="choice-number">01</span><h3>Daily protein</h3><p>For people who want a convenient protein option alongside regular meals and training.</p><a href="products.html#/category/whey">Explore whey protein →</a></article><article><span class="choice-number">02</span><h3>Muscle &amp; weight goals</h3><p>Explore higher-calorie mass-gainer options and ask us which pack suits your routine.</p><a href="products.html#/category/mass">Explore mass gainers →</a></article><article><span class="choice-number">03</span><h3>Training-day support</h3><p>Browse creatine, pre-workout and amino categories based on your training preference.</p><a href="products.html#/category/preworkout">Explore performance →</a></article><article><span class="choice-number">04</span><h3>Everyday wellness</h3><p>Browse vitamins, fish-oil and wellness categories for your daily essentials.</p><a href="products.html#/category/vitamins">Explore wellness →</a></article></div></div></section>
 
     <section class="product-band"><div class="shell"><div class="section-heading-row"><div><p class="overline">Featured in store</p><h2>Popular ways to start</h2></div><a href="products.html" class="text-link">Open full catalogue <span>→</span></a></div>
-      <div class="carousel carousel--products" data-carousel>
+      <div class="carousel carousel--products desktop-product-carousel" data-carousel>
         <div class="carousel-viewport"><div class="carousel-track" id="product-carousel" data-carousel-track tabindex="0" aria-label="Featured products by brand carousel"><div class="carousel-page product-grid" data-slide-label="Products 1–8">
           <article class="product-card" data-brand="Optimum Nutrition"><a class="product-image" href="products.html#/category/whey"><img src="assets/products/catalogue/optimum-nutrition-gold-standard-double-rich-chocolate-2lb.png" alt="Optimum Nutrition Gold Standard 100% Whey" loading="lazy" decoding="async"/></a><div class="product-details"><p>Optimum Nutrition</p><h3>Gold Standard 100% Whey</h3><span>Whey protein · Confirm size &amp; flavour</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Optimum%20Nutrition%20Gold%20Standard%20100%25%20Whey." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
           <article class="product-card" data-brand="Optimum Nutrition"><a class="product-image" href="products.html#/category/creatine"><img src="assets/products/catalogue/optimum-nutrition-micronized-creatine-powder.jpeg" alt="Optimum Nutrition Micronized Creatine Powder" loading="lazy" decoding="async"/></a><div class="product-details"><p>Optimum Nutrition</p><h3>Micronized Creatine Powder</h3><span>Creatine · Confirm pack size</span><a href="https://wa.me/919206014393?text=Hi%2C%20I%20want%20to%20check%20Optimum%20Nutrition%20Micronized%20Creatine%20Powder." target="_blank" rel="noopener noreferrer">Check availability <b>→</b></a></div></article>
@@ -88,6 +97,10 @@
         </div></div></div>
         <div class="carousel-footer"><p class="carousel-status" data-carousel-status aria-live="off"></p><div class="carousel-controls"><button class="carousel-button" type="button" data-carousel-prev aria-controls="product-carousel" aria-label="Show previous products">←</button><button class="carousel-button" type="button" data-carousel-next aria-controls="product-carousel" aria-label="Show next products">→</button></div></div>
       </div>
+      <div class="carousel carousel--products mobile-product-carousel" data-carousel>
+        <div class="carousel-viewport"><div class="carousel-track" id="product-carousel-mobile" data-carousel-track tabindex="0" aria-label="Featured products carousel, four products per slide"></div></div>
+        <div class="carousel-footer"><p class="carousel-status" data-carousel-status aria-live="off"></p><div class="carousel-controls"><button class="carousel-button" type="button" data-carousel-prev aria-controls="product-carousel-mobile" aria-label="Show previous products">←</button><button class="carousel-button" type="button" data-carousel-next aria-controls="product-carousel-mobile" aria-label="Show next products">→</button></div></div>
+      </div>
     </div></section>
 
     <section class="shell goal-section"><div class="section-heading-row"><div><p class="overline">A simpler way to shop</p><h2>Start with your goal</h2></div></div><div class="goal-grid"><a class="goal-panel goal-strength" href="products.html#/category/whey"><span>01</span><h3>Muscle<br/>and strength</h3><p>Explore whey protein, mass gainers and creatine.</p><b>Explore products →</b></a><a class="goal-panel goal-performance" href="products.html#/category/preworkout"><span>02</span><h3>Training<br/>performance</h3><p>Find pre-workouts and BCAA support.</p><b>Explore products →</b></a><a class="goal-panel goal-wellness" href="products.html#/category/vitamins"><span>03</span><h3>Everyday<br/>wellness</h3><p>Discover vitamins, fish oil and health essentials.</p><b>Explore products →</b></a></div></section>
@@ -107,6 +120,24 @@
 
   <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand-lockup brand-lockup-footer" href="#top"><img class="full-logo" src="ifitlogo.jpeg?v=20260907" alt="I FIT FORMULA Nutrition Store"/></a><p>Genuine sports nutrition and practical guidance from Kolar, Karnataka.</p></div><div><h2>Explore</h2><a href="products.html">All products</a><a href="products.html#/category/whey">Whey protein</a><a href="products.html#/category/vitamins">Wellness essentials</a></div><div><h2>Contact</h2><a href="tel:+919206014393">+91 92060 14393</a><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp the store</a><a href="https://www.instagram.com/ifitformula/" target="_blank" rel="noopener noreferrer">Instagram</a></div><div><h2>Visit</h2><p>Raja Nagar, MB Road<br/>Kolar, Karnataka 563101</p><a class="footer-map" href="https://maps.google.com/?q=R+K+Hospital+Kolar+MB+Road+Raja+Nagar" target="_blank" rel="noopener noreferrer">Get directions →</a></div></div><div class="shell footer-bottom"><span>© 2026 I FIT FORMULA Nutrition Store</span><span>Genuine supplements · Kolar, Karnataka</span></div></footer>
   <script>
+    (function () {
+      var source = document.getElementById('product-carousel');
+      var mobileTrack = document.getElementById('product-carousel-mobile');
+      if (!source || !mobileTrack) return;
+
+      var cards = Array.prototype.slice.call(source.querySelectorAll('.product-card'));
+      for (var start = 0; start < cards.length; start += 4) {
+        var page = document.createElement('div');
+        var end = Math.min(start + 4, cards.length);
+        page.className = 'carousel-page product-grid';
+        page.setAttribute('data-slide-label', 'Products ' + (start + 1) + '–' + end);
+        cards.slice(start, end).forEach(function (card) {
+          page.appendChild(card.cloneNode(true));
+        });
+        mobileTrack.appendChild(page);
+      }
+    }());
+
     (function () {
       var carousels = document.querySelectorAll('[data-carousel]');
       carousels.forEach(function (carousel) {
