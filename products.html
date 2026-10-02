@@ -59,9 +59,10 @@ a{text-decoration:none;color:inherit;}
 
 /* ── OFFER BANNER ── */
 .offer-banner{width:100%;background:rgba(226,18,43,0.85);overflow:hidden;height:34px;display:flex;align-items:center;margin:18px 0 0;border-radius:6px;position:relative;z-index:2;}
-.offer-track{display:flex;align-items:center;animation:offerScroll 22s linear infinite;white-space:nowrap;width:max-content;}
+.offer-track{display:flex;align-items:center;animation:offerScroll 22s linear infinite;white-space:nowrap;width:max-content;will-change:transform;}
 .offer-track:hover{animation-play-state:paused;}
 @keyframes offerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.offer-group{display:flex;align-items:center;flex:0 0 auto;width:max-content;min-width:100vw;}
 .offer-item{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-d);font-size:0.75rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#fff;padding:0 24px;}
 .offer-item i{font-size:0.6rem;opacity:0.8;}
 .offer-sep{color:rgba(255,255,255,0.5);padding:0 6px;font-size:0.6rem;}
@@ -177,6 +178,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;height:var(--nav-h);padding:0 24
 
 /* ── PRODUCT CARD ── */
 .prod-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s;position:relative;}
+.prod-card.product-card-clickable{cursor:pointer;}
 .prod-card:hover{transform:translateY(-5px);border-color:rgba(226,18,43,0.3);box-shadow:0 16px 48px rgba(0,0,0,0.5),0 0 0 1px rgba(226,18,43,0.08);}
 .prod-img-wrap{aspect-ratio:1/1;position:relative;overflow:hidden;flex-shrink:0;background:#ffffff;}
 .prod-img-real{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px;transition:transform 0.35s ease;background:#ffffff;}
@@ -250,10 +252,10 @@ nav{position:fixed;top:0;width:100%;z-index:200;height:var(--nav-h);padding:0 24
 .global-search-bar{max-width:1200px;margin:0 auto 20px;padding:0 24px;}
 .global-search-wrap{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 .global-search-input-wrap{flex:1;min-width:220px;position:relative;}
-.global-search-input-wrap i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:0.85rem;}
-.global-search-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:11px 14px 11px 38px;color:var(--text);font-family:var(--font-b);font-size:0.9rem;outline:none;transition:border-color 0.2s;}
-.global-search-input:focus{border-color:rgba(226,18,43,0.4);}
-.global-search-input::placeholder{color:var(--muted2);}
+.global-search-input-wrap i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#5b7160;font-size:0.85rem;}
+.global-search-input{width:100%;background:#fff;border:1px solid #c9ddc7;border-radius:8px;padding:11px 14px 11px 38px;color:#182a1d;font-family:var(--font-b);font-size:0.9rem;outline:none;transition:border-color 0.2s,box-shadow 0.2s;}
+.global-search-input:focus{border-color:#167241;box-shadow:0 0 0 3px rgba(22,114,65,0.12);}
+.global-search-input::placeholder{color:#718174;}
 .cat-filter-pills{display:flex;gap:6px;flex-wrap:wrap;}
 .cat-filter-pill{padding:7px 14px;border-radius:20px;font-size:0.75rem;font-weight:700;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;font-family:var(--font-b);white-space:nowrap;}
 .cat-filter-pill:hover{border-color:rgba(226,18,43,0.4);color:var(--text);}
@@ -392,6 +394,31 @@ textarea.form-input{resize:vertical;min-height:80px;}
 .order-success-btn{padding:12px 28px;border-radius:8px;background:var(--green);color:#fff;font-family:var(--font-d);font-size:1rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border:none;cursor:pointer;transition:background 0.2s;}
 .order-success-btn:hover{background:var(--green-dark);}
 
+/* ── PRODUCT DETAIL POPUP ── */
+.product-detail-overlay{position:fixed;inset:0;z-index:700;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,0.72);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity 0.2s ease;}
+.product-detail-overlay.open{opacity:1;pointer-events:auto;}
+.product-detail-dialog{position:relative;width:min(920px,100%);max-height:min(88vh,760px);overflow:auto;background:#fff;border:1px solid #d7e5d4;border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,0.38);transform:translateY(14px) scale(0.98);transition:transform 0.2s ease;color:#17291c;}
+.product-detail-overlay.open .product-detail-dialog{transform:translateY(0) scale(1);}
+.product-detail-close{position:sticky;top:14px;float:right;z-index:2;width:40px;height:40px;margin:14px 14px -54px 0;border:1px solid #c9ddc7;border-radius:50%;background:#fff;color:#1c4d2f;font-size:1rem;cursor:pointer;box-shadow:0 3px 10px rgba(12,48,25,0.12);}
+.product-detail-close:hover{background:#eef7ed;border-color:#167241;}
+.product-detail-content{display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);min-height:420px;}
+.product-detail-image{display:flex;align-items:center;justify-content:center;min-height:420px;padding:36px;background:#f4f8f2;border-radius:18px 0 0 18px;}
+.product-detail-image img{width:100%;height:100%;max-height:410px;object-fit:contain;}
+.product-detail-image .product-detail-image-empty{width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e1efe0;color:#4f7356;font-size:2.4rem;}
+.product-detail-info{padding:42px 40px 36px;display:flex;flex-direction:column;align-items:flex-start;}
+.product-detail-brand{font-size:0.72rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;color:#157244;margin-bottom:8px;}
+.product-detail-title{margin:0;color:#13271a;font-family:var(--font-d);font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;line-height:1.05;text-transform:uppercase;}
+.product-detail-category{margin:14px 0 0;color:#526a58;font-size:0.9rem;}
+.product-detail-spec{width:100%;margin-top:22px;padding-top:18px;border-top:1px solid #d9e8d6;}
+.product-detail-spec h3{margin:0 0 8px;color:#48634e;font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;}
+.product-detail-spec p{margin:0;color:#243f2a;font-size:0.92rem;line-height:1.55;}
+.product-detail-pills{display:flex;flex-wrap:wrap;gap:7px;}
+.product-detail-pill{padding:6px 9px;border:1px solid #c9ddc7;border-radius:6px;background:#f4f8f2;color:#234d30;font-size:0.78rem;font-weight:700;}
+.product-detail-pill.out{opacity:0.55;text-decoration:line-through;}
+.product-detail-help{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:11px 15px;border-radius:8px;background:#08783e;color:#fff;font-size:0.86rem;font-weight:800;}
+.product-detail-help:hover{background:#056431;}
+body.product-detail-open{overflow:hidden;}
+
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
   .brands-grid,.cats-grid{grid-template-columns:repeat(3,1fr);}
@@ -420,6 +447,12 @@ textarea.form-input{resize:vertical;min-height:80px;}
   .prod-grid{gap:10px;}
   .modal-body{padding:16px 18px;}
   .modal-top{padding:18px 18px 14px;}
+  .product-detail-overlay{padding:12px;}
+  .product-detail-content{grid-template-columns:1fr;}
+  .product-detail-dialog{max-height:calc(100vh - 24px);}
+  .product-detail-image{min-height:250px;max-height:320px;padding:30px;border-radius:18px 18px 0 0;}
+  .product-detail-image img{max-height:260px;}
+  .product-detail-info{padding:28px 22px 26px;}
 
   .mob-nav { display: flex; justify-content: space-between; padding: 10px 8px 16px; }
   .mob-nav a { font-size: 0.6rem; gap: 3px; }
@@ -533,22 +566,26 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
     <div class="page-title">Our Product Range</div>
     <div class="offer-banner">
       <div class="offer-track">
-        <span class="offer-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-bolt"></i> LIMITED TIME DEAL</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO CLAIM OFFER</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-check-circle"></i> 100% GENUINE PRODUCTS</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-bolt"></i> LIMITED TIME DEAL</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO CLAIM OFFER</span>
-        <span class="offer-sep">★</span>
-        <span class="offer-item"><i class="fas fa-check-circle"></i> 100% GENUINE PRODUCTS</span>
-        <span class="offer-sep">★</span>
+        <div class="offer-group" aria-hidden="true">
+          <span class="offer-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span>
+          <span class="offer-sep">★</span>
+          <span class="offer-item"><i class="fas fa-bolt"></i> LIMITED TIME DEAL</span>
+          <span class="offer-sep">★</span>
+          <span class="offer-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO CLAIM OFFER</span>
+          <span class="offer-sep">★</span>
+          <span class="offer-item"><i class="fas fa-check-circle"></i> 100% GENUINE PRODUCTS</span>
+          <span class="offer-sep">★</span>
+        </div>
+        <div class="offer-group" aria-hidden="true">
+          <span class="offer-item"><i class="fas fa-tag"></i> UP TO 50% OFF ON SELECTED PRODUCTS</span>
+          <span class="offer-sep">★</span>
+          <span class="offer-item"><i class="fas fa-bolt"></i> LIMITED TIME DEAL</span>
+          <span class="offer-sep">★</span>
+          <span class="offer-item"><i class="fab fa-whatsapp"></i> WHATSAPP TO CLAIM OFFER</span>
+          <span class="offer-sep">★</span>
+          <span class="offer-item"><i class="fas fa-check-circle"></i> 100% GENUINE PRODUCTS</span>
+          <span class="offer-sep">★</span>
+        </div>
       </div>
     </div>
     <p class="page-sub">Whey Protein &nbsp;&middot;&nbsp; Mass Gainer &nbsp;&middot;&nbsp; Pre-Workout &nbsp;&middot;&nbsp; BCAA &nbsp;&middot;&nbsp; Creatine &nbsp;&middot;&nbsp; Healthy Snacks &amp; More</p>
@@ -675,6 +712,14 @@ nav{top:var(--announce-h);height:var(--nav-h);padding:0 16px;background:rgba(7,7
     </button>
     <button class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
   </div>
+</div>
+
+<!-- PRODUCT DETAILS POPUP -->
+<div class="product-detail-overlay" id="productDetailModal" aria-hidden="true">
+  <section class="product-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="productDetailTitle">
+    <button class="product-detail-close" id="productDetailClose" type="button" aria-label="Close product details"><i class="fas fa-times"></i></button>
+    <div class="product-detail-content" id="productDetailContent"></div>
+  </section>
 </div>
 
 <!-- CHECKOUT MODAL -->
@@ -1928,7 +1973,7 @@ function renderCard(p){
       '<a href="'+escAttr(p.guidance.source)+'" target="_blank" rel="noopener noreferrer">Check product source</a>'+ 
     '</details>':'';
 
-  return '<div class="prod-card" id="card-'+p.id+'" itemscope itemtype="https://schema.org/Product">'+
+  return '<div class="prod-card product-card-clickable" id="card-'+p.id+'" data-product-id="'+escAttr(p.id)+'" itemscope itemtype="https://schema.org/Product" onclick="openProductDetails(\''+p.id+'\',event)">'+
     '<meta itemprop="name" content="'+escAttr(p.brand+' '+p.name)+'"/>'+
     '<meta itemprop="brand" content="'+escAttr(p.brand)+'"/>'+
     '<div class="prod-img-wrap">'+imgHtml+oosOverlay+
@@ -2000,6 +2045,68 @@ document.getElementById('sortSelect').addEventListener('change',function(e){
 /* ── ESCAPE HELPERS ── */
 function escHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 function escAttr(s){return (s||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+/* ── PRODUCT DETAIL POPUP ── */
+var lastProductTrigger=null;
+var productCategoryLabels={
+  whey:'Whey protein',mass:'Mass gainer',preworkout:'Pre-workout',bcaa:'BCAA & aminos',
+  creatine:'Creatine',fatburner:'Fat burners',vitamins:'Vitamins',bars:'Protein bars',
+  health:'Health essentials',herbal:'Herbal',oats:'Oats & muesli'
+};
+
+function openProductDetails(productId,event){
+  if(event&&event.target&&event.target.closest('button,a,details,input,select,label'))return;
+  var p=PRODUCTS.find(function(item){return item.id===productId;});
+  var modal=document.getElementById('productDetailModal');
+  var content=document.getElementById('productDetailContent');
+  if(!p||!modal||!content)return;
+
+  lastProductTrigger=event&&event.currentTarget?event.currentTarget:document.activeElement;
+  var flavours=(p.flavours||[]).filter(function(flavour){return flavour&&flavour!=='—';});
+  var weights=(p.weights||[]).filter(function(weight){return weight&&weight.size&&weight.size!=='—';});
+  var image=p.img?
+    '<img src="'+escAttr(p.img)+'" alt="'+escAttr(p.brand+' '+p.name)+'"/>' :
+    '<div class="product-detail-image-empty" aria-hidden="true"><i class="fas fa-dumbbell"></i></div>';
+  var flavourHtml=flavours.length?
+    '<div class="product-detail-spec"><h3>Available flavours</h3><div class="product-detail-pills">'+flavours.map(function(flavour){return '<span class="product-detail-pill">'+escHtml(flavour)+'</span>';}).join('')+'</div></div>':'';
+  var weightHtml=weights.length?
+    '<div class="product-detail-spec"><h3>Size / weight</h3><div class="product-detail-pills">'+weights.map(function(weight){return '<span class="product-detail-pill'+(weight.inStock?'':' out')+'">'+escHtml(weight.size)+(weight.inStock?'':' · Out of stock')+'</span>';}).join('')+'</div></div>':'';
+  var guidanceHtml=p.guidance?
+    '<div class="product-detail-spec"><h3>Verified use directions</h3><p>'+escHtml(p.guidance.dose)+'</p></div>':'';
+  var category=productCategoryLabels[p.cat]||'Supplement';
+
+  content.innerHTML=
+    '<div class="product-detail-image">'+image+'</div>'+
+    '<div class="product-detail-info">'+
+      '<div class="product-detail-brand">'+escHtml(p.brand)+'</div>'+
+      '<h2 class="product-detail-title" id="productDetailTitle">'+escHtml(p.name)+'</h2>'+
+      '<p class="product-detail-category">'+escHtml(category)+(p.tagline?' · '+escHtml(p.tagline):'')+'</p>'+
+      flavourHtml+weightHtml+guidanceHtml+
+      '<a class="product-detail-help" href="https://wa.me/919206014393?text='+encodeURIComponent('Hi, I need details for '+p.brand+' '+p.name)+ '" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Ask about this product</a>'+
+    '</div>';
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.classList.add('product-detail-open');
+  document.getElementById('productDetailClose').focus();
+}
+
+function closeProductDetails(){
+  var modal=document.getElementById('productDetailModal');
+  if(!modal)return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('product-detail-open');
+  if(lastProductTrigger&&document.contains(lastProductTrigger))lastProductTrigger.focus();
+}
+
+document.getElementById('productDetailClose').addEventListener('click',closeProductDetails);
+document.getElementById('productDetailModal').addEventListener('click',function(event){
+  if(event.target===this)closeProductDetails();
+});
+document.addEventListener('keydown',function(event){
+  if(event.key==='Escape'&&document.getElementById('productDetailModal').classList.contains('open'))closeProductDetails();
+});
 
 /* ── GLOBAL SEARCH (Level 1) ── */
 var globalSearchState = {active:false,query:'',cat:'all',sort:'brand_order'};
