@@ -18,6 +18,9 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":["Store","LocalBusiness"],"name":"I FIT FORMULA Nutrition Store","url":"https://ifitformula.co.in/","telephone":"+919206014393","image":"https://ifitformula.co.in/ifitlogo.jpeg","priceRange":"₹₹","address":{"@type":"PostalAddress","streetAddress":"R K Hospital Kolar, 44QJ+J4M, MB Rd, Raja Nagar","addressLocality":"Kolar","addressRegion":"Karnataka","postalCode":"563101","addressCountry":"IN"},"areaServed":["Kolar","Srinivaspur","Mulbagal","Bangarpet","Malur"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Sports nutrition and wellness essentials","itemListElement":[{"@type":"OfferCatalog","name":"Whey Protein"},{"@type":"OfferCatalog","name":"Creatine"},{"@type":"OfferCatalog","name":"Mass Gainers"},{"@type":"OfferCatalog","name":"Vitamins and Wellness"}]}}
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="retail-preview.css"/>
   <link rel="stylesheet" href="retail-logo.css"/>
   <link rel="stylesheet" href="retail-final.css"/>
@@ -32,6 +35,25 @@
       .mobile-product-carousel{display:block;}
       .mobile-product-carousel .carousel-page.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;}
     }
+
+    /* Shop by Category grid */
+    .cat-grid-section{padding:20px 0 28px;background:#f4f4f2}
+    .cat-grid-section .cat-h1{margin:0 0 4px;padding:0 14px;text-align:center;font:600 13px/1.4 system-ui,sans-serif;letter-spacing:.02em;text-transform:none;color:#4a4a4a}
+    .cat-grid-section .cat-title{margin:0 0 16px;text-align:center;font:700 30px/1.1 'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:0;text-transform:none;color:#111}
+    .cat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:1100px;margin:0 auto;padding:0 14px}
+    .cat-card{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:#161616;color:#fff;text-decoration:none;border-radius:2px}
+    .cat-card::before{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 0 52%,var(--c1) 52% 70%,var(--c2) 70% 100%)}
+    .cat-card .cat-name{position:relative;z-index:2;margin:0;padding:12% 6% 0;text-align:center;color:#fff;font:700 clamp(26px,9vw,48px)/1 'Barlow Condensed','Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:.01em}
+    .cat-card .cat-img{position:absolute;z-index:2;left:50%;bottom:8%;transform:translateX(-50%);width:52%;height:58%;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;padding:4%;box-sizing:border-box}
+    .cat-card .cat-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+    .cat-card:focus-visible{outline:3px solid #8ee26b;outline-offset:2px}
+    .c-red{--c1:#a3111c;--c2:#d9262f}
+    .c-green{--c1:#2f7a14;--c2:#7fc21f}
+    .c-orange{--c1:#d97a00;--c2:#f2a900}
+    .c-blue{--c1:#1f4fa8;--c2:#2f86d6}
+    .c-grey{--c1:#555;--c2:#b8b8b8}
+    .c-amber{--c1:#c47a00;--c2:#e8b100}
+    @media(min-width:768px){.cat-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}}
   </style>
 </head>
 <body>
@@ -49,28 +71,22 @@
   </header>
 
   <main id="top">
-    <section class="hero-section hero-strong"><div class="hero-graphic hero-graphic-one" aria-hidden="true"></div><div class="hero-graphic hero-graphic-two" aria-hidden="true"></div><div class="hero-grid-lines" aria-hidden="true"></div><div class="shell hero-grid">
-      <div class="hero-copy"><p class="overline">I FIT FORMULA · KOLAR, KARNATAKA</p><h1>Real fuel.<br/><em>Clear direction.</em></h1><p class="hero-text">Choose genuine sports nutrition with straightforward support for your training, recovery and everyday wellness routine.</p><div class="hero-cta-row"><a class="button button-primary" href="products.html">Explore the catalogue <span>→</span></a><a class="button button-secondary" href="https://wa.me/919206014393?text=Hi%2C%20I%20need%20help%20choosing%20a%20supplement." target="_blank" rel="noopener noreferrer">Get product guidance</a></div><div class="hero-data"><span><b>10+</b> categories to explore</span><span><b>1:1</b> WhatsApp support</span><span><b>100%</b> genuine-product focus</span></div></div>
-      <div class="hero-brand-stage" aria-label="I FIT FORMULA nutrition store"><div class="hero-logo-card"><p>YOUR LOCAL NUTRITION STORE</p><img src="ifitlogo.jpeg?v=20260907" alt="I FIT FORMULA Nutrition Store logo"/><span>TRAIN · RECOVER · GROW</span></div><div class="hero-float-card hero-float-card-a"><b>✓</b><span>Stock<br/>confirmation</span></div><div class="hero-float-card hero-float-card-b"><b>01</b><span>Goal-led<br/>guidance</span></div><div class="hero-orbit hero-orbit-one" aria-hidden="true"></div><div class="hero-orbit hero-orbit-two" aria-hidden="true"></div></div>
-    </div><div class="shell hero-bottom-data"><span><b>GENUINE RANGE</b> Actual product catalogue</span><span><b>PERSONAL HELP</b> Goal, flavour and pack guidance</span><span><b>LOCAL SUPPORT</b> Kolar-area delivery enquiries</span></div></section>
-
-    <section class="proof-strip" aria-label="I FIT FORMULA service promise"><div class="shell proof-grid"><article><span>01</span><div><strong>Genuine-product focus</strong><p>We help you confirm the actual product before an order is placed.</p></div></article><article><span>02</span><div><strong>Guidance before checkout</strong><p>Start with your goal, routine, flavour and pack-size preference.</p></div></article><article><span>03</span><div><strong>Stock confirmation</strong><p>Ask for current availability before making a payment decision.</p></div></article><article><span>04</span><div><strong>Kolar-area enquiries</strong><p>Share your town and pin code to confirm delivery possibilities.</p></div></article></div></section>
-
-    <section class="shop-section shell" aria-labelledby="category-heading"><div class="section-heading-row"><div><p class="overline">Find what you need</p><h2 id="category-heading">Shop by category</h2></div><a href="products.html" class="text-link">View all categories <span>→</span></a></div>
-      <div class="carousel carousel--categories" data-carousel>
-        <div class="carousel-viewport"><div class="carousel-track" id="category-carousel" data-carousel-track tabindex="0" aria-label="Supplement categories carousel"><div class="carousel-page category-grid" data-slide-label="8 categories">
-          <a class="category-card tint-green" href="products.html#/category/whey"><span class="category-image"><img src="assets/products/catalogue/optimum-nutrition-gold-standard-double-rich-chocolate-2lb.png" alt="Optimum Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Whey protein</strong><small>Daily protein support</small></span></a>
-          <a class="category-card tint-mint" href="products.html#/category/mass"><span class="category-image"><img src="assets/products/catalogue/muscleblaze-mass-gainer-xxl.jpg" alt="MuscleBlaze mass gainer" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Mass gainers</strong><small>Build strength &amp; size</small></span></a>
-          <a class="category-card tint-yellow" href="products.html#/category/creatine"><span class="category-image"><img src="assets/products/catalogue/optimum-nutrition-micronized-creatine-powder.jpeg" alt="Optimum Nutrition creatine" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Creatine</strong><small>Train with intent</small></span></a>
-          <a class="category-card tint-peach" href="products.html#/category/preworkout"><span class="category-image"><img src="assets/products/reborn-preworkout.jpg" alt="Pre-workout supplement" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Pre-workout</strong><small>Energy before training</small></span></a>
-          <a class="category-card tint-blue" href="products.html#/category/bcaa"><span class="category-image"><img src="assets/products/muscle-club-bcaa.jpg" alt="Muscle Club BCAA supplement" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>BCAA &amp; aminos</strong><small>Recovery support</small></span></a>
-          <a class="category-card tint-sage" href="products.html#/category/vitamins"><span class="category-image"><img src="assets/products/muscle-club-multivitamin.jpg" alt="Muscle Club multivitamin" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Vitamins</strong><small>Everyday wellness</small></span></a>
-          <a class="category-card tint-yellow" href="products.html#/category/health"><span class="category-image"><img src="assets/products/catalogue/muscle-club-mc-omega-3.jpg" alt="Omega-3 health supplement" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Health essentials</strong><small>Support your basics</small></span></a>
-          <a class="category-card tint-mint" href="products.html#/category/bars"><span class="category-image"><img src="assets/products/catalogue/divine-nutrition-protein-wafer-bar.jpg" alt="Divine Nutrition protein wafer bar" loading="lazy" decoding="async"/></span><span class="category-copy"><strong>Protein bars</strong><small>Smart on-the-go options</small></span></a>
-        </div></div></div>
-        <div class="carousel-footer"><p class="carousel-status" data-carousel-status aria-live="off"></p><div class="carousel-controls"><button class="carousel-button" type="button" data-carousel-prev aria-controls="category-carousel" aria-label="Show previous categories">←</button><button class="carousel-button" type="button" data-carousel-next aria-controls="category-carousel" aria-label="Show next categories">→</button></div></div>
+    <section class="cat-grid-section" aria-labelledby="cat-heading">
+      <h1 class="cat-h1">I FIT FORMULA Nutrition Store, Kolar: genuine supplements</h1>
+      <h2 class="cat-title" id="cat-heading">Shop by Category</h2>
+      <div class="cat-grid">
+        <a class="cat-card c-red" href="products.html#/category/whey"><span class="cat-name">Protein</span><span class="cat-img"><img src="assets/products/catalogue/optimum-nutrition-gold-standard-double-rich-chocolate-2lb.png" alt="Optimum Nutrition Gold Standard whey protein" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-green" href="products.html#/category/mass"><span class="cat-name">Gainer</span><span class="cat-img"><img src="assets/products/catalogue/muscleblaze-mass-gainer-xxl.jpg" alt="MuscleBlaze mass gainer" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-orange" href="products.html#/category/preworkout"><span class="cat-name">Pre Workout</span><span class="cat-img"><img src="assets/products/reborn-preworkout.jpg" alt="Pre-workout supplement" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-green" href="products.html#/category/creatine"><span class="cat-name">Creatine</span><span class="cat-img"><img src="assets/products/catalogue/optimum-nutrition-micronized-creatine-powder.jpeg" alt="Optimum Nutrition creatine" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-green" href="products.html#/category/bcaa"><span class="cat-name">EAA / BCAA</span><span class="cat-img"><img src="assets/products/muscle-club-bcaa.jpg" alt="Muscle Club BCAA" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-blue" href="products.html#/category/vitamins"><span class="cat-name">Multivitamin</span><span class="cat-img"><img src="assets/products/muscle-club-multivitamin.jpg" alt="Muscle Club multivitamin" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-grey" href="products.html#/category/health"><span class="cat-name">Fish Oil</span><span class="cat-img"><img src="assets/products/catalogue/muscle-club-mc-omega-3.jpg" alt="Omega-3 fish oil" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-amber" href="products.html#/category/bars"><span class="cat-name">Snacks</span><span class="cat-img"><img src="assets/products/catalogue/divine-nutrition-protein-wafer-bar.jpg" alt="Divine Nutrition protein wafer bar" loading="lazy" decoding="async"/></span></a>
       </div>
     </section>
+
+    <section class="proof-strip" aria-label="I FIT FORMULA service promise"><div class="shell proof-grid"><article><span>01</span><div><strong>Genuine-product focus</strong><p>We help you confirm the actual product before an order is placed.</p></div></article><article><span>02</span><div><strong>Guidance before checkout</strong><p>Start with your goal, routine, flavour and pack-size preference.</p></div></article><article><span>03</span><div><strong>Stock confirmation</strong><p>Ask for current availability before making a payment decision.</p></div></article><article><span>04</span><div><strong>Kolar-area enquiries</strong><p>Share your town and pin code to confirm delivery possibilities.</p></div></article></div></section>
 
     <section class="choice-section"><div class="shell"><div class="section-heading-row"><div><p class="overline">A better way to choose</p><h2>Start with a purpose, not a random product.</h2></div></div><p class="section-intro">Different supplements support different routines. Use these quick paths to narrow the catalogue, then ask us to confirm the right product, available flavour and pack size.</p><div class="choice-grid"><article><span class="choice-number">01</span><h3>Daily protein</h3><p>For people who want a convenient protein option alongside regular meals and training.</p><a href="products.html#/category/whey">Explore whey protein →</a></article><article><span class="choice-number">02</span><h3>Muscle &amp; weight goals</h3><p>Explore higher-calorie mass-gainer options and ask us which pack suits your routine.</p><a href="products.html#/category/mass">Explore mass gainers →</a></article><article><span class="choice-number">03</span><h3>Training-day support</h3><p>Browse creatine, pre-workout and amino categories based on your training preference.</p><a href="products.html#/category/preworkout">Explore performance →</a></article><article><span class="choice-number">04</span><h3>Everyday wellness</h3><p>Browse vitamins, fish-oil and wellness categories for your daily essentials.</p><a href="products.html#/category/vitamins">Explore wellness →</a></article></div></div></section>
 
