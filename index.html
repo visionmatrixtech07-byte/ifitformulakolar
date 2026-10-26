@@ -20,7 +20,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="retail-preview.css"/>
   <link rel="stylesheet" href="retail-logo.css"/>
   <link rel="stylesheet" href="retail-final.css"/>
@@ -35,6 +35,12 @@
       .mobile-product-carousel{display:block;}
       .mobile-product-carousel .carousel-page.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;}
     }
+
+    /* Diwali fireworks */
+    #fxCanvas{position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:90}
+    .fx-toggle{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,.14);background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:20px;line-height:1;display:grid;place-items:center;cursor:pointer;z-index:95;padding:0}
+    .fx-toggle[aria-pressed="false"]{opacity:.55;filter:grayscale(1)}
+    .ticker .tick-diwali{color:#ffd54f}
 
     /* Auto-scrolling announcement bar */
     .utility-bar{overflow:hidden}
@@ -59,8 +65,11 @@
     .top-header .header-actions{grid-column:3;grid-row:1;justify-self:end}
     .top-header .site-search{grid-column:1/-1;grid-row:2;width:100%;max-width:760px;justify-self:center;margin-bottom:12px}
 
-    .top-header .hdr-name{grid-column:1;grid-row:1;justify-self:start;align-self:center;font:700 19px/1.02 'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#034422;text-decoration:none}
-    @media(min-width:681px){.top-header .hdr-name br{display:none}.top-header .hdr-name{font-size:26px}}
+    .top-header .hdr-name{grid-column:1;grid-row:1;justify-self:start;align-self:center;white-space:nowrap;font:800 clamp(10px,3.4vw,15px)/1 'Montserrat','Arial Black',Arial,sans-serif;letter-spacing:-.01em;text-transform:uppercase;text-decoration:none}
+    .hdr-name .n-dark{color:#075a2c}
+    .hdr-name .n-leaf{color:#4a9f1c}
+    @media(max-width:680px){.top-header{column-gap:8px}.top-header .full-logo{width:92px;height:58px}}
+    @media(min-width:681px){.top-header .hdr-name{font-size:22px}}
     /* Shop by Category grid */
     .cat-grid-section{padding:20px 0 28px;background:#f4f4f2}
     .cat-grid-section .cat-h1{margin:0 0 4px;padding:0 14px;text-align:center;font:600 13px/1.4 system-ui,sans-serif;letter-spacing:.02em;text-transform:none;color:#4a4a4a}
@@ -97,11 +106,13 @@
   </style>
 </head>
 <body>
-  <div class="utility-bar" role="region" aria-label="Store announcements"><div class="ticker"><div class="ticker-group"><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i></div><div class="ticker-group" aria-hidden="true"><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer" tabindex="-1">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer" tabindex="-1">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i></div></div></div>
+  <canvas id="fxCanvas" aria-hidden="true"></canvas>
+  <button id="fxToggle" class="fx-toggle" type="button" aria-pressed="true" aria-label="Turn Diwali fireworks off" title="Fireworks on/off">🎆</button>
+  <div class="utility-bar" role="region" aria-label="Store announcements"><div class="ticker"><div class="ticker-group"><span class="tick-diwali">🪔 Happy Diwali from I FIT FORMULA 🪔</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i><span class="tick-diwali">🪔 Happy Diwali from I FIT FORMULA 🪔</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i></div><div class="ticker-group" aria-hidden="true"><span class="tick-diwali">🪔 Happy Diwali from I FIT FORMULA 🪔</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer" tabindex="-1">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i><span class="tick-diwali">🪔 Happy Diwali from I FIT FORMULA 🪔</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer" tabindex="-1">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i></div></div></div>
 
   <header class="site-header">
     <div class="shell top-header">
-      <a class="hdr-name" href="#top">I FIT<br/>FORMULA</a>
+      <a class="hdr-name" href="#top" aria-label="I FIT FORMULA"><span class="n-dark">I FIT</span> <span class="n-leaf">FORMULA</span></a>
       <a class="brand-lockup" href="#top" aria-label="I FIT FORMULA home"><img class="full-logo" src="ifitlogo.jpeg?v=20260907" alt="I FIT FORMULA Nutrition Store"/></a>
       <label class="site-search" for="homeSearch"><span aria-hidden="true">⌕</span><input id="homeSearch" type="search" placeholder="Search whey, creatine, vitamins and more" onkeydown="if(event.key==='Enter') location.href='products.html'"/></label>
       <div class="header-actions"><a class="help-link" href="tel:+919206014393"><span aria-hidden="true">☎</span><span><small>Need help?</small>Call us</span></a><a class="cart-link" href="products.html" aria-label="Shop and cart"><svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6"/></svg><em class="cart-text">Shop</em></a></div>
@@ -319,6 +330,90 @@
         row.scrollTo({ left: ratio * row.scrollWidth - row.clientWidth / 2, behavior: 'smooth' });
       });
       update();
+    }());
+  </script>
+  <script>
+    (function () {
+      var canvas = document.getElementById('fxCanvas');
+      var btn = document.getElementById('fxToggle');
+      if (!canvas || !canvas.getContext || !btn) return;
+      var ctx = canvas.getContext('2d');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var enabled = !reduce;
+      try { if (localStorage.getItem('ifit-fx') === 'off') enabled = false; } catch (e) {}
+      var W = 0, H = 0, small = false, raf = null, timer = null;
+      var parts = [], rockets = [];
+      var COLORS = ['#ffb300', '#ff6d00', '#e53935', '#d81b60', '#43a047', '#1e88e5', '#8e24aa', '#f9a825'];
+
+      function rnd(a, b) { return a + Math.random() * (b - a); }
+      function pick() { return COLORS[(Math.random() * COLORS.length) | 0]; }
+      function resize() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+        W = window.innerWidth; H = window.innerHeight; small = W < 681;
+        canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      function ensure() { if (!raf && !document.hidden) raf = window.requestAnimationFrame(frame); }
+      function burst(x, y, n, color) {
+        var second = pick(), top = small ? 4.2 : 5.6;
+        for (var i = 0; i < n; i++) {
+          var a = Math.random() * Math.PI * 2, sp = rnd(1, top);
+          parts.push({ x: x, y: y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, life: 0, max: rnd(55, 95), color: Math.random() < 0.65 ? color : second, size: rnd(1.2, 2.5) });
+        }
+        if (parts.length > 450) parts.splice(0, parts.length - 450);
+        ensure();
+      }
+      function launch() {
+        rockets.push({ x: rnd(W * 0.1, W * 0.9), y: H + 10, vy: -rnd(7, 10), ty: rnd(H * 0.12, H * 0.5), color: pick() });
+        ensure();
+      }
+      function frame() {
+        raf = null;
+        ctx.clearRect(0, 0, W, H);
+        var i, p, r;
+        for (i = rockets.length - 1; i >= 0; i--) {
+          r = rockets[i]; r.y += r.vy;
+          parts.push({ x: r.x, y: r.y, vx: rnd(-0.2, 0.2), vy: rnd(0.3, 0.8), life: 0, max: rnd(12, 22), color: '#ffcc80', size: 1.3 });
+          ctx.globalAlpha = 1; ctx.fillStyle = '#fff3c4'; ctx.fillRect(r.x - 1.5, r.y - 1.5, 3, 3);
+          if (r.y <= r.ty) { burst(r.x, r.y, small ? 46 : 80, r.color); rockets.splice(i, 1); }
+        }
+        for (i = parts.length - 1; i >= 0; i--) {
+          p = parts[i]; p.life++;
+          if (p.life >= p.max) { parts.splice(i, 1); continue; }
+          p.vx *= 0.985; p.vy = p.vy * 0.985 + 0.045; p.x += p.vx; p.y += p.vy;
+          ctx.globalAlpha = 1 - p.life / p.max; ctx.fillStyle = p.color;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, 6.2832); ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        if (parts.length || rockets.length) ensure();
+      }
+      function schedule() {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          if (enabled && !document.hidden) { launch(); if (!small && Math.random() < 0.4) setTimeout(launch, 250); }
+          schedule();
+        }, rnd(1800, 3400));
+      }
+      function setEnabled(on) {
+        enabled = on;
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.setAttribute('aria-label', on ? 'Turn Diwali fireworks off' : 'Turn Diwali fireworks on');
+        try { localStorage.setItem('ifit-fx', on ? 'on' : 'off'); } catch (e) {}
+        if (!on) { parts.length = 0; rockets.length = 0; ctx.clearRect(0, 0, W, H); }
+        else { launch(); }
+      }
+      btn.addEventListener('click', function () { if (reduce && !enabled) { enabled = true; } setEnabled(!enabled); });
+      document.addEventListener('pointerdown', function (e) {
+        if (!enabled || (e.target && e.target.closest && e.target.closest('#fxToggle'))) return;
+        burst(e.clientX, e.clientY, small ? 26 : 38, pick());
+      }, { passive: true });
+      document.addEventListener('visibilitychange', function () { if (document.hidden) { if (raf) { cancelAnimationFrame(raf); raf = null; } } else { ensure(); } });
+      window.addEventListener('resize', resize, { passive: true });
+      resize();
+      btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+      if (!enabled) btn.setAttribute('aria-label', 'Turn Diwali fireworks on');
+      schedule();
+      if (enabled) setTimeout(launch, 700);
     }());
   </script>
 </body>
