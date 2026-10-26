@@ -44,9 +44,9 @@
     .cat-card{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:#161616;color:#fff;text-decoration:none;border-radius:2px;container-type:inline-size}
     .cat-card::before{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 0 52%,var(--c1) 52% 70%,var(--c2) 70% 100%)}
     .cat-card .cat-name{position:relative;z-index:2;margin:0;padding:8cqw 3cqw 0;text-align:center;color:#fff;font:700 13.5cqw/1 'Barlow Condensed','Arial Narrow',Arial,sans-serif;white-space:nowrap;text-transform:uppercase;letter-spacing:.01em}
-    /* No box: a soft spotlight sits behind the product and the photo is multiplied onto it, so the white photo background disappears */
-    .cat-card .cat-img{position:absolute;left:11%;bottom:1%;width:78%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#fff 0,#fff 42%,rgba(255,255,255,0) 68%)}
-    .cat-card .cat-img img{width:100%;height:100%;object-fit:contain;display:block;mix-blend-mode:multiply;transform:scale(1.12)}
+    /* Cut-out product sits directly on the card, layered over the stripes */
+    .cat-card .cat-img{position:absolute;left:7%;right:7%;bottom:3%;height:75%;display:flex;align-items:center;justify-content:center}
+    .cat-card .cat-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))}
     .cat-card:focus-visible{outline:3px solid #8ee26b;outline-offset:2px}
     .c-red{--c1:#a3111c;--c2:#d9262f}
     .c-green{--c1:#2f7a14;--c2:#7fc21f}
@@ -63,10 +63,8 @@
     .brand-row::-webkit-scrollbar{display:none}
     .brand-row:focus-visible{outline:3px solid #8ee26b;outline-offset:2px}
     .brand-item{flex:0 0 auto;width:clamp(140px,40vw,210px);scroll-snap-align:start;text-align:center;text-decoration:none;color:#111}
-    .brand-circle{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:radial-gradient(circle,#fff 0,#fff 38%,rgba(255,255,255,0) 66%),#141414}
-    .brand-circle img{width:94%;height:94%;object-fit:contain;display:block;mix-blend-mode:multiply}
-    .brand-circle.is-logo{background:#fff;border:1px solid #e3e3df;box-sizing:border-box}
-    .brand-circle.is-logo img{width:58%;height:58%;mix-blend-mode:normal}
+    .brand-circle{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 42%,#3a3a3a 0,#161616 72%)}
+    .brand-circle img{width:auto;height:auto;max-width:64%;max-height:76%;object-fit:contain;display:block;filter:drop-shadow(0 8px 10px rgba(0,0,0,.5))}
     .brand-name{display:block;margin-top:12px;font:600 18px/1.25 system-ui,sans-serif;color:#111}
     .brand-bar{position:relative;height:8px;margin:6px 20px 0;max-width:1060px;background:#d9d9d4;border-radius:4px;overflow:hidden;cursor:pointer}
     @media(min-width:1140px){.brand-bar{margin-left:auto;margin-right:auto}}
@@ -92,14 +90,14 @@
       <h1 class="cat-h1">I FIT FORMULA Nutrition Store, Kolar: genuine supplements</h1>
       <h2 class="cat-title" id="cat-heading">Shop by Category</h2>
       <div class="cat-grid">
-        <a class="cat-card c-red" href="products.html#/category/whey"><span class="cat-name">Protein</span><span class="cat-img"><img src="assets/products/catalogue/optimum-nutrition-gold-standard-double-rich-chocolate-2lb.png" alt="Optimum Nutrition Gold Standard whey protein" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-green" href="products.html#/category/mass"><span class="cat-name">Gainer</span><span class="cat-img"><img src="assets/products/catalogue/muscleblaze-mass-gainer-xxl.jpg" alt="MuscleBlaze mass gainer" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-orange" href="products.html#/category/preworkout"><span class="cat-name">Pre Workout</span><span class="cat-img"><img src="assets/products/reborn-preworkout.jpg" alt="Pre-workout supplement" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-green" href="products.html#/category/creatine"><span class="cat-name">Creatine</span><span class="cat-img"><img src="assets/products/catalogue/optimum-nutrition-micronized-creatine-powder.jpeg" alt="Optimum Nutrition creatine" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-green" href="products.html#/category/bcaa"><span class="cat-name">EAA / BCAA</span><span class="cat-img"><img src="assets/products/muscle-club-bcaa.jpg" alt="Muscle Club BCAA" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-blue" href="products.html#/category/vitamins"><span class="cat-name">Multivitamin</span><span class="cat-img"><img src="assets/products/muscle-club-multivitamin.jpg" alt="Muscle Club multivitamin" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-grey" href="products.html#/category/health"><span class="cat-name">Fish Oil</span><span class="cat-img"><img src="assets/products/catalogue/muscle-club-mc-omega-3.jpg" alt="Omega-3 fish oil" loading="lazy" decoding="async"/></span></a>
-        <a class="cat-card c-amber" href="products.html#/category/bars"><span class="cat-name">Snacks</span><span class="cat-img"><img src="assets/products/catalogue/divine-nutrition-protein-wafer-bar.jpg" alt="Divine Nutrition protein wafer bar" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-red" href="products.html#/category/whey"><span class="cat-name">Protein</span><span class="cat-img"><img src="assets/cutouts/protein.webp" alt="Optimum Nutrition Gold Standard whey protein" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-green" href="products.html#/category/mass"><span class="cat-name">Gainer</span><span class="cat-img"><img src="assets/cutouts/gainer.webp" alt="MuscleBlaze mass gainer" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-orange" href="products.html#/category/preworkout"><span class="cat-name">Pre Workout</span><span class="cat-img"><img src="assets/cutouts/preworkout.webp" alt="Pre-workout supplement" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-green" href="products.html#/category/creatine"><span class="cat-name">Creatine</span><span class="cat-img"><img src="assets/cutouts/creatine.webp" alt="Optimum Nutrition creatine" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-green" href="products.html#/category/bcaa"><span class="cat-name">EAA / BCAA</span><span class="cat-img"><img src="assets/cutouts/bcaa.webp" alt="Muscle Club BCAA" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-blue" href="products.html#/category/vitamins"><span class="cat-name">Multivitamin</span><span class="cat-img"><img src="assets/cutouts/multivitamin.webp" alt="Muscle Club multivitamin" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-grey" href="products.html#/category/health"><span class="cat-name">Fish Oil</span><span class="cat-img"><img src="assets/cutouts/fishoil.webp" alt="Omega-3 fish oil" loading="lazy" decoding="async"/></span></a>
+        <a class="cat-card c-amber" href="products.html#/category/bars"><span class="cat-name">Snacks</span><span class="cat-img"><img src="assets/cutouts/snacks.webp" alt="Divine Nutrition protein wafer bar" loading="lazy" decoding="async"/></span></a>
       </div>
     </section>
 
@@ -143,16 +141,16 @@
     <section class="brand-scroll-section" aria-labelledby="brand-heading">
       <h2 class="brand-title" id="brand-heading">Choose By Brands</h2>
       <div class="brand-row" id="brandRow" tabindex="0" aria-label="Supplement brands, swipe sideways">
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/products/catalogue/optimum-nutrition-gold-standard-double-rich-chocolate-2lb.png" alt="Optimum Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Optimum Nutrition</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/products/catalogue/dymatize-elite-100-whey.png" alt="Dymatize whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Dymatize</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/products/catalogue/muscletech-nitro-tech-whey-gold.png" alt="MuscleTech whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleTech</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/products/catalogue/myprotein-impact-whey.webp" alt="MyProtein whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MyProtein</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/products/catalogue/muscleblaze-biozyme-whey-pr.jpg" alt="MuscleBlaze whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleBlaze</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle is-logo"><img src="assets/brands/gnc.png" alt="GNC logo" loading="lazy" decoding="async"/></span><span class="brand-name">GNC</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle is-logo"><img src="assets/brands/avvatar.png" alt="Avvatar logo" loading="lazy" decoding="async"/></span><span class="brand-name">Avvatar</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle is-logo"><img src="assets/brands/labrada.png" alt="Labrada logo" loading="lazy" decoding="async"/></span><span class="brand-name">Labrada</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle is-logo"><img src="assets/brands/isopure.png" alt="Isopure logo" loading="lazy" decoding="async"/></span><span class="brand-name">Isopure</span></a>
-        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle is-logo"><img src="assets/brands/ultimate-nutrition.png" alt="Ultimate Nutrition logo" loading="lazy" decoding="async"/></span><span class="brand-name">Ultimate Nutrition</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/protein.webp" alt="Optimum Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Optimum Nutrition</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-dymatize.webp" alt="Dymatize whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Dymatize</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-muscletech.webp" alt="MuscleTech whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleTech</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-myprotein.webp" alt="MyProtein whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MyProtein</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-muscleblaze.webp" alt="MuscleBlaze whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleBlaze</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-gnc.webp" alt="GNC whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">GNC</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-avvatar.webp" alt="Avvatar whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Avvatar</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-labrada.webp" alt="Labrada whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Labrada</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-isopure.webp" alt="Isopure whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Isopure</span></a>
+        <a class="brand-item" href="products.html#/category/whey"><span class="brand-circle"><img src="assets/cutouts/b-ultimate.webp" alt="Ultimate Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Ultimate Nutrition</span></a>
       </div>
       <div class="brand-bar" id="brandBar" aria-hidden="true"><span class="brand-bar-thumb" id="brandThumb"></span></div>
     </section>
