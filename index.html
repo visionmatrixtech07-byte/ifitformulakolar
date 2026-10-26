@@ -36,6 +36,29 @@
       .mobile-product-carousel .carousel-page.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;}
     }
 
+    /* Auto-scrolling announcement bar */
+    .utility-bar{overflow:hidden}
+    .ticker{display:flex;width:max-content;align-items:center;min-height:36px;animation:ifTicker 34s linear infinite;will-change:transform}
+    @media(hover:hover){.utility-bar:hover .ticker{animation-play-state:paused}}
+    .ticker-group{display:flex;align-items:center;gap:22px;padding-right:22px;white-space:nowrap}
+    .ticker a{text-decoration:underline;text-underline-offset:3px;color:#fff}
+    .ticker .utility-dot{display:inline-block;flex:0 0 auto}
+    .ticker .tick-offer{color:#f6cf6d}
+    @keyframes ifTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media(prefers-reduced-motion:reduce){.utility-bar{overflow-x:auto}.ticker{animation:none}}
+    @media(max-width:680px){.ticker{min-height:34px;font-size:11px}}
+    /* Header cart button */
+    .cart-link{gap:8px!important}
+    .cart-link .cart-icon{display:block;flex:0 0 auto}
+    .cart-link .cart-text{font-style:normal;font-size:13px;font-weight:700;display:inline!important}
+
+    /* Centered logo header: logo in the middle, cart on the right, search below */
+    .top-header{grid-template-columns:1fr auto 1fr;row-gap:10px;min-height:76px}
+    .top-header .brand-lockup{grid-column:2;grid-row:1;justify-content:center}
+    .top-header .full-logo{object-position:center center}
+    .top-header .header-actions{grid-column:3;grid-row:1;justify-self:end}
+    .top-header .site-search{grid-column:1/-1;grid-row:2;width:100%;max-width:760px;justify-self:center;margin-bottom:12px}
+
     /* Shop by Category grid */
     .cat-grid-section{padding:20px 0 28px;background:#f4f4f2}
     .cat-grid-section .cat-h1{margin:0 0 4px;padding:0 14px;text-align:center;font:600 13px/1.4 system-ui,sans-serif;letter-spacing:.02em;text-transform:none;color:#4a4a4a}
@@ -72,13 +95,13 @@
   </style>
 </head>
 <body>
-  <div class="utility-bar"><div class="shell utility-inner"><span>100% genuine products</span><span class="utility-dot"></span><span>Expert guidance from Kolar</span><span class="utility-dot"></span><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a></div></div>
+  <div class="utility-bar" role="region" aria-label="Store announcements"><div class="ticker"><div class="ticker-group"><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i></div><div class="ticker-group" aria-hidden="true"><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer" tabindex="-1">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i><a href="https://wa.me/919206014393" target="_blank" rel="noopener noreferrer" tabindex="-1">WhatsApp: 92060 14393</a><i class="utility-dot"></i><span>100% original products</span><i class="utility-dot"></i><span class="tick-offer">Up to 50% off on selected products</span><i class="utility-dot"></i><span>Expert guidance from Kolar</span><i class="utility-dot"></i></div></div></div>
 
   <header class="site-header">
     <div class="shell top-header">
       <a class="brand-lockup" href="#top" aria-label="I FIT FORMULA home"><img class="full-logo" src="ifitlogo.jpeg?v=20260907" alt="I FIT FORMULA Nutrition Store"/></a>
       <label class="site-search" for="homeSearch"><span aria-hidden="true">⌕</span><input id="homeSearch" type="search" placeholder="Search whey, creatine, vitamins and more" onkeydown="if(event.key==='Enter') location.href='products.html'"/></label>
-      <div class="header-actions"><a class="help-link" href="tel:+919206014393"><span aria-hidden="true">☎</span><span><small>Need help?</small>Call us</span></a><a class="cart-link" href="products.html"><span aria-hidden="true">▢</span><b>Catalogue</b></a></div>
+      <div class="header-actions"><a class="help-link" href="tel:+919206014393"><span aria-hidden="true">☎</span><span><small>Need help?</small>Call us</span></a><a class="cart-link" href="products.html" aria-label="Shop and cart"><svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6"/></svg><em class="cart-text">Shop</em></a></div>
     </div>
     <nav class="category-nav" aria-label="Shop categories"><div class="shell category-nav-inner">
       <a href="products.html">All supplements</a><a href="products.html#/category/whey">Whey protein</a><a href="products.html#/category/mass">Mass gainers</a><a href="products.html#/category/creatine">Creatine</a><a href="products.html#/category/preworkout">Pre-workout</a><a href="products.html#/category/vitamins">Vitamins &amp; wellness</a><a href="products.html#/category/health">Health essentials</a><a class="nav-offer" href="products.html">Browse brands →</a>
