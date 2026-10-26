@@ -59,6 +59,8 @@
     .top-header .header-actions{grid-column:3;grid-row:1;justify-self:end}
     .top-header .site-search{grid-column:1/-1;grid-row:2;width:100%;max-width:760px;justify-self:center;margin-bottom:12px}
 
+    .top-header .hdr-name{grid-column:1;grid-row:1;justify-self:start;align-self:center;font:700 19px/1.02 'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#034422;text-decoration:none}
+    @media(min-width:681px){.top-header .hdr-name br{display:none}.top-header .hdr-name{font-size:26px}}
     /* Shop by Category grid */
     .cat-grid-section{padding:20px 0 28px;background:#f4f4f2}
     .cat-grid-section .cat-h1{margin:0 0 4px;padding:0 14px;text-align:center;font:600 13px/1.4 system-ui,sans-serif;letter-spacing:.02em;text-transform:none;color:#4a4a4a}
@@ -99,6 +101,7 @@
 
   <header class="site-header">
     <div class="shell top-header">
+      <a class="hdr-name" href="#top">I FIT<br/>FORMULA</a>
       <a class="brand-lockup" href="#top" aria-label="I FIT FORMULA home"><img class="full-logo" src="ifitlogo.jpeg?v=20260907" alt="I FIT FORMULA Nutrition Store"/></a>
       <label class="site-search" for="homeSearch"><span aria-hidden="true">⌕</span><input id="homeSearch" type="search" placeholder="Search whey, creatine, vitamins and more" onkeydown="if(event.key==='Enter') location.href='products.html'"/></label>
       <div class="header-actions"><a class="help-link" href="tel:+919206014393"><span aria-hidden="true">☎</span><span><small>Need help?</small>Call us</span></a><a class="cart-link" href="products.html" aria-label="Shop and cart"><svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6"/></svg><em class="cart-text">Shop</em></a></div>
