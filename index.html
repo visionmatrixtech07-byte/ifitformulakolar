@@ -103,6 +103,24 @@
     .brand-bar{position:relative;height:8px;margin:6px 20px 0;max-width:1060px;background:#d9d9d4;border-radius:4px;overflow:hidden;cursor:pointer}
     @media(min-width:1140px){.brand-bar{margin-left:auto;margin-right:auto}}
     .brand-bar-thumb{position:absolute;top:0;bottom:0;left:0;width:40%;background:#111;border-radius:4px}
+      /* loyalty stamps section */
+    .stamp-section{background:#076437;color:#fff;padding:44px 0 48px;text-align:center;position:relative;overflow:hidden}
+    .stamp-section:before{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:#054d2a}
+    .stamp-inner{position:relative}
+    .stamp-section .overline{color:#9be22f!important;margin:0 0 8px;font-size:12px!important}
+    .stamp-section h2{margin:0;font:700 clamp(34px,8vw,52px)/1.05 'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:0;text-transform:none;color:#fff}
+    .stamp-section h2 span{color:#9be22f}
+    .stamp-sub{max-width:520px;margin:12px auto 0;font-size:16px;line-height:1.5;color:#d8efdd}
+    .stamp-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:300px;margin:24px auto}
+    @media(min-width:600px){.stamp-row{grid-template-columns:repeat(8,1fr);max-width:540px}}
+    .stamp-seal,.stamp-gift{aspect-ratio:1;border-radius:50%;display:grid;place-items:center}
+    .stamp-seal{background:#fff;border:3px solid #9be22f;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px #076437}
+    .stamp-seal img{width:78%;height:auto}
+    .stamp-seal:nth-child(1){transform:rotate(-6deg)}.stamp-seal:nth-child(2){transform:rotate(5deg)}.stamp-seal:nth-child(3){transform:rotate(-4deg)}.stamp-seal:nth-child(4){transform:rotate(7deg)}.stamp-seal:nth-child(5){transform:rotate(-7deg)}.stamp-seal:nth-child(6){transform:rotate(4deg)}.stamp-seal:nth-child(7){transform:rotate(-5deg)}
+    .stamp-gift{background:#ffc61a;color:#10281a;font:800 11px/1.15 Montserrat,Arial,sans-serif;text-align:center}
+    .stamp-btn{display:inline-block;background:#9be22f;color:#08330f;font-weight:800;font-size:17px;padding:15px 30px;border-radius:12px;text-decoration:none}
+    .stamp-btn:hover,.stamp-btn:focus-visible{background:#b3ee55}
+    .stamp-note{margin:12px 0 0;font-size:13px;color:#c5e6cc}
   </style>
 </head>
 <body>
@@ -138,9 +156,22 @@
       </div>
     </section>
 
-    <section class="proof-strip" aria-label="I FIT FORMULA service promise"><div class="shell proof-grid"><article><span>01</span><div><strong>Genuine-product focus</strong><p>We help you confirm the actual product before an order is placed.</p></div></article><article><span>02</span><div><strong>Guidance before checkout</strong><p>Start with your goal, routine, flavour and pack-size preference.</p></div></article><article><span>03</span><div><strong>Stock confirmation</strong><p>Ask for current availability before making a payment decision.</p></div></article><article><span>04</span><div><strong>Kolar-area enquiries</strong><p>Share your town and pin code to confirm delivery possibilities.</p></div></article></div></section>
-
-    <section class="choice-section"><div class="shell"><div class="section-heading-row"><div><p class="overline">A better way to choose</p><h2>Start with a purpose, not a random product.</h2></div></div><p class="section-intro">Different supplements support different routines. Use these quick paths to narrow the catalogue, then ask us to confirm the right product, available flavour and pack size.</p><div class="choice-grid"><article><span class="choice-number">01</span><h3>Daily protein</h3><p>For people who want a convenient protein option alongside regular meals and training.</p><a href="products.html#/category/whey">Explore whey protein →</a></article><article><span class="choice-number">02</span><h3>Muscle &amp; weight goals</h3><p>Explore higher-calorie mass-gainer options and ask us which pack suits your routine.</p><a href="products.html#/category/mass">Explore mass gainers →</a></article><article><span class="choice-number">03</span><h3>Training-day support</h3><p>Browse creatine, pre-workout and amino categories based on your training preference.</p><a href="products.html#/category/preworkout">Explore performance →</a></article><article><span class="choice-number">04</span><h3>Everyday wellness</h3><p>Browse vitamins, fish-oil and wellness categories for your daily essentials.</p><a href="products.html#/category/vitamins">Explore wellness →</a></article></div></div></section>
+    <section class="brand-scroll-section" aria-labelledby="brand-heading">
+      <h2 class="brand-title" id="brand-heading">Choose By Brands</h2>
+      <div class="brand-row" id="brandRow" tabindex="0" aria-label="Supplement brands, swipe sideways">
+        <a class="brand-item" href="products.html#/optimum-nutrition-on"><span class="brand-circle"><img src="assets/cutouts/protein.webp" alt="Optimum Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Optimum Nutrition</span></a>
+        <a class="brand-item" href="products.html#/dymatize"><span class="brand-circle"><img src="assets/cutouts/b-dymatize.webp" alt="Dymatize whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Dymatize</span></a>
+        <a class="brand-item" href="products.html#/muscletech"><span class="brand-circle"><img src="assets/cutouts/b-muscletech.webp" alt="MuscleTech whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleTech</span></a>
+        <a class="brand-item" href="products.html#/myprotein"><span class="brand-circle"><img src="assets/cutouts/b-myprotein.webp" alt="MyProtein whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MyProtein</span></a>
+        <a class="brand-item" href="products.html#/muscleblaze"><span class="brand-circle"><img src="assets/cutouts/b-muscleblaze.webp" alt="MuscleBlaze whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleBlaze</span></a>
+        <a class="brand-item" href="products.html#/gnc"><span class="brand-circle"><img src="assets/cutouts/b-gnc.webp" alt="GNC whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">GNC</span></a>
+        <a class="brand-item" href="products.html#/avvatar"><span class="brand-circle"><img src="assets/cutouts/b-avvatar.webp" alt="Avvatar whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Avvatar</span></a>
+        <a class="brand-item" href="products.html#/labrada"><span class="brand-circle"><img src="assets/cutouts/b-labrada.webp" alt="Labrada whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Labrada</span></a>
+        <a class="brand-item" href="products.html#/isopure"><span class="brand-circle"><img src="assets/cutouts/b-isopure.webp" alt="Isopure whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Isopure</span></a>
+        <a class="brand-item" href="products.html#/ultimate-nutrition"><span class="brand-circle"><img src="assets/cutouts/b-ultimate.webp" alt="Ultimate Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Ultimate Nutrition</span></a>
+      </div>
+      <div class="brand-bar" id="brandBar" aria-hidden="true"><span class="brand-bar-thumb" id="brandThumb"></span></div>
+    </section>
 
     <section class="product-band"><div class="shell"><div class="section-heading-row"><div><p class="overline">Featured in store</p><h2>Popular ways to start</h2></div><a href="products.html" class="text-link">Open full catalogue <span>→</span></a></div>
       <div class="carousel carousel--products desktop-product-carousel" data-carousel>
@@ -171,26 +202,22 @@
       </div>
     </div></section>
 
+    <section class="stamp-section" aria-labelledby="stamp-heading"><div class="shell stamp-inner">
+      <p class="overline">I FIT FORMULA loyalty</p>
+      <h2 id="stamp-heading">Collect 8 stamps. <span>Win a free goody.</span></h2>
+      <p class="stamp-sub">Every bill gives you 1 stamp. Your free goody is waiting. Don’t miss a single stamp, every bill you skip is a stamp lost!</p>
+      <div class="stamp-row" aria-hidden="true"><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-seal"><img src="assets/stamp-emblem.png" alt="" width="120" height="74" loading="lazy"></span><span class="stamp-gift">FREE<br>GOODY</span></div>
+      <a class="stamp-btn" href="https://script.google.com/macros/s/AKfycbxEKiQ36SLvOsnXm4v1wCwPNF_RGIumbHUKKTVogve0nowsu0Z7p7h6RErjwlNeB2Ua/exec" target="_blank" rel="noopener">Check my stamps</a>
+      <p class="stamp-note">Enter your mobile number to see your stamps.</p>
+    </div></section>
+
+    <section class="proof-strip" aria-label="I FIT FORMULA service promise"><div class="shell proof-grid"><article><span>01</span><div><strong>Genuine-product focus</strong><p>We help you confirm the actual product before an order is placed.</p></div></article><article><span>02</span><div><strong>Guidance before checkout</strong><p>Start with your goal, routine, flavour and pack-size preference.</p></div></article><article><span>03</span><div><strong>Stock confirmation</strong><p>Ask for current availability before making a payment decision.</p></div></article><article><span>04</span><div><strong>Kolar-area enquiries</strong><p>Share your town and pin code to confirm delivery possibilities.</p></div></article></div></section>
+
+    <section class="choice-section"><div class="shell"><div class="section-heading-row"><div><p class="overline">A better way to choose</p><h2>Start with a purpose, not a random product.</h2></div></div><p class="section-intro">Different supplements support different routines. Use these quick paths to narrow the catalogue, then ask us to confirm the right product, available flavour and pack size.</p><div class="choice-grid"><article><span class="choice-number">01</span><h3>Daily protein</h3><p>For people who want a convenient protein option alongside regular meals and training.</p><a href="products.html#/category/whey">Explore whey protein →</a></article><article><span class="choice-number">02</span><h3>Muscle &amp; weight goals</h3><p>Explore higher-calorie mass-gainer options and ask us which pack suits your routine.</p><a href="products.html#/category/mass">Explore mass gainers →</a></article><article><span class="choice-number">03</span><h3>Training-day support</h3><p>Browse creatine, pre-workout and amino categories based on your training preference.</p><a href="products.html#/category/preworkout">Explore performance →</a></article><article><span class="choice-number">04</span><h3>Everyday wellness</h3><p>Browse vitamins, fish-oil and wellness categories for your daily essentials.</p><a href="products.html#/category/vitamins">Explore wellness →</a></article></div></div></section>
+
     <section class="shell goal-section"><div class="section-heading-row"><div><p class="overline">A simpler way to shop</p><h2>Start with your goal</h2></div></div><div class="goal-grid"><a class="goal-panel goal-strength" href="products.html#/category/whey"><span>01</span><h3>Muscle<br/>and strength</h3><p>Explore whey protein, mass gainers and creatine.</p><b>Explore products →</b></a><a class="goal-panel goal-performance" href="products.html#/category/preworkout"><span>02</span><h3>Training<br/>performance</h3><p>Find pre-workouts and BCAA support.</p><b>Explore products →</b></a><a class="goal-panel goal-wellness" href="products.html#/category/vitamins"><span>03</span><h3>Everyday<br/>wellness</h3><p>Discover vitamins, fish oil and health essentials.</p><b>Explore products →</b></a></div></section>
 
     <section class="verification-section"><div class="shell verification-grid"><div><p class="overline">Before you order</p><h2>What we help you check.</h2><p>Supplements vary by brand, flavour, weight and batch. That is why I FIT FORMULA keeps the conversation clear before an order is confirmed.</p><a class="button button-primary" href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20to%20confirm%20a%20product%20before%20ordering." target="_blank" rel="noopener noreferrer">Confirm a product <span>→</span></a></div><ol class="checklist"><li><b>Product</b><span>Exact brand and product name</span></li><li><b>Variant</b><span>Available flavour or version</span></li><li><b>Pack</b><span>Size or weight currently in stock</span></li><li><b>Location</b><span>Your town and pin code for delivery enquiry</span></li></ol></div></section>
-
-    <section class="brand-scroll-section" aria-labelledby="brand-heading">
-      <h2 class="brand-title" id="brand-heading">Choose By Brands</h2>
-      <div class="brand-row" id="brandRow" tabindex="0" aria-label="Supplement brands, swipe sideways">
-        <a class="brand-item" href="products.html#/optimum-nutrition-on"><span class="brand-circle"><img src="assets/cutouts/protein.webp" alt="Optimum Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Optimum Nutrition</span></a>
-        <a class="brand-item" href="products.html#/dymatize"><span class="brand-circle"><img src="assets/cutouts/b-dymatize.webp" alt="Dymatize whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Dymatize</span></a>
-        <a class="brand-item" href="products.html#/muscletech"><span class="brand-circle"><img src="assets/cutouts/b-muscletech.webp" alt="MuscleTech whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleTech</span></a>
-        <a class="brand-item" href="products.html#/myprotein"><span class="brand-circle"><img src="assets/cutouts/b-myprotein.webp" alt="MyProtein whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MyProtein</span></a>
-        <a class="brand-item" href="products.html#/muscleblaze"><span class="brand-circle"><img src="assets/cutouts/b-muscleblaze.webp" alt="MuscleBlaze whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">MuscleBlaze</span></a>
-        <a class="brand-item" href="products.html#/gnc"><span class="brand-circle"><img src="assets/cutouts/b-gnc.webp" alt="GNC whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">GNC</span></a>
-        <a class="brand-item" href="products.html#/avvatar"><span class="brand-circle"><img src="assets/cutouts/b-avvatar.webp" alt="Avvatar whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Avvatar</span></a>
-        <a class="brand-item" href="products.html#/labrada"><span class="brand-circle"><img src="assets/cutouts/b-labrada.webp" alt="Labrada whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Labrada</span></a>
-        <a class="brand-item" href="products.html#/isopure"><span class="brand-circle"><img src="assets/cutouts/b-isopure.webp" alt="Isopure whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Isopure</span></a>
-        <a class="brand-item" href="products.html#/ultimate-nutrition"><span class="brand-circle"><img src="assets/cutouts/b-ultimate.webp" alt="Ultimate Nutrition whey protein" loading="lazy" decoding="async"/></span><span class="brand-name">Ultimate Nutrition</span></a>
-      </div>
-      <div class="brand-bar" id="brandBar" aria-hidden="true"><span class="brand-bar-thumb" id="brandThumb"></span></div>
-    </section>
 
     <section class="founder-section"><div class="shell founder-grid founder-grid--bodybuilding"><div class="founder-photo founder-photo--bodybuilding"><img src="assets/ali-irfan-bodybuilding-left.jpeg" alt="Ali Irfan bodybuilding at I Gym and Fitness Store"/></div><div class="founder-copy"><p class="overline">Personal Trainer · Nutritionist · Entrepreneur</p><h2>Meet Ali Irfan.</h2><p>I FIT FORMULA is built around practical supplement guidance—not just a product shelf. Ali Irfan brings a trainer’s perspective to each conversation, helping customers understand which category, pack size and routine can suit their goal.</p><p>Share your training plan and preference on WhatsApp before ordering. We will help you check the genuine product, flavour and current availability.</p><div class="founder-actions"><a class="button button-primary" href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20supplement%20guidance." target="_blank" rel="noopener noreferrer">Ask Ali for guidance <span>→</span></a><a class="button button-map" href="https://maps.app.goo.gl/ANGZfUQfvVCJE25H7?g_st=ac" target="_blank" rel="noopener noreferrer">View I Gym location <span>↗</span></a></div><aside class="gym-enquiry-card"><p class="overline">I Gym &amp; Fitness Store</p><h3>Gym joining enquiries</h3><p>Ask Ali about joining the gym and your training goal.</p><a href="https://wa.me/919206014393?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20joining%20I%20Gym%20%26%20Fitness%20Store." target="_blank" rel="noopener noreferrer">Enquire about gym joining <b>→</b></a></aside></div><div class="founder-photo founder-photo--bodybuilding"><img src="assets/ali-irfan-bodybuilding-right.jpeg" alt="Ali Irfan bodybuilding pose at I Gym and Fitness Store"/></div></div></section>
 
